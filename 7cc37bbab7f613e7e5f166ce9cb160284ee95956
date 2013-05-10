@@ -1,0 +1,7 @@
+Code-Review+2: Elliott Hughes <enh@google.com>
+Verified+1: Brian Carlstrom <bdc@google.com>
+Submitted-by: Brian Carlstrom <bdc@google.com>
+Submitted-at: Fri, 10 May 2013 23:58:59 +0000
+Reviewed-on: https://android-review.googlesource.com/58381
+Project: platform/libnativehelper
+Branch: refs/heads/master
