@@ -1,0 +1,7 @@
+Code-Review+2: Brian Carlstrom <bdc@google.com>
+Verified+1: Deckard Autoverifier <deckard@android.com>
+Submitted-by: Kenny Root <kroot@android.com>
+Submitted-at: Mon, 20 May 2013 15:52:47 +0000
+Reviewed-on: https://android-review.googlesource.com/58846
+Project: platform/libnativehelper
+Branch: refs/heads/master
