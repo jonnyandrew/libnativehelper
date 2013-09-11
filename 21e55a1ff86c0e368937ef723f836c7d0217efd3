@@ -16,6 +16,24 @@
       "revId": "21e55a1ff86c0e368937ef723f836c7d0217efd3",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c7c45963_1b7f03b7",
+        "filename": "include/nativehelper/UniquePtr.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1002975
+      },
+      "writtenOn": "2013-09-11T21:31:49Z",
+      "side": 1,
+      "message": "Whoops.",
+      "parentUuid": "c7c45963_7b01d755",
+      "revId": "21e55a1ff86c0e368937ef723f836c7d0217efd3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
