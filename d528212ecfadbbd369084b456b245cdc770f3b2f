@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "de65092b_5ac23540",
+        "filename": "include/nativehelper/ScopedFd.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2013-11-07T15:33:42Z",
+      "side": 1,
+      "message": "\"...for the Mac\"? (on bionic and glibc you should get this from \u003cunistd.h\u003e.)",
+      "revId": "d528212ecfadbbd369084b456b245cdc770f3b2f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
