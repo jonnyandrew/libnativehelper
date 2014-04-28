@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "a554cbb1_23938a7b",
+        "filename": "Android.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 1021677
+      },
+      "writtenOn": "2014-04-28T18:16:42Z",
+      "side": 1,
+      "message": "Are there any docs for what LOCAL_EXPORT_C_INCLUDE_DIRS does? I can\u0027t find this anywhere except in the build scripts. (It\u0027s missing from http://www.kandroid.org/online-pdk/guide/build_cookbook.html for example.)\n\nAre you saying that LOCAL_EXPORT_C_INCLUDE_DIRS ought to be added to all targets in this build file, or just libnativehelper_compat*?",
+      "parentUuid": "c557ffb2_87a128ca",
+      "revId": "7fdd9bfcc85a91b51d1c1f51b1ff1fded91184f4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "e55a43dc_683ddbda",
         "filename": "Android.mk",
         "patchSetId": 2
@@ -30,6 +48,30 @@
       "writtenOn": "2014-04-28T17:49:41Z",
       "side": 1,
       "message": "What NDK version does this end up mapping to?",
+      "range": {
+        "startLine": 74,
+        "startChar": 0,
+        "endLine": 74,
+        "endChar": 23
+      },
+      "revId": "7fdd9bfcc85a91b51d1c1f51b1ff1fded91184f4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e55a43dc_0861c763",
+        "filename": "Android.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1021677
+      },
+      "writtenOn": "2014-04-28T18:16:42Z",
+      "side": 1,
+      "message": "Ruben, any particular reason you chose LOCAL_SDK_VERSION :\u003d 17 instead of current for libnativehelper_compat? (I\u0027m not exactly sure what this does.)",
+      "parentUuid": "e55a43dc_683ddbda",
       "range": {
         "startLine": 74,
         "startChar": 0,
