@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c557ffb2_87a128ca",
+        "filename": "Android.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2014-04-28T17:49:41Z",
+      "side": 1,
+      "message": "add it to LOCAL_EXPORT_C_INCLUDE_DIRS as well ?",
+      "revId": "7fdd9bfcc85a91b51d1c1f51b1ff1fded91184f4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e55a43dc_683ddbda",
+        "filename": "Android.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2014-04-28T17:49:41Z",
+      "side": 1,
+      "message": "What NDK version does this end up mapping to?",
+      "range": {
+        "startLine": 74,
+        "startChar": 0,
+        "endLine": 74,
+        "endChar": 23
+      },
+      "revId": "7fdd9bfcc85a91b51d1c1f51b1ff1fded91184f4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
