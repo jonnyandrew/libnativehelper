@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "a554cbb1_83927e41",
+        "filename": "Android.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2014-04-28T18:24:29Z",
+      "side": 1,
+      "message": "It\u0027s pretty awesome :). Consider at least adding it here, although adding for the other targets is not a bad idea either.\n\nIt makes it so that adding a library using LOCAL_SHARED_LIBRARIES also automatically pulls in the includes \n\n(normally adding a library involves adding LOCAL_SHARED_LIBRARIES and also LOCAL_C_INCLUDES at the usage site; but this way the LOCAL_C_INCLUDES doesn\u0027t need to be touched when bringing in an extra library).",
+      "parentUuid": "a554cbb1_23938a7b",
+      "revId": "7fdd9bfcc85a91b51d1c1f51b1ff1fded91184f4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "e55a43dc_683ddbda",
         "filename": "Android.mk",
         "patchSetId": 2
