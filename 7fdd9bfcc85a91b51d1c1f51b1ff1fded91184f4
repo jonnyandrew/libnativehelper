@@ -117,6 +117,30 @@
       "revId": "7fdd9bfcc85a91b51d1c1f51b1ff1fded91184f4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "05caf7dd_26cc0b69",
+        "filename": "Android.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1042691
+      },
+      "writtenOn": "2014-04-30T00:43:54Z",
+      "side": 1,
+      "message": "I was emulating the build rule for the shared library.  I suspect these should both just use current.",
+      "parentUuid": "e55a43dc_0861c763",
+      "range": {
+        "startLine": 74,
+        "startChar": 0,
+        "endLine": 74,
+        "endChar": 23
+      },
+      "revId": "7fdd9bfcc85a91b51d1c1f51b1ff1fded91184f4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
