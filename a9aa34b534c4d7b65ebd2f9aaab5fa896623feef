@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ae7d493_f682883d",
+        "filename": "Android.mk",
+        "patchSetId": 5
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2014-04-30T19:04:24Z",
+      "side": 1,
+      "message": "looks like you guys are the only ones using this? can you come back and remove it when you\u0027ve switched to the new one?",
+      "revId": "a9aa34b534c4d7b65ebd2f9aaab5fa896623feef",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
