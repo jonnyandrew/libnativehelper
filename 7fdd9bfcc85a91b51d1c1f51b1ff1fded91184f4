@@ -141,6 +141,30 @@
       "revId": "7fdd9bfcc85a91b51d1c1f51b1ff1fded91184f4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "05caf7dd_a6f91b66",
+        "filename": "Android.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1042691
+      },
+      "writtenOn": "2014-04-30T00:49:30Z",
+      "side": 1,
+      "message": "Actually, that\u0027s just incorrect. I think you should probably just remove both of these rules or change them to current.  I\u0027m not sure how that got in before.",
+      "parentUuid": "05caf7dd_26cc0b69",
+      "range": {
+        "startLine": 74,
+        "startChar": 0,
+        "endLine": 74,
+        "endChar": 23
+      },
+      "revId": "7fdd9bfcc85a91b51d1c1f51b1ff1fded91184f4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
