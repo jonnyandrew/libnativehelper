@@ -53,7 +53,7 @@ LOCAL_EXPORT_C_INCLUDE_DIRS := \
     $(LOCAL_PATH)/include/nativehelper
 LOCAL_CFLAGS := -Werror
 LOCAL_SRC_FILES := $(local_src_files)
-LOCAL_LDLIBS := -llog
+LOCAL_LDFLAGS := -llog
 LOCAL_SDK_VERSION := 19
 LOCAL_NDK_STL_VARIANT := stlport_static
 LOCAL_ADDITIONAL_DEPENDENCIES := $(LOCAL_PATH)/Android.mk
@@ -74,7 +74,7 @@ LOCAL_EXPORT_C_INCLUDE_DIRS := \
     $(LOCAL_PATH)/include/nativehelper
 LOCAL_CFLAGS := -Werror
 LOCAL_SRC_FILES := $(local_src_files)
-LOCAL_LDLIBS := -llog -ldl
+LOCAL_LDFLAGS := -llog -ldl
 LOCAL_SDK_VERSION := 19
 LOCAL_NDK_STL_VARIANT := c++_static
 LOCAL_ADDITIONAL_DEPENDENCIES := $(LOCAL_PATH)/Android.mk
