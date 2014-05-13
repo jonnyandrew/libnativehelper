@@ -1,0 +1,9 @@
+Code-Review+1: Neil Fuller <nfuller@google.com>
+Code-Review+2: Elliott Hughes <enh@google.com>
+Code-Review+2: Brian Carlstrom <bdc@google.com>
+Verified+1: Narayan Kamath <narayan@google.com>
+Submitted-by: Narayan Kamath <narayan@google.com>
+Submitted-at: Tue, 13 May 2014 16:23:42 +0000
+Reviewed-on: https://android-review.googlesource.com/94184
+Project: platform/libnativehelper
+Branch: refs/heads/master
