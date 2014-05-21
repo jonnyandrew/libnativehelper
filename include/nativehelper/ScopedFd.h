@@ -17,6 +17,7 @@
 #ifndef SCOPED_FD_H_included
 #define SCOPED_FD_H_included
 
+#include <errno.h>
 #include <unistd.h>
 #include "JNIHelp.h"  // for TEMP_FAILURE_RETRY
 
