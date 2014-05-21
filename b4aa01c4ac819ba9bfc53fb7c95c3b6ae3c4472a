@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7f8344c5_d18d2edf",
+        "filename": "include/nativehelper/ScopedFd.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1010118
+      },
+      "writtenOn": "2014-05-21T21:10:52Z",
+      "side": 1,
+      "message": "doesn\u0027t this imply that JNIHelp.h is the correct place for errno.h then?",
+      "range": {
+        "startLine": 22,
+        "startChar": 0,
+        "endLine": 22,
+        "endChar": 47
+      },
+      "revId": "b4aa01c4ac819ba9bfc53fb7c95c3b6ae3c4472a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
