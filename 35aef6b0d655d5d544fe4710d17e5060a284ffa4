@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5f804079_27cdfe68",
+        "filename": "include/nativebridge/NativeBridge.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2014-06-11T00:41:44Z",
+      "side": 1,
+      "message": "What is this? In ART this seems to be always zero.",
+      "range": {
+        "startLine": 56,
+        "startChar": 55,
+        "endLine": 56,
+        "endChar": 66
+      },
+      "revId": "35aef6b0d655d5d544fe4710d17e5060a284ffa4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
