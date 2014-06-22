@@ -1,0 +1,8 @@
+Code-Review+2: Elliott Hughes <enh@google.com>
+Code-Review+2: Andreas Gampe <agampe@google.com>
+Verified+1: Ian Rogers <irogers@google.com>
+Submitted-by: Ian Rogers <irogers@google.com>
+Submitted-at: Sun, 22 Jun 2014 05:50:16 +0000
+Reviewed-on: https://android-review.googlesource.com/98184
+Project: platform/libnativehelper
+Branch: refs/heads/master
