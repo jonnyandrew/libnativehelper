@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2006 The Android Open Source Project
+ * Copyright (C) 2014 Sony Mobile Communications AB.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -12,6 +13,9 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
+ *
+ * NOTE: This file has been modified by Sony Mobile Communications AB.
+ * Modifications are licensed under the License.
  */
 
 #define LOG_TAG "JNIHelp"
@@ -172,16 +176,16 @@ static bool getStackTrace(C_JNIEnv* env, jthrowable exception, std::string& resu
         return false;
     }
 
-    jobject printWriter =
-            (*env)->NewObject(e, printWriterClass.get(), printWriterCtor, stringWriter.get());
-    if (printWriter == NULL) {
+    scoped_local_ref<jobject> printWriter(env,
+            (*env)->NewObject(e, printWriterClass.get(), printWriterCtor, stringWriter.get()));
+    if (printWriter.get() == NULL) {
         return false;
     }
 
     scoped_local_ref<jclass> exceptionClass(env, (*env)->GetObjectClass(e, exception)); // can't fail
     jmethodID printStackTraceMethod =
             (*env)->GetMethodID(e, exceptionClass.get(), "printStackTrace", "(Ljava/io/PrintWriter;)V");
-    (*env)->CallVoidMethod(e, exception, printStackTraceMethod, printWriter);
+    (*env)->CallVoidMethod(e, exception, printStackTraceMethod, printWriter.get());
 
     if ((*env)->ExceptionCheck(e)) {
         return false;
