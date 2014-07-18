@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "99df387f_a893bfda",
+        "filename": "include/nativehelper/ScopeGuard.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2014-07-18T18:05:48Z",
+      "side": 1,
+      "message": "what\u0027s this for? why\u0027s it in libnativehelper? why don\u0027t you just want UniquePtr?",
+      "revId": "2e19f8b608f838268c5fea6f78abbea4f859405e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
