@@ -16,6 +16,24 @@
       "revId": "2e19f8b608f838268c5fea6f78abbea4f859405e",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "99df387f_e874a7de",
+        "filename": "include/nativehelper/ScopeGuard.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1041673
+      },
+      "writtenOn": "2014-07-18T18:10:29Z",
+      "side": 1,
+      "message": "this cl uses it: https://android-review.googlesource.com/101981",
+      "parentUuid": "99df387f_a893bfda",
+      "revId": "2e19f8b608f838268c5fea6f78abbea4f859405e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
