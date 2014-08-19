@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "13fb2935_817e5cee",
+        "filename": "JNIHelp.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2014-08-19T02:52:44Z",
+      "side": 1,
+      "message": "we can\u0027t unconditionally #undef this because if we #undef it on the host, there\u0027s all kinds of breakage in the glibc sysroot \u003cstdio.h\u003e.",
+      "revId": "2fc9d0aeb7e3a8aa097a791b77d32114015fffb8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
