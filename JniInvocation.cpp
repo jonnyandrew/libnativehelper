@@ -55,9 +55,11 @@ static const char* kDebuggableFallback = "0";  // Not debuggable.
 #endif
 static const char* kLibraryFallback = "libart.so";
 
-const char* JniInvocation::GetLibrary(const char* library) {
+template<typename T> void UNUSED(const T&) {}
+
+const char* JniInvocation::GetLibrary(const char* library, char* buffer) {
 #ifdef HAVE_ANDROID_OS
-  char default_library[PROPERTY_VALUE_MAX];
+  char* default_library = buffer;
 
   char debuggable[PROPERTY_VALUE_MAX];
   property_get(kDebuggableSystemProperty, debuggable, kDebuggableFallback);
@@ -76,6 +78,7 @@ const char* JniInvocation::GetLibrary(const char* library) {
     property_get(kLibrarySystemProperty, default_library, kLibraryFallback);
   }
 #else
+  UNUSED(buffer);
   const char* default_library = kLibraryFallback;
 #endif
   if (library == NULL) {
@@ -86,7 +89,12 @@ const char* JniInvocation::GetLibrary(const char* library) {
 }
 
 bool JniInvocation::Init(const char* library) {
-  library = GetLibrary(library);
+#ifdef HAVE_ANDROID_OS
+  char buffer[PROPERTY_VALUE_MAX];
+#else
+  char* buffer = NULL;
+#endif
+  library = GetLibrary(library, buffer);
 
   handle_ = dlopen(library, RTLD_NOW);
   if (handle_ == NULL) {
