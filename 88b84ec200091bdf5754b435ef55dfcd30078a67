@@ -1,0 +1,7 @@
+Code-Review+2: Brian Carlstrom <bdc@google.com>
+Verified+1: Andreas Gampe <agampe@google.com>
+Submitted-by: Andreas Gampe <agampe@google.com>
+Submitted-at: Mon, 29 Sep 2014 19:49:45 +0000
+Reviewed-on: https://android-review.googlesource.com/108717
+Project: platform/libnativehelper
+Branch: refs/heads/master
