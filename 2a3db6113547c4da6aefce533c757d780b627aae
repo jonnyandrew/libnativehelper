@@ -22,6 +22,30 @@
       "revId": "2a3db6113547c4da6aefce533c757d780b627aae",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "303103d2_360c66ce",
+        "filename": "include/nativehelper/JniInvocation.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2014-09-29T18:42:51Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "303103d2_36daa6fa",
+      "range": {
+        "startLine": 42,
+        "startChar": 4,
+        "endLine": 42,
+        "endChar": 12
+      },
+      "revId": "2a3db6113547c4da6aefce533c757d780b627aae",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
