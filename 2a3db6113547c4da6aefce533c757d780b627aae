@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "303103d2_36daa6fa",
+        "filename": "include/nativehelper/JniInvocation.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1003723
+      },
+      "writtenOn": "2014-09-29T18:37:23Z",
+      "side": 1,
+      "message": "of size PROPERTY_VALUE_MAX",
+      "range": {
+        "startLine": 42,
+        "startChar": 4,
+        "endLine": 42,
+        "endChar": 12
+      },
+      "revId": "2a3db6113547c4da6aefce533c757d780b627aae",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
