@@ -16,6 +16,24 @@
       "revId": "92e6fea89d1f1703baff5241455bde3e52518d2d",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "75d9ae6e_c8c75320",
+        "filename": "include/nativehelper/JNIHelp.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 178,
+      "author": {
+        "id": 1010118
+      },
+      "writtenOn": "2014-11-04T22:11:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "35e3b620_b58462ed",
+      "revId": "92e6fea89d1f1703baff5241455bde3e52518d2d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
