@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "35e3b620_b58462ed",
+        "filename": "include/nativehelper/JNIHelp.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 178,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2014-11-04T22:06:57Z",
+      "side": 1,
+      "message": "What about GCC? `#if __cplusplus \u003e\u003d 201103L` should be sufficient and work for both compilers.",
+      "revId": "92e6fea89d1f1703baff5241455bde3e52518d2d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
