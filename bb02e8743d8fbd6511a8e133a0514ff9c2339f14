@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f5811e4d_b5e24ae3",
+        "filename": "include/nativehelper/UniquePtr.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 1010118
+      },
+      "writtenOn": "2014-11-05T18:39:22Z",
+      "side": 1,
+      "message": "I believe this is the only used and only added for ART, which now uses std::unique_ptr and not this code. We should remove this and the declaration above.",
+      "range": {
+        "startLine": 85,
+        "startChar": 1,
+        "endLine": 88,
+        "endChar": 5
+      },
+      "revId": "bb02e8743d8fbd6511a8e133a0514ff9c2339f14",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
