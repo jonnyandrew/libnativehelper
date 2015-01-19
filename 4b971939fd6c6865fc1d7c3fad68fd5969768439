@@ -33,6 +33,24 @@
       "revId": "4b971939fd6c6865fc1d7c3fad68fd5969768439",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0b4a1799_9e0af941",
+        "filename": "include/nativehelper/ScopeGuard.h",
+        "patchSetId": 6
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2015-01-19T17:31:09Z",
+      "side": 1,
+      "message": "yeah, i\u0027d still rather we used std::unique_ptr instead.",
+      "parentUuid": "4b408f75_dd764b40",
+      "revId": "4b971939fd6c6865fc1d7c3fad68fd5969768439",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
