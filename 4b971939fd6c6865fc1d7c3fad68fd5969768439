@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4bc24f1f_d3368c03",
+        "filename": "include/nativehelper/ScopeGuard.h",
+        "patchSetId": 6
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1014443
+      },
+      "writtenOn": "2015-01-19T13:56:54Z",
+      "side": 1,
+      "message": "isn\u0027t it available already ?",
+      "revId": "4b971939fd6c6865fc1d7c3fad68fd5969768439",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4b408f75_dd764b40",
+        "filename": "include/nativehelper/ScopeGuard.h",
+        "patchSetId": 6
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1014443
+      },
+      "writtenOn": "2015-01-19T13:56:54Z",
+      "side": 1,
+      "message": "I\u0027m generally a bit wary of putting things in libnativehelper. This library has extremely wide scope and it\u0027s harder to make changes to APIs or semantics once people start using these things.",
+      "revId": "4b971939fd6c6865fc1d7c3fad68fd5969768439",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
