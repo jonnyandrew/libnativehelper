@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "576be030_e35d32c6",
+        "filename": "include/nativehelper/JniConstants.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2015-03-07T00:53:03Z",
+      "side": 1,
+      "message": "(even though i don\u0027t doubt that FindClass is still relatively expensive, we should probably update this number or just lose it :-) )",
+      "revId": "25b67b1e271eff113655a038cbf353edc22edbaf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
