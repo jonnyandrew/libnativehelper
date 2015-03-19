@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "46825452_12bfaca0",
+        "filename": "Blueprints",
+        "patchSetId": 1
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2015-03-19T21:56:36Z",
+      "side": 1,
+      "message": "Maybe this whole thing should just be commented out since there isn\u0027t any NDK support yet.",
+      "revId": "9faf5d16f1721843ba66ca3243bd12b6c0946371",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
