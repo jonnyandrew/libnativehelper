@@ -63,6 +63,7 @@ struct JniConstants {
     static jclass inputStreamClass;
     static jclass integerClass;
     static jclass localeDataClass;
+    static jclass localSocketImplClass;
     static jclass longClass;
     static jclass methodClass;
     static jclass mutableIntClass;

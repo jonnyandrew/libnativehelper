@@ -46,6 +46,7 @@ jclass JniConstants::inflaterClass;
 jclass JniConstants::inputStreamClass;
 jclass JniConstants::integerClass;
 jclass JniConstants::localeDataClass;
+jclass JniConstants::localSocketImplClass;
 jclass JniConstants::longClass;
 jclass JniConstants::methodClass;
 jclass JniConstants::mutableIntClass;
@@ -113,6 +114,7 @@ void JniConstants::init(JNIEnv* env) {
     inputStreamClass = findClass(env, "java/io/InputStream");
     integerClass = findClass(env, "java/lang/Integer");
     localeDataClass = findClass(env, "libcore/icu/LocaleData");
+    localSocketImplClass = findClass(env, "libcore/io/LocalSocketImpl");
     longClass = findClass(env, "java/lang/Long");
     methodClass = findClass(env, "java/lang/reflect/Method");
     mutableIntClass = findClass(env, "android/util/MutableInt");
