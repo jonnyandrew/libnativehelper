@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "2ad60c0d_20a48abe",
+        "filename": "JNIHelp.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2015-08-03T21:28:01Z",
+      "side": 1,
+      "message": "I was trying to be defensive instead, but will change.",
+      "parentUuid": "2a536c56_beeee1f8",
+      "revId": "0149b3a13d77d1ff5d2a228a2e17ce92c8556537",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2a08cc62_36a4c0be",
         "filename": "JNIHelp.cpp",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2015-08-03T18:01:40Z",
       "side": 1,
       "message": "i realize FatalError shouldn\u0027t return, but if we\u0027re being this anal, it seems odd that there\u0027s no free(3).",
+      "revId": "0149b3a13d77d1ff5d2a228a2e17ce92c8556537",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4acfc072_61d21601",
+        "filename": "JNIHelp.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2015-08-03T21:28:01Z",
+      "side": 1,
+      "message": "Well, I just wanted to not turn off the warning. :-)\n\nI thought it would have been weird to free after a non-returning call. Potentially we can someday annotate FatalError with [[noreturn]], at which point a free() would then lead to a build break.\n\nIf you prefer, I\u0027ll add the free() calls, though.",
+      "parentUuid": "2a08cc62_36a4c0be",
       "revId": "0149b3a13d77d1ff5d2a228a2e17ce92c8556537",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
