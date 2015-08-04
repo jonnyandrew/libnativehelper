@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "aae91cd1_a2c5fa84",
+        "filename": "JNIHelp.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2015-08-04T01:19:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2ad60c0d_20a48abe",
+      "revId": "0149b3a13d77d1ff5d2a228a2e17ce92c8556537",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2a08cc62_36a4c0be",
         "filename": "JNIHelp.cpp",
         "patchSetId": 1
@@ -66,6 +84,24 @@
       "side": 1,
       "message": "Well, I just wanted to not turn off the warning. :-)\n\nI thought it would have been weird to free after a non-returning call. Potentially we can someday annotate FatalError with [[noreturn]], at which point a free() would then lead to a build break.\n\nIf you prefer, I\u0027ll add the free() calls, though.",
       "parentUuid": "2a08cc62_36a4c0be",
+      "revId": "0149b3a13d77d1ff5d2a228a2e17ce92c8556537",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ca157084_eb424510",
+        "filename": "JNIHelp.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2015-08-04T01:19:53Z",
+      "side": 1,
+      "message": "From personal discussion, leaving this as-is for now.",
+      "parentUuid": "4acfc072_61d21601",
       "revId": "0149b3a13d77d1ff5d2a228a2e17ce92c8556537",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
