@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8448d1a1_e1d44266",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2015-08-14T14:53:07Z",
+      "side": 1,
+      "message": "Bidi$Run\n\n(or \"jclass constant for Bidi$Run\")",
+      "revId": "97e6ddac5653a0a90f0df388c92f57e7c339d6a0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
