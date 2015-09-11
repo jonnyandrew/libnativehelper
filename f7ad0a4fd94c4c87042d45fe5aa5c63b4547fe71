@@ -22,6 +22,30 @@
       "revId": "f7ad0a4fd94c4c87042d45fe5aa5c63b4547fe71",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a46156bd_77c7b023",
+        "filename": "include/nativehelper/ScopedPrimitiveArray.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 1015378
+      },
+      "writtenOn": "2015-09-11T21:09:58Z",
+      "side": 1,
+      "message": "The reset API is questionable, it doesnt close an already opened region, maybe its only supposed to be called with the default constructor? What do you think.",
+      "parentUuid": "0465c2c3_dad505d3",
+      "range": {
+        "startLine": 53,
+        "startChar": 0,
+        "endLine": 53,
+        "endChar": 79
+      },
+      "revId": "f7ad0a4fd94c4c87042d45fe5aa5c63b4547fe71",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
