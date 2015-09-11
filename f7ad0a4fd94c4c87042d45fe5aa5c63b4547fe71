@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0465c2c3_dad505d3",
+        "filename": "include/nativehelper/ScopedPrimitiveArray.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 1022530
+      },
+      "writtenOn": "2015-09-11T20:35:22Z",
+      "side": 1,
+      "message": "Should we try to use GetArrayRegion in here, too?",
+      "range": {
+        "startLine": 53,
+        "startChar": 0,
+        "endLine": 53,
+        "endChar": 79
+      },
+      "revId": "f7ad0a4fd94c4c87042d45fe5aa5c63b4547fe71",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
