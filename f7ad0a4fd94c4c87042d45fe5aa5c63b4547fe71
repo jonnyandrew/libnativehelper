@@ -46,6 +46,30 @@
       "revId": "f7ad0a4fd94c4c87042d45fe5aa5c63b4547fe71",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e467cecb_19214b66",
+        "filename": "include/nativehelper/ScopedPrimitiveArray.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 1022530
+      },
+      "writtenOn": "2015-09-11T21:43:14Z",
+      "side": 1,
+      "message": "Maybe. It does not null-check the given array, either.\n\nI assume removing it may not be an easy option. (I am not sure if any use or if this is public.)\n\nI understand this CL does not regress it.\n\nIf you\u0027re up for it, would it work to factor out the constructor/destructor logic into separate functions and call them from reset()?",
+      "parentUuid": "a46156bd_77c7b023",
+      "range": {
+        "startLine": 53,
+        "startChar": 0,
+        "endLine": 53,
+        "endChar": 79
+      },
+      "revId": "f7ad0a4fd94c4c87042d45fe5aa5c63b4547fe71",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
