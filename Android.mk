@@ -30,13 +30,12 @@ LOCAL_SRC_FILES := \
     $(local_src_files) \
     JniInvocation.cpp
 LOCAL_SHARED_LIBRARIES := liblog
-LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE := libnativehelper
 LOCAL_CLANG := true
 LOCAL_CFLAGS := -Werror -fvisibility=protected
 LOCAL_C_INCLUDES := libcore/include
 LOCAL_SHARED_LIBRARIES += libcutils libdl
-LOCAL_ADDITIONAL_DEPENDENCIES := $(LOCAL_PATH)/Android.mk
+LOCAL_EXPORT_C_INCLUDE_DIRS := $(LOCAL_PATH)/include
 include $(BUILD_SHARED_LIBRARY)
 
 
@@ -47,7 +46,6 @@ include $(BUILD_SHARED_LIBRARY)
 #
 
 include $(CLEAR_VARS)
-LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE := libnativehelper_compat_libc++
 LOCAL_CLANG := true
 LOCAL_C_INCLUDES := \
@@ -59,7 +57,6 @@ LOCAL_SRC_FILES := $(local_src_files)
 LOCAL_LDFLAGS := -llog -ldl
 LOCAL_SDK_VERSION := 19
 LOCAL_NDK_STL_VARIANT := c++_static
-LOCAL_ADDITIONAL_DEPENDENCIES := $(LOCAL_PATH)/Android.mk
 include $(BUILD_SHARED_LIBRARY)
 
 
@@ -69,7 +66,6 @@ include $(BUILD_SHARED_LIBRARY)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := libnativehelper
-LOCAL_MODULE_TAGS := optional
 LOCAL_CLANG := true
 LOCAL_SRC_FILES := \
     $(local_src_files) \
@@ -78,7 +74,6 @@ LOCAL_CFLAGS := -Werror -fvisibility=protected
 LOCAL_C_INCLUDES := libcore/include
 LOCAL_SHARED_LIBRARIES := liblog
 LOCAL_LDFLAGS := -ldl
-LOCAL_ADDITIONAL_DEPENDENCIES := $(LOCAL_PATH)/Android.mk
 LOCAL_MULTILIB := both
 include $(BUILD_HOST_SHARED_LIBRARY)
 
@@ -89,7 +84,6 @@ include $(BUILD_HOST_SHARED_LIBRARY)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := libnativehelper
-LOCAL_MODULE_TAGS := optional
 LOCAL_CLANG := true
 LOCAL_SRC_FILES := \
     $(local_src_files) \
@@ -98,7 +92,6 @@ LOCAL_CFLAGS := -Werror -fvisibility=protected
 LOCAL_C_INCLUDES := libcore/include
 LOCAL_STATIC_LIBRARIES := liblog
 LOCAL_LDFLAGS := -ldl
-LOCAL_ADDITIONAL_DEPENDENCIES := $(LOCAL_PATH)/Android.mk
 LOCAL_MULTILIB := both
 include $(BUILD_HOST_STATIC_LIBRARY)
 
