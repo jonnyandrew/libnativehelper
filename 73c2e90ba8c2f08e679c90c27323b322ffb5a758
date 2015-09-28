@@ -16,6 +16,24 @@
       "revId": "73c2e90ba8c2f08e679c90c27323b322ffb5a758",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e4d7d85_fda24212",
+        "filename": "Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 1074628
+      },
+      "writtenOn": "2015-09-28T07:29:00Z",
+      "side": 1,
+      "message": "No host module that I\u0027ve found has needed it.\n\nrelocation_packer uses it, but then doesn\u0027t link against libnativehelper. It\u0027s using a header-only class (that has several other copies throughout the tree).",
+      "parentUuid": "0e5fa128_258fa523",
+      "revId": "73c2e90ba8c2f08e679c90c27323b322ffb5a758",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
