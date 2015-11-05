@@ -51,7 +51,8 @@ template <typename T, typename D = DefaultDelete<T> >
 class UniquePtr {
 public:
     // Construct a new UniquePtr, taking ownership of the given raw pointer.
-    explicit UniquePtr(T* ptr = NULL) : mPtr(ptr) {
+    explicit UniquePtr(T* ptr = NULL)
+        __attribute__((deprecated("use std::unique_ptr"))) : mPtr(ptr) {
     }
 
     ~UniquePtr() {
@@ -97,7 +98,8 @@ private:
 template <typename T, typename D>
 class UniquePtr<T[], D> {
 public:
-    explicit UniquePtr(T* ptr = NULL) : mPtr(ptr) {
+    explicit UniquePtr(T* ptr = NULL)
+        __attribute__((deprecated("use std::unique_ptr"))) : mPtr(ptr) {
     }
 
     ~UniquePtr() {
