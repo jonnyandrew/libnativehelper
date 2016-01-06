@@ -22,6 +22,30 @@
       "revId": "6bc946f3d5e94826037325c943787a4c8e952ede",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8a1aaf01_06d8c416",
+        "filename": "JniInvocation.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1041673
+      },
+      "writtenOn": "2016-01-06T21:50:40Z",
+      "side": 1,
+      "message": "it should work without it; when the functions returns 0 the debuggable is set to \"\\0\".",
+      "parentUuid": "0a4ddf0f_15ff8455",
+      "range": {
+        "startLine": 64,
+        "startChar": 2,
+        "endLine": 64,
+        "endChar": 23
+      },
+      "revId": "6bc946f3d5e94826037325c943787a4c8e952ede",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
