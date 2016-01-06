@@ -142,6 +142,30 @@
       "revId": "6bc946f3d5e94826037325c943787a4c8e952ede",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2a2b8319_f791ba3b",
+        "filename": "JniInvocation.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1014443
+      },
+      "writtenOn": "2016-01-06T22:58:41Z",
+      "side": 1,
+      "message": "Oops, not sure how i missed that. I guess I didn\u0027t expect that logic in libnativehelper but i don\u0027t think there\u0027s anywhere else we can put it.",
+      "parentUuid": "aa3e9347_8f7e21bb",
+      "range": {
+        "startLine": 64,
+        "startChar": 2,
+        "endLine": 64,
+        "endChar": 23
+      },
+      "revId": "6bc946f3d5e94826037325c943787a4c8e952ede",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
