@@ -166,6 +166,30 @@
       "revId": "6bc946f3d5e94826037325c943787a4c8e952ede",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aa3e9347_4f9c992d",
+        "filename": "JniInvocation.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2016-01-06T23:04:37Z",
+      "side": 1,
+      "message": "The logic is here because JniInvocation is used to start a runtime (and is used by app_process, thus). It\u0027s the \"We don\u0027t like to read system properties in ART\" thingy... :-)",
+      "parentUuid": "2a2b8319_f791ba3b",
+      "range": {
+        "startLine": 64,
+        "startChar": 2,
+        "endLine": 64,
+        "endChar": 23
+      },
+      "revId": "6bc946f3d5e94826037325c943787a4c8e952ede",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
