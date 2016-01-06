@@ -70,6 +70,30 @@
       "revId": "6bc946f3d5e94826037325c943787a4c8e952ede",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4a2c372e_98f3d98e",
+        "filename": "JniInvocation.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1014443
+      },
+      "writtenOn": "2016-01-06T21:58:03Z",
+      "side": 1,
+      "message": "All of this code relates to the ability to switch between ART and Dalvik (which was obsolete as of Lollipop). Not sure if it serves any other useful purpose.",
+      "parentUuid": "8a1aaf01_06d8c416",
+      "range": {
+        "startLine": 64,
+        "startChar": 2,
+        "endLine": 64,
+        "endChar": 23
+      },
+      "revId": "6bc946f3d5e94826037325c943787a4c8e952ede",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
