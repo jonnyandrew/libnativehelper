@@ -46,6 +46,30 @@
       "revId": "6bc946f3d5e94826037325c943787a4c8e952ede",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6a481bfe_121d5cf7",
+        "filename": "JniInvocation.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1019050
+      },
+      "writtenOn": "2016-01-06T21:57:42Z",
+      "side": 1,
+      "message": "lgtm.",
+      "parentUuid": "8a1aaf01_06d8c416",
+      "range": {
+        "startLine": 64,
+        "startChar": 2,
+        "endLine": 64,
+        "endChar": 23
+      },
+      "revId": "6bc946f3d5e94826037325c943787a4c8e952ede",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
