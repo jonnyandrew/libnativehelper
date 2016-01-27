@@ -22,6 +22,10 @@
 
 #include <stdlib.h>
 
+#include <atomic>
+
+#define UNLIKELY(EXPR) __builtin_expect(!!(EXPR), false)
+
 jclass JniConstants::bigDecimalClass;
 jclass JniConstants::booleanClass;
 jclass JniConstants::byteArrayClass;
@@ -77,12 +81,52 @@ jclass JniConstants::structUtsnameClass;
 jclass JniConstants::unixSocketAddressClass;
 jclass JniConstants::zipEntryClass;
 
+static std::atomic<jfieldID> gFileDescriptorClassDescriptor;
+static std::atomic<jmethodID> gFileDescriptorClassInit;
+static std::atomic<jmethodID> gReferenceClassGet;
+
 static jclass findClass(JNIEnv* env, const char* name) {
     ScopedLocalRef<jclass> localClass(env, env->FindClass(name));
     jclass result = reinterpret_cast<jclass>(env->NewGlobalRef(localClass.get()));
     if (result == NULL) {
         ALOGE("failed to find class '%s'", name);
         abort();
+    }
+    return result;
+}
+
+static inline jfieldID findAndCacheField(std::atomic<jfieldID>& cache, JNIEnv* env, jclass klass,
+                                         const char* name, const char* desc) {
+    jfieldID result = cache.load(std::memory_order_acquire);
+    if (UNLIKELY(result == NULL)) {
+        result = env->GetFieldID(klass, name, desc);
+        cache.store(result, std::memory_order_release);
+
+        // Sanity check: abort if the field is not available. This may happen if the class couldn't
+        // be initialized (e.g. still too early to resolve this field) or the programmer specified
+        // an incorrect field name or an incorrect type descriptor.
+        if (UNLIKELY(result == NULL)) {
+            ALOGV("failed to find field '%s:%s'", name, desc);
+            abort();
+        }
+    }
+    return result;
+}
+
+static inline jmethodID findAndCacheMethod(std::atomic<jmethodID>& cache, JNIEnv* env,
+                                           jclass klass, const char* name, const char* signature) {
+    jmethodID result = cache.load(std::memory_order_acquire);
+    if (UNLIKELY(result == NULL)) {
+        result = env->GetMethodID(klass, name, signature);
+        cache.store(result, std::memory_order_release);
+
+        // Sanity check: abort if the method is not available. This may happen if the class couldn't
+        // be initialized (e.g. still too early to resolve this method) or the programmer specified
+        // an incorrect method name or an incorrect signature.
+        if (UNLIKELY(result == NULL)) {
+            ALOGV("failed to find method '%s%s'", name, signature);
+            abort();
+        }
     }
     return result;
 }
@@ -142,4 +186,25 @@ void JniConstants::init(JNIEnv* env) {
     structUtsnameClass = findClass(env, "android/system/StructUtsname");
     unixSocketAddressClass = findClass(env, "android/system/UnixSocketAddress");
     zipEntryClass = findClass(env, "java/util/zip/ZipEntry");
+
+    // Initialize the cached jfieldIDs and jmethodIDs with NULL. We have to reset them because these
+    // may be changed between different VM initializations (p.s. VM may be set up and torn down
+    // several times in the unit tests.)
+    gFileDescriptorClassDescriptor.store(NULL, std::memory_order_release);
+    gFileDescriptorClassInit.store(NULL, std::memory_order_release);
+    gReferenceClassGet.store(NULL, std::memory_order_release);
+}
+
+jfieldID JniConstants::getFileDescriptorClassDescriptor(JNIEnv* env) {
+    return findAndCacheField(gFileDescriptorClassDescriptor, env, fileDescriptorClass,
+                             "descriptor", "I");
+}
+
+jmethodID JniConstants::getFileDescriptorClassInit(JNIEnv* env) {
+    return findAndCacheMethod(gFileDescriptorClassInit, env, fileDescriptorClass, "<init>", "()V");
+}
+
+jmethodID JniConstants::getReferenceClassGet(JNIEnv* env) {
+    return findAndCacheMethod(gReferenceClassGet, env, referenceClass, "get",
+                              "()Ljava/lang/Object;");
 }

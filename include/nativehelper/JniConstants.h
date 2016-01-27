@@ -93,6 +93,10 @@ struct JniConstants {
     static jclass structUtsnameClass;
     static jclass unixSocketAddressClass;
     static jclass zipEntryClass;
+
+    static jfieldID getFileDescriptorClassDescriptor(JNIEnv* env);
+    static jmethodID getFileDescriptorClassInit(JNIEnv* env);
+    static jmethodID getReferenceClassGet(JNIEnv* env);
 };
 
 #define NATIVE_METHOD(className, functionName, signature) \
