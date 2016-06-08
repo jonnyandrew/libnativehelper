@@ -33,11 +33,16 @@
  * FindClass is still called in a couple of situations: when throwing exceptions, and in some of
  * the serialization code. The former is clearly not a performance case, and we're currently
  * assuming that neither is the latter.
- *
- * TODO: similar arguments hold for field and method IDs; we should cache them centrally too.
  */
 struct JniConstants {
+    // This function will initialize the class cache.
     static void init(JNIEnv* env);
+
+    // This function will initialize the fields and methods cache.
+    static void initFieldsAndMethods(JNIEnv* env);
+
+    // This function clears the whole cache.
+    static void clear();
 
     static jclass booleanClass;
     static jclass byteArrayClass;
@@ -80,6 +85,14 @@ struct JniConstants {
     static jclass structUtsnameClass;
     static jclass unixSocketAddressClass;
     static jclass zipEntryClass;
+
+    // java.io.FileDescriptor.descriptor.
+    static jfieldID fileDescriptorDescriptorField;
+
+    // void java.io.FileDescriptor.<init>().
+    static jmethodID fileDescriptorInitMethod;
+    // Object java.lang.ref.Reference.get()
+    static jmethodID referenceGetMethod;
 };
 
 #define NATIVE_METHOD(className, functionName, signature) \

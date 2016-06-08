@@ -25,8 +25,12 @@
 #include <atomic>
 #include <mutex>
 
-static std::atomic<bool> g_constants_initialized(false);
-static std::mutex g_constants_mutex;
+static std::atomic<bool> g_classes_initialized(false);
+static std::mutex g_classes_mutex;
+
+static std::atomic<bool> g_fields_and_methods_initialized(false);
+static std::mutex g_fields_and_methods_mutex;
+
 
 jclass JniConstants::booleanClass;
 jclass JniConstants::byteArrayClass;
@@ -70,6 +74,11 @@ jclass JniConstants::structUtsnameClass;
 jclass JniConstants::unixSocketAddressClass;
 jclass JniConstants::zipEntryClass;
 
+jfieldID JniConstants::fileDescriptorDescriptorField;
+
+jmethodID JniConstants::fileDescriptorInitMethod;
+jmethodID JniConstants::referenceGetMethod;
+
 static jclass findClass(JNIEnv* env, const char* name) {
     ScopedLocalRef<jclass> localClass(env, env->FindClass(name));
     jclass result = reinterpret_cast<jclass>(env->NewGlobalRef(localClass.get()));
@@ -80,16 +89,39 @@ static jclass findClass(JNIEnv* env, const char* name) {
     return result;
 }
 
+static jfieldID findField(JNIEnv* env, jclass klass, const char* name, const char* desc) {
+    jfieldID result = env->GetFieldID(klass, name, desc);
+    if (result == NULL) {
+        ALOGV("failed to find field '%s:%s'", name, desc);
+        abort();
+    }
+    return result;
+}
+
+static jmethodID findMethod(JNIEnv* env, jclass klass, const char* name, const char* signature) {
+    jmethodID result = env->GetMethodID(klass, name, signature);
+    if (result == NULL) {
+        ALOGV("failed to find method '%s%s'", name, signature);
+        abort();
+    }
+    return result;
+}
+
+void JniConstants::clear() {
+    g_classes_initialized = false;
+    g_fields_and_methods_initialized = false;
+}
+
 void JniConstants::init(JNIEnv* env) {
     // Fast check
-    if (g_constants_initialized) {
+    if (g_classes_initialized) {
       // already initialized
       return;
     }
 
     // Slightly slower check
-    std::lock_guard<std::mutex> guard(g_constants_mutex);
-    if (g_constants_initialized) {
+    std::lock_guard<std::mutex> guard(g_classes_mutex);
+    if (g_classes_initialized) {
       // already initialized
       return;
     }
@@ -136,5 +168,26 @@ void JniConstants::init(JNIEnv* env) {
     unixSocketAddressClass = findClass(env, "android/system/UnixSocketAddress");
     zipEntryClass = findClass(env, "java/util/zip/ZipEntry");
 
-    g_constants_initialized = true;
+    g_classes_initialized = true;
+}
+
+void JniConstants::initFieldsAndMethods(JNIEnv* env) {
+    // Fast check
+    if (g_fields_and_methods_initialized) {
+      // already initialized
+      return;
+    }
+
+    // Slightly slower check
+    std::lock_guard<std::mutex> guard(g_fields_and_methods_mutex);
+    if (g_fields_and_methods_initialized) {
+      // already initialized
+      return;
+    }
+
+    fileDescriptorDescriptorField = findField(env, fileDescriptorClass, "descriptor", "I");
+    fileDescriptorInitMethod = findMethod(env, fileDescriptorClass, "<init>", "()V");
+    referenceGetMethod = findMethod(env, referenceClass, "get", "()Ljava/lang/Object;");
+
+    g_fields_and_methods_initialized = true;
 }
