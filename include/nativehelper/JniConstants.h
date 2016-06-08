@@ -38,6 +38,7 @@
  */
 struct JniConstants {
     static void init(JNIEnv* env);
+    static void initAll(JNIEnv* env);
 
     static jclass booleanClass;
     static jclass byteArrayClass;
@@ -77,6 +78,14 @@ struct JniConstants {
     static jclass structUtsnameClass;
     static jclass unixSocketAddressClass;
     static jclass zipEntryClass;
+
+    static jfieldID fileDescriptorClassDescriptor;
+    static jmethodID fileDescriptorClassInit;
+    static jmethodID referenceClassGet;
+
+private:
+    static void initClassConstants(JNIEnv* env);
+    static void initFieldMethodConstants(JNIEnv* env);
 };
 
 #define NATIVE_METHOD(className, functionName, signature) \
