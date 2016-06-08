@@ -37,7 +37,16 @@
  * TODO: similar arguments hold for field and method IDs; we should cache them centrally too.
  */
 struct JniConstants {
+    // This function will (re)-initialize the class cache, and invalide the fields and methods.
+    // This should only be called when a new runtime instance is started.
     static void init(JNIEnv* env);
+
+    // Ensure that the classes are initialized. Will not re-initialize things.
+    static void ensureClassesInitialized(JNIEnv* env);
+    // Ensure that the fields are initialized. Will not re-initialize things.
+    static void ensureFieldsInitialized(JNIEnv* env);
+    // Ensure that the methods are initialized. Will not re-initialize things.
+    static void ensureMethodsInitialized(JNIEnv* env);
 
     static jclass booleanClass;
     static jclass byteArrayClass;
@@ -80,6 +89,16 @@ struct JniConstants {
     static jclass structUtsnameClass;
     static jclass unixSocketAddressClass;
     static jclass zipEntryClass;
+
+    static jfieldID fileDescriptorClassDescriptor;
+
+    static jmethodID fileDescriptorClassInit;
+    static jmethodID referenceClassGet;
+
+private:
+    static void initClassConstants(JNIEnv* env);
+    static void initFieldConstants(JNIEnv* env);
+    static void initMethodConstants(JNIEnv* env);
 };
 
 #define NATIVE_METHOD(className, functionName, signature) \

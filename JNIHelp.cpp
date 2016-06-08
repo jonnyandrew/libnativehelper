@@ -326,9 +326,10 @@ const char* jniStrError(int errnum, char* buf, size_t buflen) {
 
 jobject jniCreateFileDescriptor(C_JNIEnv* env, int fd) {
     JNIEnv* e = reinterpret_cast<JNIEnv*>(env);
-    JniConstants::init(e);
-    static jmethodID ctor = e->GetMethodID(JniConstants::fileDescriptorClass, "<init>", "()V");
-    jobject fileDescriptor = (*env)->NewObject(e, JniConstants::fileDescriptorClass, ctor);
+    JniConstants::ensureClassesInitialized(e);
+    JniConstants::ensureFieldsInitialized(e);
+    jobject fileDescriptor = (*env)->NewObject(e, JniConstants::fileDescriptorClass,
+                                               JniConstants::fileDescriptorClassInit);
     // NOTE: NewObject ensures that an OutOfMemoryError will be seen by the Java
     // caller if the alloc fails, so we just return NULL when that happens.
     if (fileDescriptor != NULL)  {
@@ -339,10 +340,9 @@ jobject jniCreateFileDescriptor(C_JNIEnv* env, int fd) {
 
 int jniGetFDFromFileDescriptor(C_JNIEnv* env, jobject fileDescriptor) {
     JNIEnv* e = reinterpret_cast<JNIEnv*>(env);
-    JniConstants::init(e);
-    static jfieldID fid = e->GetFieldID(JniConstants::fileDescriptorClass, "descriptor", "I");
+    JniConstants::ensureFieldsInitialized(e);
     if (fileDescriptor != NULL) {
-        return (*env)->GetIntField(e, fileDescriptor, fid);
+        return (*env)->GetIntField(e, fileDescriptor, JniConstants::fileDescriptorClassDescriptor);
     } else {
         return -1;
     }
@@ -350,16 +350,14 @@ int jniGetFDFromFileDescriptor(C_JNIEnv* env, jobject fileDescriptor) {
 
 void jniSetFileDescriptorOfFD(C_JNIEnv* env, jobject fileDescriptor, int value) {
     JNIEnv* e = reinterpret_cast<JNIEnv*>(env);
-    JniConstants::init(e);
-    static jfieldID fid = e->GetFieldID(JniConstants::fileDescriptorClass, "descriptor", "I");
-    (*env)->SetIntField(e, fileDescriptor, fid, value);
+    JniConstants::ensureFieldsInitialized(e);
+    (*env)->SetIntField(e, fileDescriptor, JniConstants::fileDescriptorClassDescriptor, value);
 }
 
 jobject jniGetReferent(C_JNIEnv* env, jobject ref) {
     JNIEnv* e = reinterpret_cast<JNIEnv*>(env);
-    JniConstants::init(e);
-    static jmethodID get = e->GetMethodID(JniConstants::referenceClass, "get", "()Ljava/lang/Object;");
-    return (*env)->CallObjectMethod(e, ref, get);
+    JniConstants::ensureMethodsInitialized(e);
+    return (*env)->CallObjectMethod(e, ref, JniConstants::referenceClassGet);
 }
 
 jstring jniCreateString(C_JNIEnv* env, const jchar* unicodeChars, jsize len) {

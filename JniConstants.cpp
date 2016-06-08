@@ -25,7 +25,8 @@
 #include <atomic>
 #include <mutex>
 
-static std::atomic<bool> g_constants_initialized(false);
+static std::atomic<bool> g_class_constants_initialized(false);
+static std::atomic<bool> g_field_method_constants_initialized(false);
 static std::mutex g_constants_mutex;
 
 jclass JniConstants::booleanClass;
@@ -70,6 +71,11 @@ jclass JniConstants::structUtsnameClass;
 jclass JniConstants::unixSocketAddressClass;
 jclass JniConstants::zipEntryClass;
 
+jfieldID JniConstants::fileDescriptorClassDescriptor;
+
+jmethodID JniConstants::fileDescriptorClassInit;
+jmethodID JniConstants::referenceClassGet;
+
 static jclass findClass(JNIEnv* env, const char* name) {
     ScopedLocalRef<jclass> localClass(env, env->FindClass(name));
     jclass result = reinterpret_cast<jclass>(env->NewGlobalRef(localClass.get()));
@@ -80,20 +86,73 @@ static jclass findClass(JNIEnv* env, const char* name) {
     return result;
 }
 
-void JniConstants::init(JNIEnv* env) {
-    // Fast check
-    if (g_constants_initialized) {
-      // already initialized
-      return;
+static jfieldID findField(JNIEnv* env, jclass klass, const char* name, const char* desc) {
+    jfieldID result = env->GetFieldID(klass, name, desc);
+    if (result == NULL) {
+        ALOGV("failed to find field '%s:%s'", name, desc);
+        abort();
+    }
+    return result;
+}
+
+static jmethodID findMethod(JNIEnv* env, jclass klass, const char* name, const char* signature) {
+    jmethodID result = env->GetMethodID(klass, name, signature);
+    if (result == NULL) {
+        ALOGV("failed to find method '%s%s'", name, signature);
+        abort();
+    }
+    return result;
+}
+
+// Call once with double-checked locking pattern.  This is a clone of std::call_once().  We can't
+// simply use std::call_once() because we would like to reset the once_flag.
+template<typename Callable, typename... Args>
+static inline void callOnce(std::atomic<bool>& once_flag, Callable f, Args&&... args) {
+    if (once_flag) {
+        return;
     }
 
-    // Slightly slower check
     std::lock_guard<std::mutex> guard(g_constants_mutex);
-    if (g_constants_initialized) {
-      // already initialized
-      return;
+    if (once_flag) {
+        return;
     }
 
+    f(std::forward<Args>(args)...);
+
+    once_flag = true;
+}
+
+// This method re-initializes the class constants, and resets the fields and methods.
+//
+// init() is called early in runtime startup, and is meant to reset the state so that
+// runtime can be shutdown and restarted.
+void JniConstants::init(JNIEnv* env) {
+    initClassConstants(env);
+    g_class_constants_initialized = true;
+    g_field_method_constants_initialized = false;
+}
+
+void JniConstants::ensureClassesInitialized(JNIEnv* env) {
+    callOnce(g_class_constants_initialized, initClassConstants, env);
+}
+
+// TODO: make them unique.
+void JniConstants::ensureFieldsInitialized(JNIEnv* env) {
+    auto init_field_method = [&](JNIEnv* env_in) {
+        JniConstants::initFieldConstants(env_in);
+        JniConstants::initMethodConstants(env_in);
+    };
+    callOnce(g_field_method_constants_initialized, init_field_method, env);
+}
+void JniConstants::ensureMethodsInitialized(JNIEnv* env) {
+    auto init_field_method = [&](JNIEnv* env_in) {
+        JniConstants::initFieldConstants(env_in);
+        JniConstants::initMethodConstants(env_in);
+    };
+    callOnce(g_field_method_constants_initialized, init_field_method, env);
+}
+
+void JniConstants::initClassConstants(JNIEnv* env) {
     booleanClass = findClass(env, "java/lang/Boolean");
     byteArrayClass = findClass(env, "[B");
     calendarClass = findClass(env, "java/util/Calendar");
@@ -135,6 +194,15 @@ void JniConstants::init(JNIEnv* env) {
     structUtsnameClass = findClass(env, "android/system/StructUtsname");
     unixSocketAddressClass = findClass(env, "android/system/UnixSocketAddress");
     zipEntryClass = findClass(env, "java/util/zip/ZipEntry");
+}
 
-    g_constants_initialized = true;
+void JniConstants::initFieldConstants(JNIEnv* env) {
+    ensureClassesInitialized(env);
+    fileDescriptorClassDescriptor = findField(env, fileDescriptorClass, "descriptor", "I");
+}
+
+void JniConstants::initMethodConstants(JNIEnv* env) {
+    ensureClassesInitialized(env);
+    fileDescriptorClassInit = findMethod(env, fileDescriptorClass, "<init>", "()V");
+    referenceClassGet = findMethod(env, referenceClass, "get", "()Ljava/lang/Object;");
 }
