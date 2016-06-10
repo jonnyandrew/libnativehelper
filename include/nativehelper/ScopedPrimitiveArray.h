@@ -23,6 +23,7 @@
 // ScopedFloatArrayRO, ScopedIntArrayRO, ScopedLongArrayRO, and ScopedShortArrayRO provide
 // convenient read-only access to Java arrays from JNI code. This is cheaper than read-write
 // access and should be used by default.
+// NOLINT: clang-tidy warns about type parameters followed by binary operator.
 #define INSTANTIATE_SCOPED_PRIMITIVE_ARRAY_RO(PRIMITIVE_TYPE, NAME) \
     class Scoped ## NAME ## ArrayRO { \
     public: \
@@ -62,7 +63,7 @@
         static const jsize buffer_size = 1024; \
         JNIEnv* const mEnv; \
         PRIMITIVE_TYPE ## Array mJavaArray; \
-        PRIMITIVE_TYPE* mRawArray; \
+        PRIMITIVE_TYPE* mRawArray; /* NOLINT */ \
         jsize mSize; \
         PRIMITIVE_TYPE mBuffer[buffer_size]; \
         DISALLOW_COPY_AND_ASSIGN(Scoped ## NAME ## ArrayRO); \
@@ -83,6 +84,7 @@ INSTANTIATE_SCOPED_PRIMITIVE_ARRAY_RO(jshort, Short);
 // ScopedFloatArrayRW, ScopedIntArrayRW, ScopedLongArrayRW, and ScopedShortArrayRW provide
 // convenient read-write access to Java arrays from JNI code. These are more expensive,
 // since they entail a copy back onto the Java heap, and should only be used when necessary.
+// NOLINT: clang-tidy warns about type parameters followed by binary operator.
 #define INSTANTIATE_SCOPED_PRIMITIVE_ARRAY_RW(PRIMITIVE_TYPE, NAME) \
     class Scoped ## NAME ## ArrayRW { \
     public: \
@@ -108,13 +110,13 @@ INSTANTIATE_SCOPED_PRIMITIVE_ARRAY_RO(jshort, Short);
         const PRIMITIVE_TYPE* get() const { return mRawArray; } \
         PRIMITIVE_TYPE ## Array getJavaArray() const { return mJavaArray; } \
         const PRIMITIVE_TYPE& operator[](size_t n) const { return mRawArray[n]; } \
-        PRIMITIVE_TYPE* get() { return mRawArray; } \
-        PRIMITIVE_TYPE& operator[](size_t n) { return mRawArray[n]; } \
+        PRIMITIVE_TYPE* get() { return mRawArray; } /* NOLINT */ \
+        PRIMITIVE_TYPE& operator[](size_t n) { return mRawArray[n]; } /* NOLINT */ \
         size_t size() const { return mEnv->GetArrayLength(mJavaArray); } \
     private: \
         JNIEnv* const mEnv; \
         PRIMITIVE_TYPE ## Array mJavaArray; \
-        PRIMITIVE_TYPE* mRawArray; \
+        PRIMITIVE_TYPE* mRawArray; /* NOLINT */ \
         DISALLOW_COPY_AND_ASSIGN(Scoped ## NAME ## ArrayRW); \
     }
 
