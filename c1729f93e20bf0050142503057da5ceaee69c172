@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0f8ee441_ee335f03",
+        "filename": "include/nativehelper/ScopedPrimitiveArray.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2016-06-10T22:50:32Z",
+      "side": 1,
+      "message": "What is the actual diagnostic here?",
+      "revId": "c1729f93e20bf0050142503057da5ceaee69c172",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
