@@ -62,20 +62,20 @@
         static const jsize buffer_size = 1024; \
         JNIEnv* const mEnv; \
         PRIMITIVE_TYPE ## Array mJavaArray; \
-        PRIMITIVE_TYPE* mRawArray; \
+        PRIMITIVE_TYPE* mRawArray; /* NOLINT */ \
         jsize mSize; \
         PRIMITIVE_TYPE mBuffer[buffer_size]; \
         DISALLOW_COPY_AND_ASSIGN(Scoped ## NAME ## ArrayRO); \
     }
 
-INSTANTIATE_SCOPED_PRIMITIVE_ARRAY_RO(jboolean, Boolean);
-INSTANTIATE_SCOPED_PRIMITIVE_ARRAY_RO(jbyte, Byte);
-INSTANTIATE_SCOPED_PRIMITIVE_ARRAY_RO(jchar, Char);
-INSTANTIATE_SCOPED_PRIMITIVE_ARRAY_RO(jdouble, Double);
-INSTANTIATE_SCOPED_PRIMITIVE_ARRAY_RO(jfloat, Float);
-INSTANTIATE_SCOPED_PRIMITIVE_ARRAY_RO(jint, Int);
-INSTANTIATE_SCOPED_PRIMITIVE_ARRAY_RO(jlong, Long);
-INSTANTIATE_SCOPED_PRIMITIVE_ARRAY_RO(jshort, Short);
+INSTANTIATE_SCOPED_PRIMITIVE_ARRAY_RO(jboolean, Boolean);  // NOLINT
+INSTANTIATE_SCOPED_PRIMITIVE_ARRAY_RO(jbyte, Byte);  // NOLINT
+INSTANTIATE_SCOPED_PRIMITIVE_ARRAY_RO(jchar, Char);  // NOLINT
+INSTANTIATE_SCOPED_PRIMITIVE_ARRAY_RO(jdouble, Double);  // NOLINT
+INSTANTIATE_SCOPED_PRIMITIVE_ARRAY_RO(jfloat, Float);  // NOLINT
+INSTANTIATE_SCOPED_PRIMITIVE_ARRAY_RO(jint, Int);  // NOLINT
+INSTANTIATE_SCOPED_PRIMITIVE_ARRAY_RO(jlong, Long);  // NOLINT
+INSTANTIATE_SCOPED_PRIMITIVE_ARRAY_RO(jshort, Short);  // NOLINT
 
 #undef INSTANTIATE_SCOPED_PRIMITIVE_ARRAY_RO
 
@@ -108,13 +108,13 @@ INSTANTIATE_SCOPED_PRIMITIVE_ARRAY_RO(jshort, Short);
         const PRIMITIVE_TYPE* get() const { return mRawArray; } \
         PRIMITIVE_TYPE ## Array getJavaArray() const { return mJavaArray; } \
         const PRIMITIVE_TYPE& operator[](size_t n) const { return mRawArray[n]; } \
-        PRIMITIVE_TYPE* get() { return mRawArray; } \
-        PRIMITIVE_TYPE& operator[](size_t n) { return mRawArray[n]; } \
+        PRIMITIVE_TYPE* get() { return mRawArray; } /* NOLINT */ \
+        PRIMITIVE_TYPE& operator[](size_t n) { return mRawArray[n]; } /* NOLINT */ \
         size_t size() const { return mEnv->GetArrayLength(mJavaArray); } \
     private: \
         JNIEnv* const mEnv; \
         PRIMITIVE_TYPE ## Array mJavaArray; \
-        PRIMITIVE_TYPE* mRawArray; \
+        PRIMITIVE_TYPE* mRawArray; /* NOLINT */ \
         DISALLOW_COPY_AND_ASSIGN(Scoped ## NAME ## ArrayRW); \
     }
 
