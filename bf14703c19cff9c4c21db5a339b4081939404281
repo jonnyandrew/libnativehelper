@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e2a6a7a_37735a8b",
+        "filename": "include/nativehelper/ScopedPrimitiveArray.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2016-06-21T22:01:43Z",
+      "side": 1,
+      "message": "Can we go one layer deeper here to remove the NOLINT? Can you try creating a macro like:\n#define POINTER_TYPE(T) T*\n\nand replacing the PRIMITIVE_TYPE* here to see if it still complains? I think this is a known legitimate use here, so if there is a better way to suppress it without NOLINT, I think that would be preferable. I guess we need one for ADDRESS_TYPE as well with T\u0026.",
+      "revId": "bf14703c19cff9c4c21db5a339b4081939404281",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
