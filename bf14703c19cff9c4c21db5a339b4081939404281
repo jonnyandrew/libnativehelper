@@ -16,6 +16,24 @@
       "revId": "bf14703c19cff9c4c21db5a339b4081939404281",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e2a6a7a_e88e0feb",
+        "filename": "include/nativehelper/ScopedPrimitiveArray.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 1052399
+      },
+      "writtenOn": "2016-06-21T23:17:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0e2a6a7a_37735a8b",
+      "revId": "bf14703c19cff9c4c21db5a339b4081939404281",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
