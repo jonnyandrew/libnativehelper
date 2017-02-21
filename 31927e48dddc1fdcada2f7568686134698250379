@@ -1,0 +1,9 @@
+Presubmit-Verified+1: Treehugger Robot <treehugger-gerrit@google.com>
+Code-Review+2: Narayan Kamath <narayan@google.com>
+Code-Review+2: Przemyslaw Szczepaniak <pszczepaniak@google.com>
+Verified+1: Igor Murashkin <iam@google.com>
+Submitted-by: Treehugger Robot <treehugger-gerrit@google.com>
+Submitted-at: Tue, 21 Feb 2017 23:42:20 +0000
+Reviewed-on: https://android-review.googlesource.com/340819
+Project: platform/libnativehelper
+Branch: refs/heads/master
