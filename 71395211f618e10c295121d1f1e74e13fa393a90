@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "825a28e4_32a9830f",
+        "filename": "JniConstants.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 1041673
+      },
+      "writtenOn": "2017-03-02T00:09:38Z",
+      "side": 1,
+      "message": "call_once?",
+      "range": {
+        "startLine": 122,
+        "startChar": 4,
+        "endLine": 122,
+        "endChar": 22
+      },
+      "revId": "71395211f618e10c295121d1f1e74e13fa393a90",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "90cdf446_26417209",
+        "filename": "JniConstants.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 123,
+      "author": {
+        "id": 1041673
+      },
+      "writtenOn": "2017-03-02T00:09:38Z",
+      "side": 1,
+      "message": "and remove this?",
+      "revId": "71395211f618e10c295121d1f1e74e13fa393a90",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1dc4f5cf_28cf37c0",
+        "filename": "JniConstants.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 1041673
+      },
+      "writtenOn": "2017-03-02T00:09:38Z",
+      "side": 1,
+      "message": "of VM initialization?",
+      "range": {
+        "startLine": 130,
+        "startChar": 36,
+        "endLine": 130,
+        "endChar": 41
+      },
+      "revId": "71395211f618e10c295121d1f1e74e13fa393a90",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
