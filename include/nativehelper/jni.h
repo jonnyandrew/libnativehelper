@@ -1028,6 +1028,13 @@ struct _JNIEnv {
     /* added in JNI 1.6 */
     jobjectRefType GetObjectRefType(jobject obj)
     { return functions->GetObjectRefType(this, obj); }
+
+#if __cplusplus >= 201103L
+    /* In C++11, char16_t and uint16_t are two distinct types. */
+    jstring NewString(const char16_t* unicodeChars, jsize len)
+    { return functions->NewString(
+        this, reinterpret_cast<const jchar*>(unicodeChars), len); }
+#endif /*__cplusplus >= 201103L*/
 #endif /*__cplusplus*/
 };
 
