@@ -12,6 +12,13 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+cc_library_headers {
+    name: "libnativehelper_headers",
+    host_supported: true,
+    export_include_dirs: ["include/nativehelper"],
+    vendor_available: true,
+}
+
 cc_library {
     name: "libnativehelper",
     host_supported: true,
