@@ -31,10 +31,12 @@
 //   }
 class ScopedUtfChars {
  public:
-  ScopedUtfChars(JNIEnv* env, jstring s) : env_(env), string_(s) {
+  ScopedUtfChars(JNIEnv* env, jstring s, bool throw_if_null = true) : env_(env), string_(s) {
     if (s == NULL) {
       utf_chars_ = NULL;
-      jniThrowNullPointerException(env, NULL);
+      if (throw_if_null) {
+        jniThrowNullPointerException(env, NULL);
+      }
     } else {
       utf_chars_ = env->GetStringUTFChars(s, NULL);
     }
