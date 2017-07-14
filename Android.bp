@@ -77,6 +77,12 @@ ndk_headers {
     license: "NOTICE",
 }
 
+cc_library_headers {
+    name: "libnativehelper_headers",
+    export_include_dirs: ["vndk_include"],
+    vendor: true,
+}
+
 //
 // Tests.
 //
