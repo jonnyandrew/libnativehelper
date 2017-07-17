@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "49da35c1_efd670e7",
+        "filename": "include/nativehelper/jni.h",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-07-17T20:00:41Z",
+      "side": 1,
+      "message": "Can we fix soong to use the regular build rules instead of hardcoding jni.h?",
+      "revId": "05a41dbf7548ee14d7f9d90dc1bec414bd9b255a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
