@@ -87,6 +87,24 @@
       "revId": "05a41dbf7548ee14d7f9d90dc1bec414bd9b255a",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "cb1a0607_91676b31",
+        "filename": "include/nativehelper/jni.h",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1120458
+      },
+      "writtenOn": "2017-07-17T20:13:32Z",
+      "side": 1,
+      "message": "Yes. I already have CLs to fix all the cases in AOSP. However, I need this to merge before I can fix it in master.",
+      "parentUuid": "607622ed_cd806c52",
+      "revId": "05a41dbf7548ee14d7f9d90dc1bec414bd9b255a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
