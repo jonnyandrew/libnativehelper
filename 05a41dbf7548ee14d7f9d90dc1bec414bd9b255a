@@ -34,6 +34,24 @@
       "revId": "05a41dbf7548ee14d7f9d90dc1bec414bd9b255a",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "93cf1f41_a6e99026",
+        "filename": "include/nativehelper/jni.h",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2017-07-17T20:05:51Z",
+      "side": 1,
+      "message": "FYI, this is the way Gerrit shows symlinks.  This patch makes include/nativehelper/jni.h a symlink to ../../include_jni/jni.h",
+      "parentUuid": "e21d4527_0c17cb67",
+      "revId": "05a41dbf7548ee14d7f9d90dc1bec414bd9b255a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
