@@ -181,6 +181,24 @@
     },
     {
       "key": {
+        "uuid": "db789a46_c089ad6f",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 1120458
+      },
+      "writtenOn": "2017-07-17T19:09:34Z",
+      "side": 1,
+      "message": "In my current patchset, I\u0027ve made it so that vendor and platform uses the same include. You can also see the followup bug I filed to clean up this CL (I will do immediately after submission).\n\nIf you ping me offline, I\u0027m happy to share more details about the VNDK implementation.",
+      "parentUuid": "77a9f338_5936987c",
+      "revId": "16dac9414a20d1a6218e36d82777cb82995ef495",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "b3063a7a_090dc98b",
         "filename": "Android.bp",
         "patchSetId": 1
