@@ -16,6 +16,24 @@
       "revId": "05a41dbf7548ee14d7f9d90dc1bec414bd9b255a",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e21d4527_0c17cb67",
+        "filename": "include/nativehelper/jni.h",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1120458
+      },
+      "writtenOn": "2017-07-17T20:04:21Z",
+      "side": 1,
+      "message": "I\u0027m switching the symlink to be the other way around to make progress.\n\nb/63762847 is filed for the cleanup. I need this CL in so I can add dependencies on jni_headers in master before I remove the symlink.",
+      "parentUuid": "49da35c1_efd670e7",
+      "revId": "05a41dbf7548ee14d7f9d90dc1bec414bd9b255a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
