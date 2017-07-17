@@ -1,0 +1,11 @@
+Verified+1: Steven Moreland <smoreland@google.com>
+Verified+1: Yifan Hong <elsk@google.com>
+Autosubmit+1: Steven Moreland <smoreland@google.com>
+Code-Review+2: Andreas Gampe <agampe@google.com>
+Code-Review+2: Igor Murashkin <iam@google.com>
+Presubmit-Verified+1: Treehugger Robot <treehugger-gerrit@google.com>
+Submitted-by: Treehugger Robot <treehugger-gerrit@google.com>
+Submitted-at: Mon, 17 Jul 2017 22:04:12 +0000
+Reviewed-on: https://android-review.googlesource.com/437136
+Project: platform/libnativehelper
+Branch: refs/heads/master
