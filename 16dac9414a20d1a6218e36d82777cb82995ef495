@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "fc5f002f_7fc18ded",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-07-17T16:51:24Z",
+      "side": 1,
+      "message": "I don\u0027t know what the vndk naming convention but this should include something that makes it explicit it\u0027s only intended for vendor use.\n\ne.g. libnativehelper_vendor , libnativehelper_vndk, etc...",
+      "revId": "16dac9414a20d1a6218e36d82777cb82995ef495",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "b3063a7a_090dc98b",
         "filename": "Android.bp",
         "patchSetId": 1
@@ -22,6 +39,23 @@
       "revId": "16dac9414a20d1a6218e36d82777cb82995ef495",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6c5d8441_0c3433b4",
+        "filename": "vndk_include/jni.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-07-17T16:51:24Z",
+      "side": 1,
+      "message": "Is it supposed to be a symbolic link?",
+      "revId": "16dac9414a20d1a6218e36d82777cb82995ef495",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
