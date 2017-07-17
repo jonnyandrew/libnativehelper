@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "2680bac2_59cda63d",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 1120458
+      },
+      "writtenOn": "2017-07-17T17:01:45Z",
+      "side": 1,
+      "message": "(You\u0027ll notice agampe also made a similar comment) The vndk doesn\u0027t have a naming convention. Inclusion in the list is based on the build system, and this is already reflected and enforced by the fact that this says \"vendor: true\"\n\nI think it should be called \"libnativehelper_jni_headers\"",
+      "parentUuid": "fc5f002f_7fc18ded",
+      "revId": "16dac9414a20d1a6218e36d82777cb82995ef495",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "b3063a7a_090dc98b",
         "filename": "Android.bp",
         "patchSetId": 1
