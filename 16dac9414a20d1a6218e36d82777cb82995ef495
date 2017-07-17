@@ -127,6 +127,24 @@
     },
     {
       "key": {
+        "uuid": "75dc9e7a_f4b45d03",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 1120458
+      },
+      "writtenOn": "2017-07-17T18:07:28Z",
+      "side": 1,
+      "message": "Yeah, exactly, it won\u0027t work yet. I think it\u0027s a good goal, but I don\u0027t think it\u0027s the kind of thing that can be done in this one CL. A lot of vendor makefiles would need to be updated.",
+      "parentUuid": "5bbb6d89_165f84e6",
+      "revId": "16dac9414a20d1a6218e36d82777cb82995ef495",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "b3063a7a_090dc98b",
         "filename": "Android.bp",
         "patchSetId": 1
