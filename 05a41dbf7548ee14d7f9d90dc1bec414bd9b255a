@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "6e5e5dbf_b2c7e848",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1121838
+      },
+      "writtenOn": "2017-07-17T20:08:25Z",
+      "side": 1,
+      "message": "jni_headers",
+      "revId": "05a41dbf7548ee14d7f9d90dc1bec414bd9b255a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "49da35c1_efd670e7",
         "filename": "include/nativehelper/jni.h",
         "patchSetId": 4
