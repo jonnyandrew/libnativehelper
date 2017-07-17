@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "875a0f75_cf05e856",
+        "filename": "include_jni/jni.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-07-17T18:50:04Z",
+      "side": 1,
+      "message": "Why was it renamed?",
+      "revId": "5f505202dee5f2b0d8d7b17adcee1aa8ae53564f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
