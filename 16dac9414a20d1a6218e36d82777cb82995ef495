@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "87949d83_cb9e4ec4",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2017-07-17T17:46:32Z",
+      "side": 1,
+      "message": "Maybe the proper way is to actually separate out the jni.h completely (and not this weird include file)? Then have the regular library re-export it?",
+      "parentUuid": "2680bac2_59cda63d",
+      "revId": "16dac9414a20d1a6218e36d82777cb82995ef495",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "b3063a7a_090dc98b",
         "filename": "Android.bp",
         "patchSetId": 1
