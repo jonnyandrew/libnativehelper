@@ -69,6 +69,24 @@
       "revId": "05a41dbf7548ee14d7f9d90dc1bec414bd9b255a",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "607622ed_cd806c52",
+        "filename": "include/nativehelper/jni.h",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-07-17T20:11:38Z",
+      "side": 1,
+      "message": "Oh so there\u0027s a lot of other code that #include \u003cnativehelper/jni.h\u003e directly?\n\nYeah that seems like a problem that should be fixed separately.",
+      "parentUuid": "93cf1f41_a6e99026",
+      "revId": "05a41dbf7548ee14d7f9d90dc1bec414bd9b255a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
