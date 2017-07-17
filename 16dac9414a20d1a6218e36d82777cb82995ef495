@@ -91,6 +91,42 @@
     },
     {
       "key": {
+        "uuid": "5bbb6d89_165f84e6",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 1132673
+      },
+      "writtenOn": "2017-07-17T18:01:30Z",
+      "side": 1,
+      "message": "I like this idea. We can eliminate the regression by automatically adding the new header lib to all platform libraries (just like the libnativehelper/include/nativehelper is unconditionally given to them), but I want to ask Dan or Colin\u0027s opinion on this.",
+      "parentUuid": "8729f8ac_0003dea7",
+      "revId": "16dac9414a20d1a6218e36d82777cb82995ef495",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "824b569f_4204f359",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 1132673
+      },
+      "writtenOn": "2017-07-17T18:01:30Z",
+      "side": 1,
+      "message": "I think \u0027libnativehelper\u0027 is very misleading in this case. jni.h is not just an helper but defines JNI itself (e.g. JNIEnv, etc.)",
+      "parentUuid": "2680bac2_59cda63d",
+      "revId": "16dac9414a20d1a6218e36d82777cb82995ef495",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "b3063a7a_090dc98b",
         "filename": "Android.bp",
         "patchSetId": 1
@@ -102,6 +138,30 @@
       "writtenOn": "2017-07-17T16:37:29Z",
       "side": 1,
       "message": "also maybe include_vndk like liblog/libcutils/etc instead?",
+      "range": {
+        "startLine": 82,
+        "startChar": 27,
+        "endLine": 82,
+        "endChar": 39
+      },
+      "revId": "16dac9414a20d1a6218e36d82777cb82995ef495",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0f7d806e_24cca406",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 1132673
+      },
+      "writtenOn": "2017-07-17T18:01:30Z",
+      "side": 1,
+      "message": "I choose this simply because we already have platform_include in this project :(",
+      "parentUuid": "b3063a7a_090dc98b",
       "range": {
         "startLine": 82,
         "startChar": 27,
