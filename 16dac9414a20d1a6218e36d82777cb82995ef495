@@ -163,6 +163,24 @@
     },
     {
       "key": {
+        "uuid": "77a9f338_5936987c",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-07-17T18:48:34Z",
+      "side": 1,
+      "message": "It doesn\u0027t matter to me if there\u0027s a separate jni.h only rule.\n\nHowever, it should absolutely say that it\u0027s vendor specific because we don\u0027t want vendors and platform code to cross-contaminate the includes.",
+      "parentUuid": "c2b906ae_8eebd886",
+      "revId": "16dac9414a20d1a6218e36d82777cb82995ef495",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "b3063a7a_090dc98b",
         "filename": "Android.bp",
         "patchSetId": 1
