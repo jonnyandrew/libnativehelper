@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "47033b43_a29376e7",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-07-17T20:13:31Z",
+      "side": 1,
+      "message": "Add jni_headers build target to export only jni.h to vendor and platform.",
+      "revId": "bfed21e7973d0f2c9b6c5b1f7ffb06017043f9fb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "05879cad_f5ad4ae0",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-07-17T20:13:31Z",
+      "side": 1,
+      "message": "Add:\n\n  jni.h is part of the NDK and is guaranteed to be stable also for VNDK",
+      "revId": "bfed21e7973d0f2c9b6c5b1f7ffb06017043f9fb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
