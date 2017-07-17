@@ -16,6 +16,24 @@
       "revId": "5f505202dee5f2b0d8d7b17adcee1aa8ae53564f",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8ac4d7a9_2794f102",
+        "filename": "include_jni/jni.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1120458
+      },
+      "writtenOn": "2017-07-17T18:52:35Z",
+      "side": 1,
+      "message": "It wasn\u0027t, it was moved.",
+      "parentUuid": "875a0f75_cf05e856",
+      "revId": "5f505202dee5f2b0d8d7b17adcee1aa8ae53564f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
