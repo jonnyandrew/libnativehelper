@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "121dcdf9_2e66ff62",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 1120458
+      },
+      "writtenOn": "2017-07-17T17:51:08Z",
+      "side": 1,
+      "message": "That won\u0027t work (yet) (because most things rely on it to be in its current location relative to the root of the Android tree)",
+      "parentUuid": "87949d83_cb9e4ec4",
+      "revId": "16dac9414a20d1a6218e36d82777cb82995ef495",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "b3063a7a_090dc98b",
         "filename": "Android.bp",
         "patchSetId": 1
