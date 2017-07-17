@@ -145,6 +145,24 @@
     },
     {
       "key": {
+        "uuid": "c2b906ae_8eebd886",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2017-07-17T18:15:26Z",
+      "side": 1,
+      "message": "I am not suggesting to add this as a global header, automatically. I believe we want to get away from this, and am supportive of that.\n\nWhat I was suggesting is a temporary workaround. Add libnativehelper/jni_header/libnativehelper/jni.h. Create *two* header libraries, the \"good\" one, and a \"compat\" one. Re-export both from libnativehelper shared library, but only make the good one available to the vndk.\n\nThen leisurely go through the platform and replace the includes. (Most users in the platform also rely on things like ScopedLocalRef etc, so just including the header library is likely not enough)",
+      "parentUuid": "824b569f_4204f359",
+      "revId": "16dac9414a20d1a6218e36d82777cb82995ef495",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "b3063a7a_090dc98b",
         "filename": "Android.bp",
         "patchSetId": 1
