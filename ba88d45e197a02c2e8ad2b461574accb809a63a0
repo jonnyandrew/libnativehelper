@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d2ddc8ec_7076a683",
+        "filename": "include/nativehelper/ScopedUtfChars.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2017-07-18T22:32:01Z",
+      "side": 1,
+      "message": "i think\n\n  CHECK(utf_chars_);\n\nwould be more appropriate. you\u0027re not supposed to be calling size() without having checked that c_str() !\u003d nullptr. (as in the example.)",
+      "range": {
+        "startLine": 54,
+        "startChar": 0,
+        "endLine": 55,
+        "endChar": 15
+      },
+      "revId": "ba88d45e197a02c2e8ad2b461574accb809a63a0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
