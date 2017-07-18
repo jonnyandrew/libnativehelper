@@ -18,7 +18,7 @@
 #define UNIQUE_PTR_H_included
 
 #include <cstdlib> // For NULL.
-#include "JNIHelp.h"  // For DISALLOW_COPY_AND_ASSIGN.
+#include <nativehelper/JNIHelp.h>  // For DISALLOW_COPY_AND_ASSIGN.
 
 // Default deleter for pointer types.
 template <typename T>

@@ -17,7 +17,7 @@
 #ifndef SCOPED_PRIMITIVE_ARRAY_H_included
 #define SCOPED_PRIMITIVE_ARRAY_H_included
 
-#include "JNIHelp.h"
+#include <nativehelper/JNIHelp.h>
 
 #ifdef POINTER_TYPE
 #error POINTER_TYPE is defined.
