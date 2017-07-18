@@ -51,6 +51,8 @@ class ScopedUtfChars {
   }
 
   size_t size() const {
+    if (utf_chars_ == NULL)
+      return 0;
     return strlen(utf_chars_);
   }
 
