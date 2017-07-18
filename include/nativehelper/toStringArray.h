@@ -18,7 +18,7 @@
 #define TO_STRING_ARRAY_H_included
 
 #include "jni.h"
-#include "ScopedLocalRef.h"
+#include <nativehelper/ScopedLocalRef.h>
 
 #include <string>
 #include <vector>

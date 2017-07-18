@@ -17,7 +17,7 @@
 #ifndef SCOPED_UTF_CHARS_H_included
 #define SCOPED_UTF_CHARS_H_included
 
-#include "JNIHelp.h"
+#include <nativehelper/JNIHelp.h>
 #include <string.h>
 
 // A smart pointer that provides read-only access to a Java string's UTF chars.

@@ -20,7 +20,7 @@
 #include "jni.h"
 
 #include <stddef.h>
-#include "JNIHelp.h"  // for DISALLOW_COPY_AND_ASSIGN.
+#include <nativehelper/JNIHelp.h>  // for DISALLOW_COPY_AND_ASSIGN.
 
 // A smart pointer that deletes a JNI local reference when it goes out of scope.
 template<typename T>
