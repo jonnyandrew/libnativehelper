@@ -52,6 +52,7 @@ cc_library {
         "-fvisibility=protected",
     ],
 
+    local_include_dirs: ["include/nativehelper"],
     export_include_dirs: ["include", "platform_include"],
 }
 
