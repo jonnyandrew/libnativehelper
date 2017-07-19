@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a0dc676a_d8261fa0",
+        "filename": "AsynchronousCloseMonitor.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2017-07-19T01:10:38Z",
+      "side": 1,
+      "message": "This time it\u0027s not a different library, so really shouldn\u0027t be \u003c\u003e?",
+      "range": {
+        "startLine": 19,
+        "startChar": 9,
+        "endLine": 19,
+        "endChar": 10
+      },
+      "revId": "223b4de177ab7630bf010d83ff8d0c715f336e45",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b7100e38_7aa13d08",
+        "filename": "include/nativehelper/ScopedBytes.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2017-07-19T01:10:38Z",
+      "side": 1,
+      "message": "Is this really necessary? This is the same folder. I thought lookup succeeds in this case.\n\n(Or is this concern of pollution or w/e?)",
+      "range": {
+        "startLine": 20,
+        "startChar": 9,
+        "endLine": 21,
+        "endChar": 0
+      },
+      "revId": "223b4de177ab7630bf010d83ff8d0c715f336e45",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
