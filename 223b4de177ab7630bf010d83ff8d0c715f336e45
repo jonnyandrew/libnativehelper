@@ -93,6 +93,30 @@
       "revId": "223b4de177ab7630bf010d83ff8d0c715f336e45",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ebce9230_42c9c836",
+        "filename": "include/nativehelper/ScopedBytes.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2017-07-19T01:21:49Z",
+      "side": 1,
+      "message": "(I\u0027m just used to it from ART style, where we prefer shorter path, even if it messes with the alphabetic order...)",
+      "parentUuid": "d97f8284_55a2eb35",
+      "range": {
+        "startLine": 20,
+        "startChar": 9,
+        "endLine": 21,
+        "endChar": 0
+      },
+      "revId": "223b4de177ab7630bf010d83ff8d0c715f336e45",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
