@@ -52,6 +52,7 @@ cc_library {
         "-fvisibility=protected",
     ],
 
+    local_include_dirs: ["include/nativehelper"],
     export_include_dirs: ["include", "platform_include"],
 }
 
@@ -64,8 +65,10 @@ cc_library {
 cc_library_shared {
     name: "libnativehelper_compat_libc++",
     clang: true,
-    local_include_dirs: ["include/nativehelper"],
-    export_include_dirs: ["include/nativehelper"],
+    export_include_dirs: [
+        "include",
+        "include/nativehelper", // TODO(b/63762847): remove
+    ],
     cflags: ["-Werror"],
     srcs: [
         "JNIHelp.cpp",
