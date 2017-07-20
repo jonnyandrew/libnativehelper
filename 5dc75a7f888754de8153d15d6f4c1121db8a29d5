@@ -22,6 +22,30 @@
       "revId": "5dc75a7f888754de8153d15d6f4c1121db8a29d5",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ff92df49_743c4d25",
+        "filename": "Android.bp",
+        "patchSetId": 2
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1120458
+      },
+      "writtenOn": "2017-07-20T19:31:35Z",
+      "side": 1,
+      "message": "There\u0027s more than one user as far as I can tell?\nhttps://android-review.googlesource.com/#/c/438702/\n\nAlso, these sources are part of libnativehelper_compat_libc++ which doesn\u0027t have \"include\" as local_include_dirs",
+      "parentUuid": "1cd58304_b906f5d4",
+      "range": {
+        "startLine": 55,
+        "startChar": 0,
+        "endLine": 55,
+        "endChar": 49
+      },
+      "revId": "5dc75a7f888754de8153d15d6f4c1121db8a29d5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
