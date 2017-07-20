@@ -70,6 +70,30 @@
       "revId": "5dc75a7f888754de8153d15d6f4c1121db8a29d5",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1cf53736_71ec66bf",
+        "filename": "Android.bp",
+        "patchSetId": 2
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1120458
+      },
+      "writtenOn": "2017-07-20T21:14:36Z",
+      "side": 1,
+      "message": "Yes, but there are other users of other headers. I\u0027m either going to fix them all or fix none. This is a very common pattern in libraries, so I don\u0027t see the problem.\n\nI haven\u0027t started looking at or fixing libnativehelper_compat_libc++ yet. Do you think I should make it expose the same headers as libnativehelper?",
+      "parentUuid": "78dd4377_0baeed69",
+      "range": {
+        "startLine": 55,
+        "startChar": 0,
+        "endLine": 55,
+        "endChar": 49
+      },
+      "revId": "5dc75a7f888754de8153d15d6f4c1121db8a29d5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
