@@ -46,6 +46,30 @@
       "revId": "5dc75a7f888754de8153d15d6f4c1121db8a29d5",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "78dd4377_0baeed69",
+        "filename": "Android.bp",
+        "patchSetId": 2
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1074628
+      },
+      "writtenOn": "2017-07-20T19:36:17Z",
+      "side": 1,
+      "message": "There\u0027s only one user of JniInvocation.h (and no local users of ScopedLocalFrame)\n\nWhy is libnativehelper_compat_libc++ different? That seems like it was probably because everyone used to use the global headers, which you\u0027re trying to clean up.",
+      "parentUuid": "ff92df49_743c4d25",
+      "range": {
+        "startLine": 55,
+        "startChar": 0,
+        "endLine": 55,
+        "endChar": 49
+      },
+      "revId": "5dc75a7f888754de8153d15d6f4c1121db8a29d5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
