@@ -70,13 +70,16 @@ public:
         s.MEnv = nullptr;
     }
 
+    // Workaround for missing nullptr_t in NDK's cxx-stl. b/65466378
+    using nullptr_t = decltype(nullptr);
+
     // Allows "if (scoped_ref == nullptr)"
-    bool operator==(std::nullptr_t) const {
+    bool operator==(nullptr_t) const {
         return mLocalRef == nullptr;
     }
 
     // Allows "if (scoped_ref != nullptr)"
-    bool operator!=(std::nullptr_t) const {
+    bool operator!=(nullptr_t) const {
         return mLocalRef != nullptr;
     }
 #endif
