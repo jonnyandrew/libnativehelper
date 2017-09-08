@@ -52,6 +52,33 @@ public:
         return mLocalRef;
     }
 
+// Some better C++11 support.
+#if __cplusplus >= 201103L
+    // Move constructor.
+    ScopedLocalRef(ScopedLocalRef&& s) : mEnv(s.mEnv), mLocalRef(s.release()) {
+    }
+
+    // Empty constructor now makes sense, as we can move-assign.
+    ScopedLocalRef() : mEnv(nullptr), mLocalRef(nullptr) {
+    }
+
+    // Move assignment operator.
+    ScopedLocalRef& operator=(ScopedLocalRef&& s) {
+        reset(s.release());
+        mEnv = s.mEnv;
+    }
+
+    // Allows "if (scoped_ref == nullptr)"
+    bool operator==(std::nullptr_t) const {
+        return mLocalRef == nullptr;
+    }
+
+    // Allows "if (scoped_ref != nullptr)"
+    bool operator!=(std::nullptr_t) const {
+        return mLocalRef != nullptr;
+    }
+#endif
+
 private:
     JNIEnv* const mEnv;
     T mLocalRef;
