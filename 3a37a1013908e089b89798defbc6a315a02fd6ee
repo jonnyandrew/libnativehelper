@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b8d23bdf_194b6f38",
+        "filename": "include/nativehelper/ScopedLocalRef.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2017-09-08T00:34:55Z",
+      "side": 1,
+      "message": "do you actually need to support older C++?",
+      "revId": "3a37a1013908e089b89798defbc6a315a02fd6ee",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
