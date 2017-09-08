@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f1b00308_d159df7f",
+        "filename": "include/nativehelper/ScopedLocalRef.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-09-08T18:24:48Z",
+      "side": 1,
+      "message": "Maybe add \u0027s.mEnv \u003d nullptr\u0027 for consistency with the empty constructor?\n\nAlso see L58",
+      "revId": "889a7a728f9a055cb9bf9968f8d7888e1bc09575",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
