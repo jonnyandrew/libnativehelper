@@ -16,6 +16,24 @@
       "revId": "3a37a1013908e089b89798defbc6a315a02fd6ee",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6570ab3a_26cb9e83",
+        "filename": "include/nativehelper/ScopedLocalRef.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2017-09-08T00:39:17Z",
+      "side": 1,
+      "message": "There\u0027s code in the (included) JNIHelp.h that distinguishes. So I wanted to be conservative (so I don\u0027t have to fix up some vendor code)...",
+      "parentUuid": "b8d23bdf_194b6f38",
+      "revId": "3a37a1013908e089b89798defbc6a315a02fd6ee",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
