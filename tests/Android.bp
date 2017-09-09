@@ -7,3 +7,30 @@ cc_test {
     srcs: ["JniInvocation_test.cpp"],
     shared_libs: ["libnativehelper"],
 }
+
+cc_test {
+    name: "ScopedLocalRef_test",
+    test_suites: ["device-tests"],
+    host_supported: true,
+    target: {
+        android: {
+            cflags: ["-DTARGET_BUILD"],
+            ldflags: ["-Wl,--export-dynamic"],
+            shared_libs: [
+                "libdl",
+                "liblog",
+            ],
+        },
+        linux: {
+            host_ldlibs: ["-ldl"],
+            ldflags: ["-Wl,--export-dynamic"],
+        },
+    },
+    srcs: ["ScopedLocalRef_test.cpp"],
+    shared_libs: [
+        "libbase",
+        "libnativehelper",
+    ],
+    whole_static_libs: ["libsigchain"],
+    required: ["libart"],  // TODO: Not really enough.
+}

@@ -38,6 +38,7 @@
  */
 struct JniConstants {
     static void init(JNIEnv* env);
+    static void clear();  // DO NOT CALL.
 
     static jclass booleanClass;
     static jclass byteArrayClass;

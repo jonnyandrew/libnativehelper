@@ -138,3 +138,8 @@ void JniConstants::init(JNIEnv* env) {
 
     g_constants_initialized = true;
 }
+
+void JniConstants::clear() {
+    std::lock_guard<std::mutex> guard(g_constants_mutex);
+    g_constants_initialized = false;
+}
