@@ -46,6 +46,30 @@
       "revId": "076bf283b9b988ee5c10d6543eb58318d95a5e8f",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e53cdbe9_1b005ffc",
+        "filename": "include/nativehelper/ScopedLocalRef.h",
+        "patchSetId": 5
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-09-09T14:53:50Z",
+      "side": 1,
+      "message": "Yes, a one element constructor seems to make more sense here.\n\nA two-element reset seems unnecessary since the JNIEnv will always be the same [for local refs], even though it would be more symmetric to unique_ptr.",
+      "parentUuid": "5e272a51_e046c843",
+      "range": {
+        "startLine": 62,
+        "startChar": 4,
+        "endLine": 64,
+        "endChar": 5
+      },
+      "revId": "076bf283b9b988ee5c10d6543eb58318d95a5e8f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
