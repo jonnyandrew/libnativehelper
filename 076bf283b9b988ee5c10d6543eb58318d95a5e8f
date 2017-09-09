@@ -22,6 +22,30 @@
       "revId": "076bf283b9b988ee5c10d6543eb58318d95a5e8f",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5e272a51_e046c843",
+        "filename": "include/nativehelper/ScopedLocalRef.h",
+        "patchSetId": 5
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2017-09-09T05:39:45Z",
+      "side": 1,
+      "message": "+jmgao, tomcherry in case they have any clever suggestions, but, yeah, this seems like it does more harm than good. and a two-argument reset seems like an even worse route.",
+      "parentUuid": "4e5ee3e5_91529d18",
+      "range": {
+        "startLine": 62,
+        "startChar": 4,
+        "endLine": 64,
+        "endChar": 5
+      },
+      "revId": "076bf283b9b988ee5c10d6543eb58318d95a5e8f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
