@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e5ee3e5_91529d18",
+        "filename": "include/nativehelper/ScopedLocalRef.h",
+        "patchSetId": 5
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2017-09-09T01:46:38Z",
+      "side": 1,
+      "message": "I actually think now that this was a mistake, because even I was uncareful and did:\n\n ScopedLocalRef\u003cT\u003e tmp;\n if (...) {\n   tmp.reset(t);\n }\n\nwhich doesn\u0027t work because the JNIEnv* is missing for a delete. Any advice? I wanted the nice and simple definition, but it seems I should make it always have a valid JNIEnv*, and so a one-element constructor here?",
+      "range": {
+        "startLine": 62,
+        "startChar": 4,
+        "endLine": 64,
+        "endChar": 5
+      },
+      "revId": "076bf283b9b988ee5c10d6543eb58318d95a5e8f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
