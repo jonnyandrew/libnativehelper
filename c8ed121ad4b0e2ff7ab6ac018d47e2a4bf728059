@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "964c3352_3e2f7645",
+        "filename": "tests/ScopedLocalRef_test.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-09-09T16:53:32Z",
+      "side": 1,
+      "message": "All that stuff is super complicated, can you extract to make it easier to configure a standalone art in a gtest?",
+      "revId": "c8ed121ad4b0e2ff7ab6ac018d47e2a4bf728059",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
