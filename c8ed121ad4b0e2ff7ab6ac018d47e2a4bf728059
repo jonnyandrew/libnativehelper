@@ -16,6 +16,24 @@
       "revId": "c8ed121ad4b0e2ff7ab6ac018d47e2a4bf728059",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "704d222a_ceb6e567",
+        "filename": "tests/ScopedLocalRef_test.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2017-09-10T18:49:20Z",
+      "side": 1,
+      "message": "Maybe you didn\u0027t notice, but this is already the ARTScopedLocalRefTest... :-)\n\nI\u0027d like to merge this to get my fixes actually tested, and then see about refactoring. I\u0027m wondering whether we should expose a header library in ART for those purposes?\n\nSo I\u0027d rather focus here on what the right setup is. Should the base test class (with SetUp and TearDown) actually be parameterized so it\u0027s easier to configure tests against both ART and RI (not with the \"using ConfiguredTest\" in line 286).",
+      "parentUuid": "964c3352_3e2f7645",
+      "revId": "c8ed121ad4b0e2ff7ab6ac018d47e2a4bf728059",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
