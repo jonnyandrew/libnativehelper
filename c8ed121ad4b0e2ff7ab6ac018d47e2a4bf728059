@@ -2,6 +2,57 @@
   "comments": [
     {
       "key": {
+        "uuid": "2d94b729_3f2f5652",
+        "filename": "tests/ScopedLocalRef_test.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-09-11T20:07:52Z",
+      "side": 1,
+      "message": "nit: It\u0027s cleaner to override ::testing::Environment\n\nhttps://github.com/google/googletest/blob/master/googletest/docs/AdvancedGuide.md#global-set-up-and-tear-down",
+      "revId": "c8ed121ad4b0e2ff7ab6ac018d47e2a4bf728059",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f975954e_96270858",
+        "filename": "tests/ScopedLocalRef_test.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-09-11T20:07:52Z",
+      "side": 1,
+      "message": "This seems like it should be in TearDown()?",
+      "revId": "c8ed121ad4b0e2ff7ab6ac018d47e2a4bf728059",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "16bc18fe_43d2ef72",
+        "filename": "tests/ScopedLocalRef_test.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-09-11T20:07:52Z",
+      "side": 1,
+      "message": "Why do we need this on device?",
+      "revId": "c8ed121ad4b0e2ff7ab6ac018d47e2a4bf728059",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "964c3352_3e2f7645",
         "filename": "tests/ScopedLocalRef_test.cpp",
         "patchSetId": 1
@@ -34,6 +85,41 @@
       "revId": "c8ed121ad4b0e2ff7ab6ac018d47e2a4bf728059",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7cdf631c_899505bd",
+        "filename": "tests/ScopedLocalRef_test.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-09-11T20:07:52Z",
+      "side": 1,
+      "message": "Yes but it could be more like a DalvikVMTest, ARTTest, etc?\n\nand yes I agree we should just have something like libdalvikvm.so to allow anyone to launch it with just writing standard JNI without anything ART-specific.",
+      "parentUuid": "704d222a_ceb6e567",
+      "revId": "c8ed121ad4b0e2ff7ab6ac018d47e2a4bf728059",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d927255b_c65286f8",
+        "filename": "tests/ScopedLocalRef_test.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 280,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-09-11T20:07:52Z",
+      "side": 1,
+      "message": "Don\u0027t do this, get the path from the build instead, can easily be done at compile time.",
+      "revId": "c8ed121ad4b0e2ff7ab6ac018d47e2a4bf728059",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
