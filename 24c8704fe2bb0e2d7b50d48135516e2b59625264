@@ -72,6 +72,24 @@
     },
     {
       "key": {
+        "uuid": "684e8450_2fd51e46",
+        "filename": "JniConstants.cpp",
+        "patchSetId": 5
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-09-11T21:50:28Z",
+      "side": 1,
+      "message": "What is so specific about jfieldID/jmethodID that isn\u0027t for jclass w.r.t resetting?",
+      "parentUuid": "ed8f2894_4ac020fa",
+      "revId": "24c8704fe2bb0e2d7b50d48135516e2b59625264",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ede09538_19609cb7",
         "filename": "JniConstants.cpp",
         "patchSetId": 5
@@ -136,6 +154,24 @@
       "side": 1,
       "message": "Never. All uses are protected by ensureFieldsInitialized/ensureMethodsInitialized.",
       "parentUuid": "86c34285_aa8ec7de",
+      "revId": "24c8704fe2bb0e2d7b50d48135516e2b59625264",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ee0db90_be6e1198",
+        "filename": "JniConstants.cpp",
+        "patchSetId": 5
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-09-11T21:50:28Z",
+      "side": 1,
+      "message": "Seems dangerous with a clear(). It will have jclass etc pointing to something completely wrong.\n\nThere should be a clear() that nulls everything.",
+      "parentUuid": "cc206cf9_29ce4778",
       "revId": "24c8704fe2bb0e2d7b50d48135516e2b59625264",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false

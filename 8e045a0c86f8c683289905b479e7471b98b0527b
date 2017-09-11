@@ -1,0 +1,112 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b867dc30_c5309eb9",
+        "filename": "JNIHelp.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 330,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-09-11T21:50:28Z",
+      "side": 1,
+      "message": "This is too brittle, let\u0027s keep it simple:\n\n   JNIEnv* e \u003d ensureCacheInitialized(env);\n\nwhich does this work, and initializes *everything*. Lets not separate the initialization because that just seems like it\u0027ll cause problems.",
+      "revId": "8e045a0c86f8c683289905b479e7471b98b0527b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f247a8b0_edd203cb",
+        "filename": "JniConstants.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-09-11T21:50:28Z",
+      "side": 1,
+      "message": "Overly complicated and broken. See L133.",
+      "revId": "8e045a0c86f8c683289905b479e7471b98b0527b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fe1397fa_a31635fc",
+        "filename": "JniConstants.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-09-11T21:50:28Z",
+      "side": 1,
+      "message": "This is broken without an accompanying clear.\n\nIn particular it needs to count the # of init/clears, otherwise two init + two clear will race.\n\n  thread A    thread B\n                         init\n     init\n    use\n    clear\n                         use      \u003c-- oops, already cleared by A.\n                         clear",
+      "revId": "8e045a0c86f8c683289905b479e7471b98b0527b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4667b6e2_ed9bba5a",
+        "filename": "include/nativehelper/JniConstants.h",
+        "patchSetId": 6
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-09-11T21:50:28Z",
+      "side": 1,
+      "message": "Lets keep it simple, remove these from the interface.\n\nThis really needs your \"clear()\" addition to de-initialize.",
+      "revId": "8e045a0c86f8c683289905b479e7471b98b0527b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "273091ec_9f03f674",
+        "filename": "include/nativehelper/JniConstants.h",
+        "patchSetId": 6
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-09-11T21:50:28Z",
+      "side": 1,
+      "message": "Completely unclear from the name what this is referencing?",
+      "range": {
+        "startLine": 93,
+        "startChar": 20,
+        "endLine": 93,
+        "endChar": 49
+      },
+      "revId": "8e045a0c86f8c683289905b479e7471b98b0527b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "681eada7_f88f440d",
+        "filename": "include/nativehelper/JniConstants.h",
+        "patchSetId": 6
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-09-11T21:50:28Z",
+      "side": 1,
+      "message": "Same as L93. Leave comments with the exact method/name\n\n   // java.lang.reference#get()\n\netc",
+      "revId": "8e045a0c86f8c683289905b479e7471b98b0527b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
