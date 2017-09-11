@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "1bba433d_8e706135",
+        "filename": "JNIHelp.cpp",
+        "patchSetId": 5
+      },
+      "lineNbr": 331,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2017-09-11T21:26:07Z",
+      "side": 1,
+      "message": "Nativehelper doesn\u0027t follow ART style. The correct fix over Logan\u0027s would be 8-space indent. Will fix.",
+      "parentUuid": "e0c1fe43_bb0ade88",
+      "revId": "24c8704fe2bb0e2d7b50d48135516e2b59625264",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "bf358ba2_9f47359b",
         "filename": "JniConstants.cpp",
         "patchSetId": 5
@@ -30,6 +48,24 @@
       "writtenOn": "2017-09-11T21:21:13Z",
       "side": 1,
       "message": "^ Why are these being added?",
+      "revId": "24c8704fe2bb0e2d7b50d48135516e2b59625264",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ed8f2894_4ac020fa",
+        "filename": "JniConstants.cpp",
+        "patchSetId": 5
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2017-09-11T21:26:07Z",
+      "side": 1,
+      "message": "*That* is the bug. You can\u0027t reset those as static locals, so you can\u0027t have multiple runtime starts work correctly.",
+      "parentUuid": "bf358ba2_9f47359b",
       "revId": "24c8704fe2bb0e2d7b50d48135516e2b59625264",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "fea0d7ec_53b1b872",
+        "filename": "JniConstants.cpp",
+        "patchSetId": 5
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2017-09-11T21:26:07Z",
+      "side": 1,
+      "message": "Never.",
+      "parentUuid": "ede09538_19609cb7",
+      "revId": "24c8704fe2bb0e2d7b50d48135516e2b59625264",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "86c34285_aa8ec7de",
         "filename": "JniConstants.cpp",
         "patchSetId": 5
@@ -64,6 +118,24 @@
       "writtenOn": "2017-09-11T21:21:13Z",
       "side": 1,
       "message": "Where are they being de-initialized?",
+      "revId": "24c8704fe2bb0e2d7b50d48135516e2b59625264",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cc206cf9_29ce4778",
+        "filename": "JniConstants.cpp",
+        "patchSetId": 5
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2017-09-11T21:26:07Z",
+      "side": 1,
+      "message": "Never. All uses are protected by ensureFieldsInitialized/ensureMethodsInitialized.",
+      "parentUuid": "86c34285_aa8ec7de",
       "revId": "24c8704fe2bb0e2d7b50d48135516e2b59625264",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
@@ -87,6 +159,24 @@
     },
     {
       "key": {
+        "uuid": "1ef7af65_8db62021",
+        "filename": "JniConstants.cpp",
+        "patchSetId": 5
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2017-09-11T21:26:07Z",
+      "side": 1,
+      "message": "What\u0027s your question?",
+      "parentUuid": "13af6a14_8b4537bd",
+      "revId": "24c8704fe2bb0e2d7b50d48135516e2b59625264",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "e49aae66_ca069af4",
         "filename": "JniConstants.cpp",
         "patchSetId": 5
@@ -98,6 +188,24 @@
       "writtenOn": "2017-09-11T21:21:13Z",
       "side": 1,
       "message": "^ why are there 2 separate ensureXInitialized?",
+      "revId": "24c8704fe2bb0e2d7b50d48135516e2b59625264",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3fa9e53b_6c670408",
+        "filename": "JniConstants.cpp",
+        "patchSetId": 5
+      },
+      "lineNbr": 154,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2017-09-11T21:26:07Z",
+      "side": 1,
+      "message": "Because you shouldn\u0027t have to initialize the methods when you\u0027re only requesting the cached field. However, that\u0027s future work to actually distinguish under the hood.",
+      "parentUuid": "e49aae66_ca069af4",
       "revId": "24c8704fe2bb0e2d7b50d48135516e2b59625264",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
