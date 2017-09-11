@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "861481e6_5355c788",
+        "filename": "tests/ScopedLocalRef_test.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-09-11T21:58:45Z",
+      "side": 1,
+      "message": "Seems unrelated to the original comment, is this a separate question?",
+      "parentUuid": "b041ba63_fa8205e7",
+      "revId": "c8ed121ad4b0e2ff7ab6ac018d47e2a4bf728059",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "f975954e_96270858",
         "filename": "tests/ScopedLocalRef_test.cpp",
         "patchSetId": 1
@@ -136,6 +154,41 @@
       "side": 1,
       "message": "Yes but it could be more like a DalvikVMTest, ARTTest, etc?\n\nand yes I agree we should just have something like libdalvikvm.so to allow anyone to launch it with just writing standard JNI without anything ART-specific.",
       "parentUuid": "704d222a_ceb6e567",
+      "revId": "c8ed121ad4b0e2ff7ab6ac018d47e2a4bf728059",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d19b2185_e8f1975e",
+        "filename": "tests/ScopedLocalRef_test.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-09-11T21:58:45Z",
+      "side": 1,
+      "message": "Also this is supposed to be shipped with NDK, so it\u0027s probably better to avoid ART-isms since its also supposed to work with Dalvik.",
+      "parentUuid": "7cdf631c_899505bd",
+      "revId": "c8ed121ad4b0e2ff7ab6ac018d47e2a4bf728059",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fde0786f_02c19625",
+        "filename": "tests/ScopedLocalRef_test.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 228,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-09-11T21:58:45Z",
+      "side": 1,
+      "message": "You should get this during build, not with getenv (or figure it out at runtime from a relative path to this binary). It won\u0027t be set outside of makefile system because they don\u0027t run envsetup.sh on build servers.\n\nTry starting a new shell and seeing if tests will pass with just make command and then running the binary by hand (without running envsetup.sh).\n\nIf this gtest is *dependent* on envsetup then there should probably be a script or makefile target, but I really don\u0027t recommend doing that for something this simple.",
       "revId": "c8ed121ad4b0e2ff7ab6ac018d47e2a4bf728059",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
