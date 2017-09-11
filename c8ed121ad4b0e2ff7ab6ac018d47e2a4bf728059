@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "0304066a_ae94a773",
+        "filename": "tests/ScopedLocalRef_test.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2017-09-11T22:06:26Z",
+      "side": 1,
+      "message": "It *is* related. JniInvocation needs to get the library you intend to use for the runtime (null or \"libart.so\" for ART, \"libjvm.so\" for the RI, ...). Right now it\u0027s the test class doing all that work, and then selection of which runtime to use is done by type alias for the test base class.",
+      "parentUuid": "861481e6_5355c788",
+      "revId": "c8ed121ad4b0e2ff7ab6ac018d47e2a4bf728059",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "f975954e_96270858",
         "filename": "tests/ScopedLocalRef_test.cpp",
         "patchSetId": 1
@@ -178,6 +196,24 @@
     },
     {
       "key": {
+        "uuid": "76547ff9_2fdeed39",
+        "filename": "tests/ScopedLocalRef_test.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2017-09-11T22:06:26Z",
+      "side": 1,
+      "message": "Since when are library unit tests shipped with the NDK? And if you wanted to run those, you\u0027d then select the unit test class that actually works on Dalvik...\n\n(I don\u0027t think we\u0027ll ever ship a libdalvikvm.so on device, because it would be unused except for tests.)",
+      "parentUuid": "d19b2185_e8f1975e",
+      "revId": "c8ed121ad4b0e2ff7ab6ac018d47e2a4bf728059",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fde0786f_02c19625",
         "filename": "tests/ScopedLocalRef_test.cpp",
         "patchSetId": 1
@@ -189,6 +225,24 @@
       "writtenOn": "2017-09-11T21:58:45Z",
       "side": 1,
       "message": "You should get this during build, not with getenv (or figure it out at runtime from a relative path to this binary). It won\u0027t be set outside of makefile system because they don\u0027t run envsetup.sh on build servers.\n\nTry starting a new shell and seeing if tests will pass with just make command and then running the binary by hand (without running envsetup.sh).\n\nIf this gtest is *dependent* on envsetup then there should probably be a script or makefile target, but I really don\u0027t recommend doing that for something this simple.",
+      "revId": "c8ed121ad4b0e2ff7ab6ac018d47e2a4bf728059",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a88631c9_17716579",
+        "filename": "tests/ScopedLocalRef_test.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 228,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2017-09-11T22:06:26Z",
+      "side": 1,
+      "message": "This is ART gtest code, so it works without envsetup. It works because SetUpAndroidRoot exports this if it isn\u0027t set.",
+      "parentUuid": "fde0786f_02c19625",
       "revId": "c8ed121ad4b0e2ff7ab6ac018d47e2a4bf728059",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
