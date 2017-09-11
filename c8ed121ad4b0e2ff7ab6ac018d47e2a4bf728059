@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "b041ba63_fa8205e7",
+        "filename": "tests/ScopedLocalRef_test.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2017-09-11T21:49:56Z",
+      "side": 1,
+      "message": "I think this raises the question of test design - because how do I get the library name from a test class to the environment class?",
+      "parentUuid": "2d94b729_3f2f5652",
+      "revId": "c8ed121ad4b0e2ff7ab6ac018d47e2a4bf728059",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "f975954e_96270858",
         "filename": "tests/ScopedLocalRef_test.cpp",
         "patchSetId": 1
@@ -47,6 +65,24 @@
       "writtenOn": "2017-09-11T20:07:52Z",
       "side": 1,
       "message": "Why do we need this on device?",
+      "revId": "c8ed121ad4b0e2ff7ab6ac018d47e2a4bf728059",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f9101004_f44d59dc",
+        "filename": "tests/ScopedLocalRef_test.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2017-09-11T21:49:56Z",
+      "side": 1,
+      "message": "You don\u0027t need either on device (assuming the device is default-configured). You don\u0027t need noimage-dex2oat on the host, either, but compiling a boot image is just superfluous work here that slows down the test significantly. (Note that I did not want to add dependencies for a core image...)",
+      "parentUuid": "16bc18fe_43d2ef72",
       "revId": "c8ed121ad4b0e2ff7ab6ac018d47e2a4bf728059",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
