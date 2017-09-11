@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e0c1fe43_bb0ade88",
+        "filename": "JNIHelp.cpp",
+        "patchSetId": 5
+      },
+      "lineNbr": 331,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-09-11T21:21:13Z",
+      "side": 1,
+      "message": "nit: 1 arg per line",
+      "revId": "24c8704fe2bb0e2d7b50d48135516e2b59625264",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bf358ba2_9f47359b",
+        "filename": "JniConstants.cpp",
+        "patchSetId": 5
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-09-11T21:21:13Z",
+      "side": 1,
+      "message": "^ Why are these being added?",
+      "revId": "24c8704fe2bb0e2d7b50d48135516e2b59625264",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ede09538_19609cb7",
+        "filename": "JniConstants.cpp",
+        "patchSetId": 5
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-09-11T21:21:13Z",
+      "side": 1,
+      "message": "Where is it set to false?",
+      "revId": "24c8704fe2bb0e2d7b50d48135516e2b59625264",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "86c34285_aa8ec7de",
+        "filename": "JniConstants.cpp",
+        "patchSetId": 5
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-09-11T21:21:13Z",
+      "side": 1,
+      "message": "Where are they being de-initialized?",
+      "revId": "24c8704fe2bb0e2d7b50d48135516e2b59625264",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "13af6a14_8b4537bd",
+        "filename": "JniConstants.cpp",
+        "patchSetId": 5
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-09-11T21:21:13Z",
+      "side": 1,
+      "message": "?",
+      "revId": "24c8704fe2bb0e2d7b50d48135516e2b59625264",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e49aae66_ca069af4",
+        "filename": "JniConstants.cpp",
+        "patchSetId": 5
+      },
+      "lineNbr": 154,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-09-11T21:21:13Z",
+      "side": 1,
+      "message": "^ why are there 2 separate ensureXInitialized?",
+      "revId": "24c8704fe2bb0e2d7b50d48135516e2b59625264",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
