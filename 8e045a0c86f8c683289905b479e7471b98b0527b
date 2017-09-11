@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "c81ac3e9_c1eb4318",
+        "filename": "JNIHelp.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 330,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2017-09-11T22:24:12Z",
+      "side": 1,
+      "message": "There have to be *two* initialization functions. The classes must be initialized early, the other parts late.\n\n(Whether the former call here is necessary is debatable, a lot of this code assumes that the caller ensured there was an init() before.)",
+      "parentUuid": "b867dc30_c5309eb9",
+      "revId": "8e045a0c86f8c683289905b479e7471b98b0527b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f247a8b0_edd203cb",
         "filename": "JniConstants.cpp",
         "patchSetId": 6
@@ -47,6 +65,24 @@
       "writtenOn": "2017-09-11T21:50:28Z",
       "side": 1,
       "message": "This is broken without an accompanying clear.\n\nIn particular it needs to count the # of init/clears, otherwise two init + two clear will race.\n\n  thread A    thread B\n                         init\n     init\n    use\n    clear\n                         use      \u003c-- oops, already cleared by A.\n                         clear",
+      "revId": "8e045a0c86f8c683289905b479e7471b98b0527b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e1c31fb8_86e9cac4",
+        "filename": "JniConstants.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2017-09-11T22:24:12Z",
+      "side": 1,
+      "message": "That cannot happen. clear() is only meant to be called on shutdown, which you cannot do when B is still alive.\n\nWe\u0027re already saying you crash in daemon threads if you don\u0027t play nice with shutdown. It makes no sense to make this more complicated, IMHO.",
+      "parentUuid": "fe1397fa_a31635fc",
       "revId": "8e045a0c86f8c683289905b479e7471b98b0527b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false

@@ -90,6 +90,24 @@
     },
     {
       "key": {
+        "uuid": "04a7deaa_b44ec18f",
+        "filename": "JniConstants.cpp",
+        "patchSetId": 5
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2017-09-11T22:24:12Z",
+      "side": 1,
+      "message": "The field IDs and method IDs were cached before *in the code*. If you tell me a way to reset them easily, I\u0027d be happy to change it back. Otherwise this change is bringing them in line with the classes, where they\u0027re explicit members.",
+      "parentUuid": "684e8450_2fd51e46",
+      "revId": "24c8704fe2bb0e2d7b50d48135516e2b59625264",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ede09538_19609cb7",
         "filename": "JniConstants.cpp",
         "patchSetId": 5
