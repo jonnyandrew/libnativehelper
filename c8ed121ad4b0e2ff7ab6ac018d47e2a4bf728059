@@ -214,6 +214,24 @@
     },
     {
       "key": {
+        "uuid": "527af971_d3d01877",
+        "filename": "tests/ScopedLocalRef_test.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-09-11T22:10:40Z",
+      "side": 1,
+      "message": "Ok forget about any ART-ism comments, I see JniInvocation_Test also only works with ART. LGTM.\n\nSorry for assuming that a library shipping with NDK would get tested with Dalvik.",
+      "parentUuid": "76547ff9_2fdeed39",
+      "revId": "c8ed121ad4b0e2ff7ab6ac018d47e2a4bf728059",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fde0786f_02c19625",
         "filename": "tests/ScopedLocalRef_test.cpp",
         "patchSetId": 1
