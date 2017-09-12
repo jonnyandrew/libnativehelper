@@ -66,3 +66,12 @@ cc_library_headers {
     host_supported: true,
     export_include_dirs: ["jni_gtest"],
 }
+
+cc_test {
+    name: "ScopedLocalRef_test",
+    test_suites: ["device-tests"],
+    host_supported: true,
+    srcs: ["ScopedLocalRef_test.cpp"],
+    header_libs: ["jni_gtest_headers"],
+    shared_libs: ["libnativehelper"],
+}
