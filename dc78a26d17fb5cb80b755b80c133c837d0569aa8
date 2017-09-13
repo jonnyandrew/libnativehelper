@@ -492,6 +492,24 @@
       "revId": "dc78a26d17fb5cb80b755b80c133c837d0569aa8",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3f34a255_17b356d1",
+        "filename": "tests/jni_gtest.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 362,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2017-09-13T21:39:28Z",
+      "side": 1,
+      "message": "You can use ANDROID_JAVA_HOME",
+      "parentUuid": "7a2d34f1_4fd30469",
+      "revId": "dc78a26d17fb5cb80b755b80c133c837d0569aa8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
