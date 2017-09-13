@@ -1,0 +1,311 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fd49d36e_84b66f0e",
+        "filename": "tests/Android.bp",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-09-13T21:12:16Z",
+      "side": 1,
+      "message": "?",
+      "revId": "dc78a26d17fb5cb80b755b80c133c837d0569aa8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4f4d91c2_09876167",
+        "filename": "tests/Android.bp",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-09-13T21:12:16Z",
+      "side": 1,
+      "message": "?",
+      "revId": "dc78a26d17fb5cb80b755b80c133c837d0569aa8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ce63b0ca_283478fc",
+        "filename": "tests/Android.bp",
+        "patchSetId": 2
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-09-13T21:12:16Z",
+      "side": 1,
+      "message": "?",
+      "revId": "dc78a26d17fb5cb80b755b80c133c837d0569aa8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "29c2304d_50cfec5e",
+        "filename": "tests/Android.bp",
+        "patchSetId": 2
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-09-13T21:12:16Z",
+      "side": 1,
+      "message": "??",
+      "revId": "dc78a26d17fb5cb80b755b80c133c837d0569aa8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c0e478fe_9f8ffdd9",
+        "filename": "tests/ScopedLocalRef_test.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-09-13T21:12:16Z",
+      "side": 1,
+      "message": "RiJniProvider?",
+      "revId": "dc78a26d17fb5cb80b755b80c133c837d0569aa8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0b1c29bc_f44af3c0",
+        "filename": "tests/jni_gtest.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-09-13T21:12:16Z",
+      "side": 1,
+      "message": "is a concept that must follow this structure:",
+      "range": {
+        "startLine": 31,
+        "startChar": 12,
+        "endLine": 31,
+        "endChar": 14
+      },
+      "revId": "dc78a26d17fb5cb80b755b80c133c837d0569aa8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5b1aca1f_40f0e724",
+        "filename": "tests/jni_gtest.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-09-13T21:12:16Z",
+      "side": 1,
+      "message": "Why is it necessary? It seems it always uses the \"new TProvider();\" , so maybe requiring an empty constructor makes more sense.",
+      "revId": "dc78a26d17fb5cb80b755b80c133c837d0569aa8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "060fade9_3fb0c628",
+        "filename": "tests/jni_gtest.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-09-13T21:12:16Z",
+      "side": 1,
+      "message": "nit: this is 2017 and we can use in-place initialization\n\n  std::unique_ptr\u003cProvider\u003e provider_{Provider::Create()};\n  JNIEnv* env_{};\n  JavaVM* java_vm_{};\n\non Line 64",
+      "range": {
+        "startLine": 47,
+        "startChar": 51,
+        "endLine": 47,
+        "endChar": 83
+      },
+      "revId": "dc78a26d17fb5cb80b755b80c133c837d0569aa8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e7f0cd8e_049edaf9",
+        "filename": "tests/jni_gtest.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-09-13T21:12:16Z",
+      "side": 1,
+      "message": "Implementation of Provider concept.",
+      "revId": "dc78a26d17fb5cb80b755b80c133c837d0569aa8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "72683181_70637634",
+        "filename": "tests/jni_gtest.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-09-13T21:12:16Z",
+      "side": 1,
+      "message": "Why is it called \"JniInvocationProvider\"? At its core its called CreateJavaVM, it should be more like a CreateJavaVMProvider, JavaVmProvider, etc.",
+      "revId": "dc78a26d17fb5cb80b755b80c133c837d0569aa8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8e767956_171e9cb7",
+        "filename": "tests/jni_gtest.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-09-13T21:12:16Z",
+      "side": 1,
+      "message": "Implementation of Provider concept.",
+      "revId": "dc78a26d17fb5cb80b755b80c133c837d0569aa8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d96b8478_b3a53b54",
+        "filename": "tests/jni_gtest.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 166,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-09-13T21:12:16Z",
+      "side": 1,
+      "message": "Implementation of Provider concept.",
+      "revId": "dc78a26d17fb5cb80b755b80c133c837d0569aa8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3d714c57_3970f5f0",
+        "filename": "tests/jni_gtest.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 169,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-09-13T21:12:16Z",
+      "side": 1,
+      "message": "nit: ArtJniInvocationProvider",
+      "range": {
+        "startLine": 169,
+        "startChar": 19,
+        "endLine": 169,
+        "endChar": 43
+      },
+      "revId": "dc78a26d17fb5cb80b755b80c133c837d0569aa8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1d5766ed_2d46e2f3",
+        "filename": "tests/jni_gtest.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 321,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-09-13T21:12:16Z",
+      "side": 1,
+      "message": "Does it not work against the regular bootclasspath on target? This is very nice and all but the real users of this library will all be using boot image, not core image.",
+      "revId": "dc78a26d17fb5cb80b755b80c133c837d0569aa8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f858bf2b_e0aacd27",
+        "filename": "tests/jni_gtest.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 340,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-09-13T21:12:16Z",
+      "side": 1,
+      "message": "Implementation of Provider concept.",
+      "revId": "dc78a26d17fb5cb80b755b80c133c837d0569aa8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7cecdae3_962a3c55",
+        "filename": "tests/jni_gtest.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 342,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-09-13T21:12:16Z",
+      "side": 1,
+      "message": "nit: RiJniInvocationProvider",
+      "revId": "dc78a26d17fb5cb80b755b80c133c837d0569aa8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5acb586e_c3f43138",
+        "filename": "tests/jni_gtest.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 362,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-09-13T21:12:16Z",
+      "side": 1,
+      "message": "Don\u0027t hardcode this, use the paths environment variable.",
+      "revId": "dc78a26d17fb5cb80b755b80c133c837d0569aa8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
