@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0d48d470_3018f698",
+        "filename": "tests/Android.bp",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2017-09-13T21:21:29Z",
+      "side": 1,
+      "message": "Required to distinguish where to look for core files.",
+      "parentUuid": "fd49d36e_84b66f0e",
+      "revId": "dc78a26d17fb5cb80b755b80c133c837d0569aa8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "4f4d91c2_09876167",
         "filename": "tests/Android.bp",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2017-09-13T21:12:16Z",
       "side": 1,
       "message": "?",
+      "revId": "dc78a26d17fb5cb80b755b80c133c837d0569aa8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7d8ffa2f_fa26937e",
+        "filename": "tests/Android.bp",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2017-09-13T21:21:29Z",
+      "side": 1,
+      "message": "Required for sigchainlib.",
+      "parentUuid": "4f4d91c2_09876167",
       "revId": "dc78a26d17fb5cb80b755b80c133c837d0569aa8",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "bd208176_18c0ba59",
+        "filename": "tests/Android.bp",
+        "patchSetId": 2
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2017-09-13T21:21:29Z",
+      "side": 1,
+      "message": "See above.",
+      "parentUuid": "ce63b0ca_283478fc",
+      "revId": "dc78a26d17fb5cb80b755b80c133c837d0569aa8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "29c2304d_50cfec5e",
         "filename": "tests/Android.bp",
         "patchSetId": 2
@@ -64,6 +118,24 @@
       "writtenOn": "2017-09-13T21:12:16Z",
       "side": 1,
       "message": "??",
+      "revId": "dc78a26d17fb5cb80b755b80c133c837d0569aa8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b98b5cab_b37c4549",
+        "filename": "tests/Android.bp",
+        "patchSetId": 2
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2017-09-13T21:21:29Z",
+      "side": 1,
+      "message": "Required if you want to start ART.",
+      "parentUuid": "29c2304d_50cfec5e",
       "revId": "dc78a26d17fb5cb80b755b80c133c837d0569aa8",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
@@ -127,6 +199,24 @@
     },
     {
       "key": {
+        "uuid": "0812860d_aa092fe5",
+        "filename": "tests/jni_gtest.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2017-09-13T21:21:29Z",
+      "side": 1,
+      "message": "Sure, could do that.",
+      "parentUuid": "5b1aca1f_40f0e724",
+      "revId": "dc78a26d17fb5cb80b755b80c133c837d0569aa8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "060fade9_3fb0c628",
         "filename": "tests/jni_gtest.h",
         "patchSetId": 2
@@ -138,6 +228,30 @@
       "writtenOn": "2017-09-13T21:12:16Z",
       "side": 1,
       "message": "nit: this is 2017 and we can use in-place initialization\n\n  std::unique_ptr\u003cProvider\u003e provider_{Provider::Create()};\n  JNIEnv* env_{};\n  JavaVM* java_vm_{};\n\non Line 64",
+      "range": {
+        "startLine": 47,
+        "startChar": 51,
+        "endLine": 47,
+        "endChar": 83
+      },
+      "revId": "dc78a26d17fb5cb80b755b80c133c837d0569aa8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "10280c58_811ceb81",
+        "filename": "tests/jni_gtest.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2017-09-13T21:21:29Z",
+      "side": 1,
+      "message": "I thought it\u0027s current style to use initialization list.",
+      "parentUuid": "060fade9_3fb0c628",
       "range": {
         "startLine": 47,
         "startChar": 51,
@@ -167,6 +281,24 @@
     },
     {
       "key": {
+        "uuid": "afa30553_376d5f95",
+        "filename": "tests/jni_gtest.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2017-09-13T21:21:29Z",
+      "side": 1,
+      "message": "?",
+      "parentUuid": "e7f0cd8e_049edaf9",
+      "revId": "dc78a26d17fb5cb80b755b80c133c837d0569aa8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "72683181_70637634",
         "filename": "tests/jni_gtest.h",
         "patchSetId": 2
@@ -178,6 +310,24 @@
       "writtenOn": "2017-09-13T21:12:16Z",
       "side": 1,
       "message": "Why is it called \"JniInvocationProvider\"? At its core its called CreateJavaVM, it should be more like a CreateJavaVMProvider, JavaVmProvider, etc.",
+      "revId": "dc78a26d17fb5cb80b755b80c133c837d0569aa8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "dc4e0a3a_5442a8ad",
+        "filename": "tests/jni_gtest.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2017-09-13T21:21:29Z",
+      "side": 1,
+      "message": "But it\u0027s using JniInvocation as an abstraction layer in-between to allow not having explicit dependencies on the providing runtime. This also allows having a single test binary run against both ART and RI.",
+      "parentUuid": "72683181_70637634",
       "revId": "dc78a26d17fb5cb80b755b80c133c837d0569aa8",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
@@ -258,6 +408,24 @@
     },
     {
       "key": {
+        "uuid": "a6ffce44_87e7a95e",
+        "filename": "tests/jni_gtest.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 321,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2017-09-13T21:21:29Z",
+      "side": 1,
+      "message": "That implies you\u0027re testing on a device in an environment that has a (working, relocated) boot image at the default location, so that the default -Ximage works. That is, for example, not the case for a (fake) chroot setup etc. I thought it better to minimize any such dependencies. This way the test works without having to compile with frameworks/.",
+      "parentUuid": "1d5766ed_2d46e2f3",
+      "revId": "dc78a26d17fb5cb80b755b80c133c837d0569aa8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "f858bf2b_e0aacd27",
         "filename": "tests/jni_gtest.h",
         "patchSetId": 2
@@ -303,6 +471,24 @@
       "writtenOn": "2017-09-13T21:12:16Z",
       "side": 1,
       "message": "Don\u0027t hardcode this, use the paths environment variable.",
+      "revId": "dc78a26d17fb5cb80b755b80c133c837d0569aa8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7a2d34f1_4fd30469",
+        "filename": "tests/jni_gtest.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 362,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2017-09-13T21:21:29Z",
+      "side": 1,
+      "message": "Why is PATH better than ANDROID_BUILD_TOP?",
+      "parentUuid": "5acb586e_c3f43138",
       "revId": "dc78a26d17fb5cb80b755b80c133c837d0569aa8",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
