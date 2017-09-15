@@ -109,8 +109,8 @@ protected:
     std::vector<uintptr_t> deleted_;
 };
 
-// Test against the mock provider.
-typedef ::testing::Types<MockJNIProvider> Providers;
+// Test against ART & mock.
+typedef ::testing::Types<ARTJniInvocationProvider, MockJNIProvider> Providers;
 TYPED_TEST_CASE(ScopedLocalRefTest, Providers);
 
 TYPED_TEST(ScopedLocalRefTest, EmptyConstructor) {
