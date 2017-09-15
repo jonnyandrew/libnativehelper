@@ -4,9 +4,37 @@ cc_library_headers {
     host_supported: true,
     export_include_dirs: ["base"],
 }
+cc_library_headers {
+    name: "jni_art_gtest_headers",
+    host_supported: true,
+    export_include_dirs: ["art"],
+}
+
 
 cc_defaults {
     name: "jni_gtest_defaults",
     header_libs: ["jni_gtest_headers"],
     shared_libs: ["libnativehelper"],
+}
+
+cc_defaults {
+    name: "jni_art_gtest_defaults",
+    defaults: ["jni_gtest_defaults"],
+    header_libs: ["jni_art_gtest_headers"],
+    shared_libs: ["libbase"],
+    target: {
+        android: {
+            cflags: ["-DTARGET_BUILD"],         // For dex files and directories.
+            shared_libs: [
+                "libdl",
+                "liblog",
+            ],
+        },
+        host: {
+            host_ldlibs: ["-ldl"],
+        },
+    },
+    ldflags: ["-Wl,--export-dynamic"],  // For sigchainlib.
+    whole_static_libs: ["libsigchain"],  // Required for an ART-hosting process.
+    // TODO: Find a good dependency for ART.
 }

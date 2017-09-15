@@ -19,6 +19,8 @@
 
 #include <memory>
 
+#include <android-base/logging.h>
+#include <android-base/stringprintf.h>
 #include <gtest/gtest.h>
 
 #include <jni.h>
@@ -42,11 +44,11 @@ namespace android {
 
 
 
-// Provider is a concept that must follow this structure:
+// Provider is expected to follow this structure:
 //
 // class JNIProvider {
 // public:
-//    JNIProvider();
+//    static JNIProvider* Create();
 //
 //    void SetUp();
 //    JNIEnv* CreateJNIEnv();
@@ -58,13 +60,13 @@ namespace android {
 template <typename Provider, typename Test = ::testing::Test>
 class JNITestBase : public Test {
 protected:
-    JNITestBase() : provider_(), env_(nullptr), java_vm_(nullptr) {
+    JNITestBase() : provider_(Provider::Create()), env_(nullptr), java_vm_(nullptr) {
     }
 
     void SetUp() override {
         Test::SetUp();
-        provider_.SetUp();
-        env_ = provider_.CreateJNIEnv();
+        provider_->SetUp();
+        env_ = provider_->CreateJNIEnv();
         ASSERT_TRUE(env_ != nullptr);
     }
 
@@ -75,20 +77,18 @@ protected:
     }
 
 protected:
-    Provider provider_;
+    std::unique_ptr<Provider> provider_;
 
     JNIEnv* env_;
     JavaVM* java_vm_;
 };
 
-// A mockable implementation of the Provider concept. It is the responsibility
-// of the test to stub out any needed functions (all function pointers will be
-// null initially).
-//
-// TODO: Consider googlemock.
+// A mock provider. It is the responsibility of the test to stub out any
+// needed functions (all function pointers will be null initially).
 class MockJNIProvider {
 public:
-    MockJNIProvider() {
+    static MockJNIProvider* Create() {
+        return new MockJNIProvider();
     }
 
     void SetUp() {
