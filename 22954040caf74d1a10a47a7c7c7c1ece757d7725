@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bb69f004_2b54aa87",
+        "filename": "tests/ScopedLocalRef_test.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 178,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-09-19T00:04:10Z",
+      "side": 1,
+      "message": "You don\u0027t need to do this super-hacky type of approach to ensuring it was deleted.\n\nIf you use googlemock you can annotate the mock JNIEnv and then use normal \n\n    EXPECT_CALL(ref, method(DeleteLocalRef))\n       .Times(1);\n\nhttps://github.com/google/googletest/blob/master/googlemock/docs/ForDummies.md",
+      "revId": "22954040caf74d1a10a47a7c7c7c1ece757d7725",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "01689b91_8c6a3bdd",
+        "filename": "tests/jni_gtest.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-09-19T00:04:10Z",
+      "side": 1,
+      "message": "This is already part of our googletest so there\u0027s really no reason not to use this.",
+      "revId": "22954040caf74d1a10a47a7c7c7c1ece757d7725",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
