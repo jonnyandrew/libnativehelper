@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "dde43f63_eb270381",
+        "filename": "tests/ScopedLocalRef_test.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 178,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2017-09-19T00:07:56Z",
+      "side": 1,
+      "message": "I have *zero* intention of including googlemock as the very first user. Please feel free to fix this in a follow-up. Especially I have *zero* interest to do all the work to make JNIEnv* mockable - because that doesn\u0027t exist and is about a thousand lines of code.\n\nSo I\u0027m happy if you want to deal with this in a follow-up, when *right now* this is just superfluous work detracting me from actual progress in the name of some benefits I won\u0027t see until years later.",
+      "parentUuid": "bb69f004_2b54aa87",
+      "revId": "22954040caf74d1a10a47a7c7c7c1ece757d7725",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "01689b91_8c6a3bdd",
         "filename": "tests/jni_gtest.h",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2017-09-19T00:04:10Z",
       "side": 1,
       "message": "This is already part of our googletest so there\u0027s really no reason not to use this.",
+      "revId": "22954040caf74d1a10a47a7c7c7c1ece757d7725",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f140fcf3_8d09d946",
+        "filename": "tests/jni_gtest.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2017-09-19T00:07:56Z",
+      "side": 1,
+      "message": "No, it is *not*, counter to what you are continuing to imply. JNIEnv is not easily mockable. It\u0027s a thousand lines to do the double indirection required to have googlemock support. So please stop pushing for this when all *I* want is a simple test setup.",
+      "parentUuid": "01689b91_8c6a3bdd",
       "revId": "22954040caf74d1a10a47a7c7c7c1ece757d7725",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
