@@ -20,6 +20,13 @@ cc_library_headers {
 }
 
 cc_library_headers {
+    name: "libnativehelper_pure_headers",
+    host_supported: true,
+    export_include_dirs: ["pure_header_include"],
+    vendor_available: true,
+}
+
+cc_library_headers {
     name: "jni_platform_headers",
     host_supported: true,
     export_include_dirs: ["platform_include"],
@@ -44,8 +51,12 @@ cc_library {
         },
     },
 
-    header_libs: ["jni_headers", "jni_platform_headers"],
-    export_header_lib_headers: ["jni_headers"],
+    header_libs: [
+        "jni_headers",
+        "libnativehelper_pure_headers",
+        "jni_platform_headers"
+    ],
+    export_header_lib_headers: ["jni_headers", "libnativehelper_pure_headers"],
 
     shared_libs: [
         "liblog",

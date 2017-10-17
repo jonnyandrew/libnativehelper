@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-#ifndef SCOPED_LOCAL_REF_H_included
-#define SCOPED_LOCAL_REF_H_included
+#ifndef SCOPED_LOCAL_REF_PURE_H_included
+#define SCOPED_LOCAL_REF_PURE_H_included
 
 #include <cstddef>
 
 #include "jni.h"
-#include "JNIHelp.h"  // for DISALLOW_COPY_AND_ASSIGN.
+#include "nativehelper_macros.h"
 
 // A smart pointer that deletes a JNI local reference when it goes out of scope.
 template<typename T>
@@ -91,4 +91,4 @@ private:
     DISALLOW_COPY_AND_ASSIGN(ScopedLocalRef);
 };
 
-#endif  // SCOPED_LOCAL_REF_H_included
+#endif  // SCOPED_LOCAL_REF_PURE_H_included
