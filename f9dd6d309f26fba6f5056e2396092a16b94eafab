@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eefd183b_9fc1d8a5",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-10-17T18:06:52Z",
+      "side": 1,
+      "message": "nit: \"pure\" makes me think no side-effects, I would prefer something else, e.g \u0027libnativehelper_header_only\u0027",
+      "revId": "f9dd6d309f26fba6f5056e2396092a16b94eafab",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
