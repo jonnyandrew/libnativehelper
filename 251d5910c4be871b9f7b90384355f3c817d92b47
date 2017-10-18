@@ -51,6 +51,24 @@
       "revId": "251d5910c4be871b9f7b90384355f3c817d92b47",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a6c9e442_cbf5dea6",
+        "filename": "include/nativehelper/ScopedBytes.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-10-18T17:57:00Z",
+      "side": 1,
+      "message": "How does it actually work then? I didn\u0027t see a \"jniThrowNullPointerException\" in the header-only version?",
+      "parentUuid": "2b360e24_0dfe8324",
+      "revId": "251d5910c4be871b9f7b90384355f3c817d92b47",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
