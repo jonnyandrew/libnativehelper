@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "69d7d32c_5fd42c42",
+        "filename": "Android.bp",
+        "patchSetId": 2
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-10-18T17:07:11Z",
+      "side": 1,
+      "message": "Any reason to make it vendor_available ? Do we have to worry about incompatibility with vendor code when we make refactorings?",
+      "revId": "251d5910c4be871b9f7b90384355f3c817d92b47",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f4cedf3_51dc5904",
+        "filename": "include/nativehelper/ScopedBytes.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-10-18T17:07:11Z",
+      "side": 1,
+      "message": "So if I understand correctly, these #include JNIhelp.h are completely unnecessary ?",
+      "revId": "251d5910c4be871b9f7b90384355f3c817d92b47",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
