@@ -69,6 +69,24 @@
       "revId": "251d5910c4be871b9f7b90384355f3c817d92b47",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e07d2679_8fcc6a70",
+        "filename": "include/nativehelper/ScopedBytes.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2017-10-18T18:00:52Z",
+      "side": 1,
+      "message": "If you use the header-only version, you as the client are supposed to provide that function somewhere...",
+      "parentUuid": "a6c9e442_cbf5dea6",
+      "revId": "251d5910c4be871b9f7b90384355f3c817d92b47",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
