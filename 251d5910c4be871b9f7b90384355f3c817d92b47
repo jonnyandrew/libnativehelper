@@ -33,6 +33,24 @@
       "revId": "251d5910c4be871b9f7b90384355f3c817d92b47",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2b360e24_0dfe8324",
+        "filename": "include/nativehelper/ScopedBytes.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2017-10-18T17:25:03Z",
+      "side": 1,
+      "message": "See the old code using jniThrowNullPointerException? That\u0027s normally provided by JNIHelp. I\u0027d rather use headers to make clear where that stuff is coming from if the user isn\u0027t required to provide it (plus there are transitive users in the framework... :-( ). I guess you disagree?",
+      "parentUuid": "5f4cedf3_51dc5904",
+      "revId": "251d5910c4be871b9f7b90384355f3c817d92b47",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
