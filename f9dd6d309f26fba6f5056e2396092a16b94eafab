@@ -51,6 +51,24 @@
       "revId": "f9dd6d309f26fba6f5056e2396092a16b94eafab",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c7615bba_66541bfd",
+        "filename": "include/nativehelper/ScopedBytes.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2017-10-18T16:00:01Z",
+      "side": 1,
+      "message": "Backwards compat, so I don\u0027t have to fix up all users.",
+      "parentUuid": "5b74df70_6cb92d9f",
+      "revId": "f9dd6d309f26fba6f5056e2396092a16b94eafab",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
