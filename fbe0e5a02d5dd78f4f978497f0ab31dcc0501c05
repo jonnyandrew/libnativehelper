@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e6f71a6e_3c3b81c0",
+        "filename": "header_only_include/nativehelper/nativehelper_macros.h",
+        "patchSetId": 4
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-10-19T22:28:38Z",
+      "side": 1,
+      "message": "Strange that this is in a file called \"macros\" but other than that the approach seems good.",
+      "revId": "fbe0e5a02d5dd78f4f978497f0ab31dcc0501c05",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
