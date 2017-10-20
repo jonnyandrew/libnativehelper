@@ -16,6 +16,24 @@
       "revId": "fbe0e5a02d5dd78f4f978497f0ab31dcc0501c05",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7293e1a1_df0f6478",
+        "filename": "header_only_include/nativehelper/nativehelper_macros.h",
+        "patchSetId": 4
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2017-10-20T00:20:39Z",
+      "side": 1,
+      "message": "Yeah, now that it contains a whole function, I should probably rename. _utils?",
+      "parentUuid": "e6f71a6e_3c3b81c0",
+      "revId": "fbe0e5a02d5dd78f4f978497f0ab31dcc0501c05",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
