@@ -34,6 +34,24 @@
       "revId": "fbe0e5a02d5dd78f4f978497f0ab31dcc0501c05",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "bf944ebc_6b6d7932",
+        "filename": "header_only_include/nativehelper/nativehelper_macros.h",
+        "patchSetId": 4
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-10-20T00:21:33Z",
+      "side": 1,
+      "message": "SGTM",
+      "parentUuid": "7293e1a1_df0f6478",
+      "revId": "fbe0e5a02d5dd78f4f978497f0ab31dcc0501c05",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
