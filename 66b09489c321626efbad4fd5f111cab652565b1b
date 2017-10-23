@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f3f3eea3_9a47be11",
+        "filename": "JniConstants.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 1099044
+      },
+      "writtenOn": "2017-10-23T15:23:55Z",
+      "side": 1,
+      "message": "why are we overwriting the assignment two lines above? is the one above never needed?",
+      "range": {
+        "startLine": 117,
+        "startChar": 4,
+        "endLine": 117,
+        "endChar": 62
+      },
+      "revId": "66b09489c321626efbad4fd5f111cab652565b1b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
