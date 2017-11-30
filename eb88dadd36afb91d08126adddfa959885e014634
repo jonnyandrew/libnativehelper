@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "5abe5d60_e6c03c31",
+        "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1062848
+      },
+      "writtenOn": "2017-11-30T20:48:21Z",
+      "side": 1,
+      "message": "Thanks! yes, I can could reduce the number of template parameters.",
+      "parentUuid": "a07b9764_34426e6f",
+      "revId": "eb88dadd36afb91d08126adddfa959885e014634",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "aef5c1d6_d9b00013",
         "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
         "patchSetId": 1
@@ -30,6 +48,30 @@
       "writtenOn": "2017-11-30T19:26:10Z",
       "side": 1,
       "message": "nit: default constructor parameter that equals to 0?",
+      "range": {
+        "startLine": 124,
+        "startChar": 56,
+        "endLine": 124,
+        "endChar": 58
+      },
+      "revId": "eb88dadd36afb91d08126adddfa959885e014634",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "80793684_98c5b6d6",
+        "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 1062848
+      },
+      "writtenOn": "2017-11-30T20:48:21Z",
+      "side": 1,
+      "message": "Hmm, I think that is too much for ScopedArray right now.\n\nAccepting starting offset means essentially start supporting sub-array.\nNote that we still call Get***ArrayElements for large array, so we need to implement string_view-ish feature here. To implement that need to accept length as the constructor as well and need to care about size method and [] operator.\n\nI think it is a good idea to have array-view feature but let me focus on nullable array in this CL.",
+      "parentUuid": "aef5c1d6_d9b00013",
       "range": {
         "startLine": 124,
         "startChar": 56,
@@ -65,6 +107,30 @@
     },
     {
       "key": {
+        "uuid": "0e67f720_22e88cac",
+        "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 141,
+      "author": {
+        "id": 1062848
+      },
+      "writtenOn": "2017-11-30T20:48:21Z",
+      "side": 1,
+      "message": "By unifying NonNull and Nullable into one class, this can not be ssize_t.\nThere is already users which compares with size_t and it goes compile warning different sign comparison.\n\nI think returning zero for nullptr is not a so bad output. What do you think?",
+      "parentUuid": "17138f2d_110f63a3",
+      "range": {
+        "startLine": 141,
+        "startChar": 4,
+        "endLine": 141,
+        "endChar": 10
+      },
+      "revId": "eb88dadd36afb91d08126adddfa959885e014634",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "09e731c5_7e89dc58",
         "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
         "patchSetId": 1
@@ -76,6 +142,24 @@
       "writtenOn": "2017-11-30T19:26:10Z",
       "side": 1,
       "message": "Copy/pasting this 3 ways is a lot. Can we reduce it ?",
+      "revId": "eb88dadd36afb91d08126adddfa959885e014634",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "79b0487a_a5255a20",
+        "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 1062848
+      },
+      "writtenOn": "2017-11-30T20:48:21Z",
+      "side": 1,
+      "message": "RO/RW has different semantics, so unable to unifity them.\nNonNull/Nullable can be unified. Fixed.",
+      "parentUuid": "09e731c5_7e89dc58",
       "revId": "eb88dadd36afb91d08126adddfa959885e014634",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
