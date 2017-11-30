@@ -1,0 +1,84 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a07b9764_34426e6f",
+        "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-11-30T19:26:10Z",
+      "side": 1,
+      "message": "Perhaps ArrayTraits could be specialized to avoid passing in extra template parameters below?\n\n  struct ScopedPrimitiveArrayTraits\u003cjboolean\u003e {\n    ...\n    using ArrayType \u003d jbooleanArray;\n  }\n\n...\n\n  template \u003ctypename JType\u003e\n  class ScopedArrayRO {\n    using Traits \u003d ScopedPrimitiveArrayTraits\u003cJType\u003e;\n    using ArrayType \u003d Traits::ArrayType;\n  }",
+      "revId": "eb88dadd36afb91d08126adddfa959885e014634",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aef5c1d6_d9b00013",
+        "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-11-30T19:26:10Z",
+      "side": 1,
+      "message": "nit: default constructor parameter that equals to 0?",
+      "range": {
+        "startLine": 124,
+        "startChar": 56,
+        "endLine": 124,
+        "endChar": 58
+      },
+      "revId": "eb88dadd36afb91d08126adddfa959885e014634",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "17138f2d_110f63a3",
+        "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 141,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-11-30T19:26:10Z",
+      "side": 1,
+      "message": "Perhaps ssize_t returning -1 if its null?",
+      "range": {
+        "startLine": 141,
+        "startChar": 4,
+        "endLine": 141,
+        "endChar": 10
+      },
+      "revId": "eb88dadd36afb91d08126adddfa959885e014634",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "09e731c5_7e89dc58",
+        "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-11-30T19:26:10Z",
+      "side": 1,
+      "message": "Copy/pasting this 3 ways is a lot. Can we reduce it ?",
+      "revId": "eb88dadd36afb91d08126adddfa959885e014634",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
