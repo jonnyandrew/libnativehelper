@@ -1,0 +1,169 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4f5fca80_8f67b7fa",
+        "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-11-30T21:24:27Z",
+      "side": 1,
+      "message": "nit: kNullable",
+      "range": {
+        "startLine": 62,
+        "startChar": 30,
+        "endLine": 62,
+        "endChar": 38
+      },
+      "revId": "06e21fb00741e474f717b6c7ac27042c517f53d6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "61ed88a9_05b5100d",
+        "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-11-30T21:24:27Z",
+      "side": 1,
+      "message": "Where is the ScopedArrayRO(JNIEnv*, ArrayType) constructor?",
+      "revId": "06e21fb00741e474f717b6c7ac27042c517f53d6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b837eaea_7128eeb2",
+        "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-11-30T21:24:27Z",
+      "side": 1,
+      "message": "Don\u0027t need to get mSize for getArrayElements.",
+      "revId": "06e21fb00741e474f717b6c7ac27042c517f53d6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "56956490_68d422b5",
+        "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-11-30T21:24:27Z",
+      "side": 1,
+      "message": "Whats with this distinction?\n\nOn ART, GetPrimitiveArrayElements is always better. Either it makes a copy, in which case it\u0027s always the same implementation as GetPrimitiveArrayRegion, *or* if the array is non-movable (e.g. because its a very large page-sized array or bigger) it doesn\u0027t make a copy at all.",
+      "range": {
+        "startLine": 92,
+        "startChar": 40,
+        "endLine": 99,
+        "endChar": 5
+      },
+      "revId": "06e21fb00741e474f717b6c7ac27042c517f53d6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2fe61fb6_db635219",
+        "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-11-30T21:24:27Z",
+      "side": 1,
+      "message": "Maybe even add start/begin while you\u0027re at it, so it can be used with C++ for loop?\n\n  for (jint elem : ScopedArrayRO(jni_env, jint_array)) {\n     ...\n  }",
+      "revId": "06e21fb00741e474f717b6c7ac27042c517f53d6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "880fcdc0_785a97b1",
+        "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-11-30T21:24:27Z",
+      "side": 1,
+      "message": "Move operators?",
+      "revId": "06e21fb00741e474f717b6c7ac27042c517f53d6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0f42d4ad_373bb5a1",
+        "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-11-30T21:24:27Z",
+      "side": 1,
+      "message": "Were you actually trying to do a small-string-optimization here (1024 is likely too big)? Otherwise see L99.",
+      "revId": "06e21fb00741e474f717b6c7ac27042c517f53d6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d6952b35_026eca79",
+        "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-11-30T21:24:27Z",
+      "side": 1,
+      "message": "Is there a need for this? What about a helper function instead?\n\n  std::optional\u003cScopedArrayRO\u003cJType\u003e\u003e MaybeMakeScopedArrayRO(ArrayType arr) {\n    return arr \u003d\u003d nullptr ? std::nullopt_t : ScopedArrayRO\u003cJType\u003e(arr);\n  }",
+      "revId": "06e21fb00741e474f717b6c7ac27042c517f53d6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d855e621_4860cfe2",
+        "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 141,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-11-30T21:24:27Z",
+      "side": 1,
+      "message": "Can this inherit from ScopedArrayRO to avoid reimplementing half of the functionality?",
+      "revId": "06e21fb00741e474f717b6c7ac27042c517f53d6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}

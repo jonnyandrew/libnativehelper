@@ -84,6 +84,30 @@
     },
     {
       "key": {
+        "uuid": "0bc1908d_5dd9b916",
+        "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-11-30T21:24:27Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "80793684_98c5b6d6",
+      "range": {
+        "startLine": 124,
+        "startChar": 56,
+        "endLine": 124,
+        "endChar": 58
+      },
+      "revId": "eb88dadd36afb91d08126adddfa959885e014634",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "17138f2d_110f63a3",
         "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
         "patchSetId": 1
@@ -119,6 +143,30 @@
       "side": 1,
       "message": "By unifying NonNull and Nullable into one class, this can not be ssize_t.\nThere is already users which compares with size_t and it goes compile warning different sign comparison.\n\nI think returning zero for nullptr is not a so bad output. What do you think?",
       "parentUuid": "17138f2d_110f63a3",
+      "range": {
+        "startLine": 141,
+        "startChar": 4,
+        "endLine": 141,
+        "endChar": 10
+      },
+      "revId": "eb88dadd36afb91d08126adddfa959885e014634",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0a57d10a_1d3e241f",
+        "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 141,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-11-30T21:24:27Z",
+      "side": 1,
+      "message": "0 means it\u0027s indistinguishable from a valid array of 0, requiring an extra get() call to confirm if it\u0027s actually null or not.\n\nI\u0027m not a big fan of having an extra Nullable RO type, but if we do do it:\n\n  using SizeT \u003d std::conditional\u003cnullable, ssize_t, size_t\u003e::type;\n  // Returns -1 if null, otherwise the non-negative size.\n  SizeT size() const { return mSize; }\n  ....\n  SizeT mSize;\n\nwould be the easiest way to accomplish it.",
+      "parentUuid": "0e67f720_22e88cac",
       "range": {
         "startLine": 141,
         "startChar": 4,
