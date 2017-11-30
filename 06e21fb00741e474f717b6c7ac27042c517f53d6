@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "2bfb62bc_9e6f3a00",
+        "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1062848
+      },
+      "writtenOn": "2017-11-30T22:23:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4f5fca80_8f67b7fa",
+      "range": {
+        "startLine": 62,
+        "startChar": 30,
+        "endLine": 62,
+        "endChar": 38
+      },
+      "revId": "06e21fb00741e474f717b6c7ac27042c517f53d6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "61ed88a9_05b5100d",
         "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
         "patchSetId": 2
@@ -42,6 +66,24 @@
     },
     {
       "key": {
+        "uuid": "e3202a83_ac91ee8a",
+        "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 1062848
+      },
+      "writtenOn": "2017-11-30T22:23:18Z",
+      "side": 1,
+      "message": "The constructor starts from line 71.",
+      "parentUuid": "61ed88a9_05b5100d",
+      "revId": "06e21fb00741e474f717b6c7ac27042c517f53d6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "b837eaea_7128eeb2",
         "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
         "patchSetId": 2
@@ -53,6 +95,24 @@
       "writtenOn": "2017-11-30T21:24:27Z",
       "side": 1,
       "message": "Don\u0027t need to get mSize for getArrayElements.",
+      "revId": "06e21fb00741e474f717b6c7ac27042c517f53d6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "68a4fe2f_36b50fcd",
+        "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 1062848
+      },
+      "writtenOn": "2017-11-30T22:23:18Z",
+      "side": 1,
+      "message": "How can we retrieve the size in case of getArrayElements?",
+      "parentUuid": "b837eaea_7128eeb2",
       "revId": "06e21fb00741e474f717b6c7ac27042c517f53d6",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
@@ -82,6 +142,30 @@
     },
     {
       "key": {
+        "uuid": "f399c699_3bb5065b",
+        "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 1062848
+      },
+      "writtenOn": "2017-11-30T22:23:18Z",
+      "side": 1,
+      "message": "I don\u0027t have much context here, just copied from existing code.\n\nThis was introduced two years ago.\nhttps://android-review.googlesource.com/c/platform/libnativehelper/+/169683\nLooks that made some improvement at that time, but not sure how it is right now.\n\nI\u0027m sorry I don\u0027t have enough knowledge in ART to determine removing this or not.\n\nPersonally, I also don\u0027t like to have fixed 1024 length of buffer. In case of long array, this consumes 8096 bytes even for small array. Even if it improves the performance, it should be configurable by caller.\n\n+mathieuc, can you share any thought about this?",
+      "parentUuid": "56956490_68d422b5",
+      "range": {
+        "startLine": 92,
+        "startChar": 40,
+        "endLine": 99,
+        "endChar": 5
+      },
+      "revId": "06e21fb00741e474f717b6c7ac27042c517f53d6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "2fe61fb6_db635219",
         "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
         "patchSetId": 2
@@ -99,6 +183,24 @@
     },
     {
       "key": {
+        "uuid": "c3a48af8_7d51ace4",
+        "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 1062848
+      },
+      "writtenOn": "2017-11-30T22:23:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2fe61fb6_db635219",
+      "revId": "06e21fb00741e474f717b6c7ac27042c517f53d6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "880fcdc0_785a97b1",
         "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
         "patchSetId": 2
@@ -110,6 +212,24 @@
       "writtenOn": "2017-11-30T21:24:27Z",
       "side": 1,
       "message": "Move operators?",
+      "revId": "06e21fb00741e474f717b6c7ac27042c517f53d6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "28296113_90ac6f6e",
+        "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 1062848
+      },
+      "writtenOn": "2017-11-30T22:23:18Z",
+      "side": 1,
+      "message": "Can I add when I remove reset method? Move operation makes even confuse the users with broken reset method.",
+      "parentUuid": "880fcdc0_785a97b1",
       "revId": "06e21fb00741e474f717b6c7ac27042c517f53d6",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
@@ -133,6 +253,24 @@
     },
     {
       "key": {
+        "uuid": "16337da2_8c5e62e2",
+        "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 1062848
+      },
+      "writtenOn": "2017-11-30T22:23:18Z",
+      "side": 1,
+      "message": "I agree that this is too large, but I\u0027m sorry I don\u0027t have any numbers for optimization.",
+      "parentUuid": "0f42d4ad_373bb5a1",
+      "revId": "06e21fb00741e474f717b6c7ac27042c517f53d6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "d6952b35_026eca79",
         "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
         "patchSetId": 2
@@ -150,6 +288,24 @@
     },
     {
       "key": {
+        "uuid": "02f7f317_244a507a",
+        "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 1062848
+      },
+      "writtenOn": "2017-11-30T22:23:18Z",
+      "side": 1,
+      "message": "nullopt is C++17 feature. I\u0027m hesitate to use it in utility headers.",
+      "parentUuid": "d6952b35_026eca79",
+      "revId": "06e21fb00741e474f717b6c7ac27042c517f53d6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "d855e621_4860cfe2",
         "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
         "patchSetId": 2
@@ -161,6 +317,24 @@
       "writtenOn": "2017-11-30T21:24:27Z",
       "side": 1,
       "message": "Can this inherit from ScopedArrayRO to avoid reimplementing half of the functionality?",
+      "revId": "06e21fb00741e474f717b6c7ac27042c517f53d6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c2e362ac_cba4c795",
+        "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 141,
+      "author": {
+        "id": 1062848
+      },
+      "writtenOn": "2017-11-30T22:23:18Z",
+      "side": 1,
+      "message": "If we get rid of getArrayRegion, yes, but I can\u0027t judge it.",
+      "parentUuid": "d855e621_4860cfe2",
       "revId": "06e21fb00741e474f717b6c7ac27042c517f53d6",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
