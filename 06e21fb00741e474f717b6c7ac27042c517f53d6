@@ -208,6 +208,30 @@
     },
     {
       "key": {
+        "uuid": "90f81016_4fe9950b",
+        "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 1062848
+      },
+      "writtenOn": "2017-12-01T00:42:07Z",
+      "side": 1,
+      "message": "Thanks. updated.",
+      "parentUuid": "6f463d50_7cde99b2",
+      "range": {
+        "startLine": 92,
+        "startChar": 40,
+        "endLine": 99,
+        "endChar": 5
+      },
+      "revId": "06e21fb00741e474f717b6c7ac27042c517f53d6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "2fe61fb6_db635219",
         "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
         "patchSetId": 2
@@ -290,6 +314,24 @@
       "side": 1,
       "message": "Do you mean in a separate CL , in a separate patchset, ?",
       "parentUuid": "28296113_90ac6f6e",
+      "revId": "06e21fb00741e474f717b6c7ac27042c517f53d6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1a588ba6_31adfe78",
+        "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 1062848
+      },
+      "writtenOn": "2017-12-01T00:42:07Z",
+      "side": 1,
+      "message": "I meant in a separate CL.\nI\u0027m going to do\n1. Land this patch.\n2. Remove all single argument constructor/reset call from JNI.\n3. Remove single argument constructor/reset definition from this line.\n\nI\u0027d like introduce move operators at the same time when I do in 3.",
+      "parentUuid": "352165ea_e969b5f9",
       "revId": "06e21fb00741e474f717b6c7ac27042c517f53d6",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
@@ -384,6 +426,24 @@
     },
     {
       "key": {
+        "uuid": "8fa9068a_685b86a7",
+        "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 1062848
+      },
+      "writtenOn": "2017-12-01T00:42:07Z",
+      "side": 1,
+      "message": "By using std::unique_ptr, ScopedArray goes heap, right? That is suboptimal even in C++14 I think.\n\nAlso, to implement this, needs to introduce move constructors which I\u0027d like to do it later.\n\nAs far as I know, C++14 is the default in Android source tree, I don\u0027t have any good motivation to start using C++17 now...",
+      "parentUuid": "6b5ad8c3_b95eb2ed",
+      "revId": "06e21fb00741e474f717b6c7ac27042c517f53d6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "d855e621_4860cfe2",
         "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
         "patchSetId": 2
@@ -431,6 +491,24 @@
       "side": 1,
       "message": "Not sure I grok the code, what does getArrayRegion have to do with reusing the RO functionality?",
       "parentUuid": "c2e362ac_cba4c795",
+      "revId": "06e21fb00741e474f717b6c7ac27042c517f53d6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f4aa42b2_cf52ceda",
+        "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 141,
+      "author": {
+        "id": 1062848
+      },
+      "writtenOn": "2017-12-01T00:42:07Z",
+      "side": 1,
+      "message": "By inheriting ScopedArrayRO, this start consuming unused 4096 bytes.\nI meant it doesn\u0027t make sense unless we stop doing calling getArrayRegion.",
+      "parentUuid": "6752c3d0_525c2441",
       "revId": "06e21fb00741e474f717b6c7ac27042c517f53d6",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
