@@ -232,6 +232,30 @@
     },
     {
       "key": {
+        "uuid": "38ad685e_d7c1bec0",
+        "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 1062848
+      },
+      "writtenOn": "2017-12-01T00:50:08Z",
+      "side": 1,
+      "message": "Sorry, I was too lazy not to check the build, there are two problems:\n\n1. PAGE_SIZE may be defined in another place.\n2. The stack size becomes too large for byte case.\n\nActually, this consumes too large stack frame.... Is this really a good things to do?\n\n\nFYI:\nart/runtime/native/org_apache_harmony_dalvik_ddmc_DdmServer.cc:30:13: error: stack frame size of 4140 bytes in function \u0027art::DdmServer_nativeSendChunk\u0027 [-Werror,-Wframe-larger-than\u003d]",
+      "parentUuid": "90f81016_4fe9950b",
+      "range": {
+        "startLine": 92,
+        "startChar": 40,
+        "endLine": 99,
+        "endChar": 5
+      },
+      "revId": "06e21fb00741e474f717b6c7ac27042c517f53d6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "2fe61fb6_db635219",
         "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
         "patchSetId": 2
