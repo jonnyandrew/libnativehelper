@@ -256,6 +256,30 @@
     },
     {
       "key": {
+        "uuid": "20312966_6866a247",
+        "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-12-01T19:30:02Z",
+      "side": 1,
+      "message": "Ok, I suppose using BUFFER_SIZE \u003d 1024 / sizeof(JType) would be better, since it caps it at 1024 bytes.\n\nI think as you pointed out before, this problem was always there (with jint(4096), jlong(4096*2)) and we are now trying to minimize it.",
+      "parentUuid": "38ad685e_d7c1bec0",
+      "range": {
+        "startLine": 92,
+        "startChar": 40,
+        "endLine": 99,
+        "endChar": 5
+      },
+      "revId": "06e21fb00741e474f717b6c7ac27042c517f53d6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "2fe61fb6_db635219",
         "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
         "patchSetId": 2
@@ -462,6 +486,24 @@
       "side": 1,
       "message": "By using std::unique_ptr, ScopedArray goes heap, right? That is suboptimal even in C++14 I think.\n\nAlso, to implement this, needs to introduce move constructors which I\u0027d like to do it later.\n\nAs far as I know, C++14 is the default in Android source tree, I don\u0027t have any good motivation to start using C++17 now...",
       "parentUuid": "6b5ad8c3_b95eb2ed",
+      "revId": "06e21fb00741e474f717b6c7ac27042c517f53d6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "008a69c5_3b873233",
+        "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-12-01T19:30:02Z",
+      "side": 1,
+      "message": "My only concern if it\u0027s not reinventing the wheel for something that\u0027s already in the standard C++ library?\n\nIs there even a motivation (some existing code) that would benefit from the nullable check? The difference is so minor\n\n    ScopedNullableArrayRO array(env, obj);\n    if (env-\u003eIsExceptionPending()) return;\n\nvs\n\n    if (obj \u003d\u003d nullptr) { jniThrowNullPointerException(); return; }\n    ScopedArrayRO array(env, obj)\n\nEither way the valid code still needs to do the exception checking manually since it will not automatically unwind the C++ stack for you.\n\n\n\nalso:\n------\n  template \u003ctypename T\u003e\n  using OptionalScopedArray \u003d \n#ifdef __cplusplus \u003e\u003d 201703L\n      std::optional\u003cScopedArrayRO\u003cJType\u003e\u003e\n#else\n      std::unique_ptr\u003cScopedArrayRO\u003cJType\u003e\u003e\n#endif\n      ;",
+      "parentUuid": "8fa9068a_685b86a7",
       "revId": "06e21fb00741e474f717b6c7ac27042c517f53d6",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
