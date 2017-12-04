@@ -280,6 +280,30 @@
     },
     {
       "key": {
+        "uuid": "4afe26d4_d2ac173a",
+        "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 1062848
+      },
+      "writtenOn": "2017-12-04T23:48:51Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "20312966_6866a247",
+      "range": {
+        "startLine": 92,
+        "startChar": 40,
+        "endLine": 99,
+        "endChar": 5
+      },
+      "revId": "06e21fb00741e474f717b6c7ac27042c517f53d6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2fe61fb6_db635219",
         "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
         "patchSetId": 2
@@ -504,6 +528,24 @@
       "side": 1,
       "message": "My only concern if it\u0027s not reinventing the wheel for something that\u0027s already in the standard C++ library?\n\nIs there even a motivation (some existing code) that would benefit from the nullable check? The difference is so minor\n\n    ScopedNullableArrayRO array(env, obj);\n    if (env-\u003eIsExceptionPending()) return;\n\nvs\n\n    if (obj \u003d\u003d nullptr) { jniThrowNullPointerException(); return; }\n    ScopedArrayRO array(env, obj)\n\nEither way the valid code still needs to do the exception checking manually since it will not automatically unwind the C++ stack for you.\n\n\n\nalso:\n------\n  template \u003ctypename T\u003e\n  using OptionalScopedArray \u003d \n#ifdef __cplusplus \u003e\u003d 201703L\n      std::optional\u003cScopedArrayRO\u003cJType\u003e\u003e\n#else\n      std::unique_ptr\u003cScopedArrayRO\u003cJType\u003e\u003e\n#endif\n      ;",
       "parentUuid": "8fa9068a_685b86a7",
+      "revId": "06e21fb00741e474f717b6c7ac27042c517f53d6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5e4af219_f3a178d3",
+        "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 1062848
+      },
+      "writtenOn": "2017-12-04T23:48:51Z",
+      "side": 1,
+      "message": "In my use case, no NPE is expected if the argument is null.\n\nFor example,\n\n  ScopedNullableArrayRO array(env, optionalArg);\n  someNullAcceptFunction(array.get(), array.size());\n\nI understand that we should avoid reinventing the wheel, but in this case I don\u0027t think it is a good idea to use unique_ptr as an alternation of std::optional. By using std::unique_ptr, ScopedArrayRO goes heap. Heap allocation should be avoided if possible for performance reasons. (assuming std::optional doesn\u0027t go heap).\n\nI think we should switch to std::optional implementation once C++17 becomes default in Android.",
+      "parentUuid": "008a69c5_3b873233",
       "revId": "06e21fb00741e474f717b6c7ac27042c517f53d6",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
