@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "45f26dc0_f7af2bee",
+        "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
+        "patchSetId": 6
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-12-05T19:50:06Z",
+      "side": 1,
+      "message": "What is this TODO for?",
+      "revId": "28c23dc482511bd2b5869acfc8d6ba2b13590a29",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "df4b23bd_6a1069ea",
+        "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
+        "patchSetId": 6
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-12-05T19:50:06Z",
+      "side": 1,
+      "message": "This seems like it would only make sense for a kNullable right?\n\nYou can use std::enable_if to disable this for non-nullable types.",
+      "revId": "28c23dc482511bd2b5869acfc8d6ba2b13590a29",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da24a508_4de05491",
+        "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
+        "patchSetId": 6
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-12-05T19:50:06Z",
+      "side": 1,
+      "message": "I\u0027m not sure about the value of this exception? Consider the correct user code:\n\n  ScopedArrayRO scoped_array(env, array);\n  if (scoped_array.IsExceptionPending()) {\n     return ...;\n  }\n\nand if the user forgets to do this, it will keep on going further (maybe it will crash again in JNI, maybe not).\n\nvs this user code:\n\n  if (array \u003d\u003d nullptr) { jniThrowNullPointerException(mEnv, \"...\"); return; }\n  ScopedArrayRO scoped_array(env, array);\n\nvery similar and more explicit, right?\n\nIn java code we would also prefer to do precondition checking up front explicitly.\n\n---\n\nNow lets say we change this constructor implementation slightly:\n\n   ScopedArrayRo::ScopedArrayRo(jarray array) {\n     if (!kNullable \u0026\u0026 array \u003d\u003d nullptr) {\n       mEnv-\u003eFatalError(\"array was null\");\n     }\n   }\n\nnow if the user forgets to do the null check, it will immediately crash which is safer and the line number from the stack trace will be correct.",
+      "revId": "28c23dc482511bd2b5869acfc8d6ba2b13590a29",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee28f5d7_9f501154",
+        "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
+        "patchSetId": 6
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-12-05T19:50:06Z",
+      "side": 1,
+      "message": "What is the reset for?",
+      "revId": "28c23dc482511bd2b5869acfc8d6ba2b13590a29",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c5b3c7bd_9e56c8c9",
+        "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
+        "patchSetId": 6
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-12-05T19:50:06Z",
+      "side": 1,
+      "message": "I feel like due to the presence of both reset() and the empty() constructor, it\u0027s possible to get a mRawArray\u003d\u003dnullptr even though the template is !kNullable.\n\nIn this case, it should probably abort here\n\n   const JType* get() const {\n     if (!kNullable \u0026\u0026 mRawArray \u003d\u003d nullptr) {\n       mEnv-\u003eFatalError(\"array is null\");\n     }\n    }\n\n\n(alternatively this could throw NPE, but I\u0027m more skeptical of that as described above, because I wouldn\u0027t trust user to check IsExceptionPending).",
+      "revId": "28c23dc482511bd2b5869acfc8d6ba2b13590a29",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e58f21bf_67448770",
+        "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
+        "patchSetId": 6
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-12-05T19:50:06Z",
+      "side": 1,
+      "message": "note that all these public methods should have handling for !kNullable \u0026\u0026 mRawArray \u003d\u003d nullptr.",
+      "revId": "28c23dc482511bd2b5869acfc8d6ba2b13590a29",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
