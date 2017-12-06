@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8d81184b_c3893945",
+        "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
+        "patchSetId": 6
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 1062848
+      },
+      "writtenOn": "2017-12-06T18:05:59Z",
+      "side": 1,
+      "message": "Looks TODO confuses you, I removed all user of this from AOSP at the same time.",
+      "parentUuid": "45f26dc0_f7af2bee",
+      "revId": "28c23dc482511bd2b5869acfc8d6ba2b13590a29",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "df4b23bd_6a1069ea",
         "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
         "patchSetId": 6
@@ -30,6 +48,24 @@
       "writtenOn": "2017-12-05T19:50:06Z",
       "side": 1,
       "message": "This seems like it would only make sense for a kNullable right?\n\nYou can use std::enable_if to disable this for non-nullable types.",
+      "revId": "28c23dc482511bd2b5869acfc8d6ba2b13590a29",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c64fd344_f4c9778c",
+        "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
+        "patchSetId": 6
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 1062848
+      },
+      "writtenOn": "2017-12-06T18:05:59Z",
+      "side": 1,
+      "message": "Now removed.",
+      "parentUuid": "df4b23bd_6a1069ea",
       "revId": "28c23dc482511bd2b5869acfc8d6ba2b13590a29",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "d54bca9d_116befc8",
+        "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
+        "patchSetId": 6
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 1062848
+      },
+      "writtenOn": "2017-12-06T18:05:59Z",
+      "side": 1,
+      "message": "I prefer immediate crash rather than NPE too. Fixed.",
+      "parentUuid": "da24a508_4de05491",
+      "revId": "28c23dc482511bd2b5869acfc8d6ba2b13590a29",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee28f5d7_9f501154",
         "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
         "patchSetId": 6
@@ -70,6 +124,24 @@
     },
     {
       "key": {
+        "uuid": "f3c8f544_ebeb48a7",
+        "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
+        "patchSetId": 6
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 1062848
+      },
+      "writtenOn": "2017-12-06T18:05:59Z",
+      "side": 1,
+      "message": "Now removed.",
+      "parentUuid": "ee28f5d7_9f501154",
+      "revId": "28c23dc482511bd2b5869acfc8d6ba2b13590a29",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "c5b3c7bd_9e56c8c9",
         "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
         "patchSetId": 6
@@ -81,6 +153,24 @@
       "writtenOn": "2017-12-05T19:50:06Z",
       "side": 1,
       "message": "I feel like due to the presence of both reset() and the empty() constructor, it\u0027s possible to get a mRawArray\u003d\u003dnullptr even though the template is !kNullable.\n\nIn this case, it should probably abort here\n\n   const JType* get() const {\n     if (!kNullable \u0026\u0026 mRawArray \u003d\u003d nullptr) {\n       mEnv-\u003eFatalError(\"array is null\");\n     }\n    }\n\n\n(alternatively this could throw NPE, but I\u0027m more skeptical of that as described above, because I wouldn\u0027t trust user to check IsExceptionPending).",
+      "revId": "28c23dc482511bd2b5869acfc8d6ba2b13590a29",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "26d11f1d_a7513197",
+        "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
+        "patchSetId": 6
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 1062848
+      },
+      "writtenOn": "2017-12-06T18:05:59Z",
+      "side": 1,
+      "message": "Thank you for your comment but I removed reset and empty constructor so that this condition check is no longer necessary.",
+      "parentUuid": "c5b3c7bd_9e56c8c9",
       "revId": "28c23dc482511bd2b5869acfc8d6ba2b13590a29",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
