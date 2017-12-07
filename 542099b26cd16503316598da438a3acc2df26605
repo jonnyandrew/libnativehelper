@@ -1,0 +1,227 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8c7f3d24_10443957",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 8
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-12-07T21:30:49Z",
+      "side": 1,
+      "message": "supported",
+      "range": {
+        "startLine": 9,
+        "startChar": 57,
+        "endLine": 9,
+        "endChar": 65
+      },
+      "revId": "542099b26cd16503316598da438a3acc2df26605",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6a13fcc5_c16f50b7",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 8
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-12-07T21:30:49Z",
+      "side": 1,
+      "message": "argument",
+      "range": {
+        "startLine": 9,
+        "startChar": 7,
+        "endLine": 9,
+        "endChar": 15
+      },
+      "revId": "542099b26cd16503316598da438a3acc2df26605",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "87794c68_e1906f6b",
+        "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
+        "patchSetId": 8
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-12-07T21:30:49Z",
+      "side": 1,
+      "message": "nit: should probably be called fatalError(JNIEnv* env, const char* msg)",
+      "revId": "542099b26cd16503316598da438a3acc2df26605",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4565d8c3_2b25f664",
+        "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
+        "patchSetId": 8
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-12-07T21:30:49Z",
+      "side": 1,
+      "message": "(for future reference, you could\u0027ve made traits a template parameter and this would\u0027ve made it easier to write the test without having a fake specialization).",
+      "revId": "542099b26cd16503316598da438a3acc2df26605",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3819e69c_ac8437e5",
+        "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
+        "patchSetId": 8
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-12-07T21:30:49Z",
+      "side": 1,
+      "message": "Please a comment here that it will return -1 for nullable \u0026\u0026 null, and that the type switches between signed/unsigned size_t.",
+      "revId": "542099b26cd16503316598da438a3acc2df26605",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "37436eb8_256dabf0",
+        "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
+        "patchSetId": 8
+      },
+      "lineNbr": 135,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-12-07T21:30:49Z",
+      "side": 1,
+      "message": "nit: abort",
+      "range": {
+        "startLine": 135,
+        "startChar": 9,
+        "endLine": 135,
+        "endChar": 15
+      },
+      "revId": "542099b26cd16503316598da438a3acc2df26605",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a3d316a_b0e501e5",
+        "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
+        "patchSetId": 8
+      },
+      "lineNbr": 146,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-12-07T21:30:49Z",
+      "side": 1,
+      "message": "-1",
+      "range": {
+        "startLine": 146,
+        "startChar": 80,
+        "endLine": 146,
+        "endChar": 81
+      },
+      "revId": "542099b26cd16503316598da438a3acc2df26605",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "06c9f8c0_58bdf56a",
+        "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
+        "patchSetId": 8
+      },
+      "lineNbr": 200,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-12-07T21:30:49Z",
+      "side": 1,
+      "message": "nit: abort",
+      "range": {
+        "startLine": 200,
+        "startChar": 9,
+        "endLine": 200,
+        "endChar": 15
+      },
+      "revId": "542099b26cd16503316598da438a3acc2df26605",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a9eaa7e8_7dad473e",
+        "filename": "tests/scoped_primitive_array_test.cpp",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-12-07T21:30:49Z",
+      "side": 1,
+      "message": "This is a strange way to test it, I would\u0027ve expected gmock and/or typed test cases with google test it.\n\nNow that I read through it, looks ok, tests most of what we care about.\n\nI left some comments below but please feel free to ignore them.",
+      "revId": "542099b26cd16503316598da438a3acc2df26605",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2652f5d2_88e53d8b",
+        "filename": "tests/scoped_primitive_array_test.cpp",
+        "patchSetId": 8
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-12-07T21:30:49Z",
+      "side": 1,
+      "message": "You could use gmock for this instead? Well, doesn\u0027t matter to me now if you don\u0027t want to rewrite it I suppose.",
+      "revId": "542099b26cd16503316598da438a3acc2df26605",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d558c5c2_d2f8f582",
+        "filename": "tests/scoped_primitive_array_test.cpp",
+        "patchSetId": 8
+      },
+      "lineNbr": 180,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-12-07T21:30:49Z",
+      "side": 1,
+      "message": "If you use TYPED_TEST / TYPED_TEST_CASE here you can test all the template instantiations in one go.",
+      "range": {
+        "startLine": 180,
+        "startChar": 0,
+        "endLine": 180,
+        "endChar": 4
+      },
+      "revId": "542099b26cd16503316598da438a3acc2df26605",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
