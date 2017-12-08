@@ -329,6 +329,24 @@
     },
     {
       "key": {
+        "uuid": "52bb116c_8093af67",
+        "filename": "tests/scoped_primitive_array_test.cpp",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2017-12-08T19:49:34Z",
+      "side": 1,
+      "message": "Yeah, I think this is fine, I was just pointing out you could save some time when writing future tests :).\n\n1. adding libgmock very easy, just static_libs : [\"libgmock_test\"] in Android.bp.\n2. you could inject your own traits here easily with virtuals which would then be suitable for gmock",
+      "parentUuid": "983ec4ad_f874521c",
+      "revId": "542099b26cd16503316598da438a3acc2df26605",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2652f5d2_88e53d8b",
         "filename": "tests/scoped_primitive_array_test.cpp",
         "patchSetId": 8
