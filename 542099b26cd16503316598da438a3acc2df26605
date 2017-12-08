@@ -65,6 +65,24 @@
     },
     {
       "key": {
+        "uuid": "d49286f1_20c457a5",
+        "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
+        "patchSetId": 8
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1062848
+      },
+      "writtenOn": "2017-12-08T01:56:02Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "87794c68_e1906f6b",
+      "revId": "542099b26cd16503316598da438a3acc2df26605",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4565d8c3_2b25f664",
         "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
         "patchSetId": 8
@@ -76,6 +94,24 @@
       "writtenOn": "2017-12-07T21:30:49Z",
       "side": 1,
       "message": "(for future reference, you could\u0027ve made traits a template parameter and this would\u0027ve made it easier to write the test without having a fake specialization).",
+      "revId": "542099b26cd16503316598da438a3acc2df26605",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d2001502_96879f51",
+        "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
+        "patchSetId": 8
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 1062848
+      },
+      "writtenOn": "2017-12-08T01:56:02Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "4565d8c3_2b25f664",
       "revId": "542099b26cd16503316598da438a3acc2df26605",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
@@ -99,6 +135,24 @@
     },
     {
       "key": {
+        "uuid": "d01bdab0_9bb69294",
+        "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
+        "patchSetId": 8
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 1062848
+      },
+      "writtenOn": "2017-12-08T01:56:02Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3819e69c_ac8437e5",
+      "revId": "542099b26cd16503316598da438a3acc2df26605",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "37436eb8_256dabf0",
         "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
         "patchSetId": 8
@@ -110,6 +164,30 @@
       "writtenOn": "2017-12-07T21:30:49Z",
       "side": 1,
       "message": "nit: abort",
+      "range": {
+        "startLine": 135,
+        "startChar": 9,
+        "endLine": 135,
+        "endChar": 15
+      },
+      "revId": "542099b26cd16503316598da438a3acc2df26605",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9f4df5ef_e425111a",
+        "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
+        "patchSetId": 8
+      },
+      "lineNbr": 135,
+      "author": {
+        "id": 1062848
+      },
+      "writtenOn": "2017-12-08T01:56:02Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "37436eb8_256dabf0",
       "range": {
         "startLine": 135,
         "startChar": 9,
@@ -145,6 +223,30 @@
     },
     {
       "key": {
+        "uuid": "55541332_84695054",
+        "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
+        "patchSetId": 8
+      },
+      "lineNbr": 146,
+      "author": {
+        "id": 1062848
+      },
+      "writtenOn": "2017-12-08T01:56:02Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1a3d316a_b0e501e5",
+      "range": {
+        "startLine": 146,
+        "startChar": 80,
+        "endLine": 146,
+        "endChar": 81
+      },
+      "revId": "542099b26cd16503316598da438a3acc2df26605",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "06c9f8c0_58bdf56a",
         "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
         "patchSetId": 8
@@ -156,6 +258,30 @@
       "writtenOn": "2017-12-07T21:30:49Z",
       "side": 1,
       "message": "nit: abort",
+      "range": {
+        "startLine": 200,
+        "startChar": 9,
+        "endLine": 200,
+        "endChar": 15
+      },
+      "revId": "542099b26cd16503316598da438a3acc2df26605",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b758be6b_6e6b5abb",
+        "filename": "header_only_include/nativehelper/scoped_primitive_array.h",
+        "patchSetId": 8
+      },
+      "lineNbr": 200,
+      "author": {
+        "id": 1062848
+      },
+      "writtenOn": "2017-12-08T01:56:02Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "06c9f8c0_58bdf56a",
       "range": {
         "startLine": 200,
         "startChar": 9,
@@ -185,6 +311,24 @@
     },
     {
       "key": {
+        "uuid": "983ec4ad_f874521c",
+        "filename": "tests/scoped_primitive_array_test.cpp",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1062848
+      },
+      "writtenOn": "2017-12-08T01:56:02Z",
+      "side": 1,
+      "message": "Ack. Just leave for the record why I avoided to use gmock here.\n\n1. this test don\u0027t have libgmock dependency and looks adding gmock dependency is not so simple, (maybe due to host support?).\n2. Traits is never instantiated, so we can\u0027t mock it directly.\n\nSo, please let me keep implementing mock by myself.",
+      "parentUuid": "a9eaa7e8_7dad473e",
+      "revId": "542099b26cd16503316598da438a3acc2df26605",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2652f5d2_88e53d8b",
         "filename": "tests/scoped_primitive_array_test.cpp",
         "patchSetId": 8
@@ -202,6 +346,24 @@
     },
     {
       "key": {
+        "uuid": "5d10b9c5_113fe414",
+        "filename": "tests/scoped_primitive_array_test.cpp",
+        "patchSetId": 8
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1062848
+      },
+      "writtenOn": "2017-12-08T01:56:02Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "2652f5d2_88e53d8b",
+      "revId": "542099b26cd16503316598da438a3acc2df26605",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "d558c5c2_d2f8f582",
         "filename": "tests/scoped_primitive_array_test.cpp",
         "patchSetId": 8
@@ -213,6 +375,30 @@
       "writtenOn": "2017-12-07T21:30:49Z",
       "side": 1,
       "message": "If you use TYPED_TEST / TYPED_TEST_CASE here you can test all the template instantiations in one go.",
+      "range": {
+        "startLine": 180,
+        "startChar": 0,
+        "endLine": 180,
+        "endChar": 4
+      },
+      "revId": "542099b26cd16503316598da438a3acc2df26605",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5d81e039_14bd31ea",
+        "filename": "tests/scoped_primitive_array_test.cpp",
+        "patchSetId": 8
+      },
+      "lineNbr": 180,
+      "author": {
+        "id": 1062848
+      },
+      "writtenOn": "2017-12-08T01:56:02Z",
+      "side": 1,
+      "message": "Thank you for letting me know. I didn\u0027t know TYPED_TEST, but I prefer to write down all test code for all types since the test expectation is not exactly the same for RO/RW.",
+      "parentUuid": "d558c5c2_d2f8f582",
       "range": {
         "startLine": 180,
         "startChar": 0,
