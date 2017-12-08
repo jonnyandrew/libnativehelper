@@ -1,0 +1,10 @@
+Verified+1: Seigo Nonaka <nona@google.com>
+Code-Review+2: Seigo Nonaka <nona@google.com>
+Code-Review+2: Igor Murashkin <iam@google.com>
+Autosubmit+1: Seigo Nonaka <nona@google.com>
+Presubmit-Verified+1: Treehugger Robot <treehugger-gerrit@google.com>
+Submitted-by: Treehugger Robot <treehugger-gerrit@google.com>
+Submitted-at: Fri, 08 Dec 2017 20:07:31 +0000
+Reviewed-on: https://android-review.googlesource.com/551462
+Project: platform/libnativehelper
+Branch: refs/heads/master
