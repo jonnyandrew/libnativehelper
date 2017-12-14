@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ac9e0265_d2bdbb44",
+        "filename": "JniInvocation.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2017-12-14T17:02:24Z",
+      "side": 1,
+      "message": "Line too long.",
+      "range": {
+        "startLine": 79,
+        "startChar": 0,
+        "endLine": 79,
+        "endChar": 113
+      },
+      "revId": "0d78a6365a4c37a1fd6616a5db56fb71bc843685",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "11dab04a_0aa8faac",
+        "filename": "include/nativehelper/JniInvocation.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2017-12-14T17:02:24Z",
+      "side": 1,
+      "message": "Line too long",
+      "range": {
+        "startLine": 50,
+        "startChar": 0,
+        "endLine": 50,
+        "endChar": 106
+      },
+      "revId": "0d78a6365a4c37a1fd6616a5db56fb71bc843685",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1dd7fa8a_28457432",
+        "filename": "tests/JniInvocation_test.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2017-12-14T17:02:24Z",
+      "side": 1,
+      "message": "Line too long, same below.",
+      "range": {
+        "startLine": 53,
+        "startChar": 0,
+        "endLine": 53,
+        "endChar": 109
+      },
+      "revId": "0d78a6365a4c37a1fd6616a5db56fb71bc843685",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
