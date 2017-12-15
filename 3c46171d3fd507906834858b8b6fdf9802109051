@@ -1,0 +1,8 @@
+Verified+1: Tom Cherry <tomcherry@google.com>
+Code-Review+2: Andreas Gampe <agampe@google.com>
+Presubmit-Verified+1: Treehugger Robot <treehugger-gerrit@google.com>
+Submitted-by: Tom Cherry <tomcherry@google.com>
+Submitted-at: Fri, 15 Dec 2017 04:17:38 +0000
+Reviewed-on: https://android-review.googlesource.com/568522
+Project: platform/libnativehelper
+Branch: refs/heads/master
