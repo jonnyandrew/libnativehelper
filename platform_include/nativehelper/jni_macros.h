@@ -23,6 +23,51 @@
 #ifndef NATIVEHELPER_JNI_MACROS_H
 #define NATIVEHELPER_JNI_MACROS_H
 
+#if defined(__cplusplus) && __cplusplus >= 201402L
+
+#include "nativehelper/detail/signature_checker.h"  // for MAKE_CHECKED_JNI_NATIVE_METHOD
+
+#ifndef NATIVE_METHOD
+#define NATIVE_METHOD(className, functionName, signature)                \
+  MAKE_CHECKED_JNI_NATIVE_METHOD(kNormalNative, #functionName, signature, className ## _ ## functionName)
+#endif
+
+#ifndef OVERLOADED_NATIVE_METHOD
+#define OVERLOADED_NATIVE_METHOD(className, functionName, signature, identifier) \
+  MAKE_CHECKED_JNI_NATIVE_METHOD(kNormalNative, #functionName, signature, className ## _ ## identifier)
+#endif
+
+#define NATIVE_METHOD_AUTOSIG(className, functionName) \
+  MAKE_INFERRED_JNI_NATIVE_METHOD(kNormalNative, #functionName, className ## _ ## functionName)
+
+#ifndef FAST_NATIVE_METHOD
+#define FAST_NATIVE_METHOD(className, functionName, signature)           \
+  MAKE_CHECKED_JNI_NATIVE_METHOD(kFastNative, #functionName, signature, className ## _ ## functionName)
+#endif
+
+#ifndef OVERLOADED_FAST_NATIVE_METHOD
+#define OVERLOADED_FAST_NATIVE_METHOD(className, functionName, signature, identifier) \
+  MAKE_CHECKED_JNI_NATIVE_METHOD(kFastNative, #functionName, signature, className ## _ ## identifier)
+#endif
+
+#define FAST_NATIVE_METHOD_AUTOSIG(className, functionName) \
+  MAKE_INFERRED_JNI_NATIVE_METHOD(kFastNative, #functionName, className ## _ ## functionName)
+
+#ifndef CRITICAL_NATIVE_METHOD
+#define CRITICAL_NATIVE_METHOD(className, functionName, signature)           \
+  MAKE_CHECKED_JNI_NATIVE_METHOD(kCriticalNative, #functionName, signature, className ## _ ## functionName)
+#endif
+
+#ifndef OVERLOADED_CRITICAL_NATIVE_METHOD
+#define OVERLOADED_CRITICAL_NATIVE_METHOD(className, functionName, signature, identifier) \
+  MAKE_CHECKED_JNI_NATIVE_METHOD(kCriticalNative, #functionName, signature, className ## _ ## identifier)
+#endif
+
+#define CRITICAL_NATIVE_METHOD_AUTOSIG(className, functionName) \
+  MAKE_INFERRED_JNI_NATIVE_METHOD(kCriticalNative, #functionName, className ## _ ## functionName)
+
+
+#else // Less than C++14 or C.
 
 // Intended to construct a JNINativeMethod.
 //   (Assumes the C name is the ClassName_JavaMethodName).
@@ -65,6 +110,8 @@
     _NATIVEHELPER_JNI_MACRO_CAST(void*) (className ## _ ## identifier)                \
   }
 #endif
+
+#endif // C++ Check.
 
 ////////////////////////////////////////////////////////
 //                IMPLEMENTATION ONLY.

@@ -8,3 +8,11 @@ cc_test {
     cflags: ["-Wall", "-Werror"],
     shared_libs: ["libnativehelper"],
 }
+
+cc_test {
+  name: "JniSafeRegisterNativeMethods_test",
+  host_supported: true,
+  srcs: ["JniSafeRegisterNativeMethods_test.cpp"],
+  cflags: ["-Wall", "-Werror"],
+  shared_libs: ["libnativehelper"],
+}
