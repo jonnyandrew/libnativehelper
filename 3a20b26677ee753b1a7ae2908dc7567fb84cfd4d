@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b0217de1_97741cd1",
+        "filename": "platform_include/nativehelper/jni_macros.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2018-02-22T02:01:43Z",
+      "side": 1,
+      "message": "Maybe sample use would be good?",
+      "range": {
+        "startLine": 24,
+        "startChar": 3,
+        "endLine": 24,
+        "endChar": 42
+      },
+      "revId": "3a20b26677ee753b1a7ae2908dc7567fb84cfd4d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5f56dff6_0f361347",
+        "filename": "platform_include/nativehelper/jni_macros.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2018-02-22T02:01:43Z",
+      "side": 1,
+      "message": "Line too long?",
+      "range": {
+        "startLine": 25,
+        "startChar": 0,
+        "endLine": 25,
+        "endChar": 103
+      },
+      "revId": "3a20b26677ee753b1a7ae2908dc7567fb84cfd4d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b0b4697d_f0752e2d",
+        "filename": "platform_include/nativehelper/jni_macros.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2018-02-22T02:01:43Z",
+      "side": 1,
+      "message": "s",
+      "range": {
+        "startLine": 34,
+        "startChar": 43,
+        "endLine": 34,
+        "endChar": 51
+      },
+      "revId": "3a20b26677ee753b1a7ae2908dc7567fb84cfd4d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "583e93a9_0d0074a8",
+        "filename": "platform_include/nativehelper/jni_macros.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2018-02-22T02:01:43Z",
+      "side": 1,
+      "message": "Shouldn\u0027t this be open bracket?",
+      "range": {
+        "startLine": 104,
+        "startChar": 7,
+        "endLine": 104,
+        "endChar": 8
+      },
+      "revId": "3a20b26677ee753b1a7ae2908dc7567fb84cfd4d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
