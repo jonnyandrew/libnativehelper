@@ -2,6 +2,52 @@
   "comments": [
     {
       "key": {
+        "uuid": "52d9cedd_01b111f3",
+        "filename": "platform_include/nativehelper/detail/signature_checker.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 1018108
+      },
+      "writtenOn": "2018-02-23T18:05:24Z",
+      "side": 1,
+      "message": "Unnecessary, given the no-parameter constructor below.",
+      "range": {
+        "startLine": 84,
+        "startChar": 0,
+        "endLine": 88,
+        "endChar": 3
+      },
+      "revId": "a1969c41f6eb46cc5156399489024d1afe5b0904",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f23fb372_3881aa2b",
+        "filename": "platform_include/nativehelper/detail/signature_checker.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 1018108
+      },
+      "writtenOn": "2018-02-23T18:05:24Z",
+      "side": 1,
+      "message": "len \u003c\u003d size() - start\n(Avoid arithmetic overflow errors.)",
+      "range": {
+        "startLine": 109,
+        "startChar": 13,
+        "endLine": 109,
+        "endChar": 34
+      },
+      "revId": "a1969c41f6eb46cc5156399489024d1afe5b0904",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "aede15ec_92ffa19d",
         "filename": "platform_include/nativehelper/detail/signature_checker.h",
         "patchSetId": 3
