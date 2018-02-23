@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aede15ec_92ffa19d",
+        "filename": "platform_include/nativehelper/detail/signature_checker.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 162,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2018-02-23T15:33:58Z",
+      "side": 1,
+      "message": "These aren\u0027t really shorties. :-)",
+      "range": {
+        "startLine": 162,
+        "startChar": 63,
+        "endLine": 162,
+        "endChar": 69
+      },
+      "revId": "a1969c41f6eb46cc5156399489024d1afe5b0904",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8394991a_16cce2d4",
+        "filename": "platform_include/nativehelper/jni_macros.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 255,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2018-02-23T15:33:58Z",
+      "side": 1,
+      "message": "Indent off.",
+      "range": {
+        "startLine": 255,
+        "startChar": 66,
+        "endLine": 255,
+        "endChar": 67
+      },
+      "revId": "a1969c41f6eb46cc5156399489024d1afe5b0904",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
