@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "d4647394_809b1fd6",
+        "filename": "platform_include/nativehelper/detail/signature_checker.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2018-02-23T18:19:17Z",
+      "side": 1,
+      "message": "Yeah, I think I forgot to remove this. \n\nOriginally was meant for implicit conversion (as on L84) but it has \"explicit\" keyword so this is pointless.",
+      "parentUuid": "52d9cedd_01b111f3",
+      "range": {
+        "startLine": 84,
+        "startChar": 0,
+        "endLine": 88,
+        "endChar": 3
+      },
+      "revId": "a1969c41f6eb46cc5156399489024d1afe5b0904",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "f23fb372_3881aa2b",
         "filename": "platform_include/nativehelper/detail/signature_checker.h",
         "patchSetId": 3
