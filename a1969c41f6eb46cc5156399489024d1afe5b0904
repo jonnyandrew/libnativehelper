@@ -125,6 +125,24 @@
     },
     {
       "key": {
+        "uuid": "59079b81_efa8264a",
+        "filename": "platform_include/nativehelper/detail/signature_checker.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2018-02-26T21:19:01Z",
+      "side": 1,
+      "message": "I think it would in practice turn it into memcmp (if it was actually compiled as non-constexpr). That being said we don\u0027t actually care about this code in this file running as non-constexpr because the primary entrypoint into this file is either a static_assert or a \"constexpr x\u003d...\" which forces it to be evaluated at compile time.\n\nSee the macros below and GetStringAtRuntime which are the only 2 places there\u0027s ever any runtime code.",
+      "parentUuid": "b343b5cf_5d7842aa",
+      "revId": "a1969c41f6eb46cc5156399489024d1afe5b0904",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "aede15ec_92ffa19d",
         "filename": "platform_include/nativehelper/detail/signature_checker.h",
         "patchSetId": 3
