@@ -107,6 +107,24 @@
     },
     {
       "key": {
+        "uuid": "b343b5cf_5d7842aa",
+        "filename": "platform_include/nativehelper/detail/signature_checker.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 1079148
+      },
+      "writtenOn": "2018-02-26T21:10:38Z",
+      "side": 1,
+      "message": "Oh, duh. I forgot this was in a constexpr context.",
+      "parentUuid": "c446391a_00d2d594",
+      "revId": "a1969c41f6eb46cc5156399489024d1afe5b0904",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "aede15ec_92ffa19d",
         "filename": "platform_include/nativehelper/detail/signature_checker.h",
         "patchSetId": 3
