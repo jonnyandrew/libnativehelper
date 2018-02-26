@@ -72,6 +72,23 @@
     },
     {
       "key": {
+        "uuid": "679178fc_e272dcf4",
+        "filename": "platform_include/nativehelper/detail/signature_checker.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 1079148
+      },
+      "writtenOn": "2018-02-26T21:03:56Z",
+      "side": 1,
+      "message": "just explicitly use a memcmp instead of hoping that the compiler turns this into one for you?",
+      "revId": "a1969c41f6eb46cc5156399489024d1afe5b0904",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "aede15ec_92ffa19d",
         "filename": "platform_include/nativehelper/detail/signature_checker.h",
         "patchSetId": 3
@@ -88,6 +105,86 @@
         "startChar": 63,
         "endLine": 162,
         "endChar": 69
+      },
+      "revId": "a1969c41f6eb46cc5156399489024d1afe5b0904",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "08669040_c4b09283",
+        "filename": "platform_include/nativehelper/detail/signature_checker.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 207,
+      "author": {
+        "id": 1079148
+      },
+      "writtenOn": "2018-02-26T21:03:56Z",
+      "side": 1,
+      "message": "make this auto\u0026 as well for consistency?\n\n(also, you seem to be missing operator-\u003e)",
+      "revId": "a1969c41f6eb46cc5156399489024d1afe5b0904",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0bc1134e_b79a47df",
+        "filename": "platform_include/nativehelper/detail/signature_checker.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 330,
+      "author": {
+        "id": 1079148
+      },
+      "writtenOn": "2018-02-26T21:03:56Z",
+      "side": 1,
+      "message": "operator*?",
+      "revId": "a1969c41f6eb46cc5156399489024d1afe5b0904",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9d8fa958_ccd2a8cd",
+        "filename": "platform_include/nativehelper/detail/signature_checker.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 552,
+      "author": {
+        "id": 1079148
+      },
+      "writtenOn": "2018-02-26T21:03:56Z",
+      "side": 1,
+      "message": "this looks weird, if it\u0027s too long on one line, rename signature to sig or something along those lines?",
+      "range": {
+        "startLine": 550,
+        "startChar": 49,
+        "endLine": 552,
+        "endChar": 89
+      },
+      "revId": "a1969c41f6eb46cc5156399489024d1afe5b0904",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "599ecb30_d3e96dee",
+        "filename": "platform_include/nativehelper/detail/signature_checker.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 799,
+      "author": {
+        "id": 1079148
+      },
+      "writtenOn": "2018-02-26T21:03:56Z",
+      "side": 1,
+      "message": "whitespace",
+      "range": {
+        "startLine": 799,
+        "startChar": 71,
+        "endLine": 799,
+        "endChar": 95
       },
       "revId": "a1969c41f6eb46cc5156399489024d1afe5b0904",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
