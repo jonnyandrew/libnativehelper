@@ -89,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "c446391a_00d2d594",
+        "filename": "platform_include/nativehelper/detail/signature_checker.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2018-02-26T21:08:47Z",
+      "side": 1,
+      "message": "memcmp is not constexpr\n\n   int memcmp( const void* lhs, const void* rhs, std::size_t count );",
+      "parentUuid": "679178fc_e272dcf4",
+      "revId": "a1969c41f6eb46cc5156399489024d1afe5b0904",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "aede15ec_92ffa19d",
         "filename": "platform_include/nativehelper/detail/signature_checker.h",
         "patchSetId": 3
