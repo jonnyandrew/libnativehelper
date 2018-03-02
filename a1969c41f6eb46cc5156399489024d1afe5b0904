@@ -286,6 +286,24 @@
     },
     {
       "key": {
+        "uuid": "71fddd46_2b957605",
+        "filename": "platform_include/nativehelper/detail/signature_checker.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 510,
+      "author": {
+        "id": 1018108
+      },
+      "writtenOn": "2018-03-02T17:31:39Z",
+      "side": 1,
+      "message": "Yes, something like that. The \"LObject)MoreOfObject;\" would match jobject.",
+      "parentUuid": "f5711e9f_c8834566",
+      "revId": "a1969c41f6eb46cc5156399489024d1afe5b0904",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9d8fa958_ccd2a8cd",
         "filename": "platform_include/nativehelper/detail/signature_checker.h",
         "patchSetId": 3
