@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "af68e211_a331a04a",
+        "filename": "platform_include/nativehelper/detail/signature_checker.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2018-03-02T21:40:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d4647394_809b1fd6",
+      "range": {
+        "startLine": 84,
+        "startChar": 0,
+        "endLine": 88,
+        "endChar": 3
+      },
+      "revId": "a1969c41f6eb46cc5156399489024d1afe5b0904",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f23fb372_3881aa2b",
         "filename": "platform_include/nativehelper/detail/signature_checker.h",
         "patchSetId": 3
@@ -69,6 +93,30 @@
       "revId": "a1969c41f6eb46cc5156399489024d1afe5b0904",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "72e87a9e_83132b70",
+        "filename": "platform_include/nativehelper/detail/signature_checker.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2018-03-02T21:40:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f23fb372_3881aa2b",
+      "range": {
+        "startLine": 109,
+        "startChar": 13,
+        "endLine": 109,
+        "endChar": 34
+      },
+      "revId": "a1969c41f6eb46cc5156399489024d1afe5b0904",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     },
     {
       "key": {
@@ -143,6 +191,24 @@
     },
     {
       "key": {
+        "uuid": "59a2c42e_6bfca5ec",
+        "filename": "platform_include/nativehelper/detail/signature_checker.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2018-03-02T21:40:22Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "59079b81_efa8264a",
+      "revId": "a1969c41f6eb46cc5156399489024d1afe5b0904",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "aede15ec_92ffa19d",
         "filename": "platform_include/nativehelper/detail/signature_checker.h",
         "patchSetId": 3
@@ -166,6 +232,30 @@
     },
     {
       "key": {
+        "uuid": "dda823a7_b62959aa",
+        "filename": "platform_include/nativehelper/detail/signature_checker.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 162,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2018-03-02T21:40:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "aede15ec_92ffa19d",
+      "range": {
+        "startLine": 162,
+        "startChar": 63,
+        "endLine": 162,
+        "endChar": 69
+      },
+      "revId": "a1969c41f6eb46cc5156399489024d1afe5b0904",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "08669040_c4b09283",
         "filename": "platform_include/nativehelper/detail/signature_checker.h",
         "patchSetId": 3
@@ -180,6 +270,24 @@
       "revId": "a1969c41f6eb46cc5156399489024d1afe5b0904",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5bb6de69_4d5776f8",
+        "filename": "platform_include/nativehelper/detail/signature_checker.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 207,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2018-03-02T21:40:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "08669040_c4b09283",
+      "revId": "a1969c41f6eb46cc5156399489024d1afe5b0904",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     },
     {
       "key": {
@@ -200,6 +308,24 @@
     },
     {
       "key": {
+        "uuid": "8a107573_550a5f1f",
+        "filename": "platform_include/nativehelper/detail/signature_checker.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 330,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2018-03-02T21:40:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0bc1134e_b79a47df",
+      "revId": "a1969c41f6eb46cc5156399489024d1afe5b0904",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "042b29de_64925164",
         "filename": "platform_include/nativehelper/detail/signature_checker.h",
         "patchSetId": 3
@@ -211,6 +337,24 @@
       "writtenOn": "2018-02-28T19:01:43Z",
       "side": 1,
       "message": "Line too long.",
+      "revId": "a1969c41f6eb46cc5156399489024d1afe5b0904",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6a1d7772_44fecf88",
+        "filename": "platform_include/nativehelper/detail/signature_checker.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 382,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2018-03-02T21:40:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "042b29de_64925164",
       "revId": "a1969c41f6eb46cc5156399489024d1afe5b0904",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
@@ -234,6 +378,24 @@
     },
     {
       "key": {
+        "uuid": "6a4e8891_9fadcd33",
+        "filename": "platform_include/nativehelper/detail/signature_checker.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 384,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2018-03-02T21:40:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b9c2d551_b0e2ae0d",
+      "revId": "a1969c41f6eb46cc5156399489024d1afe5b0904",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "e7425e1d_d479f3c6",
         "filename": "platform_include/nativehelper/detail/signature_checker.h",
         "patchSetId": 3
@@ -245,6 +407,24 @@
       "writtenOn": "2018-02-28T19:01:43Z",
       "side": 1,
       "message": "Line too long.",
+      "revId": "a1969c41f6eb46cc5156399489024d1afe5b0904",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c679b051_c73eb0d0",
+        "filename": "platform_include/nativehelper/detail/signature_checker.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 500,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2018-03-02T21:40:22Z",
+      "side": 1,
+      "message": "This was intentional.",
+      "parentUuid": "e7425e1d_d479f3c6",
       "revId": "a1969c41f6eb46cc5156399489024d1afe5b0904",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
@@ -304,6 +484,24 @@
     },
     {
       "key": {
+        "uuid": "734375a7_47934f75",
+        "filename": "platform_include/nativehelper/detail/signature_checker.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 510,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2018-03-02T21:40:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "71fddd46_2b957605",
+      "revId": "a1969c41f6eb46cc5156399489024d1afe5b0904",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9d8fa958_ccd2a8cd",
         "filename": "platform_include/nativehelper/detail/signature_checker.h",
         "patchSetId": 3
@@ -327,6 +525,30 @@
     },
     {
       "key": {
+        "uuid": "4eac630a_3481f0d3",
+        "filename": "platform_include/nativehelper/detail/signature_checker.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 552,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2018-03-02T21:40:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9d8fa958_ccd2a8cd",
+      "range": {
+        "startLine": 550,
+        "startChar": 49,
+        "endLine": 552,
+        "endChar": 89
+      },
+      "revId": "a1969c41f6eb46cc5156399489024d1afe5b0904",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2d4fef7b_cff333a5",
         "filename": "platform_include/nativehelper/detail/signature_checker.h",
         "patchSetId": 3
@@ -338,6 +560,30 @@
       "writtenOn": "2018-02-28T19:01:43Z",
       "side": 1,
       "message": "typo",
+      "range": {
+        "startLine": 582,
+        "startChar": 21,
+        "endLine": 582,
+        "endChar": 31
+      },
+      "revId": "a1969c41f6eb46cc5156399489024d1afe5b0904",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3889d169_cd858410",
+        "filename": "platform_include/nativehelper/detail/signature_checker.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 582,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2018-03-02T21:40:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2d4fef7b_cff333a5",
       "range": {
         "startLine": 582,
         "startChar": 21,
@@ -373,6 +619,30 @@
     },
     {
       "key": {
+        "uuid": "b476d2a9_24417469",
+        "filename": "platform_include/nativehelper/detail/signature_checker.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 750,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2018-03-02T21:40:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b28f36d9_a695ecbb",
+      "range": {
+        "startLine": 750,
+        "startChar": 77,
+        "endLine": 750,
+        "endChar": 81
+      },
+      "revId": "a1969c41f6eb46cc5156399489024d1afe5b0904",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "599ecb30_d3e96dee",
         "filename": "platform_include/nativehelper/detail/signature_checker.h",
         "patchSetId": 3
@@ -393,6 +663,30 @@
       "revId": "a1969c41f6eb46cc5156399489024d1afe5b0904",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5deb2172_0099dc38",
+        "filename": "platform_include/nativehelper/detail/signature_checker.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 799,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2018-03-02T21:40:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "599ecb30_d3e96dee",
+      "range": {
+        "startLine": 799,
+        "startChar": 71,
+        "endLine": 799,
+        "endChar": 95
+      },
+      "revId": "a1969c41f6eb46cc5156399489024d1afe5b0904",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     },
     {
       "key": {
@@ -436,6 +730,24 @@
     },
     {
       "key": {
+        "uuid": "4f5b545f_48ecfb59",
+        "filename": "platform_include/nativehelper/detail/signature_checker.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 839,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2018-03-02T21:40:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "32461ce4_33bae7fa",
+      "revId": "a1969c41f6eb46cc5156399489024d1afe5b0904",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "d779f912_870312eb",
         "filename": "platform_include/nativehelper/detail/signature_checker.h",
         "patchSetId": 3
@@ -447,6 +759,30 @@
       "writtenOn": "2018-02-28T19:01:43Z",
       "side": 1,
       "message": "Extract body into a helper function so that we can avoid abusing \"while\" as \"if\".",
+      "range": {
+        "startLine": 840,
+        "startChar": 2,
+        "endLine": 840,
+        "endChar": 7
+      },
+      "revId": "a1969c41f6eb46cc5156399489024d1afe5b0904",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "94bdf61e_18001d58",
+        "filename": "platform_include/nativehelper/detail/signature_checker.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 840,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2018-03-02T21:40:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d779f912_870312eb",
       "range": {
         "startLine": 840,
         "startChar": 2,
@@ -511,6 +847,24 @@
     },
     {
       "key": {
+        "uuid": "a1842e95_200d5fcd",
+        "filename": "platform_include/nativehelper/detail/signature_checker.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 1290,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2018-03-02T21:40:22Z",
+      "side": 1,
+      "message": "This was intentional (and the NOLINT is a strong hint).",
+      "parentUuid": "29faab5e_724de30e",
+      "revId": "a1969c41f6eb46cc5156399489024d1afe5b0904",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0f412d16_7998d3a8",
         "filename": "platform_include/nativehelper/detail/signature_checker.h",
         "patchSetId": 3
@@ -522,6 +876,30 @@
       "writtenOn": "2018-02-28T19:01:43Z",
       "side": 1,
       "message": "Remove? (I assume this was used for debugging.)",
+      "range": {
+        "startLine": 1337,
+        "startChar": 24,
+        "endLine": 1337,
+        "endChar": 44
+      },
+      "revId": "a1969c41f6eb46cc5156399489024d1afe5b0904",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "62aade60_e9495bac",
+        "filename": "platform_include/nativehelper/detail/signature_checker.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 1337,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2018-03-02T21:40:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0f412d16_7998d3a8",
       "range": {
         "startLine": 1337,
         "startChar": 24,
@@ -557,6 +935,30 @@
     },
     {
       "key": {
+        "uuid": "ba92d434_2fbf9c3c",
+        "filename": "platform_include/nativehelper/jni_macros.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 255,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2018-03-02T21:40:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8394991a_16cce2d4",
+      "range": {
+        "startLine": 255,
+        "startChar": 66,
+        "endLine": 255,
+        "endChar": 67
+      },
+      "revId": "a1969c41f6eb46cc5156399489024d1afe5b0904",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f5d1ee79_9a8b2c75",
         "filename": "tests/JniSafeRegisterNativeMethods_test.cpp",
         "patchSetId": 3
@@ -568,6 +970,30 @@
       "writtenOn": "2018-02-28T19:01:43Z",
       "side": 1,
       "message": "Why not std::string?",
+      "range": {
+        "startLine": 37,
+        "startChar": 0,
+        "endLine": 37,
+        "endChar": 4
+      },
+      "revId": "a1969c41f6eb46cc5156399489024d1afe5b0904",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "515f7f2d_0bbb4691",
+        "filename": "tests/JniSafeRegisterNativeMethods_test.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2018-03-02T21:40:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f5d1ee79_9a8b2c75",
       "range": {
         "startLine": 37,
         "startChar": 0,
@@ -603,6 +1029,30 @@
     },
     {
       "key": {
+        "uuid": "9a99e8a9_7aa28578",
+        "filename": "tests/JniSafeRegisterNativeMethods_test.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2018-03-02T21:40:22Z",
+      "side": 1,
+      "message": "CLion automatic formatting going haywire. Fixed.",
+      "parentUuid": "240300cb_a4e57510",
+      "range": {
+        "startLine": 117,
+        "startChar": 0,
+        "endLine": 122,
+        "endChar": 51
+      },
+      "revId": "a1969c41f6eb46cc5156399489024d1afe5b0904",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7e44f776_d5bd4a3f",
         "filename": "tests/JniSafeRegisterNativeMethods_test.cpp",
         "patchSetId": 3
@@ -614,6 +1064,30 @@
       "writtenOn": "2018-02-28T19:01:43Z",
       "side": 1,
       "message": "Top-level const does not contribute to function signature.",
+      "range": {
+        "startLine": 261,
+        "startChar": 24,
+        "endLine": 261,
+        "endChar": 29
+      },
+      "revId": "a1969c41f6eb46cc5156399489024d1afe5b0904",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3bbb49f7_7c90c5a9",
+        "filename": "tests/JniSafeRegisterNativeMethods_test.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 261,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2018-03-02T21:40:22Z",
+      "side": 1,
+      "message": "Added a comment to clarify. Done.",
+      "parentUuid": "7e44f776_d5bd4a3f",
       "range": {
         "startLine": 261,
         "startChar": 24,
@@ -643,6 +1117,24 @@
     },
     {
       "key": {
+        "uuid": "59f88843_047dfe4f",
+        "filename": "tests/JniSafeRegisterNativeMethods_test.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 363,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2018-03-02T21:40:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "705ed994_6f45c326",
+      "revId": "a1969c41f6eb46cc5156399489024d1afe5b0904",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ec6e0068_60136d5d",
         "filename": "tests/JniSafeRegisterNativeMethods_test.cpp",
         "patchSetId": 3
@@ -654,6 +1146,30 @@
       "writtenOn": "2018-02-28T19:01:43Z",
       "side": 1,
       "message": "Useless. No function type can be good for both, normal must have jobject/jclass and critical must not have a reference.",
+      "range": {
+        "startLine": 373,
+        "startChar": 0,
+        "endLine": 377,
+        "endChar": 19
+      },
+      "revId": "a1969c41f6eb46cc5156399489024d1afe5b0904",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "12ecc60b_ebf5680d",
+        "filename": "tests/JniSafeRegisterNativeMethods_test.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 377,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2018-03-02T21:40:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ec6e0068_60136d5d",
       "range": {
         "startLine": 373,
         "startChar": 0,
@@ -689,6 +1205,30 @@
     },
     {
       "key": {
+        "uuid": "98d0ad59_c4abf73b",
+        "filename": "tests/JniSafeRegisterNativeMethods_test.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 475,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2018-03-02T21:40:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c30b5cad_f64db11f",
+      "range": {
+        "startLine": 475,
+        "startChar": 4,
+        "endLine": 475,
+        "endChar": 15
+      },
+      "revId": "a1969c41f6eb46cc5156399489024d1afe5b0904",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2f6dead8_0180b75a",
         "filename": "tests/JniSafeRegisterNativeMethods_test.cpp",
         "patchSetId": 3
@@ -700,6 +1240,30 @@
       "writtenOn": "2018-02-28T19:01:43Z",
       "side": 1,
       "message": "ASSERT_TRUE",
+      "range": {
+        "startLine": 492,
+        "startChar": 4,
+        "endLine": 492,
+        "endChar": 15
+      },
+      "revId": "a1969c41f6eb46cc5156399489024d1afe5b0904",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "14fc6f5b_c5581945",
+        "filename": "tests/JniSafeRegisterNativeMethods_test.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 492,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2018-03-02T21:40:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2f6dead8_0180b75a",
       "range": {
         "startLine": 492,
         "startChar": 4,
@@ -735,6 +1299,30 @@
     },
     {
       "key": {
+        "uuid": "d6c58d44_9f1826eb",
+        "filename": "tests/JniSafeRegisterNativeMethods_test.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 501,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2018-03-02T21:40:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7d836813_87b88aec",
+      "range": {
+        "startLine": 501,
+        "startChar": 4,
+        "endLine": 501,
+        "endChar": 15
+      },
+      "revId": "a1969c41f6eb46cc5156399489024d1afe5b0904",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "e8be5a5f_3c627f98",
         "filename": "tests/JniSafeRegisterNativeMethods_test.cpp",
         "patchSetId": 3
@@ -746,6 +1334,24 @@
       "writtenOn": "2018-02-28T19:01:43Z",
       "side": 1,
       "message": "Line too long.",
+      "revId": "a1969c41f6eb46cc5156399489024d1afe5b0904",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b6ef6867_54026675",
+        "filename": "tests/JniSafeRegisterNativeMethods_test.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 524,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2018-03-02T21:40:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e8be5a5f_3c627f98",
       "revId": "a1969c41f6eb46cc5156399489024d1afe5b0904",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
@@ -775,6 +1381,30 @@
     },
     {
       "key": {
+        "uuid": "cfc48164_b2b34359",
+        "filename": "tests/JniSafeRegisterNativeMethods_test.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 660,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2018-03-02T21:40:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "cc86bf9a_2a3b0569",
+      "range": {
+        "startLine": 660,
+        "startChar": 77,
+        "endLine": 660,
+        "endChar": 78
+      },
+      "revId": "a1969c41f6eb46cc5156399489024d1afe5b0904",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "aca236a4_998ef0e4",
         "filename": "tests/JniSafeRegisterNativeMethods_test.cpp",
         "patchSetId": 3
@@ -792,6 +1422,24 @@
     },
     {
       "key": {
+        "uuid": "f6153abb_57d55222",
+        "filename": "tests/JniSafeRegisterNativeMethods_test.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 723,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2018-03-02T21:40:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "aca236a4_998ef0e4",
+      "revId": "a1969c41f6eb46cc5156399489024d1afe5b0904",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "020c9d26_f9459d1d",
         "filename": "tests/JniSafeRegisterNativeMethods_test.cpp",
         "patchSetId": 3
@@ -803,6 +1451,24 @@
       "writtenOn": "2018-02-28T19:01:43Z",
       "side": 1,
       "message": "Line too long.",
+      "revId": "a1969c41f6eb46cc5156399489024d1afe5b0904",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bc4495ce_bdeddb70",
+        "filename": "tests/JniSafeRegisterNativeMethods_test.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 727,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2018-03-02T21:40:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "020c9d26_f9459d1d",
       "revId": "a1969c41f6eb46cc5156399489024d1afe5b0904",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
