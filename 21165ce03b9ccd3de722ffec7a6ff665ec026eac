@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "173dbf5d_a1a86683",
+        "filename": "platform_include/nativehelper/detail/signature_checker.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 858,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2018-03-06T19:46:40Z",
+      "side": 1,
+      "message": "My CLion automatic line wrap is broken, it think its at 80 columns.. :(",
+      "parentUuid": "99284f15_199933bd",
+      "range": {
+        "startLine": 858,
+        "startChar": 6,
+        "endLine": 858,
+        "endChar": 8
+      },
+      "revId": "21165ce03b9ccd3de722ffec7a6ff665ec026eac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8c9ac2f0_b7869ff5",
         "filename": "platform_include/nativehelper/detail/signature_checker.h",
         "patchSetId": 1
@@ -60,6 +84,30 @@
       "writtenOn": "2018-03-06T10:20:01Z",
       "side": 1,
       "message": "ditto",
+      "range": {
+        "startLine": 862,
+        "startChar": 6,
+        "endLine": 862,
+        "endChar": 8
+      },
+      "revId": "21165ce03b9ccd3de722ffec7a6ff665ec026eac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a51d2cae_7ab48191",
+        "filename": "platform_include/nativehelper/detail/signature_checker.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 862,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2018-03-06T19:46:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8c9ac2f0_b7869ff5",
       "range": {
         "startLine": 862,
         "startChar": 6,
@@ -95,6 +143,30 @@
     },
     {
       "key": {
+        "uuid": "e2cbda79_ee3cb064",
+        "filename": "platform_include/nativehelper/detail/signature_checker.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 864,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2018-03-06T19:46:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0da9e19e_a3a902fc",
+      "range": {
+        "startLine": 864,
+        "startChar": 8,
+        "endLine": 864,
+        "endChar": 10
+      },
+      "revId": "21165ce03b9ccd3de722ffec7a6ff665ec026eac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "022bb644_bd5a2b0b",
         "filename": "tests/JniSafeRegisterNativeMethods_test.cpp",
         "patchSetId": 1
@@ -106,6 +178,30 @@
       "writtenOn": "2018-03-06T10:20:01Z",
       "side": 1,
       "message": "ASSERT_FALSE",
+      "range": {
+        "startLine": 584,
+        "startChar": 2,
+        "endLine": 584,
+        "endChar": 14
+      },
+      "revId": "21165ce03b9ccd3de722ffec7a6ff665ec026eac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a8206ca2_2129acd7",
+        "filename": "tests/JniSafeRegisterNativeMethods_test.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 584,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2018-03-06T19:46:40Z",
+      "side": 1,
+      "message": "Changing this to ASSERT_FALSE does nothing ; variable is overwritten on L586 prior to next value-read.\n\n(I\u0027m sure you already knew this)\n\nASSERT is reserved when invoking subsequent expressions within the TEST would violate the API contract (e.g. triggering undefined behavior by dereferencing null and crashing).\n\nEXPECT is otherwise superior since execution will continue and we can see multiple failures.",
+      "parentUuid": "022bb644_bd5a2b0b",
       "range": {
         "startLine": 584,
         "startChar": 2,
