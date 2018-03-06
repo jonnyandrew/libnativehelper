@@ -16,6 +16,24 @@
       "revId": "a297213ad8f79c02c2dde7961cdbb9cdb001a679",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e7ae4e1f_00da68ed",
+        "filename": "tests/JniSafeRegisterNativeMethods_test.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 907,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2018-03-06T19:26:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f4569dec_c965879f",
+      "revId": "a297213ad8f79c02c2dde7961cdbb9cdb001a679",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
