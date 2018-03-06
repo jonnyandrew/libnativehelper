@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f4569dec_c965879f",
+        "filename": "tests/JniSafeRegisterNativeMethods_test.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 907,
+      "author": {
+        "id": 1003801
+      },
+      "writtenOn": "2018-03-06T19:01:26Z",
+      "side": 1,
+      "message": "Don\u0027t you care line lengths in this file??",
+      "revId": "a297213ad8f79c02c2dde7961cdbb9cdb001a679",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
