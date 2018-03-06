@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "96414457_c2739b95",
+        "filename": "platform_include/nativehelper/detail/signature_checker.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 858,
+      "author": {
+        "id": 1018108
+      },
+      "writtenOn": "2018-03-06T10:20:01Z",
+      "side": 1,
+      "message": "Does the nativehelper style deviate from ART style by breaking before the operator? Can we put this on one line an avoid the question?",
+      "range": {
+        "startLine": 858,
+        "startChar": 6,
+        "endLine": 858,
+        "endChar": 8
+      },
+      "revId": "21165ce03b9ccd3de722ffec7a6ff665ec026eac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8c9ac2f0_b7869ff5",
+        "filename": "platform_include/nativehelper/detail/signature_checker.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 862,
+      "author": {
+        "id": 1018108
+      },
+      "writtenOn": "2018-03-06T10:20:01Z",
+      "side": 1,
+      "message": "ditto",
+      "range": {
+        "startLine": 862,
+        "startChar": 6,
+        "endLine": 862,
+        "endChar": 8
+      },
+      "revId": "21165ce03b9ccd3de722ffec7a6ff665ec026eac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0da9e19e_a3a902fc",
+        "filename": "platform_include/nativehelper/detail/signature_checker.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 864,
+      "author": {
+        "id": 1018108
+      },
+      "writtenOn": "2018-03-06T10:20:01Z",
+      "side": 1,
+      "message": "ditto",
+      "range": {
+        "startLine": 864,
+        "startChar": 8,
+        "endLine": 864,
+        "endChar": 10
+      },
+      "revId": "21165ce03b9ccd3de722ffec7a6ff665ec026eac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "022bb644_bd5a2b0b",
+        "filename": "tests/JniSafeRegisterNativeMethods_test.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 584,
+      "author": {
+        "id": 1018108
+      },
+      "writtenOn": "2018-03-06T10:20:01Z",
+      "side": 1,
+      "message": "ASSERT_FALSE",
+      "range": {
+        "startLine": 584,
+        "startChar": 2,
+        "endLine": 584,
+        "endChar": 14
+      },
+      "revId": "21165ce03b9ccd3de722ffec7a6ff665ec026eac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
