@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "99284f15_199933bd",
+        "filename": "platform_include/nativehelper/detail/signature_checker.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 858,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2018-03-06T15:56:37Z",
+      "side": 1,
+      "message": "The ART style guide doesn\u0027t mandate how operator breakings occur, but sure I will fix this.",
+      "parentUuid": "96414457_c2739b95",
+      "range": {
+        "startLine": 858,
+        "startChar": 6,
+        "endLine": 858,
+        "endChar": 8
+      },
+      "revId": "21165ce03b9ccd3de722ffec7a6ff665ec026eac",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8c9ac2f0_b7869ff5",
         "filename": "platform_include/nativehelper/detail/signature_checker.h",
         "patchSetId": 1
