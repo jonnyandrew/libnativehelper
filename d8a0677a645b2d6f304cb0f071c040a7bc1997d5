@@ -1,0 +1,11 @@
+Verified+1: Igor Murashkin <iam@google.com>
+Presubmit-Verified+1: Treehugger Robot <treehugger-gerrit@google.com>
+Code-Review+1: Stephen Hines <srhines@google.com>
+Code-Review+1: George Burgess IV <gbiv@google.com>
+Code-Review+2: Andreas Gampe <agampe@google.com>
+Autosubmit+1: Igor Murashkin <iam@google.com>
+Submitted-by: Treehugger Robot <treehugger-gerrit@google.com>
+Submitted-at: Wed, 07 Mar 2018 23:51:28 +0000
+Reviewed-on: https://android-review.googlesource.com/634706
+Project: platform/libnativehelper
+Branch: refs/heads/master
