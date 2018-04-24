@@ -1,0 +1,8 @@
+Presubmit-Verified+1: Treehugger Robot <treehugger-gerrit@google.com>
+Code-Review+2: Nicolas Geoffray <ngeoffray@google.com>
+Verified+1: Logan Chien <loganchien@google.com>
+Submitted-by: Logan Chien <loganchien@google.com>
+Submitted-at: Tue, 24 Apr 2018 10:01:20 +0000
+Reviewed-on: https://android-review.googlesource.com/670823
+Project: platform/libnativehelper
+Branch: refs/heads/master
