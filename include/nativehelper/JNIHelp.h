@@ -99,6 +99,11 @@ int jniGetFDFromFileDescriptor(C_JNIEnv* env, jobject fileDescriptor);
 void jniSetFileDescriptorOfFD(C_JNIEnv* env, jobject fileDescriptor, int value);
 
 /*
+ * Returns the int owner from a java.io.FileDescriptor.
+ */
+int jniGetOwnerFromFileDescriptor(C_JNIEnv* env, jobject fileDescriptor);
+
+/*
  * Returns the reference from a java.lang.ref.Reference.
  */
 jobject jniGetReferent(C_JNIEnv* env, jobject ref);
@@ -168,6 +173,10 @@ inline int jniGetFDFromFileDescriptor(JNIEnv* env, jobject fileDescriptor) {
 
 inline void jniSetFileDescriptorOfFD(JNIEnv* env, jobject fileDescriptor, int value) {
     jniSetFileDescriptorOfFD(&env->functions, fileDescriptor, value);
+}
+
+inline int jniGetOwnerFromFileDescriptor(JNIEnv* env, jobject fileDescriptor) {
+    return jniGetOwnerFromFileDescriptor(&env->functions, fileDescriptor);
 }
 
 inline jobject jniGetReferent(JNIEnv* env, jobject ref) {
