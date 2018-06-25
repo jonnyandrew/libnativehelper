@@ -38,6 +38,8 @@ namespace {
 
 // java.io.FileDescriptor.descriptor.
 jfieldID fileDescriptorDescriptorField = nullptr;
+// java.io.FileDescriptor.owner.
+jfieldID fileDescriptorOwnerField = nullptr;
 
 // void java.io.FileDescriptor.<init>().
 jmethodID fileDescriptorInitMethod = nullptr;
@@ -65,6 +67,8 @@ jmethodID FindMethod(JNIEnv* env, jclass klass, const char* name, const char* si
 void InitFieldsAndMethods(JNIEnv* env) {
     JniConstants::init(env);  // Ensure that classes are cached.
     fileDescriptorDescriptorField = FindField(env, JniConstants::fileDescriptorClass, "descriptor",
+            "I");
+    fileDescriptorOwnerField = FindField(env, JniConstants::fileDescriptorClass, "owner",
             "I");
     fileDescriptorInitMethod = FindMethod(env, JniConstants::fileDescriptorClass, "<init>", "()V");
     referenceGetMethod = FindMethod(env, JniConstants::referenceClass, "get",
@@ -408,6 +412,21 @@ void jniSetFileDescriptorOfFD(C_JNIEnv* env, jobject fileDescriptor, int value) 
     }
     (*env)->SetIntField(e, fileDescriptor, fileDescriptorDescriptorField, value);
 }
+
+int jniGetOwnerFromFileDescriptor(C_JNIEnv* env, jobject fileDescriptor) {
+    JNIEnv* e = reinterpret_cast<JNIEnv*>(env);
+    if (fileDescriptorOwnerField == nullptr) {
+        InitFieldsAndMethods(e);
+    }
+    if (fileDescriptor != NULL) {
+        return (*env)->GetIntField(e, fileDescriptor,
+                fileDescriptorOwnerField);
+    } else {
+        return -1;
+    }
+}
+
+
 
 jobject jniGetReferent(C_JNIEnv* env, jobject ref) {
     JNIEnv* e = reinterpret_cast<JNIEnv*>(env);
