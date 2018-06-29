@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "37f71202_8fadd8be",
+        "filename": "JNIHelp.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 1038039
+      },
+      "writtenOn": "2018-06-29T12:39:06Z",
+      "side": 1,
+      "message": "FYI - knock-ons here and below if you take my suggestion from the libcore review and make this a long.",
+      "range": {
+        "startLine": 72,
+        "startChar": 13,
+        "endLine": 72,
+        "endChar": 14
+      },
+      "revId": "d1ad4e68cf55e26f815f95fbb1fc4c8d93641564",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
