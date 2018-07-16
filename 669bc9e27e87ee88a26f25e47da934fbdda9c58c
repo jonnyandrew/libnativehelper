@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b6d9120d_a6bb85e2",
+        "filename": "JNIHelp.cpp",
+        "patchSetId": 5
+      },
+      "lineNbr": 421,
+      "author": {
+        "id": 1038039
+      },
+      "writtenOn": "2018-07-16T21:33:00Z",
+      "side": 1,
+      "message": "I assume whatever this does when fileDescriptor \u003d\u003d null is what you want.",
+      "range": {
+        "startLine": 421,
+        "startChar": 19,
+        "endLine": 421,
+        "endChar": 31
+      },
+      "revId": "669bc9e27e87ee88a26f25e47da934fbdda9c58c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
