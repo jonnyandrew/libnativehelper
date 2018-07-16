@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c7b58869_2503c544",
+        "filename": "JNIHelp.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 416,
+      "author": {
+        "id": 1038039
+      },
+      "writtenOn": "2018-07-16T21:01:38Z",
+      "side": 1,
+      "message": "OwnerId",
+      "range": {
+        "startLine": 416,
+        "startChar": 6,
+        "endLine": 416,
+        "endChar": 35
+      },
+      "revId": "6967c789496044b6243660247dd023af8490a6e3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4503ac26_cefec622",
+        "filename": "include/nativehelper/JNIHelp.h",
+        "patchSetId": 4
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 1038039
+      },
+      "writtenOn": "2018-07-16T21:01:38Z",
+      "side": 1,
+      "message": "OwnerId",
+      "range": {
+        "startLine": 104,
+        "startChar": 6,
+        "endLine": 104,
+        "endChar": 35
+      },
+      "revId": "6967c789496044b6243660247dd023af8490a6e3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6672b884_9deb862b",
+        "filename": "include/nativehelper/JNIHelp.h",
+        "patchSetId": 4
+      },
+      "lineNbr": 178,
+      "author": {
+        "id": 1038039
+      },
+      "writtenOn": "2018-07-16T21:01:38Z",
+      "side": 1,
+      "message": "OwnerId",
+      "range": {
+        "startLine": 178,
+        "startChar": 13,
+        "endLine": 178,
+        "endChar": 42
+      },
+      "revId": "6967c789496044b6243660247dd023af8490a6e3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
