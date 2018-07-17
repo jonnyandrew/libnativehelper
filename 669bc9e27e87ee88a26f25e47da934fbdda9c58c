@@ -22,6 +22,30 @@
       "revId": "669bc9e27e87ee88a26f25e47da934fbdda9c58c",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2529a959_539436ad",
+        "filename": "JNIHelp.cpp",
+        "patchSetId": 5
+      },
+      "lineNbr": 421,
+      "author": {
+        "id": 1079148
+      },
+      "writtenOn": "2018-07-17T01:53:18Z",
+      "side": 1,
+      "message": "The only caller calls jniSetFileDescriptorOfFD blindly, so if anything would call this with null, they would have aborted already.\n\n(It seems like there\u0027s some weirdness going on here, though? If you call libcore.io.Linux.close, you get an abort. The thing that saves you is that you actually go through BlockGuardOs, which coincidentally calls a method on the object and NPEs. Filed b/111523523)",
+      "parentUuid": "b6d9120d_a6bb85e2",
+      "range": {
+        "startLine": 421,
+        "startChar": 19,
+        "endLine": 421,
+        "endChar": 31
+      },
+      "revId": "669bc9e27e87ee88a26f25e47da934fbdda9c58c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
