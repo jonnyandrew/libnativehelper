@@ -45,6 +45,9 @@ cc_library {
         linux: {
             srcs: ["AsynchronousCloseMonitor.cpp"],
         },
+        fuchsia: {
+            srcs: ["AsynchronousCloseMonitor.cpp"],
+        },
     },
 
     header_libs: [
@@ -93,7 +96,6 @@ cc_library_shared {
     ],
     shared_libs: [
         "liblog",
-        "libdl",
     ],
     sdk_version: "19",
     stl: "c++_static",

@@ -41,7 +41,9 @@ static AsynchronousCloseMonitor* blockedThreadList = NULL;
  * The specific signal chosen here is arbitrary, but bionic needs to know so that SIGRTMIN
  * starts at a higher value.
  */
+#if !defined(__Fuchsia__)
 static const int BLOCKED_THREAD_SIGNAL = __SIGRTMIN + 2;
+#endif
 
 static void blockedThreadSignalHandler(int /*signal*/) {
     // Do nothing. We only sent this signal for its side-effect of interrupting syscalls.
@@ -55,10 +57,12 @@ void AsynchronousCloseMonitor::init() {
     memset(&sa, 0, sizeof(sa));
     sa.sa_handler = blockedThreadSignalHandler;
     sa.sa_flags = 0;
+#if !defined(__Fuchsia__)
     int rc = sigaction(BLOCKED_THREAD_SIGNAL, &sa, NULL);
     if (rc == -1) {
         ALOGE("setting blocked thread signal handler failed: %s", strerror(errno));
     }
+#endif
 }
 
 void AsynchronousCloseMonitor::signalBlockedThreads(int fd) {
@@ -66,8 +70,10 @@ void AsynchronousCloseMonitor::signalBlockedThreads(int fd) {
     for (AsynchronousCloseMonitor* it = blockedThreadList; it != NULL; it = it->mNext) {
         if (it->mFd == fd) {
             it->mSignaled = true;
+#if !defined(__Fuchsia__)
             pthread_kill(it->mThread, BLOCKED_THREAD_SIGNAL);
             // Keep going, because there may be more than one thread...
+#endif
         }
     }
 }
