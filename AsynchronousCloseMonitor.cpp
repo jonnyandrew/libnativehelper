@@ -60,6 +60,14 @@ private:
 static std::mutex blockedThreadListMutex;
 static AsynchronousCloseMonitorImpl* blockedThreadList = NULL;
 
+#if defined(__Fuchsia__)
+void AsynchronousCloseMonitor::init() {
+}
+
+void AsynchronousCloseMonitor::signalBlockedThreads(int fd __unused) {
+}
+#else
+
 /**
  * The specific signal chosen here is arbitrary, but bionic needs to know so that SIGRTMIN
  * starts at a higher value.
@@ -94,6 +102,7 @@ void AsynchronousCloseMonitorImpl::signalBlockedThreads(int fd) {
         }
     }
 }
+#endif
 
 bool AsynchronousCloseMonitorImpl::wasSignaled() const {
     return mSignaled;
