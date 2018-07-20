@@ -401,12 +401,17 @@ int jniGetFDFromFileDescriptor(C_JNIEnv* env, jobject fileDescriptor) {
     }
 }
 
-void jniSetFileDescriptorOfFD(C_JNIEnv* env, jobject fileDescriptor, int value) {
+int jniSetFileDescriptorOfFD(C_JNIEnv* env, jobject fileDescriptor, int value) {
     JNIEnv* e = reinterpret_cast<JNIEnv*>(env);
+    if (fileDescriptor == NULL) {
+        jniThrowNullPointerException(e, "null FileDescriptor");
+        return -1;
+    }
     if (fileDescriptorDescriptorField == nullptr) {
         InitFieldsAndMethods(e);
     }
     (*env)->SetIntField(e, fileDescriptor, fileDescriptorDescriptorField, value);
+    return 0;
 }
 
 jobject jniGetReferent(C_JNIEnv* env, jobject ref) {
