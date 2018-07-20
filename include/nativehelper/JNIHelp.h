@@ -27,6 +27,7 @@
 
 #include "jni.h"
 #include <errno.h>
+#include <stdbool.h>
 #include <unistd.h>
 
 #ifndef NELEM
@@ -96,7 +97,7 @@ int jniGetFDFromFileDescriptor(C_JNIEnv* env, jobject fileDescriptor);
 /*
  * Sets the int fd in a java.io.FileDescriptor.
  */
-void jniSetFileDescriptorOfFD(C_JNIEnv* env, jobject fileDescriptor, int value);
+bool jniSetFileDescriptorOfFD(C_JNIEnv* env, jobject fileDescriptor, int value);
 
 /*
  * Returns the long ownerId from a java.io.FileDescriptor.
@@ -171,8 +172,8 @@ inline int jniGetFDFromFileDescriptor(JNIEnv* env, jobject fileDescriptor) {
     return jniGetFDFromFileDescriptor(&env->functions, fileDescriptor);
 }
 
-inline void jniSetFileDescriptorOfFD(JNIEnv* env, jobject fileDescriptor, int value) {
-    jniSetFileDescriptorOfFD(&env->functions, fileDescriptor, value);
+inline bool jniSetFileDescriptorOfFD(JNIEnv* env, jobject fileDescriptor, int value) {
+    return jniSetFileDescriptorOfFD(&env->functions, fileDescriptor, value);
 }
 
 inline jlong jniGetOwnerIdFromFileDescriptor(JNIEnv* env, jobject fileDescriptor) {
