@@ -410,7 +410,11 @@ void jniSetFileDescriptorOfFD(C_JNIEnv* env, jobject fileDescriptor, int value) 
     if (fileDescriptorDescriptorField == nullptr) {
         InitFieldsAndMethods(e);
     }
-    (*env)->SetIntField(e, fileDescriptor, fileDescriptorDescriptorField, value);
+    if (fileDescriptor == nullptr) {
+        jniThrowNullPointerException(e, "null FileDescriptor");
+    } else {
+        (*env)->SetIntField(e, fileDescriptor, fileDescriptorDescriptorField, value);
+    }
 }
 
 jlong jniGetOwnerIdFromFileDescriptor(C_JNIEnv* env, jobject fileDescriptor) {
