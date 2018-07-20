@@ -96,7 +96,7 @@ int jniGetFDFromFileDescriptor(C_JNIEnv* env, jobject fileDescriptor);
 /*
  * Sets the int fd in a java.io.FileDescriptor.
  */
-void jniSetFileDescriptorOfFD(C_JNIEnv* env, jobject fileDescriptor, int value);
+int jniSetFileDescriptorOfFD(C_JNIEnv* env, jobject fileDescriptor, int value);
 
 /*
  * Returns the reference from a java.lang.ref.Reference.
@@ -166,8 +166,8 @@ inline int jniGetFDFromFileDescriptor(JNIEnv* env, jobject fileDescriptor) {
     return jniGetFDFromFileDescriptor(&env->functions, fileDescriptor);
 }
 
-inline void jniSetFileDescriptorOfFD(JNIEnv* env, jobject fileDescriptor, int value) {
-    jniSetFileDescriptorOfFD(&env->functions, fileDescriptor, value);
+inline int jniSetFileDescriptorOfFD(JNIEnv* env, jobject fileDescriptor, int value) {
+    return jniSetFileDescriptorOfFD(&env->functions, fileDescriptor, value);
 }
 
 inline jobject jniGetReferent(JNIEnv* env, jobject ref) {
