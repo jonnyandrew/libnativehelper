@@ -81,6 +81,30 @@
       "revId": "786e518e749611c441ea1b071b90f6a89bc683b6",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "14f619e8_ae1843f1",
+        "filename": "JNIHelp.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 416,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2018-07-24T15:50:39Z",
+      "side": 1,
+      "message": "Yeah, was actually only meant as a \"the style in this file could use a cleanup,\" not \"you should fix it in this CL\" :-)",
+      "parentUuid": "7cf66ba2_57cd3070",
+      "range": {
+        "startLine": 416,
+        "startChar": 8,
+        "endLine": 416,
+        "endChar": 30
+      },
+      "revId": "786e518e749611c441ea1b071b90f6a89bc683b6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
