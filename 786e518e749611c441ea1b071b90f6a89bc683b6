@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "08c07d4e_76902a64",
+        "filename": "JNIHelp.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 412,
+      "author": {
+        "id": 1334152
+      },
+      "writtenOn": "2018-07-24T15:44:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "be614cbd_c3350f2e",
+      "revId": "786e518e749611c441ea1b071b90f6a89bc683b6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ef40607_3b7db5c9",
         "filename": "JNIHelp.cpp",
         "patchSetId": 4
@@ -30,6 +48,30 @@
       "writtenOn": "2018-07-24T14:59:30Z",
       "side": 1,
       "message": "Note: I don\u0027t know why this code (I know you copied it) was written this way. Probably this file started out as C code. My point: as you have a JNIEnv, this could just be\n\n  e-\u003eSetIntField(fd, ...)",
+      "range": {
+        "startLine": 416,
+        "startChar": 8,
+        "endLine": 416,
+        "endChar": 30
+      },
+      "revId": "786e518e749611c441ea1b071b90f6a89bc683b6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7cf66ba2_57cd3070",
+        "filename": "JNIHelp.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 416,
+      "author": {
+        "id": 1334152
+      },
+      "writtenOn": "2018-07-24T15:44:39Z",
+      "side": 1,
+      "message": "Good point, done!\n\nIt seems to be a common idiom in this file, I\u0027m happy to send a followup CL to tidy the remaining occurrences if you don\u0027t mind reviewing.",
+      "parentUuid": "6ef40607_3b7db5c9",
       "range": {
         "startLine": 416,
         "startChar": 8,
