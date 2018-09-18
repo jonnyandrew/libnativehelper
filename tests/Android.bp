@@ -60,3 +60,9 @@ cc_test {
 
   shared_libs: ["libnativehelper"],
 }
+
+cc_library_headers {
+    name: "jni_gtest_headers",
+    host_supported: true,
+    export_include_dirs: ["jni_gtest"],
+}
