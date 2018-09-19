@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "95f1e89c_1efd48fc",
+        "filename": "tests/ScopedLocalRef_test.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1120458
+      },
+      "writtenOn": "2018-09-19T02:42:33Z",
+      "side": 1,
+      "message": "nit: ASSERT_NE(nullptr, obj_)\n\n(everywhere)",
+      "range": {
+        "startLine": 64,
+        "startChar": 11,
+        "endLine": 64,
+        "endChar": 41
+      },
+      "revId": "479f68ca5c1ba83be582bc5fc7e004f278a97e31",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "29fa06ff_ad9ef92e",
+        "filename": "tests/ScopedLocalRef_test.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 1120458
+      },
+      "writtenOn": "2018-09-19T02:42:33Z",
+      "side": 1,
+      "message": "Create UninstallInfCopy and run that in TearDown?",
+      "range": {
+        "startLine": 79,
+        "startChar": 7,
+        "endLine": 80,
+        "endChar": 48
+      },
+      "revId": "479f68ca5c1ba83be582bc5fc7e004f278a97e31",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "feb95fcb_8fa2abe3",
+        "filename": "tests/ScopedLocalRef_test.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 1120458
+      },
+      "writtenOn": "2018-09-19T02:42:33Z",
+      "side": 1,
+      "message": "nit: use at here to do range checking and avoid headaches",
+      "range": {
+        "startLine": 90,
+        "startChar": 23,
+        "endLine": 90,
+        "endChar": 30
+      },
+      "revId": "479f68ca5c1ba83be582bc5fc7e004f278a97e31",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
