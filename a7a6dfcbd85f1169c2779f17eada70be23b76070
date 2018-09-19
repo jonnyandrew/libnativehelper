@@ -1,0 +1,107 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "95795b37_79743faa",
+        "filename": "tests/Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 1120458
+      },
+      "writtenOn": "2018-09-19T02:32:44Z",
+      "side": 1,
+      "message": "This should have header_libs and export_header_lib_headers for jni.h, gtest (if possible), and nativehelper/JniInvocation.h",
+      "revId": "a7a6dfcbd85f1169c2779f17eada70be23b76070",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7de248b6_d49c71a9",
+        "filename": "tests/jni_gtest/jni_gtest.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1120458
+      },
+      "writtenOn": "2018-09-19T02:32:44Z",
+      "side": 1,
+      "message": "can you move this to jni_gtest/nativehelper/jni_gtest.h? I think that would make more sense, but you\u0027re the expert.",
+      "revId": "a7a6dfcbd85f1169c2779f17eada70be23b76070",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5f71e63b_33e4cbac",
+        "filename": "tests/jni_gtest/jni_gtest.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1120458
+      },
+      "writtenOn": "2018-09-19T02:32:44Z",
+      "side": 1,
+      "message": "2018",
+      "range": {
+        "startLine": 2,
+        "startChar": 17,
+        "endLine": 2,
+        "endChar": 21
+      },
+      "revId": "a7a6dfcbd85f1169c2779f17eada70be23b76070",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "839b1779_299e07fe",
+        "filename": "tests/jni_gtest/jni_gtest.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1120458
+      },
+      "writtenOn": "2018-09-19T02:32:44Z",
+      "side": 1,
+      "message": "This is kind of annoying because it means that you cannot inject the JNI mock in an existing hierarchy of test types. Not sure if I am missing something or if there is a better way, but I would have done:\n\ntemplate \u003ctypename Provider, typename Test \u003d ::testing::Test\u003e\nclass JNITestBase : public Test { ... }",
+      "range": {
+        "startLine": 59,
+        "startChar": 27,
+        "endLine": 59,
+        "endChar": 40
+      },
+      "revId": "a7a6dfcbd85f1169c2779f17eada70be23b76070",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b2aa510d_b3a5ace4",
+        "filename": "tests/jni_gtest/jni_gtest.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 1120458
+      },
+      "writtenOn": "2018-09-19T02:32:44Z",
+      "side": 1,
+      "message": "nit: new JNINativeInterface{0}",
+      "range": {
+        "startLine": 112,
+        "startChar": 34,
+        "endLine": 113,
+        "endChar": 51
+      },
+      "revId": "a7a6dfcbd85f1169c2779f17eada70be23b76070",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
