@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "3f113e68_b30b8fbf",
+        "filename": "tests/Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2018-09-21T04:28:13Z",
+      "side": 1,
+      "message": "I\u0027ve rewritten it somewhat. I\u0027m not a fan of to many header libs when there are actual lib dependencies. So I\u0027ve added a defaults module.",
+      "parentUuid": "95795b37_79743faa",
+      "revId": "a7a6dfcbd85f1169c2779f17eada70be23b76070",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7de248b6_d49c71a9",
         "filename": "tests/jni_gtest/jni_gtest.h",
         "patchSetId": 1
@@ -33,6 +51,24 @@
       "revId": "a7a6dfcbd85f1169c2779f17eada70be23b76070",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ea762c0b_ebdba734",
+        "filename": "tests/jni_gtest/jni_gtest.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2018-09-21T04:28:13Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7de248b6_d49c71a9",
+      "revId": "a7a6dfcbd85f1169c2779f17eada70be23b76070",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     },
     {
       "key": {
@@ -59,6 +95,30 @@
     },
     {
       "key": {
+        "uuid": "68e2fa9e_104cd84f",
+        "filename": "tests/jni_gtest/jni_gtest.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2018-09-21T04:28:13Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5f71e63b_33e4cbac",
+      "range": {
+        "startLine": 2,
+        "startChar": 17,
+        "endLine": 2,
+        "endChar": 21
+      },
+      "revId": "a7a6dfcbd85f1169c2779f17eada70be23b76070",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "839b1779_299e07fe",
         "filename": "tests/jni_gtest/jni_gtest.h",
         "patchSetId": 1
@@ -82,6 +142,30 @@
     },
     {
       "key": {
+        "uuid": "3a0eb83d_d374bf08",
+        "filename": "tests/jni_gtest/jni_gtest.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2018-09-21T04:28:13Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "839b1779_299e07fe",
+      "range": {
+        "startLine": 59,
+        "startChar": 27,
+        "endLine": 59,
+        "endChar": 40
+      },
+      "revId": "a7a6dfcbd85f1169c2779f17eada70be23b76070",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "b2aa510d_b3a5ace4",
         "filename": "tests/jni_gtest/jni_gtest.h",
         "patchSetId": 1
@@ -102,6 +186,30 @@
       "revId": "a7a6dfcbd85f1169c2779f17eada70be23b76070",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "afe9a2b7_5b6fe2de",
+        "filename": "tests/jni_gtest/jni_gtest.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2018-09-21T04:28:13Z",
+      "side": 1,
+      "message": "Doesn\u0027t work.",
+      "parentUuid": "b2aa510d_b3a5ace4",
+      "range": {
+        "startLine": 112,
+        "startChar": 34,
+        "endLine": 113,
+        "endChar": 51
+      },
+      "revId": "a7a6dfcbd85f1169c2779f17eada70be23b76070",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
