@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "b6e8a378_b3a2dd35",
+        "filename": "tests/Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 1120458
+      },
+      "writtenOn": "2018-09-21T16:37:28Z",
+      "side": 1,
+      "message": "Yeah, this is definitely an annoying problem. b/63599562 for instance.",
+      "parentUuid": "3f113e68_b30b8fbf",
+      "revId": "a7a6dfcbd85f1169c2779f17eada70be23b76070",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7de248b6_d49c71a9",
         "filename": "tests/jni_gtest/jni_gtest.h",
         "patchSetId": 1
