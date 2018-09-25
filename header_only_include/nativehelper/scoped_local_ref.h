@@ -55,7 +55,7 @@ public:
 // Some better C++11 support.
 #if __cplusplus >= 201103L
     // Move constructor.
-    ScopedLocalRef(ScopedLocalRef&& s) : mEnv(s.mEnv), mLocalRef(s.release()) {
+    ScopedLocalRef(ScopedLocalRef&& s) noexcept : mEnv(s.mEnv), mLocalRef(s.release()) {
     }
 
     explicit ScopedLocalRef(JNIEnv* env) : mEnv(env), mLocalRef(nullptr) {
@@ -67,7 +67,7 @@ public:
     //   ref.reset(...);
 
     // Move assignment operator.
-    ScopedLocalRef& operator=(ScopedLocalRef&& s) {
+    ScopedLocalRef& operator=(ScopedLocalRef&& s) noexcept {
         reset(s.release());
         mEnv = s.mEnv;
         return *this;
