@@ -14,13 +14,6 @@
  * limitations under the License.
  */
 
-#if defined(__ANDROID__)
-/* libnativehelper is built by NDK 19 in one variant, which doesn't yet have the GNU strerror_r. */
-#undef _GNU_SOURCE
-/* ...but this code uses asprintf, which is a BSD/GNU extension. */
-#define _BSD_SOURCE
-#endif
-
 #define LOG_TAG "JNIHelp"
 
 #include <nativehelper/JniConstants.h>
@@ -361,7 +354,7 @@ void jniLogException(C_JNIEnv* env, int priority, const char* tag, jthrowable ex
 }
 
 const char* jniStrError(int errnum, char* buf, size_t buflen) {
-#if __GLIBC__
+#if __GLIBC__ || __BIONIC__
     // Note: glibc has a nonstandard strerror_r that returns char* rather than POSIX's int.
     // char *strerror_r(int errnum, char *buf, size_t n);
     return strerror_r(errnum, buf, buflen);
