@@ -22,6 +22,30 @@
       "revId": "4ece2008d22d0e5b6a84d836eb1052670e1aaa24",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6b2fb4be_316e48e1",
+        "filename": "JNIHelp.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 367,
+      "author": {
+        "id": 1047769
+      },
+      "writtenOn": "2018-10-31T22:34:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "aff14844_2a812753",
+      "range": {
+        "startLine": 366,
+        "startChar": 58,
+        "endLine": 367,
+        "endChar": 9
+      },
+      "revId": "4ece2008d22d0e5b6a84d836eb1052670e1aaa24",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
