@@ -45,6 +45,9 @@ cc_library {
         linux: {
             srcs: ["AsynchronousCloseMonitor.cpp"],
         },
+        linux_bionic: {
+            enabled: true,
+        },
     },
 
     header_libs: [
