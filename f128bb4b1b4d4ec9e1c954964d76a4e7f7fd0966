@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dbda810b_d4d781c5",
+        "filename": "JNIHelp.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 369,
+      "author": {
+        "id": 1022077
+      },
+      "writtenOn": "2018-10-31T23:12:58Z",
+      "side": 1,
+      "message": "add a bug number\n\nTODO(bug): ....",
+      "range": {
+        "startLine": 369,
+        "startChar": 7,
+        "endLine": 369,
+        "endChar": 11
+      },
+      "revId": "f128bb4b1b4d4ec9e1c954964d76a4e7f7fd0966",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
