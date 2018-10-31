@@ -361,9 +361,12 @@ void jniLogException(C_JNIEnv* env, int priority, const char* tag, jthrowable ex
 }
 
 const char* jniStrError(int errnum, char* buf, size_t buflen) {
-#if __GLIBC__
+#if __GLIBC__ || (defined(_GNU_SOURCE) && defined(__ANDROID_API__) && __ANDROID_API__ >= 23)
     // Note: glibc has a nonstandard strerror_r that returns char* rather than POSIX's int.
-    // char *strerror_r(int errnum, char *buf, size_t n);
+    // char // *strerror_r(int errnum, char *buf, size_t n); When we are not __ANDROID__ and
+    // __ANDROID_API__ >= 23 then bionic will provide a gnu-compatible implementation of strerror_r
+    // instead of the bsd version. This can happen with linux_bionic builds.
+    // TODO(b/31559095) Figure out why this is triggered by linux_bionic builds.
     return strerror_r(errnum, buf, buflen);
 #else
     int rc = strerror_r(errnum, buf, buflen);
