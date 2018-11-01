@@ -99,6 +99,24 @@
       "revId": "5480ec635019518f74e3c03044bf97972942f295",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a48307d_dceb35d7",
+        "filename": "JNIHelp.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 369,
+      "author": {
+        "id": 1047769
+      },
+      "writtenOn": "2018-11-01T17:52:14Z",
+      "side": 1,
+      "message": "Tried that and it failed.\n\nI think the issue is that this is sometimes built with the NDK and linux_bionic builds run with -U__ANDROID__ but I\u0027m not totally sure and this seemed like the simplest solution.",
+      "parentUuid": "a7c8ca8d_3ab467df",
+      "revId": "5480ec635019518f74e3c03044bf97972942f295",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
