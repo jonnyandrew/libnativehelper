@@ -81,6 +81,24 @@
       "revId": "5480ec635019518f74e3c03044bf97972942f295",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a7c8ca8d_3ab467df",
+        "filename": "JNIHelp.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 369,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2018-11-01T17:18:38Z",
+      "side": 1,
+      "message": "hang on though... this is a .cpp file, so `_GNU_SOURCE` is on by default (which is why your other test is just `__GLIBC__`). so do you actually just want `__GLIBC__ || __BIONIC__` (or alternatively, `!defined(__APPLE__)`)?",
+      "parentUuid": "be900aa9_a331dde4",
+      "revId": "5480ec635019518f74e3c03044bf97972942f295",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
