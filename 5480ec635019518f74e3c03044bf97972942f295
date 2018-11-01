@@ -117,6 +117,24 @@
       "revId": "5480ec635019518f74e3c03044bf97972942f295",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4a72a79a_344da777",
+        "filename": "JNIHelp.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 369,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2018-11-01T18:51:36Z",
+      "side": 1,
+      "message": "tried which? (`-U__ANDROID__` wouldn\u0027t affect `__BIONIC__`, which is what you _should_ be checking.)",
+      "parentUuid": "7a48307d_dceb35d7",
+      "revId": "5480ec635019518f74e3c03044bf97972942f295",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
