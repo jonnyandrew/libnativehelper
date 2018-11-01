@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "498fbe49_a5743b1d",
+        "filename": "JNIHelp.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 364,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2018-11-01T16:59:01Z",
+      "side": 1,
+      "message": "should be _GNU_SOURCE. __USE_GNU is an internal implementation detail.",
+      "range": {
+        "startLine": 364,
+        "startChar": 26,
+        "endLine": 364,
+        "endChar": 35
+      },
+      "revId": "5480ec635019518f74e3c03044bf97972942f295",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "50b0ffb5_613a1e2f",
+        "filename": "JNIHelp.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 369,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2018-11-01T16:59:01Z",
+      "side": 1,
+      "message": "yeah, i think the right fix is to ensure that the host bionic build looks like a platform build (since it\u0027s using those headers).",
+      "revId": "5480ec635019518f74e3c03044bf97972942f295",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
