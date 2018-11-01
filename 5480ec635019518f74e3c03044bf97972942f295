@@ -135,6 +135,24 @@
       "revId": "5480ec635019518f74e3c03044bf97972942f295",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fc49d98a_c5cc797f",
+        "filename": "JNIHelp.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 369,
+      "author": {
+        "id": 1047769
+      },
+      "writtenOn": "2018-11-01T20:13:40Z",
+      "side": 1,
+      "message": "sorry I should have been clearer. It doesn\u0027t work on due to some device build targets. For example:\n\n[ 70% 6281/8960] //libnativehelper:libnativehelper clang++ JNIHelp.cpp\nFAILED: /fast/allight/android-build/walleye/aosp1/userdebug/soong/.intermediates/libnativehelper/libnativehelper/android_arm64_armv8-a_cortex-a73_core_static_cfi_platform/obj/libnativehelper/JNIHelp.o\nPWD\u003d/proc/self/cwd prebuilts/clang/host/linux-x86/clang-r339409b/bin/clang++ -c -Ilibnativehelper/include -Ilibnativehelper  -Werror\u003dimplicit-function-declaration -DANDROID -fmessage-length\u003d0 -W -Wall -Wno-unused -Winit-self -Wpointer-arith -no-canonical-prefixes -DNDEBUG -UDEBUG -fno-exceptions -Wno-multichar -O2 -g -fno-strict-aliasing -fdebug-prefix-map\u003d/proc/self/cwd\u003d -D__compiler_offsetof\u003d__builtin_offsetof -Wimplicit-fallthrough -Wno-error\u003dimplicit-fallthrough -Werror\u003dint-conversion -Wno-reserved-id-macro -Wno-format-pedantic -Wno-unused-command-line-argument -fcolor-diagnostics -Wno-expansion-to-defined -Wno-zero-as-null-pointer-constant -Wno-deprecated-register -Wno-sign-compare -ffunction-sections -fdata-sections -fno-short-enums -funwind-tables -fstack-protector-strong -Wa,--noexecstack -D_FORTIFY_SOURCE\u003d2 -Wstrict-aliasing\u003d2 -Werror\u003dreturn-type -Werror\u003dnon-virtual-dtor -Werror\u003daddress -Werror\u003dsequence-point -Werror\u003ddate-time -Werror\u003dformat-security -nostdlibinc -march\u003darmv8-a -mcpu\u003dcortex-a53 -Ilibnativehelper/include_jni -Ilibnativehelper/header_only_include -Ilibnativehelper/platform_include -Iexternal/libcxx/include -Iexternal/libcxxabi/include -Isystem/core/liblog/include -Isystem/core/include -Isystem/media/audio/include -Ihardware/libhardware/include -Ihardware/libhardware_legacy/include -Ihardware/ril/include -Ilibnativehelper/include -Iframeworks/native/include -Iframeworks/native/opengl/include -Iframeworks/av/include -isystem bionic/libc/include -isystem bionic/libc/kernel/uapi -isystem bionic/libc/kernel/uapi/asm-arm64 -isystem bionic/libc/kernel/android/scsi -isystem bionic/libc/kernel/android/uapi -Ilibnativehelper/include_jni -Werror -fvisibility\u003dprotected -target aarch64-linux-android -Bprebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/aarch64-linux-android/bin -DANDROID_STRICT -fPIC -D_USING_LIBCXX -flto -fsanitize-cfi-cross-dso -fsanitize-blacklist\u003dexternal/compiler-rt/lib/cfi/cfi_blacklist.txt -fvisibility\u003ddefault -fsanitize\u003dcfi -fsanitize-trap\u003dall -ftrap-function\u003dabort -std\u003dgnu++14 -Wsign-promo -Wno-inconsistent-missing-override -Wno-null-dereference -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS -Wno-thread-safety-negative -Wno-gnu-include-next -fvisibility-inlines-hidden -fno-rtti  -Werror\u003dint-to-pointer-cast -Werror\u003dpointer-to-int-cast -Werror\u003daddress-of-temporary -Werror\u003dreturn-type -Wno-tautological-constant-compare -Wno-tautological-type-limit-compare -Wno-tautological-unsigned-enum-zero-compare -Wno-tautological-unsigned-zero-compare -Wno-null-pointer-arithmetic -Wno-enum-compare -Wno-enum-compare-switch -Wno-c++98-compat-extra-semi -Wno-self-assign-overloaded -Wno-constant-logical-operand -Wno-return-std-move-in-c++11 -Wno-dangling-field -MD -MF /fast/allight/android-build/walleye/aosp1/userdebug/soong/.intermediates/libnativehelper/libnativehelper/android_arm64_armv8-a_cortex-a73_core_static_cfi_platform/obj/libnativehelper/JNIHelp.o.d -o /fast/allight/android-build/walleye/aosp1/userdebug/soong/.intermediates/libnativehelper/libnativehelper/android_arm64_armv8-a_cortex-a73_core_static_cfi_platform/obj/libnativehelper/JNIHelp.o libnativehelper/JNIHelp.cpp\nlibnativehelper/JNIHelp.cpp:370:12: error: cannot initialize return object of type \u0027const char *\u0027 with an rvalue of type \u0027int\u0027\n    return strerror_r(errnum, buf, buflen);\n           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n1 error generated.",
+      "parentUuid": "4a72a79a_344da777",
+      "revId": "5480ec635019518f74e3c03044bf97972942f295",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
