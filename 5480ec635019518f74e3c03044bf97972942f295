@@ -207,6 +207,24 @@
       "revId": "5480ec635019518f74e3c03044bf97972942f295",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0a2deb8a_7e6b2d6f",
+        "filename": "JNIHelp.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 369,
+      "author": {
+        "id": 1047769
+      },
+      "writtenOn": "2018-11-05T21:14:46Z",
+      "side": 1,
+      "message": "Tried that too. Same result.\n\nI agree something is screwy with how we build this file.\n\nFor now though we want host bionic for testing and this seems to be the easiest way",
+      "parentUuid": "32136fb2_652b37e9",
+      "revId": "5480ec635019518f74e3c03044bf97972942f295",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
