@@ -279,6 +279,24 @@
       "revId": "5480ec635019518f74e3c03044bf97972942f295",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3b13a7e3_782202e6",
+        "filename": "JNIHelp.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 369,
+      "author": {
+        "id": 1047769
+      },
+      "writtenOn": "2018-11-05T22:49:44Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "19ff451d_82f438dd",
+      "revId": "5480ec635019518f74e3c03044bf97972942f295",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
