@@ -243,6 +243,24 @@
       "revId": "5480ec635019518f74e3c03044bf97972942f295",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b48829f1_8449ff3c",
+        "filename": "JNIHelp.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 369,
+      "author": {
+        "id": 1047769
+      },
+      "writtenOn": "2018-11-05T21:46:06Z",
+      "side": 1,
+      "message": "enh@, dwillemsen@\n\nLooking through the whole file I found this up at the top:\n\n    #if defined(__ANDROID__)\n    /* libnativehelper is built by NDK 19 in one variant, which doesn\u0027t yet have the GNU strerror_r. \n     */\n    #undef _GNU_SOURCE\n    /* ...but this code uses asprintf, which is a BSD/GNU extension. */\n    #define _BSD_SOURCE\n    #endif\n\nI imagine this is what\u0027s causing the problem. Just changing the __ANDROID__ to __BIONIC__ doesn\u0027t fix it though. Any idea what this is supposed to do or how we could get it working correctly.",
+      "parentUuid": "d6e07f86_ebbab1f5",
+      "revId": "5480ec635019518f74e3c03044bf97972942f295",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }

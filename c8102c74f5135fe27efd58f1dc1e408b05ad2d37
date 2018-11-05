@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1eab8b0f_9d1197cf",
+        "filename": "JNIHelp.cpp",
+        "patchSetId": 5
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1047769
+      },
+      "writtenOn": "2018-11-05T21:46:06Z",
+      "side": 1,
+      "message": "I\u0027ve got to guess this is what\u0027s causing us grief.",
+      "range": {
+        "startLine": 17,
+        "startChar": 0,
+        "endLine": 23,
+        "endChar": 0
+      },
+      "revId": "c8102c74f5135fe27efd58f1dc1e408b05ad2d37",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
