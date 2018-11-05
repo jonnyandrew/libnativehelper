@@ -261,6 +261,24 @@
       "revId": "5480ec635019518f74e3c03044bf97972942f295",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "19ff451d_82f438dd",
+        "filename": "JNIHelp.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 369,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2018-11-05T21:52:52Z",
+      "side": 1,
+      "message": "the CL that added that said:\n\n  Fix libnativehelper strerror_r build break.\n\n  We can remove this when there\u0027s a newer NDK to build with.\n\n  Change-Id: I2b4dccd720954f40abc3753028187e413fc0b3c8\n\nso i\u0027m assuming you can just remove this cruft?",
+      "parentUuid": "b48829f1_8449ff3c",
+      "revId": "5480ec635019518f74e3c03044bf97972942f295",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
