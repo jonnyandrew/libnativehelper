@@ -225,6 +225,24 @@
       "revId": "5480ec635019518f74e3c03044bf97972942f295",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d6e07f86_ebbab1f5",
+        "filename": "JNIHelp.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 369,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2018-11-05T21:23:34Z",
+      "side": 1,
+      "message": "i think you should work with dwillemsen to work out what\u0027s going wrong here before going any further. if this isn\u0027t working right, something\u0027s badly broken with the host bionic configuration.",
+      "parentUuid": "0a2deb8a_7e6b2d6f",
+      "revId": "5480ec635019518f74e3c03044bf97972942f295",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
