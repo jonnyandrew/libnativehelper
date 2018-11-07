@@ -23,7 +23,11 @@
 #include <string>
 #include <vector>
 
-jobjectArray newStringArray(JNIEnv* env, size_t count);
+#include "nativehelper/module_api.h"
+
+// Public API for libnativehelper library.
+MODULE_API jobjectArray newStringArray(JNIEnv* env, size_t count);
+MODULE_API jobjectArray toStringArray(JNIEnv* env, const char* const* strings);
 
 template <typename Counter, typename Getter>
 jobjectArray toStringArray(JNIEnv* env, Counter* counter, Getter* getter) {
@@ -66,6 +70,6 @@ inline jobjectArray toStringArray(JNIEnv* env, const std::vector<std::string>& s
     return toStringArray<VectorCounter, VectorGetter>(env, &counter, &getter);
 }
 
-JNIEXPORT jobjectArray toStringArray(JNIEnv* env, const char* const* strings);
+
 
 #endif  // TO_STRING_ARRAY_H_included
