@@ -1,0 +1,39 @@
+# This library should only export C linkage definitions.
+LIBNATIVEHELPER {
+  global:
+    JNI_GetDefaultJavaVMInitArgs;                # introduced=1
+    JNI_CreateJavaVM;                            # introduced=1
+    JNI_GetCreatedJavaVMs;                       # introduced=1
+
+    jniRegisterNativeMethods;                    # introduced=1
+    jniThrowException;                           # introduced=1
+    jniThrowExceptionFmt;                        # introduced=1
+    jniThrowNullPointerException;                # introduced=1
+    jniThrowRuntimeException;                    # introduced=1
+    jniThrowIOException;                         # introduced=1
+    jniStrError;                                 # introduced=1
+    jniCreateFileDescriptor;                     # introduced=1
+    jniGetFDFromFileDescriptor;                  # introduced=1
+    jniSetFileDescriptorOfFD;                    # introduced=1
+    jniGetOwnerIdFromFileDescriptor;             # introduced=1
+    jniGetReferent;                              # introduced=1
+    jniCreateString;                             # introduced=1
+    jniLogException;                             # introduced=1
+
+    JniInvocationCreate;                         # introduced=1
+    JniInvocationDestroy;                        # introduced=1
+    JniInvocationInit;                           # introduced=1
+    JniInvocationGetLibrary;                     # introduced=1
+
+    async_close_monitor_static_init;             # introduced=1
+    async_close_monitor_signal_blocked_threads;  # introduced=1
+    async_close_monitor_create;                  # introduced=1
+    async_close_monitor_destroy;                 # introduced=1
+    async_close_monitor_was_signalled;           # introduced=1
+
+    newStringArray;                              # introduced=1
+    toStringArray;                               # introduced=1
+
+  local:
+    *;
+};
