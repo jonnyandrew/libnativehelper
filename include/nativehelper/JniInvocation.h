@@ -19,6 +19,13 @@
 
 #include <jni.h>
 
+#include "nativehelper/module_api.h"
+
+MODULE_API void* JniInvocationCreate();
+MODULE_API void JniInvocationDestroy(void* instance);
+MODULE_API int JniInvocationInit(void* instance, const char* library);
+MODULE_API const char* JniInvocationGetLibrary(const char* library, char* buffer);
+
 // JniInvocation adds a layer of indirection for applications using
 // the JNI invocation API to allow the JNI implementation to be
 // selected dynamically. Apps can specify a specific implementation to
@@ -26,46 +33,41 @@
 // library will chosen based on the value of Android system property
 // persist.sys.dalvik.vm.lib on the device, and otherwise fall back to
 // a hard-coded default implementation.
-class JniInvocation {
+class JniInvocation final {
  public:
-  JniInvocation();
+  JniInvocation() {
+    impl_ = JniInvocationCreate();
+  }
 
-  ~JniInvocation();
+  ~JniInvocation() {
+    JniInvocationDestroy(impl_);
+  }
 
   // Initialize JNI invocation API. library should specifiy a valid
   // shared library for opening via dlopen providing a JNI invocation
   // implementation, or null to allow defaulting via
   // persist.sys.dalvik.vm.lib.
-  bool Init(const char* library);
+  bool Init(const char* library) {
+    return JniInvocationInit(impl_, library) != 0;
+  }
 
   // Exposes which library is actually loaded from the given name. The
   // buffer of size PROPERTY_VALUE_MAX will be used to load the system
   // property for the default library, if necessary. If no buffer is
   // provided, the fallback value will be used.
-  static const char* GetLibrary(const char* library, char* buffer);
+  static const char* GetLibrary(const char* library, char* buffer) {
+    return JniInvocationGetLibrary(library, buffer);
+  }
 
  private:
+  JniInvocation(const JniInvocation&) = delete;
+  JniInvocation& operator=(const JniInvocation&) = delete;
+
   static const char* GetLibrary(const char* library, char* buffer, bool (*is_debuggable)(),
                                 int (*get_library_system_property)(char* buffer));
 
-  bool FindSymbol(void** pointer, const char* symbol);
+  void* impl_;
 
-  static JniInvocation& GetJniInvocation();
-
-  jint JNI_GetDefaultJavaVMInitArgs(void* vmargs);
-  jint JNI_CreateJavaVM(JavaVM** p_vm, JNIEnv** p_env, void* vm_args);
-  jint JNI_GetCreatedJavaVMs(JavaVM** vms, jsize size, jsize* vm_count);
-
-  static JniInvocation* jni_invocation_;
-
-  void* handle_;
-  jint (*JNI_GetDefaultJavaVMInitArgs_)(void*);
-  jint (*JNI_CreateJavaVM_)(JavaVM**, JNIEnv**, void*);
-  jint (*JNI_GetCreatedJavaVMs_)(JavaVM**, jsize, jsize*);
-
-  friend jint JNI_GetDefaultJavaVMInitArgs(void* vm_args);
-  friend jint JNI_CreateJavaVM(JavaVM** p_vm, JNIEnv** p_env, void* vm_args);
-  friend jint JNI_GetCreatedJavaVMs(JavaVM** vms, jsize size, jsize* vm_count);
   friend class JNIInvocation_Debuggable_Test;
   friend class JNIInvocation_NonDebuggable_Test;
 };
