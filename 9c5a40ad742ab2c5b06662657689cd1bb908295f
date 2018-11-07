@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "50cbd572_105ab59f",
+        "filename": "AsynchronousCloseMonitor.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2018-11-07T16:24:33Z",
+      "side": 1,
+      "message": "can\u0027t you just move this wholesale to libcore and delete it here? iirc, it\u0027s just a historical accident that it\u0027s here.",
+      "revId": "9c5a40ad742ab2c5b06662657689cd1bb908295f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4ba98035_002c1193",
+        "filename": "include/nativehelper/JniConstants.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2018-11-07T16:24:33Z",
+      "side": 1,
+      "message": "since there are only a couple of these used outside libcore, i think you should move 99% into libcore, and just leave these for the couple of frameworks users, or move the frameworks users off this entirely (since you\u0027ll have to touch them anyway even if you do this).\n\nif you were going to export a C API, something like FindClassOrDie would probably be better?",
+      "revId": "9c5a40ad742ab2c5b06662657689cd1bb908295f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
