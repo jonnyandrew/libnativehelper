@@ -67,6 +67,7 @@ cc_library {
     ],
 
     export_include_dirs: ["include"],
+    version_script: "libnativehelper.map",
 }
 
 //

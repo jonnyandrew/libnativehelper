@@ -1,3 +1,4 @@
+#if 0
 /*
  * Copyright (C) 2014 The Android Open Source Project
  *
@@ -93,3 +94,4 @@ TEST(JNIInvocation, NonDebuggable) {
     GTEST_LOG_(WARNING) << "Host testing unsupported. Please run target tests.";
 #endif
 }
+#endif  // 0
