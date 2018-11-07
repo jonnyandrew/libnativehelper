@@ -6,7 +6,7 @@ cc_test {
     host_supported: true,
     srcs: ["JniInvocation_test.cpp"],
     cflags: ["-Wall", "-Werror"],
-    shared_libs: ["libnativehelper"],
+    shared_libs: ["libnativehelper_private"],
 }
 
 cc_test {
@@ -58,5 +58,14 @@ cc_test {
 
   tidy: true,
 
+  shared_libs: ["libnativehelper"],
+}
+
+cc_test {
+  name: "libnativehelper_api_test",
+  host_supported: true,
+  cflags: ["-Wall", "-Werror"],  
+  srcs: ["libnativehelper_api_test.c"],  // C Compilation test.
+  tidy: true,
   shared_libs: ["libnativehelper"],
 }
