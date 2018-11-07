@@ -29,6 +29,57 @@
 #include <sys/system_properties.h>
 #endif
 
+namespace internal {
+
+// JniInvocation adds a layer of indirection for applications using
+// the JNI invocation API to allow the JNI implementation to be
+// selected dynamically. Apps can specify a specific implementation to
+// be used by calling InitJniInvocation. If this is not done, the
+// library will chosen based on the value of Android system property
+// persist.sys.dalvik.vm.lib on the device, and otherwise fall back to
+// a hard-coded default implementation.
+class JniInvocation {
+ public:
+  JniInvocation();
+
+  ~JniInvocation();
+
+  // Initialize JNI invocation API. library should specifiy a valid
+  // shared library for opening via dlopen providing a JNI invocation
+  // implementation, or null to allow defaulting via
+  // persist.sys.dalvik.vm.lib.
+  bool Init(const char* library);
+
+  // Exposes which library is actually loaded from the given name. The
+  // buffer of size PROPERTY_VALUE_MAX will be used to load the system
+  // property for the default library, if necessary. If no buffer is
+  // provided, the fallback value will be used.
+  static const char* GetLibrary(const char* library, char* buffer);
+
+  static JniInvocation& GetJniInvocation();
+
+  jint JNI_GetDefaultJavaVMInitArgs(void* vmargs);
+  jint JNI_CreateJavaVM(JavaVM** p_vm, JNIEnv** p_env, void* vm_args);
+  jint JNI_GetCreatedJavaVMs(JavaVM** vms, jsize size, jsize* vm_count);
+
+
+ private:
+  static const char* GetLibrary(const char* library, char* buffer, bool (*is_debuggable)(),
+                                int (*get_library_system_property)(char* buffer));
+
+  bool FindSymbol(void** pointer, const char* symbol);
+
+  static JniInvocation* jni_invocation_;
+
+  void* handle_;
+  jint (*JNI_GetDefaultJavaVMInitArgs_)(void*);
+  jint (*JNI_CreateJavaVM_)(JavaVM**, JNIEnv**, void*);
+  jint (*JNI_GetCreatedJavaVMs_)(JavaVM**, jsize, jsize*);
+
+  friend class JNIInvocation_Debuggable_Test;
+  friend class JNIInvocation_NonDebuggable_Test;
+};
+
 template <typename T>
 void UNUSED(const T&) {}
 
@@ -58,7 +109,6 @@ JniInvocation::JniInvocation() :
     JNI_GetDefaultJavaVMInitArgs_(NULL),
     JNI_CreateJavaVM_(NULL),
     JNI_GetCreatedJavaVMs_(NULL) {
-
   LOG_ALWAYS_FATAL_IF(jni_invocation_ != NULL, "JniInvocation instance already initialized");
   jni_invocation_ = this;
 }
@@ -193,14 +243,34 @@ JniInvocation& JniInvocation::GetJniInvocation() {
   return *jni_invocation_;
 }
 
+}  // namespace internal
+
 extern "C" jint JNI_GetDefaultJavaVMInitArgs(void* vm_args) {
-  return JniInvocation::GetJniInvocation().JNI_GetDefaultJavaVMInitArgs(vm_args);
+  return internal::JniInvocation::GetJniInvocation().JNI_GetDefaultJavaVMInitArgs(vm_args);
 }
 
 extern "C" jint JNI_CreateJavaVM(JavaVM** p_vm, JNIEnv** p_env, void* vm_args) {
-  return JniInvocation::GetJniInvocation().JNI_CreateJavaVM(p_vm, p_env, vm_args);
+  return internal::JniInvocation::GetJniInvocation().JNI_CreateJavaVM(p_vm, p_env, vm_args);
 }
 
 extern "C" jint JNI_GetCreatedJavaVMs(JavaVM** vms, jsize size, jsize* vm_count) {
-  return JniInvocation::GetJniInvocation().JNI_GetCreatedJavaVMs(vms, size, vm_count);
+  return internal::JniInvocation::GetJniInvocation().JNI_GetCreatedJavaVMs(vms, size, vm_count);
+}
+
+void* JniInvocationCreate() {
+  return new internal::JniInvocation();
+}
+
+void JniInvocationDestroy(void* instance) {
+  internal::JniInvocation* impl = static_cast<internal::JniInvocation*>(instance);
+  delete impl;
+}
+
+int JniInvocationInit(void* instance, const char* library) {
+  internal::JniInvocation* impl = static_cast<internal::JniInvocation*>(instance);
+  return impl->Init(library) ? 1 : 0;
+}
+
+const char* JniInvocationGetLibrary(const char* library, char* buffer) {
+  return internal::JniInvocation::GetLibrary(library, buffer);
 }

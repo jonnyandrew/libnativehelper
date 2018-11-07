@@ -27,47 +27,47 @@
 #include <atomic>
 #include <mutex>
 
+jclass JniConstants_booleanClass;
+jclass JniConstants_byteArrayClass;
+jclass JniConstants_calendarClass;
+jclass JniConstants_charsetICUClass;
+jclass JniConstants_doubleClass;
+jclass JniConstants_errnoExceptionClass;
+jclass JniConstants_fileDescriptorClass;
+jclass JniConstants_gaiExceptionClass;
+jclass JniConstants_inet6AddressClass;
+jclass JniConstants_inet6AddressHolderClass;
+jclass JniConstants_inetAddressClass;
+jclass JniConstants_inetAddressHolderClass;
+jclass JniConstants_inetSocketAddressClass;
+jclass JniConstants_inetSocketAddressHolderClass;
+jclass JniConstants_integerClass;
+jclass JniConstants_localeDataClass;
+jclass JniConstants_longClass;
+jclass JniConstants_netlinkSocketAddressClass;
+jclass JniConstants_packetSocketAddressClass;
+jclass JniConstants_patternSyntaxExceptionClass;
+jclass JniConstants_referenceClass;
+jclass JniConstants_socketTaggerClass;
+jclass JniConstants_stringClass;
+jclass JniConstants_structAddrinfoClass;
+jclass JniConstants_structFlockClass;
+jclass JniConstants_structGroupReqClass;
+jclass JniConstants_structIfaddrs;
+jclass JniConstants_structLingerClass;
+jclass JniConstants_structPasswdClass;
+jclass JniConstants_structPollfdClass;
+jclass JniConstants_structStatClass;
+jclass JniConstants_structStatVfsClass;
+jclass JniConstants_structTimespecClass;
+jclass JniConstants_structTimevalClass;
+jclass JniConstants_structUcredClass;
+jclass JniConstants_structUtsnameClass;
+jclass JniConstants_unixSocketAddressClass;
+jclass JniConstants_zipEntryClass;
+
 static std::atomic<bool> g_constants_initialized(false);
 static std::mutex g_constants_mutex;
-
-jclass JniConstants::booleanClass;
-jclass JniConstants::byteArrayClass;
-jclass JniConstants::calendarClass;
-jclass JniConstants::charsetICUClass;
-jclass JniConstants::doubleClass;
-jclass JniConstants::errnoExceptionClass;
-jclass JniConstants::fileDescriptorClass;
-jclass JniConstants::gaiExceptionClass;
-jclass JniConstants::inet6AddressClass;
-jclass JniConstants::inet6AddressHolderClass;
-jclass JniConstants::inetAddressClass;
-jclass JniConstants::inetAddressHolderClass;
-jclass JniConstants::inetSocketAddressClass;
-jclass JniConstants::inetSocketAddressHolderClass;
-jclass JniConstants::integerClass;
-jclass JniConstants::localeDataClass;
-jclass JniConstants::longClass;
-jclass JniConstants::netlinkSocketAddressClass;
-jclass JniConstants::packetSocketAddressClass;
-jclass JniConstants::patternSyntaxExceptionClass;
-jclass JniConstants::referenceClass;
-jclass JniConstants::socketTaggerClass;
-jclass JniConstants::stringClass;
-jclass JniConstants::structAddrinfoClass;
-jclass JniConstants::structFlockClass;
-jclass JniConstants::structGroupReqClass;
-jclass JniConstants::structIfaddrs;
-jclass JniConstants::structLingerClass;
-jclass JniConstants::structPasswdClass;
-jclass JniConstants::structPollfdClass;
-jclass JniConstants::structStatClass;
-jclass JniConstants::structStatVfsClass;
-jclass JniConstants::structTimevalClass;
-jclass JniConstants::structTimespecClass;
-jclass JniConstants::structUcredClass;
-jclass JniConstants::structUtsnameClass;
-jclass JniConstants::unixSocketAddressClass;
-jclass JniConstants::zipEntryClass;
 
 static jclass findClass(JNIEnv* env, const char* name) {
     ScopedLocalRef<jclass> localClass(env, env->FindClass(name));
@@ -79,7 +79,7 @@ static jclass findClass(JNIEnv* env, const char* name) {
     return result;
 }
 
-void JniConstants::init(JNIEnv* env) {
+void JniConstants_init(C_JNIEnv* abi_env) {
     // Fast check
     if (g_constants_initialized) {
       // already initialized
@@ -93,53 +93,54 @@ void JniConstants::init(JNIEnv* env) {
       return;
     }
 
-    booleanClass = findClass(env, "java/lang/Boolean");
-    byteArrayClass = findClass(env, "[B");
-    calendarClass = findClass(env, "java/util/Calendar");
-    charsetICUClass = findClass(env, "java/nio/charset/CharsetICU");
-    doubleClass = findClass(env, "java/lang/Double");
-    errnoExceptionClass = findClass(env, "android/system/ErrnoException");
-    fileDescriptorClass = findClass(env, "java/io/FileDescriptor");
-    gaiExceptionClass = findClass(env, "android/system/GaiException");
-    inet6AddressClass = findClass(env, "java/net/Inet6Address");
-    inet6AddressHolderClass = findClass(env, "java/net/Inet6Address$Inet6AddressHolder");
-    inetAddressClass = findClass(env, "java/net/InetAddress");
-    inetAddressHolderClass = findClass(env, "java/net/InetAddress$InetAddressHolder");
-    inetSocketAddressClass = findClass(env, "java/net/InetSocketAddress");
-    inetSocketAddressHolderClass = findClass(env, "java/net/InetSocketAddress$InetSocketAddressHolder");
-    integerClass = findClass(env, "java/lang/Integer");
-    localeDataClass = findClass(env, "libcore/icu/LocaleData");
-    longClass = findClass(env, "java/lang/Long");
-    netlinkSocketAddressClass = findClass(env, "android/system/NetlinkSocketAddress");
-    packetSocketAddressClass = findClass(env, "android/system/PacketSocketAddress");
-    patternSyntaxExceptionClass = findClass(env, "java/util/regex/PatternSyntaxException");
-    referenceClass = findClass(env, "java/lang/ref/Reference");
-    socketTaggerClass = findClass(env, "dalvik/system/SocketTagger");
-    stringClass = findClass(env, "java/lang/String");
-    structAddrinfoClass = findClass(env, "android/system/StructAddrinfo");
-    structFlockClass = findClass(env, "android/system/StructFlock");
-    structGroupReqClass = findClass(env, "android/system/StructGroupReq");
-    structIfaddrs = findClass(env, "android/system/StructIfaddrs");
-    structLingerClass = findClass(env, "android/system/StructLinger");
-    structPasswdClass = findClass(env, "android/system/StructPasswd");
-    structPollfdClass = findClass(env, "android/system/StructPollfd");
-    structStatClass = findClass(env, "android/system/StructStat");
-    structStatVfsClass = findClass(env, "android/system/StructStatVfs");
-    structTimevalClass = findClass(env, "android/system/StructTimeval");
-    structTimespecClass = findClass(env, "android/system/StructTimespec");
-    structUcredClass = findClass(env, "android/system/StructUcred");
-    structUtsnameClass = findClass(env, "android/system/StructUtsname");
-    unixSocketAddressClass = findClass(env, "android/system/UnixSocketAddress");
-    zipEntryClass = findClass(env, "java/util/zip/ZipEntry");
+    // The following cast is ordinarily unsafe across ABI boundaries. It is safe as the layout of
+    // JNIEnv is an append-only POCO. We should not add to the list of constants here for safety
+    // reasons.
+    JNIEnv* env = reinterpret_cast<JNIEnv*>(abi_env);
+
+    JniConstants_booleanClass = findClass(env, "java/lang/Boolean");
+    JniConstants_byteArrayClass = findClass(env, "[B");
+    JniConstants_calendarClass = findClass(env, "java/util/Calendar");
+    JniConstants_charsetICUClass = findClass(env, "java/nio/charset/CharsetICU");
+    JniConstants_doubleClass = findClass(env, "java/lang/Double");
+    JniConstants_errnoExceptionClass = findClass(env, "android/system/ErrnoException");
+    JniConstants_fileDescriptorClass = findClass(env, "java/io/FileDescriptor");
+    JniConstants_gaiExceptionClass = findClass(env, "android/system/GaiException");
+    JniConstants_inet6AddressClass = findClass(env, "java/net/Inet6Address");
+    JniConstants_inet6AddressHolderClass = findClass(env, "java/net/Inet6Address$Inet6AddressHolder");
+    JniConstants_inetAddressClass = findClass(env, "java/net/InetAddress");
+    JniConstants_inetAddressHolderClass = findClass(env, "java/net/InetAddress$InetAddressHolder");
+    JniConstants_inetSocketAddressClass = findClass(env, "java/net/InetSocketAddress");
+    JniConstants_inetSocketAddressHolderClass = findClass(env, "java/net/InetSocketAddress$InetSocketAddressHolder");
+    JniConstants_integerClass = findClass(env, "java/lang/Integer");
+    JniConstants_localeDataClass = findClass(env, "libcore/icu/LocaleData");
+    JniConstants_longClass = findClass(env, "java/lang/Long");
+    JniConstants_netlinkSocketAddressClass = findClass(env, "android/system/NetlinkSocketAddress");
+    JniConstants_packetSocketAddressClass = findClass(env, "android/system/PacketSocketAddress");
+    JniConstants_patternSyntaxExceptionClass = findClass(env, "java/util/regex/PatternSyntaxException");
+    JniConstants_referenceClass = findClass(env, "java/lang/ref/Reference");
+    JniConstants_socketTaggerClass = findClass(env, "dalvik/system/SocketTagger");
+    JniConstants_stringClass = findClass(env, "java/lang/String");
+    JniConstants_structAddrinfoClass = findClass(env, "android/system/StructAddrinfo");
+    JniConstants_structFlockClass = findClass(env, "android/system/StructFlock");
+    JniConstants_structGroupReqClass = findClass(env, "android/system/StructGroupReq");
+    JniConstants_structIfaddrs = findClass(env, "android/system/StructIfaddrs");
+    JniConstants_structLingerClass = findClass(env, "android/system/StructLinger");
+    JniConstants_structPasswdClass = findClass(env, "android/system/StructPasswd");
+    JniConstants_structPollfdClass = findClass(env, "android/system/StructPollfd");
+    JniConstants_structStatClass = findClass(env, "android/system/StructStat");
+    JniConstants_structStatVfsClass = findClass(env, "android/system/StructStatVfs");
+    JniConstants_structTimespecClass = findClass(env, "android/system/StructTimespec");
+    JniConstants_structTimevalClass = findClass(env, "android/system/StructTimeval");
+    JniConstants_structUcredClass = findClass(env, "android/system/StructUcred");
+    JniConstants_structUtsnameClass = findClass(env, "android/system/StructUtsname");
+    JniConstants_unixSocketAddressClass = findClass(env, "android/system/UnixSocketAddress");
+    JniConstants_zipEntryClass = findClass(env, "java/util/zip/ZipEntry");
 
     g_constants_initialized = true;
 }
 
-namespace android {
-
-void ClearJniConstantsCache() {
+void android_ClearJniConstantsCache() {
     g_constants_initialized = false;
-    ClearJNIHelpLocalCache();
-}
-
+    android::ClearJNIHelpLocalCache();
 }
