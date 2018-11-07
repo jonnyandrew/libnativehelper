@@ -17,9 +17,15 @@
 #ifndef NATIVEHELPER_PLATFORM_INCLUDE_NATIVEHELPER_JNICONSTANTS_PRIV_H_
 #define NATIVEHELPER_PLATFORM_INCLUDE_NATIVEHELPER_JNICONSTANTS_PRIV_H_
 
+__BEGIN_DECLS
+
+void android_ClearJniConstantsCache();
+
+__END_DECLS
+
 namespace android {
 
-void ClearJniConstantsCache();
+void ClearJniConstantsCache() { android_ClearJniConstantsCache(); }
 
 }  // namespace android
 

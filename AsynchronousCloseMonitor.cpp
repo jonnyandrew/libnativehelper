@@ -26,6 +26,30 @@
 
 #include <mutex>
 
+namespace internal {
+
+class AsynchronousCloseMonitor {
+public:
+    explicit AsynchronousCloseMonitor(int fd);
+    ~AsynchronousCloseMonitor();
+    bool wasSignaled() const;
+
+    static void init();
+
+    static void signalBlockedThreads(int fd);
+
+private:
+    AsynchronousCloseMonitor* mPrev;
+    AsynchronousCloseMonitor* mNext;
+    pthread_t mThread;
+    int mFd;
+    bool mSignaled;
+
+    // Disallow copy and assignment.
+    AsynchronousCloseMonitor(const AsynchronousCloseMonitor&);
+    void operator=(const AsynchronousCloseMonitor&);
+};
+
 /**
  * We use an intrusive doubly-linked list to keep track of blocked threads.
  * This gives us O(1) insertion and removal, and means we don't need to do any allocation.
@@ -102,4 +126,32 @@ AsynchronousCloseMonitor::~AsynchronousCloseMonitor() {
     } else {
         mPrev->mNext = mNext;
     }
+}
+
+}  // namespace internal
+
+//
+// C ABI and API boundary
+//
+
+void async_close_monitor_static_init() {
+  internal::AsynchronousCloseMonitor::init();
+}
+
+void async_close_monitor_signal_blocked_threads(int fd) {
+  internal::AsynchronousCloseMonitor::signalBlockedThreads(fd);
+}
+
+void* async_close_monitor_create(int fd) {
+  return new internal::AsynchronousCloseMonitor(fd);
+}
+
+void async_close_monitor_destroy(void* instance) {
+  auto monitor = reinterpret_cast<internal::AsynchronousCloseMonitor*>(instance);
+  delete monitor;
+}
+
+int async_close_monitor_was_signalled(const void* instance) {
+  auto monitor = reinterpret_cast<const internal::AsynchronousCloseMonitor*>(instance);
+  return monitor->wasSignaled() ? 1 : 0;
 }
