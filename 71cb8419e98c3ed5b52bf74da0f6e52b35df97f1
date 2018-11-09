@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b5e0f6df_9fd4f9d1",
+        "filename": "JNIHelp.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 381,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2018-11-09T19:25:36Z",
+      "side": 1,
+      "message": "Unintended white space cleanup?",
+      "revId": "71cb8419e98c3ed5b52bf74da0f6e52b35df97f1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
