@@ -32,6 +32,7 @@ static std::mutex g_constants_mutex;
 
 jclass JniConstants::booleanClass;
 jclass JniConstants::byteArrayClass;
+jclass JniConstants::byteClass;
 jclass JniConstants::calendarClass;
 jclass JniConstants::charsetICUClass;
 jclass JniConstants::doubleClass;
@@ -95,6 +96,7 @@ void JniConstants::init(JNIEnv* env) {
 
     booleanClass = findClass(env, "java/lang/Boolean");
     byteArrayClass = findClass(env, "[B");
+    byteClass = findClass(env, "java/lang/Byte");
     calendarClass = findClass(env, "java/util/Calendar");
     charsetICUClass = findClass(env, "java/nio/charset/CharsetICU");
     doubleClass = findClass(env, "java/lang/Double");

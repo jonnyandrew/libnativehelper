@@ -41,6 +41,7 @@ struct JniConstants {
 
     static jclass booleanClass;
     static jclass byteArrayClass;
+    static jclass byteClass;
     static jclass calendarClass;
     static jclass charsetICUClass;
     static jclass doubleClass;
