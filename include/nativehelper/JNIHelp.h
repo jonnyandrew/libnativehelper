@@ -203,11 +203,11 @@ inline void jniLogException(JNIEnv* env, int priority, const char* tag, jthrowab
 // declarations in a class.
 #if __cplusplus >= 201103L
 #define DISALLOW_COPY_AND_ASSIGN(TypeName) \
-  TypeName(const TypeName&) = delete;  \
+  TypeName(const TypeName&) = delete;      \
   void operator=(const TypeName&) = delete
 #else
 #define DISALLOW_COPY_AND_ASSIGN(TypeName) \
-  TypeName(const TypeName&);  \
+  TypeName(const TypeName&);               \
   void operator=(const TypeName&)
 #endif  // __has_feature(cxx_deleted_functions)
 #endif  // !defined(DISALLOW_COPY_AND_ASSIGN)
