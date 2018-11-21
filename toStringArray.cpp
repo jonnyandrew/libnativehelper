@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-#include <nativehelper/JniConstants.h>
 #include <nativehelper/toStringArray.h>
 
 jobjectArray newStringArray(JNIEnv* env, size_t count) {
-    return env->NewObjectArray(count, JniConstants::stringClass, NULL);
+    jclass stringClass = env->FindClass("java/lang/String");
+    return env->NewObjectArray(count, stringClass, NULL);
 }
 
 struct ArrayCounter {
