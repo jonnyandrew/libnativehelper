@@ -36,9 +36,9 @@ cc_library {
     host_supported: true,
     srcs: [
         "JNIHelp.cpp",
-        "JniConstants.cpp",
-        "toStringArray.cpp",
+	"JniConstants.cpp",
         "JniInvocation.cpp",
+	"toStringArray.cpp",
     ],
 
     target: {
