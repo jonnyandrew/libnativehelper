@@ -16,28 +16,29 @@
 
 #define LOG_TAG "JNIHelp"
 
-#include <nativehelper/JniConstants.h>
-#include <nativehelper/JNIHelp.h>
+#include "nativehelper/JNIHelp.h"
+#include "JNIHelp-priv.h"
+
 #include "ALog-priv.h"
 
+#include <assert.h>
+#include <mutex>
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-#include <assert.h>
-
 #include <string>
+
+#include "nativehelper/ScopedLocalRef.h"
 
 namespace {
 
-// java.io.FileDescriptor.descriptor.
-jfieldID fileDescriptorDescriptorField = nullptr;
-// java.io.FileDescriptor.ownerId.
-jfieldID fileDescriptorOwnerIdField = nullptr;
-
-// void java.io.FileDescriptor.<init>().
-jmethodID fileDescriptorInitMethod = nullptr;
-// Object java.lang.ref.Reference.get()
-jmethodID referenceGetMethod = nullptr;
+jclass FindClass(JNIEnv* env, const char* name) {
+    ScopedLocalRef<jclass> klass(env, env->FindClass(name));
+    if (klass.get() == NULL) {
+        ALOGV("failed to find class '%s'", name);
+        abort();
+    }
+    return reinterpret_cast<jclass>(env->NewGlobalRef(klass.get()));
+}
 
 jfieldID FindField(JNIEnv* env, jclass klass, const char* name, const char* desc) {
     jfieldID result = env->GetFieldID(klass, name, desc);
@@ -57,28 +58,60 @@ jmethodID FindMethod(JNIEnv* env, jclass klass, const char* name, const char* si
     return result;
 }
 
+namespace JniClassConstants {
+
+std::mutex g_constants_mutex;
+bool g_constants_initialized = false;
+
+jclass fileDescriptorClass;
+jclass referenceClass;
+
+bool Initialize(JNIEnv* env) {
+    std::lock_guard<std::mutex> guard(g_constants_mutex);
+    if (g_constants_initialized) {
+        return false;
+    }
+
+    fileDescriptorClass = FindClass(env, "java/io/FileDescriptor");
+    referenceClass = FindClass(env, "java/lang/ref/Reference");
+
+    g_constants_initialized = true;
+    return true;
+}
+
+void Uninitialize() {
+    std::lock_guard<std::mutex> guard(g_constants_mutex);
+    fileDescriptorClass = nullptr;
+    referenceClass = nullptr;
+    g_constants_initialized = false;
+}
+
+}  // namespace JniClassConstants
+
+// java.io.FileDescriptor.descriptor.
+jfieldID fileDescriptorDescriptorField = nullptr;
+// java.io.FileDescriptor.ownerId.
+jfieldID fileDescriptorOwnerIdField = nullptr;
+
+// void java.io.FileDescriptor.<init>().
+jmethodID fileDescriptorInitMethod = nullptr;
+// Object java.lang.ref.Reference.get()
+jmethodID referenceGetMethod = nullptr;
+
 void InitFieldsAndMethods(JNIEnv* env) {
-    JniConstants::init(env);  // Ensure that classes are cached.
-    fileDescriptorDescriptorField = FindField(env, JniConstants::fileDescriptorClass, "descriptor",
-            "I");
-    fileDescriptorOwnerIdField = FindField(env, JniConstants::fileDescriptorClass, "ownerId",
-            "J");
-    fileDescriptorInitMethod = FindMethod(env, JniConstants::fileDescriptorClass, "<init>", "()V");
-    referenceGetMethod = FindMethod(env, JniConstants::referenceClass, "get",
-            "()Ljava/lang/Object;");
+    if (JniClassConstants::Initialize(env)) {
+        fileDescriptorDescriptorField =
+                FindField(env, JniClassConstants::fileDescriptorClass, "descriptor", "I");
+        fileDescriptorOwnerIdField =
+                FindField(env, JniClassConstants::fileDescriptorClass, "ownerId", "J");
+        fileDescriptorInitMethod =
+                FindMethod(env, JniClassConstants::fileDescriptorClass, "<init>", "()V");
+        referenceGetMethod =
+                FindMethod(env, JniClassConstants::referenceClass, "get", "()Ljava/lang/Object;");
+    }
 }
 
-}
-
-namespace android {
-
-void ClearJNIHelpLocalCache() {
-    fileDescriptorDescriptorField = nullptr;
-    fileDescriptorInitMethod = nullptr;
-    referenceGetMethod = nullptr;
-}
-
-}
+}  // namespace
 
 /**
  * Equivalent to ScopedLocalRef, but for C_JNIEnv instead. (And slightly more powerful.)
@@ -392,8 +425,8 @@ jobject jniCreateFileDescriptor(C_JNIEnv* env, int fd) {
     if (fileDescriptorInitMethod == nullptr) {
         InitFieldsAndMethods(e);
     }
-    jobject fileDescriptor = (*env)->NewObject(e, JniConstants::fileDescriptorClass,
-            fileDescriptorInitMethod);
+    jobject fileDescriptor =
+            (*env)->NewObject(e, JniClassConstants::fileDescriptorClass, fileDescriptorInitMethod);
     // NOTE: NewObject ensures that an OutOfMemoryError will be seen by the Java
     // caller if the alloc fails, so we just return NULL when that happens.
     if (fileDescriptor != NULL)  {
@@ -447,4 +480,8 @@ jobject jniGetReferent(C_JNIEnv* env, jobject ref) {
 jstring jniCreateString(C_JNIEnv* env, const jchar* unicodeChars, jsize len) {
     JNIEnv* e = reinterpret_cast<JNIEnv*>(env);
     return (*env)->NewString(e, unicodeChars, len);
+}
+
+void JNIHelpClearConstants() {
+    JniClassConstants::Uninitialize();
 }
