@@ -16,7 +16,6 @@
 
 #define LOG_TAG "JNIHelp"
 
-#include <nativehelper/JniConstants.h>
 #include <nativehelper/JNIHelp.h>
 #include "ALog-priv.h"
 
@@ -39,6 +38,15 @@ jmethodID fileDescriptorInitMethod = nullptr;
 // Object java.lang.ref.Reference.get()
 jmethodID referenceGetMethod = nullptr;
 
+jclass FindClass(JNIEnv* env, const char* name) {
+    jclass result = env->FindClass(name);
+    if (result == NULL) {
+        ALOGV("failed to find class '%s'", name);
+        abort();
+    }
+    return result;
+}
+
 jfieldID FindField(JNIEnv* env, jclass klass, const char* name, const char* desc) {
     jfieldID result = env->GetFieldID(klass, name, desc);
     if (result == NULL) {
@@ -58,24 +66,13 @@ jmethodID FindMethod(JNIEnv* env, jclass klass, const char* name, const char* si
 }
 
 void InitFieldsAndMethods(JNIEnv* env) {
-    JniConstants::init(env);  // Ensure that classes are cached.
-    fileDescriptorDescriptorField = FindField(env, JniConstants::fileDescriptorClass, "descriptor",
-            "I");
-    fileDescriptorOwnerIdField = FindField(env, JniConstants::fileDescriptorClass, "ownerId",
-            "J");
-    fileDescriptorInitMethod = FindMethod(env, JniConstants::fileDescriptorClass, "<init>", "()V");
-    referenceGetMethod = FindMethod(env, JniConstants::referenceClass, "get",
-            "()Ljava/lang/Object;");
-}
+    jclass fileDescriptorClass = FindClass(env, "java/io/FileDescriptor");
+    fileDescriptorDescriptorField = FindField(env, fileDescriptorClass, "descriptor", "I");
+    fileDescriptorOwnerIdField = FindField(env, fileDescriptorClass, "ownerId", "J");
+    fileDescriptorInitMethod = FindMethod(env, fileDescriptorClass, "<init>", "()V");
 
-}
-
-namespace android {
-
-void ClearJNIHelpLocalCache() {
-    fileDescriptorDescriptorField = nullptr;
-    fileDescriptorInitMethod = nullptr;
-    referenceGetMethod = nullptr;
+    jclass referenceClass = FindClass(env, "java/lang/ref/Reference");
+    referenceGetMethod = FindMethod(env, referenceClass, "get", "()Ljava/lang/Object;");
 }
 
 }
@@ -392,8 +389,8 @@ jobject jniCreateFileDescriptor(C_JNIEnv* env, int fd) {
     if (fileDescriptorInitMethod == nullptr) {
         InitFieldsAndMethods(e);
     }
-    jobject fileDescriptor = (*env)->NewObject(e, JniConstants::fileDescriptorClass,
-            fileDescriptorInitMethod);
+    jclass fileDescriptorClass = FindClass(e, "java/io/FileDescriptor");
+    jobject fileDescriptor = (*env)->NewObject(e, fileDescriptorClass, fileDescriptorInitMethod);
     // NOTE: NewObject ensures that an OutOfMemoryError will be seen by the Java
     // caller if the alloc fails, so we just return NULL when that happens.
     if (fileDescriptor != NULL)  {
