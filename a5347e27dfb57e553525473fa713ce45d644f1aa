@@ -34,6 +34,24 @@
       "revId": "a5347e27dfb57e553525473fa713ce45d644f1aa",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "82895f07_71bdc9a6",
+        "filename": "header_only_include/nativehelper/scoped_bytes.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2018-11-26T18:57:06Z",
+      "side": 1,
+      "message": "that seems fine to me: of course this costs _something_. my point is that there\u0027s nothing here that cleans up the FindClass local reference, so that\u0027s a leak, which is not okay.\n\ni\u0027d rather keep this in libnativehelper if possible, because it\u0027s more folks _should_ be using it rather than doing this manually.",
+      "parentUuid": "29fe42ad_911810b6",
+      "revId": "a5347e27dfb57e553525473fa713ce45d644f1aa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
