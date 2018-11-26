@@ -34,14 +34,11 @@ public:
     {
         if (mObject == NULL) {
             jniThrowNullPointerException(mEnv, NULL);
+        } else if (mEnv->IsInstanceOf(mObject, JniConstants::byteArrayClass)) {
+            mByteArray = reinterpret_cast<jbyteArray>(mObject);
+            mPtr = mEnv->GetByteArrayElements(mByteArray, NULL);
         } else {
-            jclass byteArrayClass = env->FindClass("[B");
-            if (mEnv->IsInstanceOf(mObject, byteArrayClass)) {
-                mByteArray = reinterpret_cast<jbyteArray>(mObject);
-                mPtr = mEnv->GetByteArrayElements(mByteArray, NULL);
-            } else {
-                mPtr = reinterpret_cast<jbyte*>(mEnv->GetDirectBufferAddress(mObject));
-            }
+            mPtr = reinterpret_cast<jbyte*>(mEnv->GetDirectBufferAddress(mObject));
         }
     }
 
