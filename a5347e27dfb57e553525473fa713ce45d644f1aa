@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b9974c8d_608cf12e",
+        "filename": "header_only_include/nativehelper/scoped_bytes.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2018-11-26T06:19:28Z",
+      "side": 1,
+      "message": "should you delete the local reference in case someone\u0027s doing this in a loop?",
+      "revId": "a5347e27dfb57e553525473fa713ce45d644f1aa",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
