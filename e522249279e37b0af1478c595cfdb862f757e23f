@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7094c618_5a941372",
+        "filename": "JNIHelp.cpp",
+        "patchSetId": 8
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2018-12-10T17:36:14Z",
+      "side": 1,
+      "message": "you know you can return a reference if you want more natural call sites?",
+      "revId": "e522249279e37b0af1478c595cfdb862f757e23f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}

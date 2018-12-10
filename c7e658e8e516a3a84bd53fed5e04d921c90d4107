@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "93dd7ae2_69ebd251",
+        "filename": "JniConstants.cpp",
+        "patchSetId": 8
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2018-12-10T17:36:14Z",
+      "side": 0,
+      "message": "don\u0027t you need a replacement for this? isn\u0027t there still a JNI_OnLoad?",
+      "range": {
+        "startLine": 140,
+        "startChar": 5,
+        "endLine": 140,
+        "endChar": 27
+      },
+      "revId": "c7e658e8e516a3a84bd53fed5e04d921c90d4107",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
