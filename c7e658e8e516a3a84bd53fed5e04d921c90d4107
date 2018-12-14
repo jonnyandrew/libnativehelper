@@ -22,6 +22,30 @@
       "revId": "c7e658e8e516a3a84bd53fed5e04d921c90d4107",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "aeb42acb_d72c38a9",
+        "filename": "JniConstants.cpp",
+        "patchSetId": 8
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 1071150
+      },
+      "writtenOn": "2018-12-14T14:44:24Z",
+      "side": 0,
+      "message": "These are now done at point of use, e.g. the constants moved to libcore are invalidated with Jni_OnUnload.\n\nThere is a call with CreateJavaVM (JniInvocations.cpp) to invalidate the constants associated with JNIHelp.cc.",
+      "parentUuid": "93dd7ae2_69ebd251",
+      "range": {
+        "startLine": 140,
+        "startChar": 5,
+        "endLine": 140,
+        "endChar": 27
+      },
+      "revId": "c7e658e8e516a3a84bd53fed5e04d921c90d4107",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }

@@ -16,6 +16,24 @@
       "revId": "e522249279e37b0af1478c595cfdb862f757e23f",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e87acd1f_afe3b86d",
+        "filename": "JNIHelp.cpp",
+        "patchSetId": 8
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1071150
+      },
+      "writtenOn": "2018-12-14T14:44:24Z",
+      "side": 1,
+      "message": "Yes. This code has been refactored to support invalidating the constants here.",
+      "parentUuid": "7094c618_5a941372",
+      "revId": "e522249279e37b0af1478c595cfdb862f757e23f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
