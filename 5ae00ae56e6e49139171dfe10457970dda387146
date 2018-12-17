@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "50745d82_cbf6f722",
+        "filename": "JNIHelp.cpp",
+        "patchSetId": 10
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2018-12-17T07:00:58Z",
+      "side": 1,
+      "message": "did you talk to hboehm about this?\n\nyou already have unsafe checks before you even call Initialize, so i\u0027m not sure i get the point...",
+      "range": {
+        "startLine": 70,
+        "startChar": 0,
+        "endLine": 80,
+        "endChar": 0
+      },
+      "revId": "5ae00ae56e6e49139171dfe10457970dda387146",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
