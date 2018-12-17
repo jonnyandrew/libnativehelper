@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6383ecb6_75d29cf4",
+        "filename": "JNIHelp-priv.h",
+        "patchSetId": 11
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2018-12-17T17:08:15Z",
+      "side": 1,
+      "message": "(or replace all this nonsense with `#pragma once` and not worry about correcting the `#endif`.)",
+      "range": {
+        "startLine": 17,
+        "startChar": 0,
+        "endLine": 19,
+        "endChar": 0
+      },
+      "revId": "c709d7741a467f42e73dc93fc18822164794a8de",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9bf9dca0_9cce1bef",
+        "filename": "JNIHelp.cpp",
+        "patchSetId": 11
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2018-12-17T17:08:15Z",
+      "side": 1,
+      "message": "unused?",
+      "revId": "c709d7741a467f42e73dc93fc18822164794a8de",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d736b979_0a2e5972",
+        "filename": "JNIHelp.cpp",
+        "patchSetId": 11
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2018-12-17T17:08:15Z",
+      "side": 1,
+      "message": "if you\u0027re going to abort, you probably want something a lot stronger than ALOGV. LOG_ALWAYS_FATAL_IF?",
+      "range": {
+        "startLine": 37,
+        "startChar": 0,
+        "endLine": 39,
+        "endChar": 0
+      },
+      "revId": "c709d7741a467f42e73dc93fc18822164794a8de",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
