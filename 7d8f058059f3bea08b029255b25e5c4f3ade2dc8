@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fce7c612_c729b569",
+        "filename": "ALog-priv.h",
+        "patchSetId": 12
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2018-12-18T18:34:13Z",
+      "side": 1,
+      "message": "(i always forget we don\u0027t have these in the NDK. which does seem idiotic. but at the same time, i\u0027m scared of unleashing yet more macros into everyone\u0027s namespace...)",
+      "range": {
+        "startLine": 31,
+        "startChar": 0,
+        "endLine": 34,
+        "endChar": 0
+      },
+      "revId": "7d8f058059f3bea08b029255b25e5c4f3ade2dc8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "176acc09_6407ad54",
+        "filename": "JNIHelp.cpp",
+        "patchSetId": 12
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2018-12-18T18:34:13Z",
+      "side": 1,
+      "message": "field (plus the missing %s)",
+      "range": {
+        "startLine": 41,
+        "startChar": 60,
+        "endLine": 41,
+        "endChar": 65
+      },
+      "revId": "7d8f058059f3bea08b029255b25e5c4f3ade2dc8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
