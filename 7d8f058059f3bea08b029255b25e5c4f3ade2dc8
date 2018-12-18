@@ -45,6 +45,52 @@
       "revId": "7d8f058059f3bea08b029255b25e5c4f3ade2dc8",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3d467b87_0bce7d0f",
+        "filename": "JNIHelp.cpp",
+        "patchSetId": 12
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 1042828
+      },
+      "writtenOn": "2018-12-18T19:43:19Z",
+      "side": 1,
+      "message": "This looks unsafe in the presence of concurrent initialization. It looks like it may return without any of these actually having been set. Is that OK?\n\n(I don\u0027t understand the full context here. Ignore if it doesn\u0027t matter.)",
+      "range": {
+        "startLine": 92,
+        "startChar": 4,
+        "endLine": 92,
+        "endChar": 45
+      },
+      "revId": "7d8f058059f3bea08b029255b25e5c4f3ade2dc8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1ad39a71_0de9d455",
+        "filename": "JniInvocation.cpp",
+        "patchSetId": 12
+      },
+      "lineNbr": 205,
+      "author": {
+        "id": 1042828
+      },
+      "writtenOn": "2018-12-18T19:43:19Z",
+      "side": 1,
+      "message": "one VM?",
+      "range": {
+        "startLine": 205,
+        "startChar": 32,
+        "endLine": 205,
+        "endChar": 34
+      },
+      "revId": "7d8f058059f3bea08b029255b25e5c4f3ade2dc8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }

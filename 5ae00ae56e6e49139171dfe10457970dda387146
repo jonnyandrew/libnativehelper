@@ -46,6 +46,30 @@
       "revId": "5ae00ae56e6e49139171dfe10457970dda387146",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4788b320_08df8e31",
+        "filename": "JNIHelp.cpp",
+        "patchSetId": 10
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 1042828
+      },
+      "writtenOn": "2018-12-18T19:43:19Z",
+      "side": 1,
+      "message": "Thanks! That indeed wasn\u0027t safe.",
+      "parentUuid": "2f5cbc55_2d335a83",
+      "range": {
+        "startLine": 70,
+        "startChar": 0,
+        "endLine": 80,
+        "endChar": 0
+      },
+      "revId": "5ae00ae56e6e49139171dfe10457970dda387146",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
