@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "2451e6d5_3e2a2d04",
+        "filename": "JNIHelp-priv.h",
+        "patchSetId": 11
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1071150
+      },
+      "writtenOn": "2018-12-18T18:26:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6383ecb6_75d29cf4",
+      "range": {
+        "startLine": 17,
+        "startChar": 0,
+        "endLine": 19,
+        "endChar": 0
+      },
+      "revId": "c709d7741a467f42e73dc93fc18822164794a8de",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9bf9dca0_9cce1bef",
         "filename": "JNIHelp.cpp",
         "patchSetId": 11
@@ -39,6 +63,24 @@
       "revId": "c709d7741a467f42e73dc93fc18822164794a8de",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "22714619_89ad3055",
+        "filename": "JNIHelp.cpp",
+        "patchSetId": 11
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1071150
+      },
+      "writtenOn": "2018-12-18T18:26:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9bf9dca0_9cce1bef",
+      "revId": "c709d7741a467f42e73dc93fc18822164794a8de",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     },
     {
       "key": {
@@ -62,6 +104,30 @@
       "revId": "c709d7741a467f42e73dc93fc18822164794a8de",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6c3ea446_06bca2c2",
+        "filename": "JNIHelp.cpp",
+        "patchSetId": 11
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1071150
+      },
+      "writtenOn": "2018-12-18T18:26:32Z",
+      "side": 1,
+      "message": "Added a wannabe version to ALog-priv.h.",
+      "parentUuid": "d736b979_0a2e5972",
+      "range": {
+        "startLine": 37,
+        "startChar": 0,
+        "endLine": 39,
+        "endChar": 0
+      },
+      "revId": "c709d7741a467f42e73dc93fc18822164794a8de",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
