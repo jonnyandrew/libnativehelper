@@ -70,6 +70,30 @@
       "revId": "5ae00ae56e6e49139171dfe10457970dda387146",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e6a910fa_6086734a",
+        "filename": "JNIHelp.cpp",
+        "patchSetId": 10
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 1071150
+      },
+      "writtenOn": "2018-12-19T15:20:13Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4788b320_08df8e31",
+      "range": {
+        "startLine": 70,
+        "startChar": 0,
+        "endLine": 80,
+        "endChar": 0
+      },
+      "revId": "5ae00ae56e6e49139171dfe10457970dda387146",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
