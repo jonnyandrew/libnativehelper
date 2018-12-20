@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "5d4f14af_a85f657a",
+        "filename": "JNIHelp-priv.h",
+        "patchSetId": 13
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2018-12-20T16:51:10Z",
+      "side": 0,
+      "message": "Any reason why you dropped this? Because we\u0027re not using hidden as default symbol visibility, this is a visible symbol, so the namespacing is nice.",
+      "revId": "c7e658e8e516a3a84bd53fed5e04d921c90d4107",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "93dd7ae2_69ebd251",
         "filename": "JniConstants.cpp",
         "patchSetId": 8

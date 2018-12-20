@@ -1,0 +1,61 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c436ef0a_fc32c380",
+        "filename": "JNIHelp.cpp",
+        "patchSetId": 13
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2018-12-20T16:51:10Z",
+      "side": 1,
+      "message": "Keep C and C++ separate.",
+      "range": {
+        "startLine": 24,
+        "startChar": 0,
+        "endLine": 27,
+        "endChar": 17
+      },
+      "revId": "77813b5a41d17b449f2a576e03ccaa136a650f9b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8418145c_d8feb9b9",
+        "filename": "JNIHelp.cpp",
+        "patchSetId": 13
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2018-12-20T16:51:10Z",
+      "side": 1,
+      "message": "Technically this isn\u0027t clean (for a \"clean\" shutdown, DeleteGlobalRef should be called).\n\nPlease add a comment on the intended use (and possibly propagate that to the caller), to say why that\u0027s fine.",
+      "revId": "77813b5a41d17b449f2a576e03ccaa136a650f9b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "49054822_714ced93",
+        "filename": "toStringArray.cpp",
+        "patchSetId": 13
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2018-12-20T16:51:10Z",
+      "side": 1,
+      "message": "Add a comment that this isn\u0027t performance-sensitive enough to warrant caching?",
+      "revId": "77813b5a41d17b449f2a576e03ccaa136a650f9b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
