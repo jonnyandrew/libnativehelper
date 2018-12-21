@@ -159,6 +159,24 @@
     },
     {
       "key": {
+        "uuid": "73d272c7_5b4ecc20",
+        "filename": "tests/ScopedLocalRef_test.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2018-12-21T18:16:57Z",
+      "side": 1,
+      "message": "See the note. For that I\u0027ll have to first add your support for forking every test case. Future CL.",
+      "parentUuid": "c0e478fe_9f8ffdd9",
+      "revId": "dc78a26d17fb5cb80b755b80c133c837d0569aa8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "0b1c29bc_f44af3c0",
         "filename": "tests/jni_gtest.h",
         "patchSetId": 2
@@ -179,6 +197,30 @@
       "revId": "dc78a26d17fb5cb80b755b80c133c837d0569aa8",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "250b3aba_6d31be37",
+        "filename": "tests/jni_gtest.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2018-12-21T18:16:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0b1c29bc_f44af3c0",
+      "range": {
+        "startLine": 31,
+        "startChar": 12,
+        "endLine": 31,
+        "endChar": 14
+      },
+      "revId": "dc78a26d17fb5cb80b755b80c133c837d0569aa8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     },
     {
       "key": {
@@ -214,6 +256,24 @@
       "revId": "dc78a26d17fb5cb80b755b80c133c837d0569aa8",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e2f15348_6d059c71",
+        "filename": "tests/jni_gtest.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2018-12-21T18:16:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0812860d_aa092fe5",
+      "revId": "dc78a26d17fb5cb80b755b80c133c837d0569aa8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     },
     {
       "key": {
@@ -296,6 +356,24 @@
       "revId": "dc78a26d17fb5cb80b755b80c133c837d0569aa8",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f30c7352_dcf6fd6d",
+        "filename": "tests/jni_gtest.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2018-12-21T18:16:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "afa30553_376d5f95",
+      "revId": "dc78a26d17fb5cb80b755b80c133c837d0569aa8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     },
     {
       "key": {
