@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0dcd0b79_09e0a90c",
+        "filename": "JNIHelp-priv.h",
+        "patchSetId": 13
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1071150
+      },
+      "writtenOn": "2018-12-21T14:39:15Z",
+      "side": 0,
+      "message": "This file is really just historical baggage, removed. We\u0027ll be using a version script to scope the visible API as part of putting libnativehelper in the runtime module.",
+      "parentUuid": "5d4f14af_a85f657a",
+      "revId": "c7e658e8e516a3a84bd53fed5e04d921c90d4107",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "93dd7ae2_69ebd251",
         "filename": "JniConstants.cpp",
         "patchSetId": 8

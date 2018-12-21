@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "1f9c3782_8f5d4768",
+        "filename": "JNIHelp.cpp",
+        "patchSetId": 13
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1071150
+      },
+      "writtenOn": "2018-12-21T14:39:15Z",
+      "side": 1,
+      "message": "Done. C headers not required here.",
+      "parentUuid": "c436ef0a_fc32c380",
+      "range": {
+        "startLine": 24,
+        "startChar": 0,
+        "endLine": 27,
+        "endChar": 17
+      },
+      "revId": "77813b5a41d17b449f2a576e03ccaa136a650f9b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8418145c_d8feb9b9",
         "filename": "JNIHelp.cpp",
         "patchSetId": 13
@@ -42,6 +66,24 @@
     },
     {
       "key": {
+        "uuid": "11b99bcf_86be8877",
+        "filename": "JNIHelp.cpp",
+        "patchSetId": 13
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 1071150
+      },
+      "writtenOn": "2018-12-21T14:39:15Z",
+      "side": 1,
+      "message": "Moved this out into JniConstants and removed the useless wrapper. Comment in the revised JniConstants.h and one (already) present in JNI_CreateJavaVM.",
+      "parentUuid": "8418145c_d8feb9b9",
+      "revId": "77813b5a41d17b449f2a576e03ccaa136a650f9b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "49054822_714ced93",
         "filename": "toStringArray.cpp",
         "patchSetId": 13
@@ -53,6 +95,24 @@
       "writtenOn": "2018-12-20T16:51:10Z",
       "side": 1,
       "message": "Add a comment that this isn\u0027t performance-sensitive enough to warrant caching?",
+      "revId": "77813b5a41d17b449f2a576e03ccaa136a650f9b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8e917bd8_d4187936",
+        "filename": "toStringArray.cpp",
+        "patchSetId": 13
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1071150
+      },
+      "writtenOn": "2018-12-21T14:39:15Z",
+      "side": 1,
+      "message": "Added back an internal JniConstants.{h,cc}. Added stringClass there.\n\nNo idea if this is performance sensitive.",
+      "parentUuid": "49054822_714ced93",
       "revId": "77813b5a41d17b449f2a576e03ccaa136a650f9b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
