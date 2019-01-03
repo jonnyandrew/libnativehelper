@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "33dbcdd6_9d46ffa3",
+        "filename": "JniConstants.cpp",
+        "patchSetId": 19
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 1042828
+      },
+      "writtenOn": "2019-01-03T19:22:08Z",
+      "side": 1,
+      "message": "Is there a race here, with this test possibly occurring while g_string_class is being initialized? Hopefully there isn\u0027t a race with Uninitialize()?\n\nDo the other methods have similar issues?\n\nIf FindMethod and FindClass are pure functions, which don\u0027t alter state, then this may be fixable without significant performance loss by using memory_order_relaxed atomic accesses.",
+      "range": {
+        "startLine": 120,
+        "startChar": 8,
+        "endLine": 120,
+        "endChar": 33
+      },
+      "revId": "7c2d4e639fbd88d4ae3eab2efead71bd224c5761",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "23ed790d_5742ccaa",
+        "filename": "JniConstants.h",
+        "patchSetId": 19
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1042828
+      },
+      "writtenOn": "2019-01-03T19:22:08Z",
+      "side": 1,
+      "message": "Maybe state explicitly that this must happen after all other calls are complete?",
+      "range": {
+        "startLine": 47,
+        "startChar": 4,
+        "endLine": 49,
+        "endChar": 62
+      },
+      "revId": "7c2d4e639fbd88d4ae3eab2efead71bd224c5761",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
