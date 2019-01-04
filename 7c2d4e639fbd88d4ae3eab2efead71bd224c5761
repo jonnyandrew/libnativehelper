@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "8fb044c3_4f54dcc3",
+        "filename": "JniConstants.cpp",
+        "patchSetId": 19
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 1071150
+      },
+      "writtenOn": "2019-01-04T14:15:08Z",
+      "side": 1,
+      "message": "Thanks, yes, this pattern was inherited and I\u0027d not thought it through. Initialize() has been changed to EnsureInitialized() which uses relaxed accesses to an atomic boolean.\n\nFind{Field,Method} and FindClass are not pure. FindClass allocates global state in the runtime. FindMethod/FindClass can cause a class to be initialized (and for FileDescriptor here, we end-up recursing into FindField in that initialization).\n\nThe field and method initialization remain racy here, but the return values are non-gc heap pointers and the runtime is fine with concurrent calls here.\n\nUninitialize() is called to clean up when creating a new runtime. This should be safe as previous runtime (if any) must have been destroyed.\n\nDoes this seem reasonable?",
+      "parentUuid": "33dbcdd6_9d46ffa3",
+      "range": {
+        "startLine": 120,
+        "startChar": 8,
+        "endLine": 120,
+        "endChar": 33
+      },
+      "revId": "7c2d4e639fbd88d4ae3eab2efead71bd224c5761",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "23ed790d_5742ccaa",
         "filename": "JniConstants.h",
         "patchSetId": 19
@@ -45,6 +69,30 @@
       "revId": "7c2d4e639fbd88d4ae3eab2efead71bd224c5761",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4de7b5b1_e8afb753",
+        "filename": "JniConstants.h",
+        "patchSetId": 19
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1071150
+      },
+      "writtenOn": "2019-01-04T14:15:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "23ed790d_5742ccaa",
+      "range": {
+        "startLine": 47,
+        "startChar": 4,
+        "endLine": 49,
+        "endChar": 62
+      },
+      "revId": "7c2d4e639fbd88d4ae3eab2efead71bd224c5761",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
