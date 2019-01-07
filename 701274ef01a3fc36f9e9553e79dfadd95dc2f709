@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e793211b_993fcec1",
+        "filename": "JniConstants.cpp",
+        "patchSetId": 22
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 1042828
+      },
+      "writtenOn": "2019-01-07T23:56:14Z",
+      "side": 1,
+      "message": "It seems to me that this needs to be memory_order_acquire, since you need the effects of the initialization to be visible if you see true. Unfortunately, that\u0027s a minor performance hit, especially on v7. But I don\u0027t see how to avoid it. The only possibility would be to rely on dependence ordering, and test the pointer rather than a Boolean. But that\u0027s always dubious, and even more so if FindClass initializes state that could be accessed without going through that pointer.\n\nThis looks to me like it\u0027s basically the canonical double-checked-locking situation. See e.g. Slide 27 in http://schd.ws/hosted_files/cppcon2016/74/HansWeakAtomics.pdf .\n\nThe other two accesses to g_class_refs_initialized below are OK as is. The second one could use memory_order_release.",
+      "range": {
+        "startLine": 129,
+        "startChar": 38,
+        "endLine": 129,
+        "endChar": 63
+      },
+      "revId": "701274ef01a3fc36f9e9553e79dfadd95dc2f709",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}

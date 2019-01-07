@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "c291a93b_9a11ec4c",
+        "filename": "JniConstants.cpp",
+        "patchSetId": 19
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 1042828
+      },
+      "writtenOn": "2019-01-07T23:56:14Z",
+      "side": 1,
+      "message": "It sounds like Uninitialize() should be OK. But I\u0027m still concerned about initialization. I\u0027ll comment on the new version.",
+      "parentUuid": "8fb044c3_4f54dcc3",
+      "range": {
+        "startLine": 120,
+        "startChar": 8,
+        "endLine": 120,
+        "endChar": 33
+      },
+      "revId": "7c2d4e639fbd88d4ae3eab2efead71bd224c5761",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "23ed790d_5742ccaa",
         "filename": "JniConstants.h",
         "patchSetId": 19
