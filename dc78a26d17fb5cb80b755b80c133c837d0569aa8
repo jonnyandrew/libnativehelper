@@ -324,6 +324,30 @@
     },
     {
       "key": {
+        "uuid": "bb89c074_7c58c71c",
+        "filename": "tests/jni_gtest.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1021471
+      },
+      "writtenOn": "2019-01-07T19:30:29Z",
+      "side": 1,
+      "message": "If there\u0027s multiple constructors, then initialization lists have to be repeated [at least to forward the constructor call].\n\nAlso for very big classes the fields will be far away from the constructor, it\u0027s non-obvious if something was not initialized. Compiler won\u0027t warn us always if field is not initialized, better to defensively initialize everything if it\u0027s valid.",
+      "parentUuid": "10280c58_811ceb81",
+      "range": {
+        "startLine": 47,
+        "startChar": 51,
+        "endLine": 47,
+        "endChar": 83
+      },
+      "revId": "dc78a26d17fb5cb80b755b80c133c837d0569aa8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "e7f0cd8e_049edaf9",
         "filename": "tests/jni_gtest.h",
         "patchSetId": 2
