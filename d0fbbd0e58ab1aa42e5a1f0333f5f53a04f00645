@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "96c5a91e_8c5ae2b0",
+        "filename": "JniConstants.cpp",
+        "patchSetId": 24
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 1042828
+      },
+      "writtenOn": "2019-01-08T18:04:20Z",
+      "side": 1,
+      "message": "Actually, these methods don\u0027t look thread-safe? Should they be?\n\nIf not, could we document that?",
+      "range": {
+        "startLine": 85,
+        "startChar": 0,
+        "endLine": 91,
+        "endChar": 1
+      },
+      "revId": "d0fbbd0e58ab1aa42e5a1f0333f5f53a04f00645",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
