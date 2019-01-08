@@ -22,6 +22,30 @@
       "revId": "701274ef01a3fc36f9e9553e79dfadd95dc2f709",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "dedf8d93_9557c057",
+        "filename": "JniConstants.cpp",
+        "patchSetId": 22
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 1071150
+      },
+      "writtenOn": "2019-01-08T14:22:45Z",
+      "side": 1,
+      "message": "Thanks Hans, updated to follow the pattern on slide 27.",
+      "parentUuid": "e793211b_993fcec1",
+      "range": {
+        "startLine": 129,
+        "startChar": 38,
+        "endLine": 129,
+        "endChar": 63
+      },
+      "revId": "701274ef01a3fc36f9e9553e79dfadd95dc2f709",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
