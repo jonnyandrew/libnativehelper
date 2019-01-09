@@ -46,6 +46,30 @@
       "revId": "701274ef01a3fc36f9e9553e79dfadd95dc2f709",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "19838f9a_0db8dbb3",
+        "filename": "JniConstants.cpp",
+        "patchSetId": 22
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 1071150
+      },
+      "writtenOn": "2019-01-09T10:21:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "dedf8d93_9557c057",
+      "range": {
+        "startLine": 129,
+        "startChar": 38,
+        "endLine": 129,
+        "endChar": 63
+      },
+      "revId": "701274ef01a3fc36f9e9553e79dfadd95dc2f709",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
