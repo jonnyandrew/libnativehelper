@@ -2,6 +2,98 @@
   "comments": [
     {
       "key": {
+        "uuid": "e538420c_b7950df0",
+        "filename": "Android.bp",
+        "patchSetId": 9
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1373864
+      },
+      "writtenOn": "2019-01-15T19:27:12Z",
+      "side": 1,
+      "message": "Why is this necessary?\n\nAlso, with stubs I don\u0027t think we need version scripts.",
+      "range": {
+        "startLine": 72,
+        "startChar": 0,
+        "endLine": 73,
+        "endChar": 41
+      },
+      "revId": "b63744926a2422288a3ae14dd43995c24b9b3c7a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "cbb43e1d_dd75f8de",
+        "filename": "include/nativehelper/AsynchronousCloseMonitor.h",
+        "patchSetId": 9
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1373864
+      },
+      "writtenOn": "2019-01-15T19:27:12Z",
+      "side": 1,
+      "message": "A forward declaration struct for this would provide better typing in the C level API.",
+      "range": {
+        "startLine": 25,
+        "startChar": 44,
+        "endLine": 25,
+        "endChar": 48
+      },
+      "revId": "b63744926a2422288a3ae14dd43995c24b9b3c7a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "02e5706a_443c8770",
+        "filename": "include/nativehelper/JniInvocation.h",
+        "patchSetId": 9
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1373864
+      },
+      "writtenOn": "2019-01-15T19:27:12Z",
+      "side": 1,
+      "message": "Ditto - this can be typed better.",
+      "range": {
+        "startLine": 25,
+        "startChar": 37,
+        "endLine": 25,
+        "endChar": 41
+      },
+      "revId": "b63744926a2422288a3ae14dd43995c24b9b3c7a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "58aed113_a5b9634a",
+        "filename": "include/nativehelper/JniInvocation.h",
+        "patchSetId": 9
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1373864
+      },
+      "writtenOn": "2019-01-15T19:27:12Z",
+      "side": 1,
+      "message": "Isn\u0027t it better to put all API declarations in a pure C header file? Then we can test it with C compilation too (cf. http://cs/aosp-master/art/libdexfile/Android.bp?l\u003d284).",
+      "range": {
+        "startLine": 24,
+        "startChar": 0,
+        "endLine": 27,
+        "endChar": 82
+      },
+      "revId": "b63744926a2422288a3ae14dd43995c24b9b3c7a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "89e095b8_4f818613",
         "filename": "include/nativehelper/module_api.h",
         "patchSetId": 9
@@ -13,6 +105,52 @@
       "writtenOn": "2019-01-15T18:45:06Z",
       "side": 1,
       "message": "We should start using this for other API libs.",
+      "revId": "b63744926a2422288a3ae14dd43995c24b9b3c7a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b1ec91c5_ebe5b510",
+        "filename": "libnativehelper.map.txt",
+        "patchSetId": 9
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1373864
+      },
+      "writtenOn": "2019-01-15T19:27:12Z",
+      "side": 1,
+      "message": "Nit: Missing \"\u003c\".",
+      "range": {
+        "startLine": 3,
+        "startChar": 46,
+        "endLine": 3,
+        "endChar": 47
+      },
+      "revId": "b63744926a2422288a3ae14dd43995c24b9b3c7a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "34887504_6bcd94ad",
+        "filename": "libnativehelper.map.txt",
+        "patchSetId": 9
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1373864
+      },
+      "writtenOn": "2019-01-15T19:27:12Z",
+      "side": 1,
+      "message": "If I\u0027m not mistaken this is redundant, right?",
+      "range": {
+        "startLine": 6,
+        "startChar": 49,
+        "endLine": 6,
+        "endChar": 63
+      },
       "revId": "b63744926a2422288a3ae14dd43995c24b9b3c7a",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
