@@ -69,6 +69,24 @@
       "revId": "9c5a40ad742ab2c5b06662657689cd1bb908295f",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "aa4a1b14_11e48df5",
+        "filename": "include/nativehelper/JniConstants.h",
+        "patchSetId": 3
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1071150
+      },
+      "writtenOn": "2019-01-15T14:14:11Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e10cb6f4_126b3f14",
+      "revId": "9c5a40ad742ab2c5b06662657689cd1bb908295f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }

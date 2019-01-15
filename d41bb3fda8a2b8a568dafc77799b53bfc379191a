@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "91055189_b3812afc",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1071150
+      },
+      "writtenOn": "2019-01-15T14:14:11Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1ccaf833_f3f0da4c",
+      "revId": "d41bb3fda8a2b8a568dafc77799b53bfc379191a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "43bb9ef0_a67c48ab",
         "filename": "Android.bp",
         "patchSetId": 4
@@ -56,6 +74,30 @@
       "revId": "d41bb3fda8a2b8a568dafc77799b53bfc379191a",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2ecdce6b_b01ef8bc",
+        "filename": "include/nativehelper/JniInvocation.h",
+        "patchSetId": 4
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1071150
+      },
+      "writtenOn": "2019-01-15T14:14:11Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0a827975_c761957c",
+      "range": {
+        "startLine": 29,
+        "startChar": 0,
+        "endLine": 31,
+        "endChar": 18
+      },
+      "revId": "d41bb3fda8a2b8a568dafc77799b53bfc379191a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
