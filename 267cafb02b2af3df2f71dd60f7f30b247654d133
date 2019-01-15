@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "62b55084_47062dbc",
+        "filename": "Android.bp",
+        "patchSetId": 7
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2019-01-15T15:51:20Z",
+      "side": 1,
+      "message": "Multiline.",
+      "range": {
+        "startLine": 55,
+        "startChar": 26,
+        "endLine": 55,
+        "endChar": 78
+      },
+      "revId": "267cafb02b2af3df2f71dd60f7f30b247654d133",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "e5dffc4a_32db2580",
         "filename": "AsynchronousCloseMonitor.cpp",
         "patchSetId": 7
