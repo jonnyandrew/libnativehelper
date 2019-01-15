@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e5dffc4a_32db2580",
+        "filename": "AsynchronousCloseMonitor.cpp",
+        "patchSetId": 7
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 1038443
+      },
+      "writtenOn": "2019-01-15T14:58:28Z",
+      "side": 1,
+      "message": "Should these (and other impls in this CL) have extern \"C\" with them?",
+      "range": {
+        "startLine": 136,
+        "startChar": 0,
+        "endLine": 156,
+        "endChar": 1
+      },
+      "revId": "267cafb02b2af3df2f71dd60f7f30b247654d133",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c53d1dd4_c29bff07",
+        "filename": "libnativehelper.map.txt",
+        "patchSetId": 7
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1038443
+      },
+      "writtenOn": "2019-01-15T14:58:28Z",
+      "side": 1,
+      "message": "We\u0027ve followed the NAME_VERSIONNUMBER format for this.",
+      "range": {
+        "startLine": 2,
+        "startChar": 0,
+        "endLine": 2,
+        "endChar": 15
+      },
+      "revId": "267cafb02b2af3df2f71dd60f7f30b247654d133",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
