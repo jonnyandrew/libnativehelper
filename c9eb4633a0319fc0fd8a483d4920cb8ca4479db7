@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3a9f508a_eb72524c",
+        "filename": "include/nativehelper/JNIHelp.h",
+        "patchSetId": 10
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1373864
+      },
+      "writtenOn": "2019-01-16T21:08:46Z",
+      "side": 1,
+      "message": "This doesn\u0027t appear to be used anywhere, so perhaps get rid of it? Not really in scope though, so consider it optional.",
+      "range": {
+        "startLine": 32,
+        "startChar": 0,
+        "endLine": 35,
+        "endChar": 0
+      },
+      "revId": "c9eb4633a0319fc0fd8a483d4920cb8ca4479db7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "073020a0_41c2755d",
+        "filename": "tests/Android.bp",
+        "patchSetId": 10
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 1373864
+      },
+      "writtenOn": "2019-01-16T21:08:46Z",
+      "side": 1,
+      "message": "Nit: trailing ws.",
+      "range": {
+        "startLine": 67,
+        "startChar": 31,
+        "endLine": 67,
+        "endChar": 33
+      },
+      "revId": "c9eb4633a0319fc0fd8a483d4920cb8ca4479db7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}

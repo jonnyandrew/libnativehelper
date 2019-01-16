@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "371e0ff7_12fd9d51",
+        "filename": "Android.bp",
+        "patchSetId": 9
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1373864
+      },
+      "writtenOn": "2019-01-16T21:08:46Z",
+      "side": 1,
+      "message": "Afaik we generally don\u0027t protect libs from dlopen abuse, so this seems somewhat ad-hoc. But I suppose if we want to do it we\u0027ll have to start somewhere.",
+      "parentUuid": "c9017c79_7603f8ab",
+      "range": {
+        "startLine": 72,
+        "startChar": 0,
+        "endLine": 73,
+        "endChar": 41
+      },
+      "revId": "b63744926a2422288a3ae14dd43995c24b9b3c7a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "cbb43e1d_dd75f8de",
         "filename": "include/nativehelper/AsynchronousCloseMonitor.h",
         "patchSetId": 9
@@ -190,6 +214,30 @@
     },
     {
       "key": {
+        "uuid": "3641f986_feed879c",
+        "filename": "include/nativehelper/JniInvocation.h",
+        "patchSetId": 9
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1373864
+      },
+      "writtenOn": "2019-01-16T21:08:46Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "edca6fdc_132033b1",
+      "range": {
+        "startLine": 24,
+        "startChar": 0,
+        "endLine": 27,
+        "endChar": 82
+      },
+      "revId": "b63744926a2422288a3ae14dd43995c24b9b3c7a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "89e095b8_4f818613",
         "filename": "include/nativehelper/module_api.h",
         "patchSetId": 9
@@ -251,6 +299,30 @@
       "revId": "b63744926a2422288a3ae14dd43995c24b9b3c7a",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6fba2335_b05442b4",
+        "filename": "libnativehelper.map.txt",
+        "patchSetId": 9
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1373864
+      },
+      "writtenOn": "2019-01-16T21:08:46Z",
+      "side": 1,
+      "message": "Hmm, no..?",
+      "parentUuid": "767b2bdd_87121fff",
+      "range": {
+        "startLine": 3,
+        "startChar": 46,
+        "endLine": 3,
+        "endChar": 47
+      },
+      "revId": "b63744926a2422288a3ae14dd43995c24b9b3c7a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     },
     {
       "key": {
