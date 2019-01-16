@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "c9017c79_7603f8ab",
+        "filename": "Android.bp",
+        "patchSetId": 9
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1071150
+      },
+      "writtenOn": "2019-01-16T16:04:49Z",
+      "side": 1,
+      "message": "The version script means the visible symbols in the shared object are exactly the API exposed by stubs. The stubs on their own just ensures the symbols linked against at build time, but doesn\u0027t deal with dlopen/dlsym.\n\nAs the comment suggests, there are tests that rely on symbols outside of the public API. A problem that wouldn\u0027t exist without the version script.",
+      "parentUuid": "e538420c_b7950df0",
+      "range": {
+        "startLine": 72,
+        "startChar": 0,
+        "endLine": 73,
+        "endChar": 41
+      },
+      "revId": "b63744926a2422288a3ae14dd43995c24b9b3c7a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "cbb43e1d_dd75f8de",
         "filename": "include/nativehelper/AsynchronousCloseMonitor.h",
         "patchSetId": 9
@@ -45,6 +69,30 @@
       "revId": "b63744926a2422288a3ae14dd43995c24b9b3c7a",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5ea8fae9_0a29c9dd",
+        "filename": "include/nativehelper/AsynchronousCloseMonitor.h",
+        "patchSetId": 9
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1071150
+      },
+      "writtenOn": "2019-01-16T16:04:49Z",
+      "side": 1,
+      "message": "This is a good suggestion. However, I\u0027d like to leave this as-is since it is going to be removed from libnativehelper and this has potential to add more work there (b/122881655).",
+      "parentUuid": "cbb43e1d_dd75f8de",
+      "range": {
+        "startLine": 25,
+        "startChar": 44,
+        "endLine": 25,
+        "endChar": 48
+      },
+      "revId": "b63744926a2422288a3ae14dd43995c24b9b3c7a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     },
     {
       "key": {
@@ -71,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "1ec2a97e_a2385a06",
+        "filename": "include/nativehelper/JniInvocation.h",
+        "patchSetId": 9
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1071150
+      },
+      "writtenOn": "2019-01-16T16:04:49Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "02e5706a_443c8770",
+      "range": {
+        "startLine": 25,
+        "startChar": 37,
+        "endLine": 25,
+        "endChar": 41
+      },
+      "revId": "b63744926a2422288a3ae14dd43995c24b9b3c7a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "58aed113_a5b9634a",
         "filename": "include/nativehelper/JniInvocation.h",
         "patchSetId": 9
@@ -82,6 +154,30 @@
       "writtenOn": "2019-01-15T19:27:12Z",
       "side": 1,
       "message": "Isn\u0027t it better to put all API declarations in a pure C header file? Then we can test it with C compilation too (cf. http://cs/aosp-master/art/libdexfile/Android.bp?l\u003d284).",
+      "range": {
+        "startLine": 24,
+        "startChar": 0,
+        "endLine": 27,
+        "endChar": 82
+      },
+      "revId": "b63744926a2422288a3ae14dd43995c24b9b3c7a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "edca6fdc_132033b1",
+        "filename": "include/nativehelper/JniInvocation.h",
+        "patchSetId": 9
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1071150
+      },
+      "writtenOn": "2019-01-16T16:04:49Z",
+      "side": 1,
+      "message": "I had started down this route, but it gets a bit messy with JNIHelp.\n\nFor now, PS10 adds __cplusplus guards in the 4 headers that contain public API. Not a first choice, but there\u0027s going to be more churn here and it doesn\u0027t affect the underlying API.",
+      "parentUuid": "58aed113_a5b9634a",
       "range": {
         "startLine": 24,
         "startChar": 0,
@@ -134,6 +230,30 @@
     },
     {
       "key": {
+        "uuid": "767b2bdd_87121fff",
+        "filename": "libnativehelper.map.txt",
+        "patchSetId": 9
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1071150
+      },
+      "writtenOn": "2019-01-16T16:04:49Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b1ec91c5_ebe5b510",
+      "range": {
+        "startLine": 3,
+        "startChar": 46,
+        "endLine": 3,
+        "endChar": 47
+      },
+      "revId": "b63744926a2422288a3ae14dd43995c24b9b3c7a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "34887504_6bcd94ad",
         "filename": "libnativehelper.map.txt",
         "patchSetId": 9
@@ -154,6 +274,30 @@
       "revId": "b63744926a2422288a3ae14dd43995c24b9b3c7a",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7bf6b971_74fd5d5c",
+        "filename": "libnativehelper.map.txt",
+        "patchSetId": 9
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1071150
+      },
+      "writtenOn": "2019-01-16T16:04:49Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "34887504_6bcd94ad",
+      "range": {
+        "startLine": 6,
+        "startChar": 49,
+        "endLine": 6,
+        "endChar": 63
+      },
+      "revId": "b63744926a2422288a3ae14dd43995c24b9b3c7a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
