@@ -73,6 +73,30 @@
     },
     {
       "key": {
+        "uuid": "335afa38_368a3181",
+        "filename": "Android.bp",
+        "patchSetId": 9
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1071150
+      },
+      "writtenOn": "2019-01-17T09:35:32Z",
+      "side": 1,
+      "message": "Removed since it breaks TH atest as it\u0027s not picking up the libnativehelper_private.so. Ideally wouldn\u0027t do this, but no idea how the atest pipeline works.",
+      "parentUuid": "371e0ff7_12fd9d51",
+      "range": {
+        "startLine": 72,
+        "startChar": 0,
+        "endLine": 73,
+        "endChar": 41
+      },
+      "revId": "b63744926a2422288a3ae14dd43995c24b9b3c7a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "cbb43e1d_dd75f8de",
         "filename": "include/nativehelper/AsynchronousCloseMonitor.h",
         "patchSetId": 9
@@ -323,6 +347,30 @@
       "revId": "b63744926a2422288a3ae14dd43995c24b9b3c7a",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "166463c4_1f83daa7",
+        "filename": "libnativehelper.map.txt",
+        "patchSetId": 9
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1071150
+      },
+      "writtenOn": "2019-01-17T09:35:32Z",
+      "side": 1,
+      "message": "Really done :-) Reverted other changes locally and accidentally included this.",
+      "parentUuid": "6fba2335_b05442b4",
+      "range": {
+        "startLine": 3,
+        "startChar": 46,
+        "endLine": 3,
+        "endChar": 47
+      },
+      "revId": "b63744926a2422288a3ae14dd43995c24b9b3c7a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     },
     {
       "key": {
