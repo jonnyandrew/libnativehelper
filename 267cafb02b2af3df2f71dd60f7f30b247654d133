@@ -96,6 +96,30 @@
     },
     {
       "key": {
+        "uuid": "db615ac6_7767bd4f",
+        "filename": "AsynchronousCloseMonitor.cpp",
+        "patchSetId": 7
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 1071150
+      },
+      "writtenOn": "2019-01-17T09:39:14Z",
+      "side": 1,
+      "message": "Marking as resolved.",
+      "parentUuid": "9b104d97_a14e914b",
+      "range": {
+        "startLine": 136,
+        "startChar": 0,
+        "endLine": 156,
+        "endChar": 1
+      },
+      "revId": "267cafb02b2af3df2f71dd60f7f30b247654d133",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "c53d1dd4_c29bff07",
         "filename": "libnativehelper.map.txt",
         "patchSetId": 7
