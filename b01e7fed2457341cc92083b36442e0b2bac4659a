@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7fb4b557_09b05438",
+        "filename": "include/nativehelper/AsynchronousCloseMonitor.h",
+        "patchSetId": 11
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1038443
+      },
+      "writtenOn": "2019-01-17T11:09:24Z",
+      "side": 1,
+      "message": "Do you plan to move this to its own header, without C++ stuff below?",
+      "range": {
+        "startLine": 24,
+        "startChar": 0,
+        "endLine": 29,
+        "endChar": 52
+      },
+      "revId": "b01e7fed2457341cc92083b36442e0b2bac4659a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "57589f5c_b30a2dba",
+        "filename": "include/nativehelper/toStringArray.h",
+        "patchSetId": 11
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1038443
+      },
+      "writtenOn": "2019-01-17T11:09:24Z",
+      "side": 1,
+      "message": "ditto about separating C and C++",
+      "revId": "b01e7fed2457341cc92083b36442e0b2bac4659a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
