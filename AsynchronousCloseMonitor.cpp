@@ -158,3 +158,21 @@ MODULE_API int async_close_monitor_was_signalled(const void* instance) {
   auto monitor = reinterpret_cast<const AsynchronousCloseMonitorImpl*>(instance);
   return monitor->wasSignaled() ? 1 : 0;
 }
+
+/*
+ * Backward compatibility: Older versions of the unbundled Conscrypt library for
+ * Android explicitly look for the mangled constructor and destructor symbols
+ * for AsynchronousCloseMonitor, and then pass in their own buffer on the
+ * assumption that this is equivalent to using a placement new and explicit
+ * destruction.
+ *
+ * TODO(b/122881655): Retire these eventually.
+ */
+MODULE_API void* _ZN24AsynchronousCloseMonitorC1Ei(void* buffer, int fd) {
+  return new(buffer) AsynchronousCloseMonitorImpl(fd);
+}
+
+MODULE_API void _ZN24AsynchronousCloseMonitorD1Ev(void* buffer) {
+  auto monitor = reinterpret_cast<AsynchronousCloseMonitorImpl*>(buffer);
+  monitor->~AsynchronousCloseMonitorImpl();
+}
