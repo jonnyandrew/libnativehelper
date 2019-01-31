@@ -32,6 +32,8 @@ LIBNATIVEHELPER_1 {
     async_close_monitor_create;
     async_close_monitor_destroy;
     async_close_monitor_was_signalled;
+    _ZN24AsynchronousCloseMonitorC1Ei;
+    _ZN24AsynchronousCloseMonitorD1Ev;
 
     newStringArray;
     toStringArray;
