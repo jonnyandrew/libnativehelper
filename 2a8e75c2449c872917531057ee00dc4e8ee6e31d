@@ -46,6 +46,30 @@
       "revId": "2a8e75c2449c872917531057ee00dc4e8ee6e31d",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c0f0dbb8_4f94ae11",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2019-01-31T16:24:23Z",
+      "side": 1,
+      "message": "\u003e 1) On what Android versions does dlopen(\"libjavacore\") even work from apps?\n\nbefore N. (it\u0027s not on the greylist, so having an old targetSdkVersion won\u0027t help.)",
+      "parentUuid": "9aa3b6fa_9f13de60",
+      "range": {
+        "startLine": 11,
+        "startChar": 7,
+        "endLine": 11,
+        "endChar": 38
+      },
+      "revId": "2a8e75c2449c872917531057ee00dc4e8ee6e31d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
