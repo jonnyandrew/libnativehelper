@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c759aa51_f6018cb0",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1052644
+      },
+      "writtenOn": "2019-02-01T13:43:33Z",
+      "side": 1,
+      "message": "This looks like the reason for the original revert, not this \"revert of revert\"; amend or remove this line?",
+      "revId": "2ff21fd097060b5207e07bf46d7988e8e68fb642",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
