@@ -16,6 +16,24 @@
       "revId": "2ff21fd097060b5207e07bf46d7988e8e68fb642",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4e991bf9_9b98025d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1373864
+      },
+      "writtenOn": "2019-02-01T13:50:12Z",
+      "side": 1,
+      "message": "Hmm, I don\u0027t read it that way - there\u0027s also \"This reverts commit ...\" above that applies to this revert, not the original one. I think it\u0027s reasonable to explain the reason for this revert here.",
+      "parentUuid": "c759aa51_f6018cb0",
+      "revId": "2ff21fd097060b5207e07bf46d7988e8e68fb642",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
