@@ -48,6 +48,30 @@
     },
     {
       "key": {
+        "uuid": "fe953dfd_2dfd27f4",
+        "filename": "JniInvocation.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 280,
+      "author": {
+        "id": 1038443
+      },
+      "writtenOn": "2019-03-12T16:35:34Z",
+      "side": 1,
+      "message": "The caller in this CL doesn\u0027t have an instance, do you want to pass null and handle that in JniInvocationDestroy?",
+      "parentUuid": "dd936d0a_276bee96",
+      "range": {
+        "startLine": 280,
+        "startChar": 5,
+        "endLine": 280,
+        "endChar": 41
+      },
+      "revId": "a2b85ab607c57ccb2d1ee2fcd368ef489752a84d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "8dc76d2e_e4eb89e7",
         "filename": "include/nativehelper/JniInvocation.h",
         "patchSetId": 1
