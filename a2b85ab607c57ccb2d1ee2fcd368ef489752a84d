@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e1bb5ca_1da2493e",
+        "filename": "JniInvocation.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 273,
+      "author": {
+        "id": 1071150
+      },
+      "writtenOn": "2019-03-12T15:24:52Z",
+      "side": 1,
+      "message": "Can we remove this too?",
+      "range": {
+        "startLine": 273,
+        "startChar": 0,
+        "endLine": 273,
+        "endChar": 10
+      },
+      "revId": "a2b85ab607c57ccb2d1ee2fcd368ef489752a84d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "dd936d0a_276bee96",
+        "filename": "JniInvocation.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 280,
+      "author": {
+        "id": 1071150
+      },
+      "writtenOn": "2019-03-12T15:24:52Z",
+      "side": 1,
+      "message": "JniInvocationUninitializeConstants()\n\nCould this go in JniInvocationDestroy and avoid the extra surface area?",
+      "range": {
+        "startLine": 280,
+        "startChar": 5,
+        "endLine": 280,
+        "endChar": 41
+      },
+      "revId": "a2b85ab607c57ccb2d1ee2fcd368ef489752a84d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8dc76d2e_e4eb89e7",
+        "filename": "include/nativehelper/JniInvocation.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 1071150
+      },
+      "writtenOn": "2019-03-12T15:24:52Z",
+      "side": 1,
+      "message": "This should be implemented inline and call a C method JniInvocationUninitializeConstants().\n\nJniInvocationUnintializeConstants should be added to libnativehelper.map.txt.",
+      "range": {
+        "startLine": 66,
+        "startChar": 2,
+        "endLine": 66,
+        "endChar": 38
+      },
+      "revId": "a2b85ab607c57ccb2d1ee2fcd368ef489752a84d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
