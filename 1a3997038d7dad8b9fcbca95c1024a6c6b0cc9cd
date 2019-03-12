@@ -1,0 +1,90 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "09a77df3_82f5d54b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1071150
+      },
+      "writtenOn": "2019-03-12T16:19:01Z",
+      "side": 1,
+      "message": "Is there a Bug: for this?",
+      "revId": "1a3997038d7dad8b9fcbca95c1024a6c6b0cc9cd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "72537c07_5089dd53",
+        "filename": "JNIHelp.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 1071150
+      },
+      "writtenOn": "2019-03-12T16:19:01Z",
+      "side": 1,
+      "message": "Can this go into asprintf() which is ifdef\u0027de for _WIN32? That\u0027d reduce duplication here and below.",
+      "range": {
+        "startLine": 78,
+        "startChar": 0,
+        "endLine": 80,
+        "endChar": 114
+      },
+      "revId": "1a3997038d7dad8b9fcbca95c1024a6c6b0cc9cd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "638401c4_144d6342",
+        "filename": "JniInvocation.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 1071150
+      },
+      "writtenOn": "2019-03-12T16:19:01Z",
+      "side": 1,
+      "message": "HMODULE is typedef\u0027ed as a HANDLE which is typedef\u0027ed as PVOID which is the same as void* :-)\n\nThese are fixed Windows data type definitions.",
+      "range": {
+        "startLine": 97,
+        "startChar": 1,
+        "endLine": 97,
+        "endChar": 9
+      },
+      "revId": "1a3997038d7dad8b9fcbca95c1024a6c6b0cc9cd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2c5938a9_8570fc4a",
+        "filename": "JniInvocation.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 192,
+      "author": {
+        "id": 1071150
+      },
+      "writtenOn": "2019-03-12T16:19:01Z",
+      "side": 1,
+      "message": "There could be less duplication here if there were smaller helpers:\n\nOpenLibrary -\u003e dlopen / LoadLibrary\nGetSymbol -\u003e dlsym / GetProcAddress\nCloseLibrary -\u003e dlclose / FreeLibrary\n\nAnd these handle the appropriate type conversions so there are just implementation diffs. Avoids long ifdef blocks and duplication.",
+      "range": {
+        "startLine": 192,
+        "startChar": 12,
+        "endLine": 192,
+        "endChar": 23
+      },
+      "revId": "1a3997038d7dad8b9fcbca95c1024a6c6b0cc9cd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
