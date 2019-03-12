@@ -276,3 +276,7 @@ MODULE_API const char* JniInvocation::GetLibrary(const char* library,
                                                  int (*get_library_system_property)(char* buffer)) {
   return JniInvocationImpl::GetLibrary(library, buffer, is_debuggable, get_library_system_property);
 }
+
+MODULE_API void JniInvocationUninitializeConstants() {
+  JniConstants::Uninitialize();
+}

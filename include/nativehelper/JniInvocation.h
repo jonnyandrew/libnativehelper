@@ -26,6 +26,7 @@ MODULE_API struct JniInvocationImpl* JniInvocationCreate();
 MODULE_API void JniInvocationDestroy(struct JniInvocationImpl* instance);
 MODULE_API int JniInvocationInit(struct JniInvocationImpl* instance, const char* library);
 MODULE_API const char* JniInvocationGetLibrary(const char* library, char* buffer);
+MODULE_API void JniInvocationUninitializeConstants();
 
 #ifdef __cplusplus
 
@@ -60,6 +61,11 @@ class JniInvocation final {
   // provided, the fallback value will be used.
   static const char* GetLibrary(const char* library, char* buffer) {
     return JniInvocationGetLibrary(library, buffer);
+  }
+
+  // Clear the cached constants.
+  static void UninitializeConstants() {
+    return JniInvocationUninitializeConstants();
   }
 
  private:

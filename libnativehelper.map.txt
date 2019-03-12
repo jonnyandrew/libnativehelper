@@ -26,6 +26,7 @@ LIBNATIVEHELPER_1 {
     JniInvocationDestroy;
     JniInvocationInit;
     JniInvocationGetLibrary;
+    JniInvocationUninitializeConstants;
 
     newStringArray;
     toStringArray;
