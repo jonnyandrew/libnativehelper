@@ -58,6 +58,31 @@ private:
     DISALLOW_COPY_AND_ASSIGN(scoped_local_ref);
 };
 
+namespace {
+
+void formatErrorMessage(const char* msg, const char *formattedMessage, const char *defaultMessage, ...) {
+    char* tmp;
+    va_list arguments;
+    va_start(arguments, defaultMessage);
+#ifdef _WIN32
+    int size = _scprintf(formattedMessage, arguments) + 1;
+    tmp = static_cast<char*>(malloc(size));
+    if (sprintf_s(tmp, size, formattedMessage, arguments) == -1) {
+        free(tmp);
+        // Allocation failed, print default warning.
+        msg = defaultMessage;
+#else
+    if (asprintf(&tmp, formattedMessage, arguments) == -1) {
+        // Allocation failed, print default warning.
+        msg = defaultMessage;
+#endif
+    } else {
+        msg = tmp;
+    }
+}
+
+} // namespace
+
 static jclass findClass(C_JNIEnv* env, const char* className) {
     JNIEnv* e = reinterpret_cast<JNIEnv*>(env);
     return (*env)->FindClass(e, className);
@@ -72,28 +97,16 @@ MODULE_API int jniRegisterNativeMethods(C_JNIEnv* env, const char* className,
 
     scoped_local_ref<jclass> c(env, findClass(env, className));
     if (c.get() == NULL) {
-        char* tmp;
         const char* msg;
-        if (asprintf(&tmp,
-                     "Native registration unable to find class '%s'; aborting...",
-                     className) == -1) {
-            // Allocation failed, print default warning.
-            msg = "Native registration unable to find class; aborting...";
-        } else {
-            msg = tmp;
-        }
+        formatErrorMessage(msg, "Native registration unable to find class '%s'; aborting...",
+                           "Native registration unable to find class; aborting...", className);
         e->FatalError(msg);
     }
 
     if ((*env)->RegisterNatives(e, c.get(), gMethods, numMethods) < 0) {
-        char* tmp;
         const char* msg;
-        if (asprintf(&tmp, "RegisterNatives failed for '%s'; aborting...", className) == -1) {
-            // Allocation failed, print default warning.
-            msg = "RegisterNatives failed; aborting...";
-        } else {
-            msg = tmp;
-        }
+        formatErrorMessage(msg, "RegisterNatives failed for '%s'; aborting...",
+                           "RegisterNatives failed; aborting...", className);
         e->FatalError(msg);
     }
 
@@ -327,9 +340,14 @@ inline const char* realJniStrError(POSIXStrError func, int errnum, char* buf, si
 }  // namespace impl
 
 MODULE_API const char* jniStrError(int errnum, char* buf, size_t buflen) {
+#ifdef _WIN32
+  strerror_s(buf, buflen, errnum);
+  return buf;
+#else
   // The magic of C++ overloading selects the correct implementation based on the declared type of
   // strerror_r. The inline will ensure that we don't have any indirect calls.
   return impl::realJniStrError(strerror_r, errnum, buf, buflen);
+#endif
 }
 
 MODULE_API jobject jniCreateFileDescriptor(C_JNIEnv* env, int fd) {
