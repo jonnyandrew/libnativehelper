@@ -62,6 +62,9 @@ class JniInvocation final {
     return JniInvocationGetLibrary(library, buffer);
   }
 
+  // Clear the cached constants.
+  static void UninitializeConstants();
+
  private:
   JniInvocation(const JniInvocation&) = delete;
   JniInvocation& operator=(const JniInvocation&) = delete;
