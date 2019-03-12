@@ -74,11 +74,20 @@ MODULE_API int jniRegisterNativeMethods(C_JNIEnv* env, const char* className,
     if (c.get() == NULL) {
         char* tmp;
         const char* msg;
+#ifdef _WIN32
+        int size = _scprintf("Native registration unable to find class '%s'; aborting...", className) + 1;
+        tmp = static_cast<char*>(malloc(size));
+        if (sprintf_s(tmp, size, "Native registration unable to find class '%s'; aborting...", className) == -1) {
+            free(tmp);
+            // Allocation failed, print default warning.
+            msg = "Native registration unable to find class; aborting...";
+#else
         if (asprintf(&tmp,
                      "Native registration unable to find class '%s'; aborting...",
                      className) == -1) {
             // Allocation failed, print default warning.
             msg = "Native registration unable to find class; aborting...";
+#endif
         } else {
             msg = tmp;
         }
@@ -88,9 +97,18 @@ MODULE_API int jniRegisterNativeMethods(C_JNIEnv* env, const char* className,
     if ((*env)->RegisterNatives(e, c.get(), gMethods, numMethods) < 0) {
         char* tmp;
         const char* msg;
+#ifdef _WIN32
+        int size = _scprintf("RegisterNatives failed for '%s'; aborting...", className) + 1;
+        tmp = static_cast<char*>(malloc(size));
+        if (sprintf_s(tmp, size, "RegisterNatives failed for '%s'; aborting...", className) == -1) {
+            free(tmp);
+            // Allocation failed, print default warning.
+            msg = "RegisterNatives failed; aborting...";
+#else
         if (asprintf(&tmp, "RegisterNatives failed for '%s'; aborting...", className) == -1) {
             // Allocation failed, print default warning.
             msg = "RegisterNatives failed; aborting...";
+#endif
         } else {
             msg = tmp;
         }
@@ -327,9 +345,14 @@ inline const char* realJniStrError(POSIXStrError func, int errnum, char* buf, si
 }  // namespace impl
 
 MODULE_API const char* jniStrError(int errnum, char* buf, size_t buflen) {
+#ifdef _WIN32
+  strerror_s(buf, buflen, errnum);
+  return buf;
+#else
   // The magic of C++ overloading selects the correct implementation based on the declared type of
   // strerror_r. The inline will ensure that we don't have any indirect calls.
   return impl::realJniStrError(strerror_r, errnum, buf, buflen);
+#endif
 }
 
 MODULE_API jobject jniCreateFileDescriptor(C_JNIEnv* env, int fd) {

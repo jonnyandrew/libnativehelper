@@ -16,7 +16,11 @@
 
 #include "nativehelper/JniInvocation.h"
 
+#ifdef _WIN32
+#include <windows.h>
+#else
 #include <dlfcn.h>
+#endif
 #include <stdlib.h>
 #include <string.h>
 
@@ -81,13 +85,21 @@ struct JniInvocationImpl final {
   JniInvocationImpl(const JniInvocationImpl&) = delete;
   JniInvocationImpl& operator=(const JniInvocationImpl&) = delete;
 
+#ifdef _WIN32
+  bool FindSymbol(FARPROC* pointer, const char* symbol);
+#else
   bool FindSymbol(void** pointer, const char* symbol);
+#endif
 
   static JniInvocationImpl* jni_invocation_;
 
+#ifdef _WIN32
+  HMODULE handle_;
+#else
   // Handle to library opened with dlopen(). Library exports
   // JNI_GetDefaultJavaVMInitArgs, JNI_CreateJavaVM, JNI_GetCreatedJavaVMs.
   void* handle_;
+#endif
   jint (*JNI_GetDefaultJavaVMInitArgs_)(void*);
   jint (*JNI_CreateJavaVM_)(JavaVM**, JNIEnv**, void*);
   jint (*JNI_GetCreatedJavaVMs_)(JavaVM**, jsize, jsize*);
@@ -113,7 +125,11 @@ JniInvocationImpl::JniInvocationImpl() :
 JniInvocationImpl::~JniInvocationImpl() {
   jni_invocation_ = NULL;
   if (handle_ != NULL) {
+#ifdef _WIN32
+    FreeLibrary(handle_);
+#else
     dlclose(handle_);
+#endif
   }
 }
 
@@ -172,6 +188,36 @@ bool JniInvocationImpl::Init(const char* library) {
   // This is due to the fact that it is possible that some threads might have yet to finish
   // exiting even after JNI_DeleteJavaVM returns, which can lead to segfaults if the library is
   // unloaded.
+#ifdef _WIN32
+  handle_ = LoadLibrary(library);
+  if (handle_ == NULL) {
+    if (strcmp(library, kLibraryFallback) == 0) {
+      // Nothing else to try.
+      ALOGE("Failed to LoadLibrary %s", library);
+      return false;
+    }
+    ALOGW("Falling back from %s to %s after LoadLibrary error",
+          library, kLibraryFallback);
+    library = kLibraryFallback;
+    handle_ = LoadLibrary(library);
+    if (handle_ == NULL) {
+      ALOGE("Failed to LoadLibrary %s", library);
+      return false;
+    }
+  }
+  if (!FindSymbol(reinterpret_cast<FARPROC*>(&JNI_GetDefaultJavaVMInitArgs_),
+                  "JNI_GetDefaultJavaVMInitArgs")) {
+    return false;
+  }
+  if (!FindSymbol(reinterpret_cast<FARPROC*>(&JNI_CreateJavaVM_),
+                  "JNI_CreateJavaVM")) {
+    return false;
+  }
+  if (!FindSymbol(reinterpret_cast<FARPROC*>(&JNI_GetCreatedJavaVMs_),
+                  "JNI_GetCreatedJavaVMs")) {
+    return false;
+  }
+#else
   const int kDlopenFlags = RTLD_NOW | RTLD_NODELETE;
   handle_ = dlopen(library, kDlopenFlags);
   if (handle_ == NULL) {
@@ -206,6 +252,7 @@ bool JniInvocationImpl::Init(const char* library) {
                   "JNI_GetCreatedJavaVMs")) {
     return false;
   }
+#endif
   return true;
 }
 
@@ -221,6 +268,18 @@ jint JniInvocationImpl::JNI_GetCreatedJavaVMs(JavaVM** vms, jsize size, jsize* v
   return JNI_GetCreatedJavaVMs_(vms, size, vm_count);
 }
 
+#ifdef _WIN32
+bool JniInvocationImpl::FindSymbol(FARPROC* pointer, const char* symbol) {
+  *pointer = GetProcAddress(handle_, symbol);
+  if (*pointer == NULL) {
+    ALOGE("Failed to find symbol %s\n", symbol);
+    FreeLibrary(handle_);
+    handle_ = NULL;
+    return false;
+  }
+  return true;
+}
+#else
 bool JniInvocationImpl::FindSymbol(void** pointer, const char* symbol) {
   *pointer = dlsym(handle_, symbol);
   if (*pointer == NULL) {
@@ -231,6 +290,7 @@ bool JniInvocationImpl::FindSymbol(void** pointer, const char* symbol) {
   }
   return true;
 }
+#endif
 
 JniInvocationImpl& JniInvocationImpl::GetJniInvocation() {
   LOG_ALWAYS_FATAL_IF(jni_invocation_ == NULL,
