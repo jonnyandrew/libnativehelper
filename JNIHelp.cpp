@@ -22,6 +22,7 @@
 
 #include <string>
 
+#include "android-base/stringprintf.h"
 #include "JniConstants.h"
 #include "nativehelper/ScopedLocalRef.h"
 
@@ -72,27 +73,28 @@ MODULE_API int jniRegisterNativeMethods(C_JNIEnv* env, const char* className,
 
     scoped_local_ref<jclass> c(env, findClass(env, className));
     if (c.get() == NULL) {
-        char* tmp;
+        std::string tmp = android::base::StringPrintf(
+                "Native registration unable to find class '%s'; aborting...",
+                className);
         const char* msg;
-        if (asprintf(&tmp,
-                     "Native registration unable to find class '%s'; aborting...",
-                     className) == -1) {
+        if (tmp.size() == 0) {
             // Allocation failed, print default warning.
             msg = "Native registration unable to find class; aborting...";
         } else {
-            msg = tmp;
+            msg = tmp.c_str();
         }
-        e->FatalError(msg);
     }
 
     if ((*env)->RegisterNatives(e, c.get(), gMethods, numMethods) < 0) {
-        char* tmp;
+        std::string tmp = android::base::StringPrintf(
+                "RegisterNatives failed for '%s'; aborting...",
+                 className);
         const char* msg;
-        if (asprintf(&tmp, "RegisterNatives failed for '%s'; aborting...", className) == -1) {
+        if (tmp.size() == 0) {
             // Allocation failed, print default warning.
             msg = "RegisterNatives failed; aborting...";
         } else {
-            msg = tmp;
+            msg = tmp.c_str();
         }
         e->FatalError(msg);
     }
@@ -327,9 +329,14 @@ inline const char* realJniStrError(POSIXStrError func, int errnum, char* buf, si
 }  // namespace impl
 
 MODULE_API const char* jniStrError(int errnum, char* buf, size_t buflen) {
+#ifdef _WIN32
+  strerror_s(buf, buflen, errnum);
+  return buf;
+#else
   // The magic of C++ overloading selects the correct implementation based on the declared type of
   // strerror_r. The inline will ensure that we don't have any indirect calls.
   return impl::realJniStrError(strerror_r, errnum, buf, buflen);
+#endif
 }
 
 MODULE_API jobject jniCreateFileDescriptor(C_JNIEnv* env, int fd) {
