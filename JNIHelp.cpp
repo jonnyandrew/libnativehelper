@@ -22,6 +22,7 @@
 
 #include <string>
 
+#include "android-base/stringprintf.h"
 #include "JniConstants.h"
 #include "nativehelper/ScopedLocalRef.h"
 
@@ -72,29 +73,25 @@ MODULE_API int jniRegisterNativeMethods(C_JNIEnv* env, const char* className,
 
     scoped_local_ref<jclass> c(env, findClass(env, className));
     if (c.get() == NULL) {
-        char* tmp;
-        const char* msg;
-        if (asprintf(&tmp,
-                     "Native registration unable to find class '%s'; aborting...",
-                     className) == -1) {
-            // Allocation failed, print default warning.
-            msg = "Native registration unable to find class; aborting...";
+        std::string message  = android::base::StringPrintf(
+                "Native registration unable to find class '%s'; aborting...",
+                className);
+        if (message.size() != 0) {
+            e->FatalError(message.c_str());
         } else {
-            msg = tmp;
+            e->FatalError("Native registration unable to find class; aborting...");
         }
-        e->FatalError(msg);
     }
 
-    if ((*env)->RegisterNatives(e, c.get(), gMethods, numMethods) < 0) {
-        char* tmp;
-        const char* msg;
-        if (asprintf(&tmp, "RegisterNatives failed for '%s'; aborting...", className) == -1) {
-            // Allocation failed, print default warning.
-            msg = "RegisterNatives failed; aborting...";
+    if (e->RegisterNatives(c.get(), gMethods, numMethods) < 0) {
+        std::string message = android::base::StringPrintf(
+                "RegisterNatives failed for '%s'; aborting...",
+                 className);
+        if (message.size() != 0) {
+            e->FatalError(message.c_str());
         } else {
-            msg = tmp;
+            e->FatalError("RegisterNatives failed; aborting...");
         }
-        e->FatalError(msg);
     }
 
     return 0;
@@ -327,9 +324,14 @@ inline const char* realJniStrError(POSIXStrError func, int errnum, char* buf, si
 }  // namespace impl
 
 MODULE_API const char* jniStrError(int errnum, char* buf, size_t buflen) {
+#ifdef _WIN32
+  strerror_s(buf, buflen, errnum);
+  return buf;
+#else
   // The magic of C++ overloading selects the correct implementation based on the declared type of
   // strerror_r. The inline will ensure that we don't have any indirect calls.
   return impl::realJniStrError(strerror_r, errnum, buf, buflen);
+#endif
 }
 
 MODULE_API jobject jniCreateFileDescriptor(C_JNIEnv* env, int fd) {
