@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "484e0022_4ab2d03a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1064724
+      },
+      "writtenOn": "2019-03-14T14:05:06Z",
+      "side": 1,
+      "message": "Added",
+      "parentUuid": "09a77df3_82f5d54b",
+      "revId": "1a3997038d7dad8b9fcbca95c1024a6c6b0cc9cd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "72537c07_5089dd53",
         "filename": "JNIHelp.cpp",
         "patchSetId": 2
@@ -30,6 +48,30 @@
       "writtenOn": "2019-03-12T16:19:01Z",
       "side": 1,
       "message": "Can this go into asprintf() which is ifdef\u0027de for _WIN32? That\u0027d reduce duplication here and below.",
+      "range": {
+        "startLine": 78,
+        "startChar": 0,
+        "endLine": 80,
+        "endChar": 114
+      },
+      "revId": "1a3997038d7dad8b9fcbca95c1024a6c6b0cc9cd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1d78a589_5acc58a3",
+        "filename": "JNIHelp.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 1064724
+      },
+      "writtenOn": "2019-03-14T14:05:06Z",
+      "side": 1,
+      "message": "I can\u0027t modify the definition of asprintf, but I made a helper method to extract that behaviour",
+      "parentUuid": "72537c07_5089dd53",
       "range": {
         "startLine": 78,
         "startChar": 0,
