@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9854b3f5_247d17cf",
+        "filename": "JNIHelp.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 1071150
+      },
+      "writtenOn": "2019-03-15T13:13:21Z",
+      "side": 1,
+      "message": "\"}  // namespace\"",
+      "range": {
+        "startLine": 84,
+        "startChar": 0,
+        "endLine": 84,
+        "endChar": 1
+      },
+      "revId": "c95dc7256748d479f5733ef4837960701efca557",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b9c49d14_cd8a5507",
+        "filename": "JniInvocation.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 1071150
+      },
+      "writtenOn": "2019-03-15T13:13:21Z",
+      "side": 1,
+      "message": "Using FormatMessage() is potentially more useful on Windows and would avoid the ERROR_ and STRINGIFY macros.\n\nThis code isn\u0027t perf sensitive so could return std::string and eat the cost of string copying.",
+      "range": {
+        "startLine": 106,
+        "startChar": 9,
+        "endLine": 106,
+        "endChar": 24
+      },
+      "revId": "c95dc7256748d479f5733ef4837960701efca557",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}

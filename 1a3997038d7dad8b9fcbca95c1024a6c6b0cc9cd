@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "ab5ac2da_30347246",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1071150
+      },
+      "writtenOn": "2019-03-15T13:13:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "484e0022_4ab2d03a",
+      "revId": "1a3997038d7dad8b9fcbca95c1024a6c6b0cc9cd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "72537c07_5089dd53",
         "filename": "JNIHelp.cpp",
         "patchSetId": 2
@@ -72,6 +90,30 @@
       "side": 1,
       "message": "I can\u0027t modify the definition of asprintf, but I made a helper method to extract that behaviour",
       "parentUuid": "72537c07_5089dd53",
+      "range": {
+        "startLine": 78,
+        "startChar": 0,
+        "endLine": 80,
+        "endChar": 114
+      },
+      "revId": "1a3997038d7dad8b9fcbca95c1024a6c6b0cc9cd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "37e31471_8c0bf00e",
+        "filename": "JNIHelp.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 1071150
+      },
+      "writtenOn": "2019-03-15T13:13:21Z",
+      "side": 1,
+      "message": "Does Win32 have an alternative definition that prevents this?\n\n\"#ifdef WIN32_\nint asprintf(char **strp, const char *fmt, ...) {\n ...\n}\n#endif  // WIN32_\"\n\nFine if so.",
+      "parentUuid": "1d78a589_5acc58a3",
       "range": {
         "startLine": 78,
         "startChar": 0,
