@@ -150,6 +150,30 @@
     },
     {
       "key": {
+        "uuid": "a9182a25_89139a64",
+        "filename": "JNIHelp.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2019-03-18T15:57:52Z",
+      "side": 1,
+      "message": "android::base::StringPrintf has the workaround needed for Windows. can you just use libbase?",
+      "parentUuid": "e4aee45f_e2b008c0",
+      "range": {
+        "startLine": 78,
+        "startChar": 0,
+        "endLine": 80,
+        "endChar": 114
+      },
+      "revId": "1a3997038d7dad8b9fcbca95c1024a6c6b0cc9cd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "638401c4_144d6342",
         "filename": "JniInvocation.cpp",
         "patchSetId": 2
