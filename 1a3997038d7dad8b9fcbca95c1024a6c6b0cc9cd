@@ -126,6 +126,30 @@
     },
     {
       "key": {
+        "uuid": "e4aee45f_e2b008c0",
+        "filename": "JNIHelp.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 1064724
+      },
+      "writtenOn": "2019-03-18T15:50:27Z",
+      "side": 1,
+      "message": "Windows does not seem to have a version of asprintf that automatically computes the correct size of the buffer",
+      "parentUuid": "37e31471_8c0bf00e",
+      "range": {
+        "startLine": 78,
+        "startChar": 0,
+        "endLine": 80,
+        "endChar": 114
+      },
+      "revId": "1a3997038d7dad8b9fcbca95c1024a6c6b0cc9cd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "638401c4_144d6342",
         "filename": "JniInvocation.cpp",
         "patchSetId": 2
