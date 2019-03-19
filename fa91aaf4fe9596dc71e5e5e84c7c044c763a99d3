@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "79127c21_8edfde44",
+        "filename": "JNIHelp.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 1071150
+      },
+      "writtenOn": "2019-03-19T09:30:00Z",
+      "side": 1,
+      "message": "Lost the e-\u003eFatalError() here, likely crash when calling RegisterNatives().",
+      "range": {
+        "startLine": 85,
+        "startChar": 0,
+        "endLine": 85,
+        "endChar": 9
+      },
+      "revId": "fa91aaf4fe9596dc71e5e5e84c7c044c763a99d3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d45fa483_efafb67c",
+        "filename": "JNIHelp.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 1071150
+      },
+      "writtenOn": "2019-03-19T09:30:00Z",
+      "side": 1,
+      "message": "tmp and msg seem a little redundant here and below.\n\nstd::string message  \u003d android::base::StringPrintf(...);\nif (message.size() !\u003d 0) {\n    e-\u003eFatalError(message.c_str());\n} else {\n    e-\u003eFatalError(\"Native registration unable to find class; aborting...\");\n}",
+      "range": {
+        "startLine": 76,
+        "startChar": 0,
+        "endLine": 85,
+        "endChar": 9
+      },
+      "revId": "fa91aaf4fe9596dc71e5e5e84c7c044c763a99d3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8108f619_4a7e9db3",
+        "filename": "JNIHelp.cpp",
+        "patchSetId": 6
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 1071150
+      },
+      "writtenOn": "2019-03-19T09:30:00Z",
+      "side": 1,
+      "message": "e-\u003eRegisterNatives()",
+      "range": {
+        "startLine": 88,
+        "startChar": 8,
+        "endLine": 88,
+        "endChar": 14
+      },
+      "revId": "fa91aaf4fe9596dc71e5e5e84c7c044c763a99d3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
