@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "768e3feb_31780354",
+        "filename": "JNIHelp.cpp",
+        "patchSetId": 8
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 1071150
+      },
+      "writtenOn": "2019-03-19T17:17:39Z",
+      "side": 1,
+      "message": "enh@ pointed out that this could just LOG(FATAL) here. That is all e-\u003eFatalError does and would remove the need for this fallback logic and StringPrintf().",
+      "range": {
+        "startLine": 80,
+        "startChar": 12,
+        "endLine": 80,
+        "endChar": 43
+      },
+      "revId": "d6380a8637baad9135fb3660291adb5242253a36",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
