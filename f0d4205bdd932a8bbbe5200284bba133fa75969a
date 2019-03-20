@@ -1,0 +1,7 @@
+Code-Review+2: Orion Hodson <oth@google.com>
+Presubmit-Verified+1: Treehugger Robot <treehugger-gerrit@google.com>
+Submitted-by: Jerome Gaillard <jgaillard@google.com>
+Submitted-at: Wed, 20 Mar 2019 13:37:58 +0000
+Reviewed-on: https://android-review.googlesource.com/c/platform/libnativehelper/+/926862
+Project: platform/libnativehelper
+Branch: refs/heads/master
