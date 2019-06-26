@@ -28,6 +28,7 @@ cc_library_headers {
     name: "libnativehelper_header_only",
     host_supported: true,
     export_include_dirs: ["header_only_include"],
+    sdk_version: "current",
     target: {
         windows: {
             enabled: true,
@@ -39,6 +40,7 @@ cc_library_headers {
     name: "jni_platform_headers",
     host_supported: true,
     export_include_dirs: ["platform_include"],
+    sdk_version: "current",
     target: {
         windows: {
             enabled: true,
@@ -46,8 +48,8 @@ cc_library_headers {
     },
 }
 
-cc_library {
-    name: "libnativehelper",
+cc_defaults {
+    name: "libnativehelper_defaults",
     host_supported: true,
     srcs: [
         "JNIHelp.cpp",
@@ -56,7 +58,6 @@ cc_library {
         "toStringArray.cpp",
     ],
     shared_libs: [
-        "libbase",
         "liblog",
     ],
     cflags: [
@@ -77,6 +78,30 @@ cc_library {
             enabled: true,
         },
     },
+}
+
+cc_library {
+    name: "libnativehelper",
+    defaults: ["libnativehelper_defaults"],
+    sdk_version: "current",
+    stl: "libc++",
+    shared_libs: [
+        "libbase_ndk",
+    ],
+    target: {
+        android: {
+            // Pull in extended headers with ALOG etc that NDK liblog doesn't give us.
+            header_libs: ["liblog_headers_ndk"],
+        },
+    }
+}
+
+cc_library {
+    name: "libnativehelper_not_ndk",
+    defaults: ["libnativehelper_defaults"],
+    shared_libs: [
+        "libbase",
+    ],
 }
 
 //
