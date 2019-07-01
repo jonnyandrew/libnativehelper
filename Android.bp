@@ -14,9 +14,10 @@
 
 cc_library_headers {
     name: "jni_headers",
+    // TODO: Restrict to LL-NDK only?
+    vendor_available: true,
     host_supported: true,
     export_include_dirs: ["include_jni"],
-    vendor_available: true,
     target: {
         windows: {
             enabled: true,
@@ -26,6 +27,7 @@ cc_library_headers {
 
 cc_library_headers {
     name: "libnativehelper_header_only",
+    vendor_available: true,
     host_supported: true,
     export_include_dirs: ["header_only_include"],
     target: {
@@ -37,6 +39,8 @@ cc_library_headers {
 
 cc_library_headers {
     name: "jni_platform_headers",
+    // TODO: Restrict to LL-NDK only?
+    vendor_available: true,
     host_supported: true,
     export_include_dirs: ["platform_include"],
     target: {
@@ -48,6 +52,9 @@ cc_library_headers {
 
 cc_library {
     name: "libnativehelper",
+    // TODO: Restrict to LL-NDK only? Got core dependencies from libmedia2_jni,
+    // libprintspooler_jni, possibly more.
+    vendor_available: true,
     host_supported: true,
     srcs: [
         "JNIHelp.cpp",
@@ -87,6 +94,7 @@ cc_library {
 
 cc_library_shared {
     name: "libnativehelper_compat_libc++",
+    vendor_available: true,
     export_include_dirs: [
         "header_only_include",
         "include",
@@ -105,7 +113,8 @@ cc_library_shared {
         "liblog",
     ],
     sdk_version: "19",
-    stl: "c++_static",
+    // TODO: Safe to change this from c++_static?
+    stl: "libc++",
 }
 
 ndk_headers {
