@@ -46,6 +46,30 @@
       "revId": "3d068ed92f509573189daaa3ed70429ff5e735d1",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c02957f6_25ef9908",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2019-07-16T19:54:59Z",
+      "side": 1,
+      "message": "yeah, one day we should clean those up, but the annoying this is that i think the lower numbers are still meaningful for Java. (though i\u0027m not sure whether it still makes any sense to be using those lower numbers for Java...)",
+      "parentUuid": "a072d83e_1c436b50",
+      "range": {
+        "startLine": 26,
+        "startChar": 18,
+        "endLine": 26,
+        "endChar": 19
+      },
+      "revId": "3d068ed92f509573189daaa3ed70429ff5e735d1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
