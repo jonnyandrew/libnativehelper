@@ -22,6 +22,30 @@
       "revId": "3d068ed92f509573189daaa3ed70429ff5e735d1",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a072d83e_1c436b50",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1039338
+      },
+      "writtenOn": "2019-07-16T19:26:53Z",
+      "side": 1,
+      "message": "The libRSDispatch target (which the associated change in this topic adds jni_headers to) builds against sdk_version 9 so I set this to the same because otherwise the build failed. Using minimum also works so I have updated as per your suggestion.",
+      "parentUuid": "a1f7e7ac_7cc59727",
+      "range": {
+        "startLine": 26,
+        "startChar": 18,
+        "endLine": 26,
+        "endChar": 19
+      },
+      "revId": "3d068ed92f509573189daaa3ed70429ff5e735d1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
