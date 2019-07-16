@@ -22,6 +22,30 @@
       "revId": "16b4d884585c64831727495a40937784fb363119",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5215c270_7b3aee15",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1039338
+      },
+      "writtenOn": "2019-07-16T14:58:39Z",
+      "side": 1,
+      "message": "I used that number because it is used elsewhere in that file and I wanted to be consistent. However, at the moment current will work so I switched to current as suggested.",
+      "parentUuid": "d33d0a8d_13f1e14c",
+      "range": {
+        "startLine": 36,
+        "startChar": 18,
+        "endLine": 36,
+        "endChar": 20
+      },
+      "revId": "16b4d884585c64831727495a40937784fb363119",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
