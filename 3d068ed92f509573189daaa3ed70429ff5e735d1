@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a1f7e7ac_7cc59727",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2019-07-16T19:12:14Z",
+      "side": 1,
+      "message": "\"minimum\"? (there is no \"9\" any more, really.)",
+      "range": {
+        "startLine": 26,
+        "startChar": 18,
+        "endLine": 26,
+        "endChar": 19
+      },
+      "revId": "3d068ed92f509573189daaa3ed70429ff5e735d1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
