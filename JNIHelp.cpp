@@ -79,6 +79,16 @@ MODULE_API int jniRegisterNativeMethods(C_JNIEnv* env, const char* className,
     ALOG_ALWAYS_FATAL_IF(result < 0, "RegisterNatives failed for '%s'; aborting...",
                          className);
 
+    // Log JNI Mapping.
+    Dl_info info;
+    for (int i = 0; i < numMethods; i++) {
+        if (dladdr(gMethods[i].fnPtr, &info) != 0) {
+            ALOGD("JNI: %s : %s%s", info.dli_sname, gMethods[i].name, gMethods[i].signature);
+        } else {
+            ALOGD("JNI: dladdr failed for %p", gMethods[i].fnPtr);
+        }
+    }
+
     return 0;
 }
 
