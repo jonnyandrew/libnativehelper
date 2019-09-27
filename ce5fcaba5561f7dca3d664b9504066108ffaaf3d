@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7cafa959_08e2d4b6",
+        "filename": "JNIHelp.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 1003723
+      },
+      "writtenOn": "2019-09-27T18:13:09Z",
+      "side": 1,
+      "message": "maybe there should be a check to see if the debug logging is enabled around the whole block, so we don\u0027t iterate through the loop to just do nothing...",
+      "range": {
+        "startLine": 84,
+        "startChar": 0,
+        "endLine": 84,
+        "endChar": 42
+      },
+      "revId": "ce5fcaba5561f7dca3d664b9504066108ffaaf3d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
