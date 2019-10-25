@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "10b2957d_971af744",
+        "filename": "JNIHelp.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1373864
+      },
+      "writtenOn": "2019-10-25T16:20:31Z",
+      "side": 1,
+      "message": "The include being defined should go first. http://go/cpp-style#Names_and_Order_of_Includes",
+      "range": {
+        "startLine": 24,
+        "startChar": 0,
+        "endLine": 24,
+        "endChar": 33
+      },
+      "revId": "0db037ee861949ff5ab9fb5b5f76aa801f6dd937",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e2513072_9551dd71",
+        "filename": "include/nativehelper/libnativehelper_api.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1373864
+      },
+      "writtenOn": "2019-10-25T16:20:31Z",
+      "side": 1,
+      "message": "\"jni.h\"?",
+      "range": {
+        "startLine": 22,
+        "startChar": 9,
+        "endLine": 22,
+        "endChar": 16
+      },
+      "revId": "0db037ee861949ff5ab9fb5b5f76aa801f6dd937",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8b045e03_3faa92eb",
+        "filename": "include/nativehelper/libnativehelper_api.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1373864
+      },
+      "writtenOn": "2019-10-25T16:20:31Z",
+      "side": 1,
+      "message": "If we\u0027re serious about this we should file a ticket and block updatable ART APEX on it.",
+      "range": {
+        "startLine": 35,
+        "startChar": 3,
+        "endLine": 35,
+        "endChar": 60
+      },
+      "revId": "0db037ee861949ff5ab9fb5b5f76aa801f6dd937",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "df06e137_6b2bba48",
+        "filename": "include/nativehelper/libnativehelper_api.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 194,
+      "author": {
+        "id": 1373864
+      },
+      "writtenOn": "2019-10-25T16:20:31Z",
+      "side": 1,
+      "message": "I recognise you\u0027re only moving things around here, but it\u0027d be great if our exposed APIs had a modicum of docs.",
+      "range": {
+        "startLine": 184,
+        "startChar": 0,
+        "endLine": 194,
+        "endChar": 68
+      },
+      "revId": "0db037ee861949ff5ab9fb5b5f76aa801f6dd937",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
