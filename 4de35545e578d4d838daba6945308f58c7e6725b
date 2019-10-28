@@ -1,0 +1,119 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f1a044b3_f6608fc6",
+        "filename": "include/nativehelper/libnativehelper_api.h",
+        "patchSetId": 5
+      },
+      "lineNbr": 201,
+      "author": {
+        "id": 1373864
+      },
+      "writtenOn": "2019-10-28T15:26:16Z",
+      "side": 1,
+      "message": "I spontaneously would want to know what might make it fail. I guess it\u0027s an error from dlopen, or that the lib doesn\u0027t export the expected symbols. Can it mean anything else?",
+      "range": {
+        "startLine": 201,
+        "startChar": 25,
+        "endLine": 201,
+        "endChar": 36
+      },
+      "revId": "4de35545e578d4d838daba6945308f58c7e6725b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f72983f8_37b162c7",
+        "filename": "include/nativehelper/libnativehelper_api.h",
+        "patchSetId": 5
+      },
+      "lineNbr": 203,
+      "author": {
+        "id": 1373864
+      },
+      "writtenOn": "2019-10-28T15:26:16Z",
+      "side": 1,
+      "message": "This is a library filename, and/or a path?",
+      "range": {
+        "startLine": 203,
+        "startChar": 70,
+        "endLine": 203,
+        "endChar": 77
+      },
+      "revId": "4de35545e578d4d838daba6945308f58c7e6725b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b8be52fd_1738b999",
+        "filename": "include/nativehelper/libnativehelper_api.h",
+        "patchSetId": 5
+      },
+      "lineNbr": 215,
+      "author": {
+        "id": 1373864
+      },
+      "writtenOn": "2019-10-28T15:26:16Z",
+      "side": 1,
+      "message": "So in this case the return value is the same as the argument, if it isn\u0027t nullptr?",
+      "range": {
+        "startLine": 214,
+        "startChar": 78,
+        "endLine": 215,
+        "endChar": 18
+      },
+      "revId": "4de35545e578d4d838daba6945308f58c7e6725b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d77929e0_133ec5cb",
+        "filename": "include/nativehelper/libnativehelper_api.h",
+        "patchSetId": 5
+      },
+      "lineNbr": 218,
+      "author": {
+        "id": 1373864
+      },
+      "writtenOn": "2019-10-28T15:26:16Z",
+      "side": 1,
+      "message": "So as a caller I\u0027m expected to pass in a char(*)[PROP_VALUE_MAX], without any particular content in it, and afterwards I get the read system properties in there? Or is it something else that makes more sense?",
+      "range": {
+        "startLine": 217,
+        "startChar": 3,
+        "endLine": 218,
+        "endChar": 24
+      },
+      "revId": "4de35545e578d4d838daba6945308f58c7e6725b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4120f8f9_13ae5114",
+        "filename": "include/nativehelper/libnativehelper_api.h",
+        "patchSetId": 5
+      },
+      "lineNbr": 220,
+      "author": {
+        "id": 1373864
+      },
+      "writtenOn": "2019-10-28T15:26:16Z",
+      "side": 1,
+      "message": "\"name of\" or \"path to\"?",
+      "range": {
+        "startLine": 220,
+        "startChar": 27,
+        "endLine": 220,
+        "endChar": 28
+      },
+      "revId": "4de35545e578d4d838daba6945308f58c7e6725b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}

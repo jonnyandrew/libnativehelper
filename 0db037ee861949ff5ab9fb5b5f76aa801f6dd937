@@ -187,6 +187,30 @@
       "revId": "0db037ee861949ff5ab9fb5b5f76aa801f6dd937",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2d116076_dd0c287f",
+        "filename": "include/nativehelper/libnativehelper_api.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 194,
+      "author": {
+        "id": 1373864
+      },
+      "writtenOn": "2019-10-28T15:26:16Z",
+      "side": 1,
+      "message": "Thanks, much better! Since you\u0027ve taken the effort to make the docs decently detailed I also feel inclined to review them that way, hence a bunch of comments on various details.",
+      "parentUuid": "79dcd6d6_7b06c404",
+      "range": {
+        "startLine": 184,
+        "startChar": 0,
+        "endLine": 194,
+        "endChar": 68
+      },
+      "revId": "0db037ee861949ff5ab9fb5b5f76aa801f6dd937",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
