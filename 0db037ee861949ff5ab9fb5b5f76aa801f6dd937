@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "68fa7df9_833db30f",
+        "filename": "JNIHelp.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1071150
+      },
+      "writtenOn": "2019-10-28T13:08:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "10b2957d_971af744",
+      "range": {
+        "startLine": 24,
+        "startChar": 0,
+        "endLine": 24,
+        "endChar": 33
+      },
+      "revId": "0db037ee861949ff5ab9fb5b5f76aa801f6dd937",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "e2513072_9551dd71",
         "filename": "include/nativehelper/libnativehelper_api.h",
         "patchSetId": 2
@@ -45,6 +69,30 @@
       "revId": "0db037ee861949ff5ab9fb5b5f76aa801f6dd937",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8f192067_e85a099b",
+        "filename": "include/nativehelper/libnativehelper_api.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1071150
+      },
+      "writtenOn": "2019-10-28T13:08:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e2513072_9551dd71",
+      "range": {
+        "startLine": 22,
+        "startChar": 9,
+        "endLine": 22,
+        "endChar": 16
+      },
+      "revId": "0db037ee861949ff5ab9fb5b5f76aa801f6dd937",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     },
     {
       "key": {
@@ -71,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "f872db9d_daf2acac",
+        "filename": "include/nativehelper/libnativehelper_api.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1071150
+      },
+      "writtenOn": "2019-10-28T13:08:35Z",
+      "side": 1,
+      "message": "Updated the comment (from 2012). Fixing this seems to be low gain, high pain: it\u0027s in the NDK and widely used in downstream branches.",
+      "parentUuid": "8b045e03_3faa92eb",
+      "range": {
+        "startLine": 35,
+        "startChar": 3,
+        "endLine": 35,
+        "endChar": 60
+      },
+      "revId": "0db037ee861949ff5ab9fb5b5f76aa801f6dd937",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "df06e137_6b2bba48",
         "filename": "include/nativehelper/libnativehelper_api.h",
         "patchSetId": 2
@@ -82,6 +154,30 @@
       "writtenOn": "2019-10-25T16:20:31Z",
       "side": 1,
       "message": "I recognise you\u0027re only moving things around here, but it\u0027d be great if our exposed APIs had a modicum of docs.",
+      "range": {
+        "startLine": 184,
+        "startChar": 0,
+        "endLine": 194,
+        "endChar": 68
+      },
+      "revId": "0db037ee861949ff5ab9fb5b5f76aa801f6dd937",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "79dcd6d6_7b06c404",
+        "filename": "include/nativehelper/libnativehelper_api.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 194,
+      "author": {
+        "id": 1071150
+      },
+      "writtenOn": "2019-10-28T13:08:35Z",
+      "side": 1,
+      "message": "Okay, ptal.",
+      "parentUuid": "df06e137_6b2bba48",
       "range": {
         "startLine": 184,
         "startChar": 0,
