@@ -143,6 +143,30 @@
     },
     {
       "key": {
+        "uuid": "211c1611_3af8c262",
+        "filename": "include/nativehelper/libnativehelper_api.h",
+        "patchSetId": 5
+      },
+      "lineNbr": 215,
+      "author": {
+        "id": 1373864
+      },
+      "writtenOn": "2019-10-28T19:15:36Z",
+      "side": 1,
+      "message": "A weird API is all the more reason to make docs clear. Thanks for doing it!",
+      "parentUuid": "86a277ab_c13b8a32",
+      "range": {
+        "startLine": 214,
+        "startChar": 78,
+        "endLine": 215,
+        "endChar": 18
+      },
+      "revId": "4de35545e578d4d838daba6945308f58c7e6725b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "d77929e0_133ec5cb",
         "filename": "include/nativehelper/libnativehelper_api.h",
         "patchSetId": 5
