@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "d252d490_5573aa36",
+        "filename": "include/nativehelper/libnativehelper_api.h",
+        "patchSetId": 5
+      },
+      "lineNbr": 201,
+      "author": {
+        "id": 1071150
+      },
+      "writtenOn": "2019-10-28T17:51:36Z",
+      "side": 1,
+      "message": "Updated doc comment. Suggest filing a bug if wanting to go much further with rounds of doc comment here as this was not the purpose of this CL.",
+      "parentUuid": "f1a044b3_f6608fc6",
+      "range": {
+        "startLine": 201,
+        "startChar": 25,
+        "endLine": 201,
+        "endChar": 36
+      },
+      "revId": "4de35545e578d4d838daba6945308f58c7e6725b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f72983f8_37b162c7",
         "filename": "include/nativehelper/libnativehelper_api.h",
         "patchSetId": 5
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "53a9da2a_00f98220",
+        "filename": "include/nativehelper/libnativehelper_api.h",
+        "patchSetId": 5
+      },
+      "lineNbr": 203,
+      "author": {
+        "id": 1071150
+      },
+      "writtenOn": "2019-10-28T17:51:36Z",
+      "side": 1,
+      "message": "Updated doc comment. Renaming the argument it\u0027s out of scope for this CL.",
+      "parentUuid": "f72983f8_37b162c7",
+      "range": {
+        "startLine": 203,
+        "startChar": 70,
+        "endLine": 203,
+        "endChar": 77
+      },
+      "revId": "4de35545e578d4d838daba6945308f58c7e6725b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "b8be52fd_1738b999",
         "filename": "include/nativehelper/libnativehelper_api.h",
         "patchSetId": 5
@@ -59,6 +107,30 @@
       "writtenOn": "2019-10-28T15:26:16Z",
       "side": 1,
       "message": "So in this case the return value is the same as the argument, if it isn\u0027t nullptr?",
+      "range": {
+        "startLine": 214,
+        "startChar": 78,
+        "endLine": 215,
+        "endChar": 18
+      },
+      "revId": "4de35545e578d4d838daba6945308f58c7e6725b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "86a277ab_c13b8a32",
+        "filename": "include/nativehelper/libnativehelper_api.h",
+        "patchSetId": 5
+      },
+      "lineNbr": 215,
+      "author": {
+        "id": 1071150
+      },
+      "writtenOn": "2019-10-28T17:51:36Z",
+      "side": 1,
+      "message": "It\u0027s just complicated...tried to surface more of that in the documentation, but we\u0027re putting lipstick on a frail old pig here.",
+      "parentUuid": "b8be52fd_1738b999",
       "range": {
         "startLine": 214,
         "startChar": 78,
@@ -94,6 +166,30 @@
     },
     {
       "key": {
+        "uuid": "a306c960_ee859f31",
+        "filename": "include/nativehelper/libnativehelper_api.h",
+        "patchSetId": 5
+      },
+      "lineNbr": 218,
+      "author": {
+        "id": 1071150
+      },
+      "writtenOn": "2019-10-28T17:51:36Z",
+      "side": 1,
+      "message": "Documented that this may be used as the return value if the system property is read.",
+      "parentUuid": "d77929e0_133ec5cb",
+      "range": {
+        "startLine": 217,
+        "startChar": 3,
+        "endLine": 218,
+        "endChar": 24
+      },
+      "revId": "4de35545e578d4d838daba6945308f58c7e6725b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4120f8f9_13ae5114",
         "filename": "include/nativehelper/libnativehelper_api.h",
         "patchSetId": 5
@@ -114,6 +210,30 @@
       "revId": "4de35545e578d4d838daba6945308f58c7e6725b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "23ba5ba5_061aa21f",
+        "filename": "include/nativehelper/libnativehelper_api.h",
+        "patchSetId": 5
+      },
+      "lineNbr": 220,
+      "author": {
+        "id": 1071150
+      },
+      "writtenOn": "2019-10-28T17:51:36Z",
+      "side": 1,
+      "message": "filename.",
+      "parentUuid": "4120f8f9_13ae5114",
+      "range": {
+        "startLine": 220,
+        "startChar": 27,
+        "endLine": 220,
+        "endChar": 28
+      },
+      "revId": "4de35545e578d4d838daba6945308f58c7e6725b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
