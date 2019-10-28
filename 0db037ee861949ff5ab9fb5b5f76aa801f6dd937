@@ -143,6 +143,30 @@
     },
     {
       "key": {
+        "uuid": "93281c72_63c6f45f",
+        "filename": "include/nativehelper/libnativehelper_api.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2019-10-28T18:15:29Z",
+      "side": 1,
+      "message": "(fwiw, this isn\u0027t in the NDK. only \u003cjni.h\u003e is in the NDK.)",
+      "parentUuid": "f872db9d_daf2acac",
+      "range": {
+        "startLine": 35,
+        "startChar": 3,
+        "endLine": 35,
+        "endChar": 60
+      },
+      "revId": "0db037ee861949ff5ab9fb5b5f76aa801f6dd937",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "df06e137_6b2bba48",
         "filename": "include/nativehelper/libnativehelper_api.h",
         "patchSetId": 2
