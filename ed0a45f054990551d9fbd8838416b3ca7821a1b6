@@ -1,0 +1,11 @@
+Autosubmit+1: Chun-Yi Lee <easoncylee@google.com>
+Verified+1: Chun-Yi Lee <easoncylee@google.com>
+Verified+1: Bill Yang <yangbill@google.com>
+Code-Review+2: Dan Shi <dshi@google.com>
+Code-Review+2: Bill Yang <yangbill@google.com>
+Presubmit-Verified+1: Treehugger Robot <treehugger-gerrit@google.com>
+Submitted-by: Treehugger Robot <treehugger-gerrit@google.com>
+Submitted-at: Mon, 02 Dec 2019 08:50:27 +0000
+Reviewed-on: https://android-review.googlesource.com/c/platform/libnativehelper/+/1175027
+Project: platform/libnativehelper
+Branch: refs/heads/master
