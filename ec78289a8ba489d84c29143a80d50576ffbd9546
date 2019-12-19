@@ -1,0 +1,8 @@
+Code-Review+2: Martin Stjernholm <mast@google.com>
+Code-Review+2: Roland Levillain <rpl@google.com>
+Presubmit-Verified+1: Treehugger Robot <treehugger-gerrit@google.com>
+Submitted-by: Jiyong Park <jiyong@google.com>
+Submitted-at: Thu, 19 Dec 2019 00:21:38 +0000
+Reviewed-on: https://android-review.googlesource.com/c/platform/libnativehelper/+/1178555
+Project: platform/libnativehelper
+Branch: refs/heads/master
