@@ -126,6 +126,20 @@ ndk_headers {
     license: "NOTICE",
 }
 
+android_library {
+    name: "libnativehelper_aar",
+    srcs: [],
+    min_sdk_version: "19",
+    target_sdk_version: "30",
+    compile_multilib: "both",
+    prefab: {
+        package_name: "libnativehelper",
+        version: "1.0.0",
+        stl: "c++_shared",
+        shared_libraries: ["libnativehelper_compat_libc++"],
+    },
+}
+
 //
 // Tests.
 //
