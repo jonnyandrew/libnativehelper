@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ade258e8_96825547",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1071150
+      },
+      "writtenOn": "2020-01-15T10:46:52Z",
+      "side": 1,
+      "message": "DBC: missing?",
+      "range": {
+        "startLine": 7,
+        "startChar": 21,
+        "endLine": 7,
+        "endChar": 25
+      },
+      "revId": "e945200d2160aca48448f407dd7df784f48e56c6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
