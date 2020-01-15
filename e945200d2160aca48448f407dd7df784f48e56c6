@@ -22,6 +22,30 @@
       "revId": "e945200d2160aca48448f407dd7df784f48e56c6",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "74a9db10_c4e6c4b7",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1132673
+      },
+      "writtenOn": "2020-01-15T10:56:56Z",
+      "side": 1,
+      "message": "I just copied the same commit message in the topic. Do you want me to amend the message?",
+      "parentUuid": "ade258e8_96825547",
+      "range": {
+        "startLine": 7,
+        "startChar": 21,
+        "endLine": 7,
+        "endChar": 25
+      },
+      "revId": "e945200d2160aca48448f407dd7df784f48e56c6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
