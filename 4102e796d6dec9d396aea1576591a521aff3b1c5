@@ -2,6 +2,74 @@
   "comments": [
     {
       "key": {
+        "uuid": "34719f3c_f8584f4f",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2020-01-30T23:49:03Z",
+      "side": 1,
+      "message": "TODO: we should make a static library as well",
+      "revId": "4102e796d6dec9d396aea1576591a521aff3b1c5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f5eb78fa_382639ce",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2020-01-30T23:49:03Z",
+      "side": 1,
+      "message": "TODO: Should see if we can lower this to 16.",
+      "revId": "4102e796d6dec9d396aea1576591a521aff3b1c5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "604660ba_dfd95631",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2020-01-30T23:49:03Z",
+      "side": 1,
+      "message": "TODO: Is there a way to say \"latest stable\"?",
+      "revId": "4102e796d6dec9d396aea1576591a521aff3b1c5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5bcbedba_7be5d070",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2020-01-30T23:49:03Z",
+      "side": 1,
+      "message": "TODO: Need to do a bit more so we can ship this to users as //libnativehelper:libnativehelper rather than //libnativehelper:libnativehelper_compat_libc++.",
+      "revId": "4102e796d6dec9d396aea1576591a521aff3b1c5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "69c767ac_23fc0916",
         "filename": "AndroidManifest.xml",
         "patchSetId": 1
