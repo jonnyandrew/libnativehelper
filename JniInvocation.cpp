@@ -16,24 +16,22 @@
 
 #include "nativehelper/JniInvocation.h"
 
+#include <string>
+
+#ifdef __ANDROID__
+#include <sys/system_properties.h>
+#endif  // __ANDROID__
+
 #ifdef _WIN32
 #include <windows.h>
+#include <android-base/errors.h>
 #else
 #include <dlfcn.h>
-#endif
-#include <stdlib.h>
-#include <string.h>
-
-#include <cstddef>
+#endif  //  _WIN32
 
 #define LOG_TAG "JniInvocation"
 #include <log/log.h>
 
-#ifdef __ANDROID__
-#include <sys/system_properties.h>
-#endif
-
-#include "android-base/errors.h"
 #include "JniConstants.h"
 
 namespace {
