@@ -17,7 +17,6 @@
 // All header files with MODULE_API decorated function declarations.
 #include "nativehelper/JNIHelp.h"
 #include "nativehelper/JniInvocation.h"
-#include "nativehelper/toStringArray.h"
 
 int main() {
   // The test here is that the headers are properly guarded to support

@@ -32,9 +32,6 @@ LIBNATIVEHELPER_1 {
     JniInvocationInit;
     JniInvocationGetLibrary;
 
-    newStringArray;
-    toStringArray;
-
   local:
     *;
 };
