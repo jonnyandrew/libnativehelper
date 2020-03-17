@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "60e19336_38a62d69",
+        "filename": "JNIHelp.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 241,
+      "author": {
+        "id": 1071150
+      },
+      "writtenOn": "2020-03-17T15:40:44Z",
+      "side": 1,
+      "message": "Done as it\u0027s easy to see the internal linkage, though it\u0027s already in unnamed namespace.",
+      "parentUuid": "aa052b8d_e03c58f8",
+      "revId": "386620054a130372c969411207868fabd9fb3efd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3fa4192e_4b4b14e3",
         "filename": "JNIHelp.cpp",
         "patchSetId": 2
@@ -33,6 +51,24 @@
       "revId": "386620054a130372c969411207868fabd9fb3efd",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7af870ed_122c14cd",
+        "filename": "JNIHelp.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 242,
+      "author": {
+        "id": 1071150
+      },
+      "writtenOn": "2020-03-17T15:40:44Z",
+      "side": 1,
+      "message": "Yes, that\u0027s a layoutlib dependency from studio.",
+      "parentUuid": "3fa4192e_4b4b14e3",
+      "revId": "386620054a130372c969411207868fabd9fb3efd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
