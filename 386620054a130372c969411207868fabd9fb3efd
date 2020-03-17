@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aa052b8d_e03c58f8",
+        "filename": "JNIHelp.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 241,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2020-03-17T15:07:20Z",
+      "side": 1,
+      "message": "static?",
+      "revId": "386620054a130372c969411207868fabd9fb3efd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3fa4192e_4b4b14e3",
+        "filename": "JNIHelp.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 242,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2020-03-17T15:07:20Z",
+      "side": 1,
+      "message": "this is used on Windows?!",
+      "revId": "386620054a130372c969411207868fabd9fb3efd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
