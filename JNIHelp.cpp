@@ -16,6 +16,8 @@
 
 #include "nativehelper/JNIHelp.h"
 
+#include <string.h>
+
 #include <string>
 
 #define LOG_TAG "JNIHelp"
@@ -236,6 +238,15 @@ inline const char* realJniStrError(POSIXStrError func, int errnum, char* buf, si
     return buf;
 }
 
+const char* platformStrError(int errnum, char* buf, size_t buflen) {
+#ifdef _WIN32
+    strerror_s(buf, buflen, errnum);
+    return buf;
+#else
+    return realJniStrError(strerror_r, errnum, buf, buflen);
+#endif
+}
+
 }  // namespace
 
 int jniRegisterNativeMethods(C_JNIEnv* env, const char* className,
@@ -304,24 +315,13 @@ int jniThrowRuntimeException(C_JNIEnv* env, const char* msg) {
 
 int jniThrowIOException(C_JNIEnv* env, int errnum) {
     char buffer[80];
-    const char* message = jniStrError(errnum, buffer, sizeof(buffer));
+    const char* message = platformStrError(errnum, buffer, sizeof(buffer));
     return jniThrowException(env, "java/io/IOException", message);
 }
 
 void jniLogException(C_JNIEnv* env, int priority, const char* tag, jthrowable exception) {
     std::string trace(jniGetStackTrace(env, exception));
     __android_log_write(priority, tag, trace.c_str());
-}
-
-const char* jniStrError(int errnum, char* buf, size_t buflen) {
-#ifdef _WIN32
-  strerror_s(buf, buflen, errnum);
-  return buf;
-#else
-  // The magic of C++ overloading selects the correct implementation based on the declared type of
-  // strerror_r. The inline will ensure that we don't have any indirect calls.
-  return realJniStrError(strerror_r, errnum, buf, buflen);
-#endif
 }
 
 jobject jniCreateFileDescriptor(C_JNIEnv* env, int fd) {
