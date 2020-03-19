@@ -23,6 +23,7 @@ LIBNATIVEHELPER_1 {
     jniGetNioBufferFields;
     jniGetReferent;
     jniCreateString;
+    jniCreateStringArray;
     jniLogException;
     jniUninitializeConstants;
 
@@ -31,8 +32,7 @@ LIBNATIVEHELPER_1 {
     JniInvocationInit;
     JniInvocationGetLibrary;
 
-    newStringArray;
-    toStringArray;
+
 
   local:
     *;
