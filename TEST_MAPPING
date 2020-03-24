@@ -1,7 +1,0 @@
-{
-  "presubmit": [
-    {
-      "name": "JniInvocation_test"
-    }
-  ]
-}

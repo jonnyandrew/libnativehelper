@@ -27,11 +27,6 @@ LIBNATIVEHELPER_1 {
     jniLogException;
     jniUninitializeConstants;
 
-    JniInvocationCreate;
-    JniInvocationDestroy;
-    JniInvocationInit;
-    JniInvocationGetLibrary;
-
   local:
     *;
 };
