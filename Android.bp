@@ -55,7 +55,6 @@ cc_library {
     srcs: [
         "JNIHelp.cpp",
         "JniConstants.cpp",
-        "JniInvocation.cpp",
     ],
     shared_libs: ["liblog"],
     cflags: [
@@ -91,7 +90,6 @@ cc_library {
 //
 // NDK-only build for the target (device), using libc++.
 // - Relies only on NDK exposed functionality.
-// - This doesn't include JniInvocation.
 //
 
 cc_library_shared {
