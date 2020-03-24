@@ -237,17 +237,6 @@ void JniInvocationDestroy(struct JniInvocationImpl* instance);
  */
 const char* JniInvocationGetLibrary(const char* library, char* buffer);
 
-/* ---------------------------------- C API for toStringArray.h --------------------------------- */
-
-/*
- * Converts an array of C strings into a managed array of Java strings. The size of the C array is
- * determined by the presence of a final element containing a nullptr.
- *
- * Returns a new array on success or nullptr in case of failure. This method raises an
- * OutOfMemoryError exception if allocation fails.
- */
-jobjectArray toStringArray(JNIEnv* env, const char* const* strings);
-
 #ifdef __cplusplus
 }
 #endif  // __cplusplus
