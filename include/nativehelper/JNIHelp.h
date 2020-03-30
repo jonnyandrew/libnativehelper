@@ -42,6 +42,13 @@ inline int jniRegisterNativeMethods(JNIEnv* env, const char* className, const JN
     return jniRegisterNativeMethods(&env->functions, className, gMethods, numMethods);
 }
 
+template <size_t N>
+inline int jniRegisterNativeMethods(JNIEnv* env, const char* className,
+                                    const JNINativeMethod (&gMethods)[N]) {
+    return jniRegisterNativeMethods(&env->functions, className, gMethods, N);
+}
+
+
 inline int jniThrowException(JNIEnv* env, const char* className, const char* msg) {
     return jniThrowException(&env->functions, className, msg);
 }
